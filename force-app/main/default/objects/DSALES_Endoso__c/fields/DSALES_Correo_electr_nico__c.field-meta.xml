@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Correo_electr_nico__c</fullName>
+    <description>Campo para ingresar el correo electrónico para envió de estatus de el endoso</description>
+    <externalId>false</externalId>
+    <label>Correo electrónico</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

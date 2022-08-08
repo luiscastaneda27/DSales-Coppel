@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Estatus__c</fullName>
+    <description>Campos para saber en que procesos se encuentra un endoso.</description>
+    <externalId>false</externalId>
+    <label>Estatus</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nuevo</fullName>
+                <color>#AFCADF</color>
+                <default>true</default>
+                <label>Nuevo</label>
+            </value>
+            <value>
+                <fullName>En tramite</fullName>
+                <color>#EFAE73</color>
+                <default>false</default>
+                <label>En tramite</label>
+            </value>
+            <value>
+                <fullName>Requerimiento de Información</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Requerimiento de Información</label>
+            </value>
+            <value>
+                <fullName>Autorizado</fullName>
+                <color>#57F17C</color>
+                <default>false</default>
+                <label>Autorizado</label>
+            </value>
+            <value>
+                <fullName>Rechazado</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Rechazado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

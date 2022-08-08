@@ -1,0 +1,37 @@
+<aura:component controller="DSALES_ClonarMatriz" implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="esClone" type="Boolean" />
+    <aura:attribute name="cloneId" type="String" />
+    
+    <aura:if isTrue="{! v.esClone }">
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> 
+                Actualizar Matriz Item.
+            </h1>
+        </div>
+        <br/>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <p>Desea refrescar la matriz original con los datos actuales.</p>
+        </div>
+        <div class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" onclick="{! c.cancelar }" aria-label="Cancel and close">Cancelar</button>
+            <button class="slds-button slds-button_brand" onclick="{! c.actualizar }">Actualizar</button>
+        </div>
+    </aura:if>
+    <aura:if isTrue="{! NOT(v.esClone) }">
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> 
+                Clonar Matriz Item.
+            </h1>
+        </div>
+        <br/>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <p>Desea clonar esta matriz de precios para modificar sus ítem.</p>
+        </div>
+        <div class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" onclick="{! c.cancelar }" aria-label="Cancel and close">Cancelar</button>
+            <button class="slds-button slds-button_brand" onclick="{! c.clonar }">Clonar</button>
+        </div>
+    </aura:if>
+    
+</aura:component>

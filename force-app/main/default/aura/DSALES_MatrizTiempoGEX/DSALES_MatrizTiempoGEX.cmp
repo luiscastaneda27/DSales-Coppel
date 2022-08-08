@@ -1,0 +1,182 @@
+<aura:component controller="DSALES_ControladorMatrizTiempo" implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="data" type="object" />
+    <aura:attribute name="dataShow" type="object" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <div style="background-color: #ffffff">
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> 
+                Matriz de Precios
+            </h1>
+        </div>
+        <br/>
+        <div style="text-align: right;width: 98%;">
+            <lightning:button label="Anterior" variant="brand" onclick="{! c.anterior }" disabled="{! v.data.anteriorDes }"  />
+            <lightning:button label="Siguiente" variant="brand" onclick="{! c.siguiente }" disabled="{! v.data.siguienteDes }" />
+        </div>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="6" >
+                <lightning:card iconName="standard:asset_warranty" title="{! v.dataShow.matriz1.tiempo }">
+                    <aura:set attribute="actions">
+                        <aura:if isTrue="{! v.data.esClone }">
+                            <lightning:buttonIcon iconName="utility:delete" variant="brand" onclick="{!c.popPag1}" name ="{! v.dataShow.matriz1.tiempo }" disabled="{! NOT(v.dataShow.seleccionadoPag1) }" ></lightning:buttonIcon>
+                            <lightning:buttonIcon iconName="utility:add" variant="brand" onclick="{!c.agregarMatriz1}" name ="{! v.dataShow.matriz1.tiempo }" ></lightning:buttonIcon>
+                        </aura:if>
+                    </aura:set>
+                    
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <lightning:input type="checkbox" checked="{! v.dataShow.seleccionadoPag1 }" onchange="{! c.seleccionTodosPag1 }" disabled="{! NOT(v.data.esClone) }" />
+                                </th>
+                                <th class="" scope="col">
+                                    SKU de Servicio
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Precio">Desde</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Cantidad">Hasta</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Total">Precio</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{! v.dataShow.matriz1.listMatriz }" var="item">
+                                <tr>
+                                     <td>
+                                        <br/>
+                                        <lightning:input type="checkbox" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag1 }" disabled="{! NOT(v.data.esClone) }" />
+                                    </td>
+                                    <td>
+                                        <lightning:input type="text" value="{! item.codigo }" readonly="{! NOT(v.data.esClone) }" />
+                                    </td>
+                                    <td>
+                                        <lightning:input type="number" value="{!item.rangoMenor}" readonly="{!  NOT(v.data.esClone) }" />
+                                    </td>
+                                    <td>
+                                        <lightning:input type="number" value="{!item.rangoMayor}" readonly="{!  NOT(v.data.esClone) }" />
+                                    </td>
+                                    <td>
+                                        <lightning:input type="number" value="{!item.precio}" readonly="{!  NOT(v.data.esClone) }" formatter="currency" />
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </lightning:card>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small" size="6">
+                <aura:if isTrue="{! v.dataShow.matriz2.tiempo != null }">
+                    <lightning:card iconName="standard:asset_warranty" title="{! v.dataShow.matriz2.tiempo }">
+                        <aura:set attribute="actions">
+                            <aura:if isTrue="{! v.data.esClone }">
+                                <lightning:buttonIcon iconName="utility:delete" variant="brand" onclick="{!c.popPag2}" name ="{! v.dataShow.matriz1.tiempo }" disabled="{! NOT(v.dataShow.seleccionadoPag2) }" ></lightning:buttonIcon>
+                                <lightning:buttonIcon iconName="utility:add" variant="brand" onclick="{!c.agregarMatriz2}" name ="{! v.dataShow.matriz2.tiempo }" ></lightning:buttonIcon>
+                            </aura:if>
+                        </aura:set>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <lightning:input type="checkbox" checked="{! v.dataShow.seleccionadoPag2 }" onchange="{! c.seleccionTodosPag2 }" disabled="{! NOT(v.data.esClone) }" />
+                                    </th>
+                                    <th class="" scope="col">
+                                         SKU de Servicio
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Precio">Desde</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Cantidad">Hasta</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Total">Precio</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.dataShow.matriz2.listMatriz}" var="item">
+                                    <tr>
+                                        <td>
+                                            <br/>
+                                            <lightning:input type="checkbox" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag2 }" disabled="{! NOT(v.data.esClone) }" />
+                                        </td>
+                                         <td>
+                                             <lightning:input type="text" value="{!item.codigo}" readonly="{! NOT(v.data.esClone) }" />
+                                            <!--br/>
+                                            <lightning:input type="checkbox" label="{! item.codigo }" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag2 }" disabled="{! NOT(v.data.esClone) }" /-->
+                                        </td>
+                                        <td>
+                                            <lightning:input type="number" value="{!item.rangoMenor}" readonly="{! NOT(v.data.esClone) }" />
+                                        </td>
+                                        <td>
+                                            <lightning:input type="number" value="{!item.rangoMayor}" readonly="{! NOT(v.data.esClone) }" />
+                                        </td>
+                                        <td>
+                                            <lightning:input type="number" value="{!item.precio}" readonly="{! NOT(v.data.esClone) }" formatter="currency" />
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </lightning:card>
+                </aura:if>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <aura:if isTrue="{! v.data.esClone }">
+            <footer class="slds-modal__footer">
+                <lightning:button label="Guardar" class="slds-m-top--medium" variant="brand" onclick="{!c.popGuardar}" />
+            </footer>
+        </aura:if>
+        <aura:renderIf isTrue="{!OR(v.data.popEliminarPag1, v.data.popEliminarPag2)}">
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Eliminar Matriz Item</h1>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Esta seguro que desea eliminar los registros seleccionados.</p>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{! c.cancelar }" aria-label="Cancel and close">Cancelar</button>
+                        <button class="slds-button slds-button_destructive" onclick="{! c.eliminar }">Eliminar</button>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </aura:renderIf>
+        
+        <aura:renderIf isTrue="{! v.data.popGuardar }">
+            <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Guardar Matriz Item</h1>
+                    </div>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>Esta seguro que desea guardar los registros modificados.</p>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{! c.cancelar }" aria-label="Cancel and close">Cancelar</button>
+                        <button class="slds-button slds-button_brand" onclick="{! c.guardar }">Guardar</button>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+        </aura:renderIf>
+        
+        <aura:renderIf isTrue="{!v.showSpinner}">
+            <div id="activityIndicator" class="slds-spinner_container">
+                <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+                    <span class="slds-assistive-text">Loading, Please Wait...</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </aura:renderIf>
+    </div>
+</aura:component>

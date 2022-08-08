@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Celular_del_Cliente__c</fullName>
+    <description>Número celular del cliente</description>
+    <externalId>false</externalId>
+    <label>Número celular del cliente</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Phone</type>
+</CustomField>
