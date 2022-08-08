@@ -7,9 +7,9 @@ public class DSALES_ControladorCertificadoPDFTest {
         insert ac;
         Asset asset= new Asset(Name='DannyTest-b',AccountId=ac.Id);
         insert asset;
-        DSALES_Certificado__c certi = new DSALES_Certificado__c(DSALES_ProductoAdquirido__c=asset.id);
+        DSALES_Certificado__c certi = new DSALES_Certificado__c(DSALES_ProductoAdquirido__c=asset.id,DSALES_Duracion_de_GEX__c = 12.1);
         insert certi;
-        DSALES_Generador__C genera= new DSALES_Generador__c(Name='Certificado PDF',DSALES_Plantilla__c='Hey');
+        DSALES_Generador__C genera= new DSALES_Generador__c(Name='Certificado PDF',DSALES_Plantilla__c='Name,DSALES_Duracion_de_GEX__c');
         insert genera;
     }
     @isTest static void DSALES_ControladorCertificadoPDF()
