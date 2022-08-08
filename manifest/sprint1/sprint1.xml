@@ -181,6 +181,27 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>Account.DSales_Nuevos_de_esta_semana</members>
+		<members>Account.DSales_Todos_los_clientes</members>
+		<members>Asset.DSALES_Misproductosadquridos</members>
+		<members>Asset.DSALES_Nuevosdeestasemana</members>
+		<members>DSALES_Certificado__c.All</members>
+		<members>DSALES_Certificado__c.Certificado_por_sucursal</members>
+		<members>DSALES_Certificado__c.DSALES_Mis_Certificados</members>
+		<members>DSALES_Certificado__c.DSALES_Nuevos_de_esta_semana</members>
+		<members>DSALES_Endoso__c.All</members>
+		<members>DSALES_Endoso__c.DSALES_Mis_endosos</members>
+		<members>DSALES_Endoso__c.DSALES_Nuevos_de_esta_semana</members>
+		<members>DSALES_Generador__c.All</members>
+		<members>DSALES_Informaci_n_de_Pago__c.All</members>
+		<members>DSALES_Informaci_n_de_Pago__c.Mis_Informaci_n_de_Pago</members>
+		<members>DSALES_Informaci_n_de_Pago__c.Nuevos_de_esta_semana</members>
+		<members>DSALES_Matriz_de_Cotizacion__c.All</members>
+		<members>DSales_Matriz_GEX__c.All</members>
+		<members>Quote.DSALES_Nuevosdeestasemana</members>
+		<name>ListView</name>
+	</types>
+	<types>
 		<members>Administrador GEX</members>
 		<members>Administrador SM</members>
 		<members>DSALES_Agente de Ventas</members>

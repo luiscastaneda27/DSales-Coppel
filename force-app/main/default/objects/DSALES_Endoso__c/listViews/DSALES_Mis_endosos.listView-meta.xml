@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Mis_endosos</fullName>
+    <columns>NAME</columns>
+    <columns>DSALES_Folio__c</columns>
+    <columns>DSALES_Cliente__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>DSALES_Estatus__c</columns>
+    <columns>P_liza__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Mis endosos</label>
+    <sharedTo>
+        <role>DSALES_Admin_SM</role>
+        <role>DSALES_Agente_de_servicio_SM</role>
+        <role>DSALES_Atenci_n_a_servicio</role>
+    </sharedTo>
+</ListView>

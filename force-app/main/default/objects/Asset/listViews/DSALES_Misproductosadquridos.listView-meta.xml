@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Misproductosadquridos</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ASSET.SERIAL_NUMBER</columns>
+    <columns>ASSET.INSTALL_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.NAME</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <filterScope>Mine</filterScope>
+    <label>Mis productos adquridos</label>
+    <sharedTo>
+        <role>DSALES_Admin_GEX</role>
+        <role>DSALES_Agente_de_servicio_SM</role>
+    </sharedTo>
+</ListView>
