@@ -201,7 +201,7 @@
         <fields>NAME</fields>
         <fields>DSALES_Ticket__c</fields>
         <fields>DSALES_ProductoAdquirido__c</fields>
-        <fields>DSALES_S_KU__c</fields>
+        <fields>DSALES_SKU__c</fields>
         <relatedList>DSALES_Certificado__c.DSALES_Cliente__c</relatedList>
     </relatedLists>
     <relatedLists>

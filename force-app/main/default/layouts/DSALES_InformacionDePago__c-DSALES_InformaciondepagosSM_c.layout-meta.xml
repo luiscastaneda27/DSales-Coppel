@@ -29,11 +29,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Direcci_n_Tienda__c</field>
+                <field>DSALES_DireccionTienda__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Tel_fono__c</field>
+                <field>DSALES_Telefono__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -80,7 +80,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Direcci_n_del_Cliente__c</field>
+                <field>DSALES_DireccionCliente__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -90,7 +90,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Tel_fono_del_cliente__c</field>
+                <field>DSALES_TelefonoCliente__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -137,11 +137,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_M_delo__c</field>
+                <field>DSALES_Modelo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Descripci_n_del_art_culo__c</field>
+                <field>DSALES_DescripcionArticulo__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

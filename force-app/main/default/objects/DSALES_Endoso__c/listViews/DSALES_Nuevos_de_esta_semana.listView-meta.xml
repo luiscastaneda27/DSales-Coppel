@@ -6,7 +6,7 @@
     <columns>DSALES_Cliente__c</columns>
     <columns>CREATED_DATE</columns>
     <columns>DSALES_Estatus__c</columns>
-    <columns>P_liza__c</columns>
+    <columns>DSALES_Poliza__c</columns>
     <filterScope>Mine</filterScope>
     <filters>
         <field>CREATED_DATE</field>

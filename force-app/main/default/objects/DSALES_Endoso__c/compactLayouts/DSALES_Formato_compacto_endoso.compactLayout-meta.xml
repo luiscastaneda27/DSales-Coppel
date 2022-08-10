@@ -3,8 +3,8 @@
     <fullName>DSALES_Formato_compacto_endoso</fullName>
     <fields>DSALES_Cliente__c</fields>
     <fields>Name</fields>
-    <fields>P_liza__c</fields>
+    <fields>DSALES_Poliza__c</fields>
     <fields>DSALES_Estatus__c</fields>
-    <fields>DSALES_Correo_electr_nico__c</fields>
+    <fields>DSALES_CorreoElectronico__c</fields>
     <label>Formato compacto endoso</label>
 </CompactLayout>

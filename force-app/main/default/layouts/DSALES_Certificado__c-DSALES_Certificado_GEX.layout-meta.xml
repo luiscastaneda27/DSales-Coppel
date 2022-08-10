@@ -40,7 +40,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_T_ienda__c</field>
+                <field>DSALES_Tienda__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -88,7 +88,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_S_KU__c</field>
+                <field>DSALES_SKU__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -102,11 +102,11 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_M_odelo__c</field>
+                <field>DSALES_Modelo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_M_arca__c</field>
+                <field>DSALES_Marca__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -172,7 +172,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Informaci_n_de_Pago__c</field>
+                <field>DSALES_InformacionDePago__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

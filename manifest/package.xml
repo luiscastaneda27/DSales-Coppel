@@ -52,9 +52,9 @@
 		<members>DSALES_Certificado__c.DSALES_Fecha_Inicio_de_Vigencia__c</members>
 		<members>DSALES_Certificado__c.DSALES_Fecha_de_compra_GEX__c</members>
 		<members>DSALES_Certificado__c.DSALES_Fecha_de_venta_del_articulo__c</members>
-		<members>DSALES_Certificado__c.DSALES_Informaci_n_de_Pago__c</members>
-		<members>DSALES_Certificado__c.DSALES_M_arca__c</members>
-		<members>DSALES_Certificado__c.DSALES_M_odelo__c</members>
+		<members>DSALES_Certificado__c.DSALES_InformacionDePago__c</members>
+		<members>DSALES_Certificado__c.DSALES_Marca__c</members>
+		<members>DSALES_Certificado__c.DSALES_Modelo__c</members>
 		<members>DSALES_Certificado__c.DSALES_No_Transaccion__c</members>
 		<members>DSALES_Certificado__c.DSALES_No_de_Telefono__c</members>
 		<members>DSALES_Certificado__c.DSALES_NombreCliente__c</members>
@@ -66,20 +66,21 @@
 		<members>DSALES_Certificado__c.DSALES_Oportunidad__c</members>
 		<members>DSALES_Certificado__c.DSALES_Precio_del_Articulo__c</members>
 		<members>DSALES_Certificado__c.DSALES_ProductoAdquirido__c</members>
-		<members>DSALES_Certificado__c.DSALES_S_KU__c</members>
-		<members>DSALES_Certificado__c.DSALES_T_ienda__c</members>
+		<members>DSALES_Certificado__c.DSALES_SKU__c</members>
+		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
 		<members>DSALES_Certificado__c.DSALES_Ticket__c</members>
 		<members>DSALES_Certificado__c.DSALES_Vigenciacumplida__c</members>
 		<members>DSALES_Certificado__c.DSALES_enviado__c</members>
 		<members>DSALES_Certificado__c.NOMIGRAR__c</members>
 		<members>DSALES_Endoso__c.DSALES_Cliente__c</members>
-		<members>DSALES_Endoso__c.DSALES_Correo_electr_nico__c</members>
+		<members>DSALES_Endoso__c.DSALES_CorreoElectronico__c</members>
 		<members>DSALES_Endoso__c.DSALES_Estatus__c</members>
 		<members>DSALES_Endoso__c.DSALES_Folio__c</members>
-		<members>DSALES_Endoso__c.DSALES_Motivo_de_devoluci_n__c</members>
-		<members>DSALES_Endoso__c.DSALES_Motivo_de_rechazo__c</members>
-		<members>DSALES_Endoso__c.DSALES_Soluci_n_a_devoluci_n__c</members>
-		<members>DSALES_Endoso__c.P_liza__c</members>
+		<members>DSALES_Endoso__c.DSALES_MotivoDevolucion__c</members>
+		<members>DSALES_Endoso__c.DSALES_MotivoRechazo__c</members>
+		<members>DSALES_Endoso__c.DSALES_SolucionDevolucion__c</members>
+		<members>DSALES_Endoso__c.DSALES_Poliza__c</members>
+		<members>DSALES_Endoso__c.DSALES_NumeroClienteCoppel__c</members>
 		<members>DSALES_Generador__c.DSALES_Plantilla__c</members>
 		<members>DSALES_InformacionDePago__c.DALES_dineroelectronico__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Caja__c</members>
@@ -89,17 +90,17 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_CreditoIVA__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Descripci_n_del_art_culo__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Direcci_n_Tienda__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Direcci_n_del_Cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DescripcionArticulo__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DireccionCliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Duracion_GEX_meses__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Estatus__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Exp_en__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_ExpEn__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Factura__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Fecha__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Formadepago__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Ganodineroelec__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_M_delo__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Modelo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Marca__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Motor__c</members>
@@ -114,8 +115,8 @@
 		<members>DSALES_InformacionDePago__c.DSALES_ProductoAdquirido__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_SKU__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Saldodineroelec__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Tel_fono__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Tel_fono_del_cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Telefono__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_TelefonoCliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_TotalContado__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_VehIculo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Vendedor__c</members>
@@ -135,7 +136,7 @@
 		<members>InsurancePolicy.DSALES_Armadora__c</members>
 		<members>InsurancePolicy.DSALES_Asegurado__c</members>
 		<members>InsurancePolicy.DSALES_Clavevehicular__c</members>
-		<members>InsurancePolicy.DSALES_Correo_electr_nico__c</members>
+		<members>InsurancePolicy.DSALES_CorreoElectronico__c</members>
 		<members>InsurancePolicy.DSALES_Descripcion__c</members>
 		<members>InsurancePolicy.DSALES_Modelo__c</members>
 		<members>InsurancePolicy.DSALES_Nmerodemotor__c</members>

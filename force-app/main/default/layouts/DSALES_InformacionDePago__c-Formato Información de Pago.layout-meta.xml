@@ -16,7 +16,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Tel_fono__c</field>
+                <field>DSALES_Telefono__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -28,7 +28,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Direcci_n_Tienda__c</field>
+                <field>DSALES_DireccionTienda__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -36,11 +36,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Direcci_n_del_Cliente__c</field>
+                <field>DSALES_DireccionCliente__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Tel_fono_del_cliente__c</field>
+                <field>DSALES_TelefonoCliente__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -113,13 +113,13 @@
     <miniLayout>
         <fields>DSALES_Factura__c</fields>
         <fields>DSALES_Clave_Tienda__c</fields>
-        <fields>DSALES_Tel_fono__c</fields>
+        <fields>DSALES_Telefono__c</fields>
         <fields>DSALES_Nombre_de_la_Tienda__c</fields>
         <fields>DSALES_Caja__c</fields>
-        <fields>DSALES_Direcci_n_Tienda__c</fields>
+        <fields>DSALES_DireccionTienda__c</fields>
         <fields>DSALES_Vendedor__c</fields>
-        <fields>DSALES_Direcci_n_del_Cliente__c</fields>
-        <fields>DSALES_Tel_fono_del_cliente__c</fields>
+        <fields>DSALES_DireccionCliente__c</fields>
+        <fields>DSALES_TelefonoCliente__c</fields>
         <fields>DSALES_Celular_del_Cliente__c</fields>
     </miniLayout>
     <showEmailCheckbox>false</showEmailCheckbox>

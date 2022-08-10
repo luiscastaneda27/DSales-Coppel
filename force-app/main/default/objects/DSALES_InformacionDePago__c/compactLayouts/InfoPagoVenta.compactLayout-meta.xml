@@ -5,7 +5,7 @@
     <fields>DSALES_ProductoAdquirido__c</fields>
     <fields>DSALES_Fecha__c</fields>
     <fields>DSALES_Marca__c</fields>
-    <fields>DSALES_M_delo__c</fields>
+    <fields>DSALES_Modelo__c</fields>
     <fields>DSALES_Motor__c</fields>
     <fields>DSALES_No_de_serie__c</fields>
     <fields>DSALES_Precio__c</fields>

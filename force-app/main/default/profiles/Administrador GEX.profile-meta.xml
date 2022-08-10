@@ -163,17 +163,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Certificado__c.DSALES_Informaci_n_de_Pago__c</field>
+        <field>DSALES_Certificado__c.DSALES_InformacionDePago__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Certificado__c.DSALES_M_arca__c</field>
+        <field>DSALES_Certificado__c.DSALES_Marca__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Certificado__c.DSALES_M_odelo__c</field>
+        <field>DSALES_Certificado__c.DSALES_Modelo__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -228,17 +228,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Certificado__c.DSALES_S_KU__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DSALES_Certificado__c.DSALES_T_ienda__c</field>
+        <field>DSALES_Certificado__c.DSALES_SKU__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>DSALES_Certificado__c.DSALES_Ticket__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_Certificado__c.DSALES_Tienda__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -263,7 +263,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Endoso__c.DSALES_Correo_electr_nico__c</field>
+        <field>DSALES_Endoso__c.DSALES_CorreoElectronico__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -278,22 +278,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Endoso__c.DSALES_Motivo_de_devoluci_n__c</field>
+        <field>DSALES_Endoso__c.DSALES_MotivoDevolucion__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Endoso__c.DSALES_Motivo_de_rechazo__c</field>
+        <field>DSALES_Endoso__c.DSALES_MotivoRechazo__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Endoso__c.DSALES_NmerodeclienteCoppel__c</field>
+        <field>DSALES_Endoso__c.DSALES_NumeroClienteCoppel__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Endoso__c.DSALES_Soluci_n_a_devoluci_n__c</field>
+        <field>DSALES_Endoso__c.DSALES_SolucionDevolucion__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -328,7 +328,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_Descripci_n_del_art_culo__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_DescripcionArticulo__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -338,7 +338,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_Exp_en__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_ExpEn__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -353,17 +353,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_M_delo__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>DSALES_InformacionDePago__c.DSALES_Marca__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Modelo__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -498,7 +498,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>InsurancePolicy.DSALES_Correo_electr_nico__c</field>
+        <field>InsurancePolicy.DSALES_CorreoElectronico__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

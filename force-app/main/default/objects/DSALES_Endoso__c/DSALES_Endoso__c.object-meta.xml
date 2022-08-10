@@ -168,7 +168,7 @@
         <searchResultsAdditionalFields>DSALES_Cliente__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Estatus__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>P_liza__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DSALES_Poliza__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

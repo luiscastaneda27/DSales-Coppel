@@ -16,7 +16,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_NmerodeclienteCoppel__c</field>
+                <field>DSALES_NumeroClienteCoppel__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -24,7 +24,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>P_liza__c</field>
+                <field>DSALES_Poliza__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -38,7 +38,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>DSALES_Correo_electr_nico__c</field>
+                <field>DSALES_CorreoElectronico__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -46,15 +46,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Motivo_de_devoluci_n__c</field>
+                <field>DSALES_MotivoDevolucion__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Soluci_n_a_devoluci_n__c</field>
+                <field>DSALES_SolucionDevolucion__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Motivo_de_rechazo__c</field>
+                <field>DSALES_MotivoRechazo__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

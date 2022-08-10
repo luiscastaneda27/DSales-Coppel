@@ -4,7 +4,7 @@
     <columns>NAME</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>DSALES_T_ienda__c</field>
+        <field>DSALES_Tienda__c</field>
         <operation>equals</operation>
         <value>T 0983</value>
     </filters>
