@@ -67,8 +67,8 @@
 		<members>DSALES_Certificado__c.DSALES_Precio_del_Articulo__c</members>
 		<members>DSALES_Certificado__c.DSALES_ProductoAdquirido__c</members>
 		<members>DSALES_Certificado__c.DSALES_SKU__c</members>
-		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
 		<members>DSALES_Certificado__c.DSALES_Ticket__c</members>
+		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
 		<members>DSALES_Certificado__c.DSALES_Vigenciacumplida__c</members>
 		<members>DSALES_Certificado__c.DSALES_enviado__c</members>
 		<members>DSALES_Certificado__c.NOMIGRAR__c</members>
@@ -78,9 +78,9 @@
 		<members>DSALES_Endoso__c.DSALES_Folio__c</members>
 		<members>DSALES_Endoso__c.DSALES_MotivoDevolucion__c</members>
 		<members>DSALES_Endoso__c.DSALES_MotivoRechazo__c</members>
-		<members>DSALES_Endoso__c.DSALES_SolucionDevolucion__c</members>
-		<members>DSALES_Endoso__c.DSALES_Poliza__c</members>
 		<members>DSALES_Endoso__c.DSALES_NumeroClienteCoppel__c</members>
+		<members>DSALES_Endoso__c.DSALES_Poliza__c</members>
+		<members>DSALES_Endoso__c.DSALES_SolucionDevolucion__c</members>
 		<members>DSALES_Generador__c.DSALES_Plantilla__c</members>
 		<members>DSALES_InformacionDePago__c.DALES_dineroelectronico__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Caja__c</members>
@@ -91,18 +91,17 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_CreditoIVA__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DescripcionArticulo__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DireccionCliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Duracion_GEX_meses__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Estatus__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_ExpEn__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Factura__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Fecha__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Formadepago__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Ganodineroelec__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Modelo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Marca__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Modelo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Motor__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_No_de_cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_No_de_serie__c</members>
@@ -115,8 +114,8 @@
 		<members>DSALES_InformacionDePago__c.DSALES_ProductoAdquirido__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_SKU__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Saldodineroelec__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Telefono__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_TelefonoCliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Telefono__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_TotalContado__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_VehIculo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Vendedor__c</members>
@@ -158,7 +157,15 @@
 		<members>Opportunity.DSALES_Periodo__c</members>
 		<members>Opportunity.DSALES_Region__c</members>
 		<members>Opportunity.DSALES_Tienda__c</members>
+		<members>Opportunity.DSales_Cotizacion_Entregada__c</members>
+		<members>Opportunity.DSales_Duracion_de_Garantia__c</members>
+		<members>Opportunity.DSales_Extension_de_Garantia__c</members>
+		<members>Opportunity.DSales_Pago_Registrado__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
+		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
+		<members>Quote.DSALES_Dias_Transcurridos__c</members>
+		<members>Quote.DSALES_Fechadecreacionpresupuesto__c</members>
+		<members>Quote.DSALES_FormadePago__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
