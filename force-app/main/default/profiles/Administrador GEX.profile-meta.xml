@@ -544,7 +544,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.DSALES_Dias_Transcurridos__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -557,9 +557,9 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Opportunity.DSALES_Fecha_creacion__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -611,6 +611,14 @@
         <layout>DSALES_Generador__c-Formato Generador Plantillas</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>DSALES_Informaci_n_de_Pago__c-DSALES_Info_pago_Venta_NPV</layout>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>DSALES_Informaci_n_de_Pago__c-DSALES_Info_pago_Venta_NPV</layout>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>DSALES_Informaci_n_de_Pago__c-Formato Información de Pago</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -626,10 +634,66 @@
         <layout>PersonAccount-DSALES_Clientes</layout>
         <recordType>PersonAccount.PersonAccount</recordType>
     </layoutAssignments>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>DSALES_Certificado__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>DSALES_Generador__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>DSALES_Informaci_n_de_Pago__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>DSALES_Matriz_de_Cotizacion__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>DSales_Matriz_GEX__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <pageAccesses>
         <apexPage>DSALES_CertificadoPDF</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>

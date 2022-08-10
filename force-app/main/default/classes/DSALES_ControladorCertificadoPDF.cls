@@ -10,9 +10,10 @@ public class DSALES_ControladorCertificadoPDF {
         String recordId = ApexPages.currentPage().getParameters().get('certificadoId');
         //html = [Select Id, HtmlValue, Subject from EmailTemplate Where DeveloperName = :NOMBRE_PLANTILLA].HtmlValue;
         html = [select Id, DSALES_Plantilla__c  from DSALES_Generador__c Where Name = :NOMBRE_PLANTILLA].DSALES_Plantilla__c;
-        html = html.replace('border-color: #ffffff;', 'border-image: initial; border: .3px solid blue;');
-        html=html.replace('p style="text-align:center"', 'text-align:center; font-size:10px; color:rgb(0, 101, 173);');
-        html=html.replace('<div>&nbsp;&nbsp;&nbsp;</div>', '<div style="page-break-after:always;" />');
+        html = html.replace('border-color: #ffffff;', 'border-image: initial; border: 1px solid blue;');
+        html=html.replace('p style="text-align:center"', 'p style="text-align:center; font-size:10px; color:rgb(0, 101, 173);"');
+        html=html.replace('<div><hr /><p>&nbsp;</p></div>', '<div style="page-break-after: always"><span style="display:none">&nbsp;</span></div>');
+        
         Map<String, String> mapCampos = getField(NOMBRE_OBJETO);
         String query = 'Select ';
         for(String item: mapCampos.keySet()){

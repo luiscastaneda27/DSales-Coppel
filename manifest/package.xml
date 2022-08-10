@@ -14,8 +14,6 @@
 		<members>DSALES_MatrizHelper</members>
 		<name>ApexClass</name>
 	</types>
-    
-
 	<types>
 		<members>DSALES_CertificadoPDF</members>
 		<name>ApexPage</name>
@@ -161,6 +159,15 @@
 		<members>Opportunity.DSALES_Tienda__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
 		<name>CustomField</name>
+	</types>
+	<types>
+		<members>DSALES_Certificado__c</members>
+		<members>DSALES_Endoso__c</members>
+		<members>DSALES_Generador__c</members>
+		<members>DSALES_Informaci_n_de_Pago__c</members>
+		<members>DSALES_Matriz_de_Cotizacion__c</members>
+		<members>DSales_Matriz_GEX__c</members>
+		<name>CustomObject</name>
 	</types>
 	<types>
 		<members>DSALES_MatrizPaginaRegistro</members>

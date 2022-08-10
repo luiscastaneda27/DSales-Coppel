@@ -610,7 +610,15 @@
         <layout>DSALES_Generador__c-Formato Generador Plantillas</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>DSALES_Informaci_n_de_Pago__c-DSALES_Info_pago_Venta_NPV</layout>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>DSALES_Informaci_n_de_Pago__c-Formato Información de Pago</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>DSALES_Informaci_n_de_Pago__c-Formato Información de Pago</layout>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>DSALES_Matriz_de_Cotizacion__c-Formato Matriz de Cotización</layout>
@@ -622,6 +630,16 @@
         <apexPage>DSALES_CertificadoPDF</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
