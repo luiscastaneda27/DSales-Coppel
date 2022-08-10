@@ -168,7 +168,7 @@
         <searchResultsAdditionalFields>DSALES_ProductoAdquirido__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Fecha__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Estatus__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>DSALES_Formadepago_c__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DSALES_FormaDePago__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Oportunidad__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Precio__c</searchResultsAdditionalFields>
     </searchLayouts>

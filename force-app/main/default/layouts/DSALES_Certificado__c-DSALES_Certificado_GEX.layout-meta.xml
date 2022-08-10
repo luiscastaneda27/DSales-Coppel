@@ -35,7 +35,8 @@
                 <field>DSALES_Ticket__c</field>
             </layoutItems>
             <layoutItems>
-                <emptySpace>true</emptySpace>
+                <behavior>Edit</behavior>
+                <field>DSALES_Estatus__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -91,7 +92,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Descripci_n_del_artculo__c</field>
+                <field>DSALES_DescripcionDelArtculo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

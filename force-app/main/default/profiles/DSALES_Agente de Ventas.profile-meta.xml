@@ -87,7 +87,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Claim.DSALES_Estatus_C__c</field>
+        <field>Claim.DSALES_Estatus__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -107,7 +107,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Certificado__c.DSALES_Descripci_n_del_artculo__c</field>
+        <field>DSALES_Certificado__c.DSALES_DescripcionDelArtculo__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -177,7 +177,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Certificado__c.DSALES_No_Transacci_n__c</field>
+        <field>DSALES_Certificado__c.DSALES_No_Transaccion__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -287,7 +287,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>DSALES_Endoso__c.DSALES_NmerodeclienteCoppel__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>DSALES_Endoso__c.DSALES_Soluci_n_a_devoluci_n__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DSALES_Endoso__c.DSALES_Tipodeendoso__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -332,7 +342,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_Formadepago_c__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_FormaDePago__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -357,7 +367,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_Motor_c__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Motor__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -407,7 +417,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_InformacionDePago__c.DSALES_VehIculo_c__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_VehIculo__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -472,7 +482,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>InsurancePolicy.DSALES_Armadora_c__c</field>
+        <field>InsurancePolicy.DSALES_Armadora__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -517,7 +527,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>InsurancePolicy.DSALES_PDFpoliza_c__c</field>
+        <field>InsurancePolicy.DSALES_PDFpoliza__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

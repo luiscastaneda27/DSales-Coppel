@@ -37,11 +37,11 @@
 		<members>Asset.DSALES_Oportunidad__c</members>
 		<members>Asset.DSALES_Region__c</members>
 		<members>Asset.DSALES_Servicio__c</members>
-		<members>Claim.DSALES_Estatus_C__c</members>
+		<members>Claim.DSALES_Estatus__c</members>
 		<members>DSALES_Certificado__c.DSALES_Caja_GEX__c</members>
 		<members>DSALES_Certificado__c.DSALES_Cliente__c</members>
 		<members>DSALES_Certificado__c.DSALES_Costo_de_Garantia_Extendida__c</members>
-		<members>DSALES_Certificado__c.DSALES_Descripci_n_del_artculo__c</members>
+		<members>DSALES_Certificado__c.DSALES_DescripcionDelArtculo__c</members>
 		<members>DSALES_Certificado__c.DSALES_Domicilio_del_Client_e__c</members>
 		<members>DSALES_Certificado__c.DSALES_Duracion_de_GEX__c</members>
 		<members>DSALES_Certificado__c.DSALES_E_mail__c</members>
@@ -55,7 +55,7 @@
 		<members>DSALES_Certificado__c.DSALES_Informaci_n_de_Pago__c</members>
 		<members>DSALES_Certificado__c.DSALES_M_arca__c</members>
 		<members>DSALES_Certificado__c.DSALES_M_odelo__c</members>
-		<members>DSALES_Certificado__c.DSALES_No_Transacci_n__c</members>
+		<members>DSALES_Certificado__c.DSALES_No_Transaccion__c</members>
 		<members>DSALES_Certificado__c.DSALES_No_de_Telefono__c</members>
 		<members>DSALES_Certificado__c.DSALES_NombreCliente__c</members>
 		<members>DSALES_Certificado__c.DSALES_Nombre_Vendedor__c</members>
@@ -97,12 +97,12 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Exp_en__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Factura__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Fecha__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Formadepago_c__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Formadepago__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Ganodineroelec__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_M_delo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Marca__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_Motor_c__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Motor__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_No_de_cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_No_de_serie__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Nombre_de_la_Tienda__c</members>
@@ -117,7 +117,7 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Tel_fono__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Tel_fono_del_cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_TotalContado__c</members>
-		<members>DSALES_InformacionDePago__c.DSALES_VehIculo_c__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_VehIculo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Vendedor__c</members>
 		<members>DSALES_Matriz_de_Cotizacion__c.DSALES_ID_Matriz_GEX__c</members>
 		<members>DSALES_Matriz_de_Cotizacion__c.DSALES_MatrizItemClone__c</members>
@@ -132,7 +132,7 @@
 		<members>DSales_Matriz_GEX__c.DSALES_Tiempogex__c</members>
 		<members>DSales_Matriz_GEX__c.DSALES_Tipo__c</members>
 		<members>DSales_Matriz_GEX__c.DSales_Region_GEX__c</members>
-		<members>InsurancePolicy.DSALES_Armadora_c__c</members>
+		<members>InsurancePolicy.DSALES_Armadora__c</members>
 		<members>InsurancePolicy.DSALES_Asegurado__c</members>
 		<members>InsurancePolicy.DSALES_Clavevehicular__c</members>
 		<members>InsurancePolicy.DSALES_Correo_electr_nico__c</members>
@@ -141,7 +141,7 @@
 		<members>InsurancePolicy.DSALES_Nmerodemotor__c</members>
 		<members>InsurancePolicy.DSALES_Numeroserie__c</members>
 		<members>InsurancePolicy.DSALES_Oportunidad__c</members>
-		<members>InsurancePolicy.DSALES_PDFpoliza_c__c</members>
+		<members>InsurancePolicy.DSALES_PDFpoliza__c</members>
 		<members>InsurancePolicy.DSALES_RFC__c</members>
 		<members>InsurancePolicy.DSALES_Tipodepersona__c</members>
 		<members>InsurancePolicy.DSALES_VigenciacumplidaSM__c</members>

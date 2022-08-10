@@ -59,7 +59,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Formadepago_c__c</field>
+                <field>DSALES_FormaDePago__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -111,7 +111,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_VehIculo_c__c</field>
+                <field>DSALES_VehIculo__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -119,7 +119,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Motor_c__c</field>
+                <field>DSALES_Motor__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>

@@ -16,7 +16,7 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>DSALES_Formadepago_c__c</picklist>
+        <picklist>DSALES_FormaDePago__c</picklist>
         <values>
             <fullName>Efectivo</fullName>
             <default>false</default>
