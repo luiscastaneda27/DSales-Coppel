@@ -216,7 +216,7 @@
         <fields>NAME</fields>
         <fields>DSALES_Factura__c</fields>
         <fields>DSALES_SKU__c</fields>
-        <relatedList>DSALES_Informaci_n_de_Pago__c.DSALES_Certificado__c</relatedList>
+        <relatedList>DSALES_InformacionDePago__c.DSALES_Certificado__c</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>

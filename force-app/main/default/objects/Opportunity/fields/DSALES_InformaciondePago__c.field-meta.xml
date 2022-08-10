@@ -4,7 +4,7 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Información de Pago</label>
-    <referenceTo>DSALES_Informaci_n_de_Pago__c</referenceTo>
+    <referenceTo>DSALES_InformacionDePago__c</referenceTo>
     <relationshipLabel>Oportunidades</relationshipLabel>
     <relationshipName>Oportunidades</relationshipName>
     <required>false</required>

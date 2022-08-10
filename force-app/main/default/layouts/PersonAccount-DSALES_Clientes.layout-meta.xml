@@ -225,7 +225,7 @@
         <fields>DSALES_Certificado__c</fields>
         <fields>DSALES_ProductoAdquirido__c</fields>
         <fields>DSALES_SKU__c</fields>
-        <relatedList>DSALES_Informaci_n_de_Pago__c.DSALES_Cliente__c</relatedList>
+        <relatedList>DSALES_InformacionDePago__c.DSALES_Cliente__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>

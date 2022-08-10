@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_PagosdeVentaenNPVSM_c</fullName>
+    <active>true</active>
+    <description>Registro de pagos desde el nuevo punto de venta para SM</description>
+    <label>Pagos de Venta en NPV de SM</label>
+    <picklistValues>
+        <picklist>DSALES_Estatus__c</picklist>
+        <values>
+            <fullName>Acreditado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Acreditado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_Formadepago_c__c</picklist>
+        <values>
+            <fullName>Efectivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarjeta de crédito</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

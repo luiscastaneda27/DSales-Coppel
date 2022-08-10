@@ -297,117 +297,117 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DALES_dineroelectronico__c</field>
+        <field>DSALES_InformacionDePago__c.DALES_dineroelectronico__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Cambio__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Cambio__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Certificado__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Certificado__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_CreditoIVA__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Descripci_n_del_art_culo__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Duracion_GEX_meses__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Exp_en__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Formadepago_c__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Ganodineroelec__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_CreditoIVA__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_M_delo__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Marca__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Descripci_n_del_art_culo__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Menospagoinicial__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Duracion_GEX_meses__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Motor_c__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Exp_en__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_No_de_cliente__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_No_de_serie__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Formadepago_c__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Nombre_del_Vendedor__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Ganodineroelec__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Nombre_del_cliente__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_M_delo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Marca__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Pagoefectivo__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Motor_c__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Precio__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_No_de_cliente__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_No_de_serie__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_SKU__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Nombre_del_Vendedor__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Nombre_del_cliente__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Pagoefectivo__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_Precio__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>DSALES_InformacionDePago__c.DSALES_SKU__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_Saldodineroelec__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_Saldodineroelec__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_TotalContado__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_TotalContado__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>DSALES_Informaci_n_de_Pago__c.DSALES_VehIculo_c__c</field>
+        <field>DSALES_InformacionDePago__c.DSALES_VehIculo_c__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -610,15 +610,15 @@
         <layout>DSALES_Generador__c-Formato Generador Plantillas</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_Informaci_n_de_Pago__c-DSALES_Info_pago_Venta_NPV</layout>
-        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+        <layout>DSALES_InformacionDePago__c-DSALES_Info_pago_Venta_NPV</layout>
+        <recordType>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_Informaci_n_de_Pago__c-Formato Información de Pago</layout>
+        <layout>DSALES_InformacionDePago__c-Formato Información de Pago</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_Informaci_n_de_Pago__c-Formato Información de Pago</layout>
-        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
+        <layout>DSALES_InformacionDePago__c-Formato Información de Pago</layout>
+        <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>DSALES_Matriz_de_Cotizacion__c-Formato Matriz de Cotización</layout>
@@ -632,12 +632,12 @@
     </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_Pagos_en_NPV</recordType>
+        <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
-        <recordType>DSALES_Informaci_n_de_Pago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
+        <recordType>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>

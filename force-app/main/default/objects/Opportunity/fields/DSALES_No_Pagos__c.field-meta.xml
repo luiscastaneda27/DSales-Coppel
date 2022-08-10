@@ -4,7 +4,7 @@
     <description>Campo que hace conteo de numero de pagos</description>
     <externalId>false</externalId>
     <label>No. Pagos</label>
-    <summaryForeignKey>DSALES_Informaci_n_de_Pago__c.DSALES_Oportunidad__c</summaryForeignKey>
+    <summaryForeignKey>DSALES_InformacionDePago__c.DSALES_Oportunidad__c</summaryForeignKey>
     <summaryOperation>count</summaryOperation>
     <trackTrending>false</trackTrending>
     <type>Summary</type>

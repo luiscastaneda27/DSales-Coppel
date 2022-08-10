@@ -278,7 +278,7 @@
         <fields>NAME</fields>
         <fields>Account.NAME</fields>
         <fields>DSALES_Estatus__c</fields>
-        <relatedList>DSALES_Informaci_n_de_Pago__c.DSALES_Oportunidad__c</relatedList>
+        <relatedList>DSALES_InformacionDePago__c.DSALES_Oportunidad__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>QUOTE.QUOTENUMBER</fields>

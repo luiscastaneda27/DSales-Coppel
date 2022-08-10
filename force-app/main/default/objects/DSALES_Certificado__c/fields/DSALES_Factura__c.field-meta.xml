@@ -4,7 +4,7 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Factura</label>
-    <referenceTo>DSALES_Informaci_n_de_Pago__c</referenceTo>
+    <referenceTo>DSALES_InformacionDePago__c</referenceTo>
     <relationshipLabel>Certificados</relationshipLabel>
     <relationshipName>Pago</relationshipName>
     <required>false</required>
