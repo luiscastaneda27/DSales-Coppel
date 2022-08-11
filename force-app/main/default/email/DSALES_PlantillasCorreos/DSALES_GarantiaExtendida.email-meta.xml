@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla que se enviará cuando se inserte un registro de Garantía Extendida</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Garantía Extendida</name>
+    <style>none</style>
+    <subject>Tu certificado de Garantía Extendida Coppel / La compra de tu Garantía Extendida ha sido exitosa.</subject>
+    <textOnly>{nombreCliente}
+
+¡Felicidades!, acabas de extender la garantía de tu producto adquirido en Coppel.
+Te invitamos a consultar el certificado de tu Garantía Extendida en donde te compartimos el detalle del servicio de protección que adquiriste y sus términos y condiciones para disfrutar de sus beneficios.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

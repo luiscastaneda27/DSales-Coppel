@@ -192,6 +192,13 @@
 		<name>DuplicateRule</name>
 	</types>
 	<types>
+		<members>DSALES_PlantillasCorreos</members>
+		<members>DSALES_PlantillasCorreos/DSALES_CertificadoGEX</members>
+		<members>DSALES_PlantillasCorreos/DSALES_CertificadoPDF</members>
+		<members>DSALES_PlantillasCorreos/DSALES_GarantiaExtendida</members>
+		<name>EmailTemplate</name>
+	</types>
+	<types>
 		<members>DSALES_MatrizPaginaRegistro</members>
 		<members>DSALES_Pagina_de_Inicio_GEX</members>
 		<members>DSALES_PysisAccountRecordPage</members>
