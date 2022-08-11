@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Venta Garantía</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Gerente Venta Servicios</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>DSALES_Direccion_seguros_y_garant_as</parentRole>
+</Role>
