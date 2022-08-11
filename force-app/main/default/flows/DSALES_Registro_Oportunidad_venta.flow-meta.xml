@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>Si no hay un producto de servicio despues de 30 dias de creación de oportunidad se cambiara a estado &quot; Cerrada Perdida &quot;</description>
+        <name>DSALES_Sin_Producto_Servicio</name>
+        <label>Sin Producto de Servicio</label>
+        <locationX>446</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>DSALES_Cerrada_Perdida</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DSALES_Dias_Transcurridos__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>30.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.DSALES_No_Pagos__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DSALES_Actualiza_Estatus_Perdido</targetReference>
+            </connector>
+            <label>Cerrada Perdida</label>
+        </rules>
+        <rules>
+            <name>DSALES_En_Espera_Pago</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SyncedQuote.DSALES_Dias_Transcurridos__c</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>7.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.DSALES_No_Pagos__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.DSALES_No_Presupuesto__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DSALES_Cambia_Estatus_Espera_Pago</targetReference>
+            </connector>
+            <label>En Espera de Pago</label>
+        </rules>
+        <rules>
+            <name>DSALES_Cerrada_Ganada</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DSALES_No_Pagos__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>General</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DSALES_Cambia_Estatus_Ganada</targetReference>
+            </connector>
+            <label>Cerrada Ganada</label>
+        </rules>
+    </decisions>
+    <description>Realiza las automatizaciones del registro de la oportunidad para cuando las etapas son: &quot;Cerrada Perdida&quot; / &quot;En espera de pago&quot; / &quot;Cerrada Ganada&quot;</description>
+    <interviewLabel>Registro de Oportunidad de venta {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Registro de Oportunidad de venta</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Actualiza el estatus de la oportunidad a &quot; Cerrada Perdida &quot;</description>
+        <name>DSALES_Actualiza_Estatus_Perdido</name>
+        <label>Actualiza Estatus Perdido</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Cerrada perdida</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Cambia el estatus de la oportunidad a &quot; En espera de Pago &quot;</description>
+        <name>DSALES_Cambia_Estatus_Espera_Pago</name>
+        <label>Cambia Estatus Espera de Pago</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>En espera de pago</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Cambia el estatus de la oportunidad a &quot; Cerrada Ganada &quot;</description>
+        <name>DSALES_Cambia_Estatus_Ganada</name>
+        <label>Cambia Estatus a Ganada</label>
+        <locationX>578</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Cerrada ganada</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>320</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DSALES_Sin_Producto_Servicio</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

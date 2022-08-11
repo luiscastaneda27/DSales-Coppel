@@ -207,6 +207,22 @@
 		<name>FlexiPage</name>
 	</types>
 	<types>
+		<members>DSALES_Alerta_certificado_caduco</members>
+		<members>DSALES_Alerta_p_liza_caduca</members>
+		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
+		<members>DSALES_Correo_Endoso_Nuevo</members>
+		<members>DSALES_Correo_nueva_p_liza</members>
+		<members>DSALES_Correo_nuevo_siniestro</members>
+		<members>DSALES_Correo_rechazo_de_siniestro</members>
+		<members>DSALES_Correo_siniestro_completado</members>
+		<members>DSALES_Envi_de_correo_estatus_Autorizado</members>
+		<members>DSALES_Envi_de_correo_estatus_en_rechazo</members>
+		<members>DSALES_Envi_de_correo_estatus_en_requerimiento_de_informaci_n</members>
+		<members>DSALES_Presupuesto_Vencido</members>
+		<members>DSALES_Registro_Oportunidad_venta</members>
+		<name>Flow</name>
+	</types>
+	<types>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Endoso__c-Formato Endoso</members>
 		<members>DSALES_Generador__c-Formato Generador Plantillas</members>
@@ -238,6 +254,7 @@
 		<members>DSALES_InformacionDePago__c.Nuevos_de_esta_semana</members>
 		<members>DSALES_Matriz_de_Cotizacion__c.All</members>
 		<members>DSales_Matriz_GEX__c.All</members>
+		<members>Quote.All</members>
 		<members>Quote.DSALES_Nuevosdeestasemana</members>
 		<name>ListView</name>
 	</types>
@@ -248,7 +265,10 @@
 	<types>
 		<members>Administrador GEX</members>
 		<members>Administrador SM</members>
-		<members>DSALES_Agente de Ventas</members>
+		<members>Agente de servicios SM</members>
+		<members>Atención de servicio SM</members>
+		<members>Control de Informes GEX</members>
+		<members>Control de Informes SM</members>
 		<name>Profile</name>
 	</types>
 	<types>
@@ -275,7 +295,7 @@
 		<members>DSALES_Atenci_n_a_servicio</members>
 		<members>DSALES_Control_de_informes_GEX</members>
 		<members>DSALES_Control_de_informes_SM</members>
-		<members>DSALES_Direccion_seguros_y_garant_as</members>
+		<members>DSALES_DireccionSegurosGarantias</members>
 		<members>DSALES_Gerente_Venta_Garant_a</members>
 		<members>DSALES_Gerente_Venta_seguros</members>
 		<name>Role</name>
@@ -289,6 +309,15 @@
 	<types>
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
 		<name>WebLink</name>
+	</types>
+	<types>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_de_el_Endoso_a_tramite</members>
+		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
+		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
+		<name>WorkflowAlert</name>
 	</types>
 	<version>53.0</version>
 </Package>

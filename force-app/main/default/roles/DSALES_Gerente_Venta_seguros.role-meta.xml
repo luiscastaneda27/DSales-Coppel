@@ -6,5 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>Gerente Venta Seguros</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>DSALES_Direccion_seguros_y_garant_as</parentRole>
+    <parentRole>DSALES_DireccionSegurosGarantias</parentRole>
 </Role>
