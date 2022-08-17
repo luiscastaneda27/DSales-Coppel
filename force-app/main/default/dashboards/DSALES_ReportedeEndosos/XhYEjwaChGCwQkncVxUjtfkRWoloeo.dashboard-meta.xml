@@ -35,7 +35,7 @@
                 <header>Endosos por estatus de este mes</header>
                 <legendPosition>Bottom</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</report>
+                <report>CoppelPISyS/SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -65,7 +65,7 @@
                 <indicatorHighColor>#C23934</indicatorHighColor>
                 <indicatorLowColor>#00716B</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
+                <report>CoppelPISyS/SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
                 <showPercentage>true</showPercentage>
                 <showRange>false</showRange>
                 <showTotal>true</showTotal>

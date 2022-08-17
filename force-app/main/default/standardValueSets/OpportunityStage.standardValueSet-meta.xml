@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Nuevo</fullName>
+        <color>#FFFF66</color>
+        <default>false</default>
+        <label>Nuevo</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Clasificación</fullName>
+        <color>#FF9900</color>
+        <default>false</default>
+        <description>You&apos;ve contacted the prospect and they&apos;re interested.</description>
+        <label>Clasificación</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Necesita análisis</fullName>
+        <color>#33CCFF</color>
+        <default>false</default>
+        <description>You&apos;re defining the prospect&apos;s needs.</description>
+        <label>Necesita análisis</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>35</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>En espera de aceptación de Cliente</fullName>
+        <color>#FFCC66</color>
+        <default>false</default>
+        <label>En espera de aceptación de Cliente</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>40</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>En espera de pago</fullName>
+        <color>#0B6FCE</color>
+        <default>false</default>
+        <label>En espera de pago</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrada ganada</fullName>
+        <color>#33FF33</color>
+        <default>false</default>
+        <description>Sold!</description>
+        <label>Cerrada ganada</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Cerrada perdida</fullName>
+        <color>#FF0000</color>
+        <default>false</default>
+        <description>No sale.</description>
+        <label>Cerrada perdida</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+</StandardValueSet>

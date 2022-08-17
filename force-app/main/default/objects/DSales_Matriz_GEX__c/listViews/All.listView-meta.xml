@@ -11,10 +11,5 @@
     <columns>LAST_UPDATE</columns>
     <columns>UPDATEDBY_USER</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>DSALES_EsClone__c</field>
-        <operation>equals</operation>
-        <value>1</value>
-    </filters>
     <label>Todos</label>
 </ListView>

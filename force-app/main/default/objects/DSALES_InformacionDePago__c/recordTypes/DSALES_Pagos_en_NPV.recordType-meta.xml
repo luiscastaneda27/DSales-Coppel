@@ -26,4 +26,15 @@
             <default>false</default>
         </values>
     </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_TipoCompra__c</picklist>
+        <values>
+            <fullName>Producto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

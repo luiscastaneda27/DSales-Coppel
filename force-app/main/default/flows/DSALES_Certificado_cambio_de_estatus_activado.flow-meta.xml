@@ -18,7 +18,7 @@
         </connector>
     </assignments>
     <interviewLabel>Certificado cambio de estatus activado {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Certificado cambio de estatus activado</label>
+    <label>Certificado cambio de estatus activado V2</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

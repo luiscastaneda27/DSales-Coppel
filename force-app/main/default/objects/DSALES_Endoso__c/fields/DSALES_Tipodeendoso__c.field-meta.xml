@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DSALES_Tipodeendoso__c</fullName>
+    <description>Campo para ingresar que tipo de endoso se va a generar</description>
     <externalId>false</externalId>
     <label>Tipo de endoso</label>
     <required>false</required>
@@ -10,7 +11,7 @@
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>true</sorted>
+            <sorted>false</sorted>
             <value>
                 <fullName>Cambio de dirección</fullName>
                 <default>false</default>
@@ -50,6 +51,26 @@
                 <fullName>Corrección de RFC</fullName>
                 <default>false</default>
                 <label>Corrección de RFC</label>
+            </value>
+            <value>
+                <fullName>Actualización de correo electrónico</fullName>
+                <default>false</default>
+                <label>Actualización de correo electrónico</label>
+            </value>
+            <value>
+                <fullName>Actualización de teléfono</fullName>
+                <default>false</default>
+                <label>Actualización de teléfono</label>
+            </value>
+            <value>
+                <fullName>Actualización de color</fullName>
+                <default>false</default>
+                <label>Actualización de color</label>
+            </value>
+            <value>
+                <fullName>Beneficiario preferente</fullName>
+                <default>false</default>
+                <label>Beneficiario preferente</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -40,6 +40,22 @@
                 <behavior>Edit</behavior>
                 <field>Probability</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSALES_No_Pagos__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSALES_No_Presupuesto__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSales_Resumen_Tipo_de_Compra_Producto__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSales_Resumen_Tipo_de_Compra_Servicio__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -61,6 +77,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>DSales_Extension_de_Garantia__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSALES_Dias_Transcurridos__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

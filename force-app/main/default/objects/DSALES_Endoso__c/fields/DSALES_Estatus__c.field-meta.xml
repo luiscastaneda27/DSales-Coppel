@@ -25,6 +25,11 @@
                 <label>En tramite</label>
             </value>
             <value>
+                <fullName>Recibido</fullName>
+                <default>false</default>
+                <label>Recibido</label>
+            </value>
+            <value>
                 <fullName>Requerimiento de Información</fullName>
                 <color>#F3D904</color>
                 <default>false</default>

@@ -35,6 +35,10 @@
                 <behavior>Required</behavior>
                 <field>DSALES_Telefono__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSALES_TipoCompra__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

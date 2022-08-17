@@ -1,6 +1,6 @@
 public class DSALES_MatrizCotizacion {    
     public static String clonarMatriz(Id recordId){       
-        List<String> listaCampo = Clonar_Matriz.getField('DSales_Matriz_GEX__c');
+        List<String> listaCampo = DSALES_ClonarMatriz.getField('DSales_Matriz_GEX__c');
         String query = 'Select ';
         for(Integer i = 0; i < listaCampo.size(); i++){
             query += listaCampo[i]+',';  
@@ -19,7 +19,7 @@ public class DSALES_MatrizCotizacion {
     }
     
     public static void clonarMatrizItem(Id originalId, Id recordId){       
-        List<String> listaCampo = Clonar_Matriz.getField('DSALES_Matriz_de_Cotizacion__c');
+        List<String> listaCampo = DSALES_ClonarMatriz.getField('DSALES_Matriz_de_Cotizacion__c');
         String query = 'Select ';
         for(Integer i = 0; i < listaCampo.size(); i++){
             query += listaCampo[i]+',';  
