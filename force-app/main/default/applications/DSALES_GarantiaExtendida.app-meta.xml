@@ -372,7 +372,6 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>DSales_Matriz_GEX__c</tabs>
-    <tabs>DSales_ClasificacionDeServicio__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Garant_a_Extendida_UtilityBar</utilityBar>
 </CustomApplication>

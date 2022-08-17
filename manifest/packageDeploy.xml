@@ -148,6 +148,7 @@
 		<members>InsurancePolicy.DSALES_Numeroserie__c</members>
 		<members>InsurancePolicy.DSALES_Oportunidad__c</members>
 		<members>InsurancePolicy.DSALES_PDFpoliza__c</members>
+		<members>InsurancePolicy.DSALES_Productoadquirido__c</members>
 		<members>InsurancePolicy.DSALES_RFC__c</members>
 		<members>InsurancePolicy.DSALES_Tipodepersona__c</members>
 		<members>InsurancePolicy.DSALES_VigenciacumplidaSM__c</members>
@@ -182,8 +183,8 @@
 		<members>DSALES_InformacionDePago__c</members>
 		<members>DSALES_Matriz_de_Cotizacion__c</members>
 		<members>DSales_Matriz_GEX__c</members>
-		<members>InsurancePolicy</members>
-		<members>Opportunity</members>
+		<!--members>InsurancePolicy</members>
+		<members>Opportunity</members-->
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -357,6 +358,7 @@
 	</types>
 	<types>
 		<members>Opportunity.DSales_Garantia_Extendida</members>
+		<members>Opportunity.DSALES_Oportunidad</members>
 		<name>RecordType</name>
 	</types>
 	<types>
