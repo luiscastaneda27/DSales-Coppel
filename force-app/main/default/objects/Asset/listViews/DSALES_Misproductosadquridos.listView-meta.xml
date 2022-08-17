@@ -7,7 +7,8 @@
     <columns>PRODUCT2.NAME</columns>
     <columns>ASSET.PRICE</columns>
     <columns>DSALES_Oportunidad__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
+    <!--filterScope>Mine</filterScope-->
     <label>Mis productos adquridos</label>
     <sharedTo>
         <role>DSALES_Admin_GEX</role>

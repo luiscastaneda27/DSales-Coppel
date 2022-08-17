@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Opportunity.DSALES_Oportunidad</members>
-		<name>RecordType</name>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_de_el_Endoso_a_tramite</members>
+		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
+		<name>WorkflowAlert</name>
 	</types>
+
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
+		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_de_el_Endoso_a_tramite</members>
+		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
+		
 	<version>53.0</version>
 </Package>

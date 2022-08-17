@@ -36,7 +36,7 @@
                 <header>Endosos por estatus de este mes</header>
                 <legendPosition>Bottom</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>CoppelPISyS/SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</report>
+                <report>SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</report>
                 <showPercentage>true</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>false</showValues>

@@ -4,4 +4,15 @@
     <active>true</active>
     <businessProcess>FinServ__Opportunity Process</businessProcess>
     <label>Oportunidad</label>
+    <picklistValues>
+        <picklist>Tipo_de_servicio__c</picklist>
+        <values>
+            <fullName>GEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

@@ -4,6 +4,7 @@
     <columns>NAME</columns>
     <columns>DSALES_Cliente__c</columns>
     <columns>DSALES_ProductoAdquirido__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
+    <!--filterScope>Mine</filterScope-->
     <label>Mis Certificados</label>
 </ListView>

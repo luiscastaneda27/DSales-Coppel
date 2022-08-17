@@ -157,10 +157,12 @@
 		<members>Opportunity.DSALES_Division__c</members>
 		<members>Opportunity.DSALES_Fecha_Inicio__c</members>
 		<members>Opportunity.DSALES_Fecha_creacion__c</members>
+		<members>Opportunity.DSALES_Fechadenacimiento__c</members>
 		<members>Opportunity.DSALES_Gerente_de_zona__c</members>
 		<members>Opportunity.DSALES_InformaciondePago__c</members>
 		<members>Opportunity.DSALES_No_Pagos__c</members>
 		<members>Opportunity.DSALES_No_Presupuesto__c</members>
+		<members>Opportunity.DSALES_Nombredelsolicitante__c</members>
 		<members>Opportunity.DSALES_Periodo__c</members>
 		<members>Opportunity.DSALES_Region__c</members>
 		<members>Opportunity.DSALES_Tienda__c</members>
@@ -168,6 +170,9 @@
 		<members>Opportunity.DSales_Duracion_de_Garantia__c</members>
 		<members>Opportunity.DSales_Extension_de_Garantia__c</members>
 		<members>Opportunity.DSales_Pago_Registrado__c</members>
+		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Producto__c</members>
+		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Servicio__c</members>
+		<members>Opportunity.Tipo_de_servicio__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
 		<members>Quote.DSALES_Dias_Transcurridos__c</members>
@@ -223,6 +228,8 @@
 		<members>Oportunidad_PISYS_GEX</members>
 		<members>Siniestro_P_gina_de_registro</members>
 		<members>P_liza_P_gina_de_registro1</members>
+		<members>Matriz_Item_P_gina_de_registro</members>
+		<members>P_gina_de_inicio_predeterminada1</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -293,6 +300,7 @@
 	<types>
 		<members>DSales_Matriz_GEX__c.DSALES_ActualizarMatriz</members>
 		<members>DSales_Matriz_GEX__c.DSALES_ClonarMatriz</members>
+		<members>DSALES_Endoso__c.DSALES_Enviaraproveedor</members>
 		<name>QuickAction</name>
 	</types>
 	<types>
@@ -377,8 +385,9 @@
 		<name>StandardValueSet</name>
 	</types>
 	<types>
-	    <members>DSALES_PISYS.png</members>
-		<members>DSALES_PISYS/DALES_LogoIGEX.png</members>
+	    <members>DSALES_PISYS</members>
+		<members>DSALES_PISYS/DALES_LogoIGEX</members>
+		<members>DSALES_PISYS/DSALES_LogoFGEX</members>
 		<name>Document</name>
 	</types>
 	<types>
