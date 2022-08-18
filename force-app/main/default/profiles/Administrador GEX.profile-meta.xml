@@ -47,10 +47,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DSALES_MatrizCotizacion</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DSALES_MatrizHelper</apexClass>
         <enabled>false</enabled>
     </classAccesses>

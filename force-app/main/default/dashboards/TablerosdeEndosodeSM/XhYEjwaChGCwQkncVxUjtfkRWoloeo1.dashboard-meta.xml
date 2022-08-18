@@ -78,7 +78,7 @@
                 </groupingSortProperties>
                 <header>Motivos de rechazo de endosos</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>CoppelPISyS/SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
+                <report>SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>

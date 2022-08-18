@@ -23,7 +23,7 @@
                 <expandOthers>false</expandOthers>
                 <groupingSortProperties/>
                 <header>Tasa de conversión de cotizaciones</header>
-                <report>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
+                <report>SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>false</showValues>
@@ -57,7 +57,7 @@
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
+                <report>SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
                 <showPercentage>false</showPercentage>
                 <showRange>false</showRange>
                 <showTotal>true</showTotal>
@@ -96,7 +96,7 @@
                 <header>Funnel de Ventas</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
+                <report>SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</report>
                 <showPercentage>true</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>

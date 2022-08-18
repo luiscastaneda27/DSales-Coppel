@@ -170,30 +170,6 @@
         <profile>Administrador GEX</profile>
     </profileActionOverrides>
     <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Administrador GEX</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Control de Informes GEX</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
         <actionName>View</actionName>
         <content>Certificado_de_Garant_a_Extendida</content>
         <formFactor>Small</formFactor>

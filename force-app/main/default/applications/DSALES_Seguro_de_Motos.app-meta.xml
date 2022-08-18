@@ -55,14 +55,6 @@
         <pageOrSobjectType>DSALES_InformacionDePago__c</pageOrSobjectType>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Quote_Record_Page</content>
@@ -408,30 +400,6 @@
         <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
         <type>Flexipage</type>
         <profile>Administrador SM</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Administrador SM</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>P_gina_de_inicio_predeterminada</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Atención de servicio SM</profile>
     </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>

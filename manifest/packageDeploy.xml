@@ -10,7 +10,6 @@
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
 		<members>DSALES_Matriz</members>
-		<members>DSALES_MatrizCotizacion</members>
 		<members>DSALES_MatrizHelper</members>
 		<name>ApexClass</name>
 	</types>
@@ -188,23 +187,22 @@
 		<members>DSALES_InformacionDePago__c</members>
 		<members>DSALES_Matriz_de_Cotizacion__c</members>
 		<members>DSales_Matriz_GEX__c</members>
-		<!--members>InsurancePolicy</members>
-		<members>Opportunity</members-->
 		<name>CustomObject</name>
 	</types>
-	<types>
+	<!--types>
 		<members>DSALES_ReportedeEndosos</members>
 		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
 		<members>TablerosdeEndosodeSM</members>
 		<members>TablerosdeEndosodeSM/XhYEjwaChGCwQkncVxUjtfkRWoloeo1</members>
+		<members>COPPELPISyS</members>
 		<members>Garantaextendida</members>
-		<members>Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
 		<members>Segurosdemotos</members>
-		<members>Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<members>COPPELPISyS/Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
+		<members>COPPELPISyS/Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
 		<name>Dashboard</name>
-	</types>
+	</types-->
 	<types>
-		<members>Account.DSales_PersonAccountsDR</members>
+		<members>PersonAccount.DSales_PersonAccountsDR</members>
 		<name>DuplicateRule</name>
 	</types>
 	<types>
@@ -223,16 +221,16 @@
 		<members>Endoso_P_gina_de_registro</members>
 		<members>Certificado_de_Garant_a_Extendida</members>
 		<members>Informaci_n_de_Venta_de_Pago</members>
-		<members>P_gina_de_inicio_predeterminada</members>
+		<!--members>P_gina_de_inicio_predeterminada</members-->
 		<members>Quote_Record_Page</members>
 		<members>Oportunidad_PISYS_GEX</members>
 		<members>Siniestro_P_gina_de_registro</members>
 		<members>P_liza_P_gina_de_registro1</members>
 		<members>Matriz_Item_P_gina_de_registro</members>
-		<members>P_gina_de_inicio_predeterminada1</members>
+		<!--members>P_gina_de_inicio_predeterminada1</members-->
 		<name>FlexiPage</name>
 	</types>
-	<types>
+	<!--types>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
@@ -247,7 +245,7 @@
 		<members>DSALES_Presupuesto_Vencido</members>
 		<members>DSALES_Registro_Oportunidad_venta</members>
 		<name>Flow</name>
-	</types>
+	</types-->
 	<types>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Endoso__c-Formato Endoso</members>
@@ -310,14 +308,13 @@
 		<members>DSALES_ReportedeCotizacionesSM/DSALES_estatus_cotizaciones_POE</members>
 		<members>DSALES_ReportesdeCertificadosGEX</members>
 		<members>DSALES_ReportesdeCertificadosGEX/reporte_de_CertificadosPrueba_ibX</members>
-		<members>SegurosdeMotos</members>
-		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
-		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
-		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
-		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
-		<members>SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</members>
-		<members>SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</members>
-		<members>SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</members>
+		<members>CoppelPISyS</members>
+		<members>CoppelPISyS/SegurosdeMotos</members>
+		<!--members>CoppelPISyS/SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
+		<members>CoppelPISyS/SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
+		<members>CoppelPISyS/SegurosdeMotos/Endosos_por_estatus_de_este_mes_cnl</members>
+		<members>CoppelPISyS/SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</members-->
+		<members>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</members>
 		<name>Report</name>
 	</types>
 	<types>
@@ -342,7 +339,7 @@
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
 		<name>WebLink</name>
 	</types>
-	<types>
+	<!--types>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
@@ -350,7 +347,7 @@
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<name>WorkflowAlert</name>
-	</types>
+	</types-->
 	<types>
 		<members>DSALES_Tiempodegarantaextendida</members>
 		<name>GlobalValueSet</name>
@@ -375,7 +372,7 @@
 	</types>
 	<types>
 		<members>DSALES_Certificados</members>
-		<members>DSALES_Membrete_para_endosos</members>
+		<!--members>DSALES_Membrete_para_endosos</members-->
 		<name>Letterhead</name>
 	</types>
 	<types>
@@ -397,6 +394,11 @@
 		<members>PISYS_Color3</members>
 		<members>PISYS_Color4</members>
 		<name>ContentAsset</name>
+	</types>
+	<types>
+		<members>Deloitte</members>
+		<members>DSALES_PISYS</members>
+		<name>Group</name>
 	</types>
 	<version>53.0</version>
 </Package>

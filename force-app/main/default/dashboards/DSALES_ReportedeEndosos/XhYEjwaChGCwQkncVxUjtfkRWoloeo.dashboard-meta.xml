@@ -65,7 +65,7 @@
                 <indicatorHighColor>#C23934</indicatorHighColor>
                 <indicatorLowColor>#00716B</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>CoppelPISyS/SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
+                <report>SegurosdeMotos/Nuevo_reporte_de_Clientes_x_Endosos_a2B</report>
                 <showPercentage>true</showPercentage>
                 <showRange>false</showRange>
                 <showTotal>true</showTotal>
