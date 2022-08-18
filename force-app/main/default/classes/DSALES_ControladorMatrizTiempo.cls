@@ -4,12 +4,24 @@ public class DSALES_ControladorMatrizTiempo {
     @AuraEnabled
     public static List<ResultWrapper> getRecords(String recordId) {
         List<ResultWrapper> resultado = new List<ResultWrapper>();
-        DSales_Matriz_GEX__c matriz = [Select DSALES_Tiempogex__c  from DSales_Matriz_GEX__c Where Id =:recordId];
+        Map<String, String> mapMatrizItem = new Map<String, String>();
+        List<String> listMatrizItem = new List<String>();
+        DSales_Matriz_GEX__c matriz = [Select DSALES_Tiempogex__c, DSALES_EsClone__c  from DSales_Matriz_GEX__c Where Id =:recordId];
         Map<String, ResultWrapper> mapMatriz = getPicklistOptions('DSALES_Matriz_de_Cotizacion__c', 'DSALES_Tiempo_de_Garantia_Extendida_GEX__c', matriz.DSALES_Tiempogex__c);
+        for(DSALES_Matriz_de_Cotizacion__c item : 
+            [Select DSALES_MatrizItemClone__c  from DSALES_Matriz_de_Cotizacion__c
+             where DSales_Matriz_GEX__c = :recordId and DSales_Matriz_GEX__r.DSALES_EsClone__c = false]){
+                 listMatrizItem.add(item.DSALES_MatrizItemClone__c);
+             }
+        for(DSALES_Matriz_de_Cotizacion__c item : 
+            [Select  Id, Name from DSALES_Matriz_de_Cotizacion__c
+             where Id in :listMatrizItem]){
+                 mapMatrizItem.put(item.Id,  item.Name);
+             }
         for(DSALES_Matriz_de_Cotizacion__c item : 
             [Select DSALES_Rango_interior_GEX__c , DSALES_Rango_Superior_GEX__c, Id,
              DSALES_Tiempo_de_Garantia_Extendida_GEX__c, Name, DSALES_ID_Matriz_GEX__c,
-             SALES_Precio_GEX__c 
+             SALES_Precio_GEX__c, DSALES_MatrizItemClone__c  
              from DSALES_Matriz_de_Cotizacion__c
              where DSales_Matriz_GEX__c = :recordId
              order by DSALES_Rango_interior_GEX__c]){
@@ -23,6 +35,9 @@ public class DSALES_ControladorMatrizTiempo {
                  mt.anio = item.DSALES_Tiempo_de_Garantia_Extendida_GEX__c;
                  mt.seleccionado = false;
                  mt.index = mat.listMatriz.size();
+                 if(mapMatrizItem.containsKey(item.DSALES_MatrizItemClone__c) ){
+                     mt.codigo = mapMatrizItem.get(item.DSALES_MatrizItemClone__c);
+                 }
                  mat.listMatriz.add(mt);
                  mapMatriz.put(item.DSALES_Tiempo_de_Garantia_Extendida_GEX__c, mat);
              }
@@ -46,7 +61,6 @@ public class DSALES_ControladorMatrizTiempo {
             for(MatrizTiempo mt : item.listMatriz){
                 DSALES_Matriz_de_Cotizacion__c matriz = new DSALES_Matriz_de_Cotizacion__c();
                 matriz.Id = mt.matrizId;
-                matriz.Name = mt.codigo;
                 matriz.DSALES_Rango_interior_GEX__c = mt.rangoMenor;
                 matriz.DSALES_Rango_Superior_GEX__c = mt.rangoMayor;
                 matriz.SALES_Precio_GEX__c = mt.precio;

@@ -230,7 +230,7 @@
 		<!--members>P_gina_de_inicio_predeterminada1</members-->
 		<name>FlexiPage</name>
 	</types>
-	<!--types>
+	<types>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
@@ -245,7 +245,7 @@
 		<members>DSALES_Presupuesto_Vencido</members>
 		<members>DSALES_Registro_Oportunidad_venta</members>
 		<name>Flow</name>
-	</types-->
+	</types>
 	<types>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Endoso__c-Formato Endoso</members>
@@ -339,7 +339,7 @@
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
 		<name>WebLink</name>
 	</types>
-	<!--types>
+	<types>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
@@ -347,7 +347,7 @@
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<name>WorkflowAlert</name>
-	</types-->
+	</types>
 	<types>
 		<members>DSALES_Tiempodegarantaextendida</members>
 		<name>GlobalValueSet</name>

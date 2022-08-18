@@ -120,8 +120,7 @@
             for(let j=0; j<data.listMatriz[i].listMatriz.length; j++){
                 if(data.listMatriz[i].listMatriz[j].rangoMenor == 0 || data.listMatriz[i].listMatriz[j].rangoMenor == null ||
                    data.listMatriz[i].listMatriz[j].rangoMayor == 0 || data.listMatriz[i].listMatriz[j].rangoMayor == null ||
-                   data.listMatriz[i].listMatriz[j].precio == 0 || data.listMatriz[i].listMatriz[j].precio == null ||
-                   data.listMatriz[i].listMatriz[j].codigo == null || data.listMatriz[i].listMatriz[j].codigo == ''){
+                   data.listMatriz[i].listMatriz[j].precio == 0 || data.listMatriz[i].listMatriz[j].precio == null){
                     helper.showMessage('error', "Por favor complete todos los campos.");
                     return;
                 }

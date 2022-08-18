@@ -156,9 +156,10 @@
     <gender>Feminine</gender>
     <label>Matriz Item</label>
     <nameField>
+        <displayFormat>{000000}</displayFormat>
         <label>SKU</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Matriz Items</pluralLabel>
     <profileSearchLayouts>
