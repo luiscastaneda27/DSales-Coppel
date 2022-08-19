@@ -4,7 +4,7 @@
     <description>Estatus del pago del NPV</description>
     <externalId>false</externalId>
     <label>Estatus</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>

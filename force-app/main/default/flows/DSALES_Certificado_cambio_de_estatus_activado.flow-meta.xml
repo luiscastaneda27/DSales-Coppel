@@ -18,7 +18,7 @@
         </connector>
     </assignments>
     <interviewLabel>Certificado cambio de estatus activado {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Certificado cambio de estatus activado V2</label>
+    <label>Certificado cambio de estatus activado</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -72,9 +72,17 @@
         <connector>
             <targetReference>DSALES_Certificado_activo</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DSLAES_GEXPagada__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
         <object>DSALES_InformacionDePago__c</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
 </Flow>

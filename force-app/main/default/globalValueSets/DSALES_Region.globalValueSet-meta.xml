@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1 • HERMOSILLO</fullName>
+        <default>false</default>
+        <label>1 • HERMOSILLO</label>
+    </customValue>
+    <customValue>
+        <fullName>2 • CULIACAN</fullName>
+        <default>false</default>
+        <label>2 • CULIACAN</label>
+    </customValue>
+    <customValue>
+        <fullName>3 • GUADALAJARA I</fullName>
+        <default>false</default>
+        <label>3 • GUADALAJARA I</label>
+    </customValue>
+    <customValue>
+        <fullName>4 • MONTERREY I</fullName>
+        <default>false</default>
+        <label>4 • MONTERREY I</label>
+    </customValue>
+    <customValue>
+        <fullName>5 • LEON</fullName>
+        <default>false</default>
+        <label>5 • LEON</label>
+    </customValue>
+    <customValue>
+        <fullName>6 • AZCAPOTZALCO</fullName>
+        <default>false</default>
+        <label>6 • AZCAPOTZALCO</label>
+    </customValue>
+    <customValue>
+        <fullName>7 • GOMEZ PALACIO</fullName>
+        <default>false</default>
+        <label>7 • GOMEZ PALACIO</label>
+    </customValue>
+    <customValue>
+        <fullName>8 • PUEBLA</fullName>
+        <default>false</default>
+        <label>8 • PUEBLA</label>
+    </customValue>
+    <customValue>
+        <fullName>9 • VILLAHERMOSA</fullName>
+        <default>false</default>
+        <label>9 • VILLAHERMOSA</label>
+    </customValue>
+    <customValue>
+        <fullName>10 • IZTAPALAPA</fullName>
+        <default>false</default>
+        <label>10 • IZTAPALAPA</label>
+    </customValue>
+    <customValue>
+        <fullName>11 • TECAMAC</fullName>
+        <default>false</default>
+        <label>11 • TECAMAC</label>
+    </customValue>
+    <customValue>
+        <fullName>12 • CUAUTITLAN</fullName>
+        <default>false</default>
+        <label>12 • CUAUTITLAN</label>
+    </customValue>
+    <customValue>
+        <fullName>13 • MEXICALI</fullName>
+        <default>false</default>
+        <label>13 • MEXICALI</label>
+    </customValue>
+    <customValue>
+        <fullName>14 • IXTAPALUCA</fullName>
+        <default>false</default>
+        <label>14 • IXTAPALUCA</label>
+    </customValue>
+    <customValue>
+        <fullName>15 • LOS MOCHIS</fullName>
+        <default>false</default>
+        <label>15 • LOS MOCHIS</label>
+    </customValue>
+    <customValue>
+        <fullName>16 • MERIDA</fullName>
+        <default>false</default>
+        <label>16 • MERIDA</label>
+    </customValue>
+    <customValue>
+        <fullName>17 • GUADALAJARA II</fullName>
+        <default>false</default>
+        <label>17 • GUADALAJARA II</label>
+    </customValue>
+    <customValue>
+        <fullName>18 • VERACRUZ</fullName>
+        <default>false</default>
+        <label>18 • VERACRUZ</label>
+    </customValue>
+    <customValue>
+        <fullName>19 • TOLUCA</fullName>
+        <default>false</default>
+        <label>19 • TOLUCA</label>
+    </customValue>
+    <customValue>
+        <fullName>21 • CIUDAD JUAREZ</fullName>
+        <default>false</default>
+        <label>21 • CIUDAD JUAREZ</label>
+    </customValue>
+    <customValue>
+        <fullName>22 • MONTERREY II</fullName>
+        <default>false</default>
+        <label>22 • MONTERREY II</label>
+    </customValue>
+    <customValue>
+        <fullName>23 • OAXACA</fullName>
+        <default>false</default>
+        <label>23 • OAXACA</label>
+    </customValue>
+    <customValue>
+        <fullName>25 • SAN LUIS</fullName>
+        <default>false</default>
+        <label>25 • SAN LUIS</label>
+    </customValue>
+    <customValue>
+        <fullName>26 • TEXCOCO</fullName>
+        <default>false</default>
+        <label>26 • TEXCOCO</label>
+    </customValue>
+    <description>Regiones donde están las tiendas Coppel</description>
+    <masterLabel>Región</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -112,7 +112,7 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>KPI&apos;s de Cotizaciones y Ventas</description>
     <isGridLayout>true</isGridLayout>
-    <runningUser>murrutiag@deloitte.com.dev</runningUser>
+    <runningUser>lcastanedad@deloitte.com</runningUser>
     <textColor>#000000</textColor>
     <title>Indicadores de Ventas</title>
     <titleColor>#000000</titleColor>

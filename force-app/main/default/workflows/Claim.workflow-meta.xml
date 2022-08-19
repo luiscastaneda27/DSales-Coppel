@@ -14,10 +14,6 @@
     </alerts>
     <alerts>
         <fullName>Informa_Nuevo_Siniestro</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Informa Nuevo Siniestro</description>
         <protected>false</protected>
         <recipients>
@@ -30,10 +26,6 @@
     </alerts>
     <alerts>
         <fullName>Informa_Siniestro_Completado</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Informa Siniestro Completado</description>
         <protected>false</protected>
         <recipients>
@@ -46,10 +38,6 @@
     </alerts>
     <alerts>
         <fullName>Informa_Siniestro_Rechazado</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Informa Siniestro Rechazado</description>
         <protected>false</protected>
         <recipients>

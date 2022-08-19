@@ -4,7 +4,7 @@
     <description>Dirección de la tienda de la venta</description>
     <externalId>false</externalId>
     <label>Dirección Tienda</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>TextArea</type>
 </CustomField>

@@ -179,6 +179,19 @@
 		<members>Quote.DSALES_Fechadecreacionpresupuesto__c</members>
 		<members>Quote.DSALES_FormadePago__c</members>
 		<members>Claim.Cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSLAES_GEXPagada__c</members>
+		<members>DSales_Matriz_GEX__c.DSALES_Region__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Caja__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Celular_del_Cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DireccionCliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Estatus__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Factura__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Nombre_de_la_Tienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_TelefonoCliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Telefono__c</members>
+		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -230,19 +243,12 @@
 		<name>FlexiPage</name>
 	</types>
 	<types>
-		<!--members>DSALES_Correo_Endoso_Nuevo</members>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
-		<members>DSALES_Correo_nueva_p_liza</members>
-		<members>DSALES_Correo_nuevo_siniestro</members>
-		<members>DSALES_Correo_rechazo_de_siniestro</members>
-		<members>DSALES_Correo_siniestro_completado</members>
-		<members>DSALES_Envi_de_correo_estatus_Autorizado</members>
-		<members>DSALES_Envi_de_correo_estatus_en_rechazo</members>
-		<members>DSALES_Envi_de_correo_estatus_en_requerimiento_de_informaci_n</members>
+		<!--members>DSALES_Correo_nueva_p_liza</members-->
 		<members>DSALES_Presupuesto_Vencido</members>
-		<members>DSALES_Registro_Oportunidad_venta</members-->
+		<members>DSALES_Registro_Oportunidad_venta</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -340,8 +346,8 @@
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
 		<name>WebLink</name>
 	</types>
-	<types>
-		<!--members>Claim.DSALES_Informa_Siniestro_En_Tramite</members>
+	<!--types>
+		<members>Claim.DSALES_Informa_Siniestro_En_Tramite</members>
 		<members>Claim.Informa_Nuevo_Siniestro</members>
 		<members>Claim.Informa_Siniestro_Completado</members>
 		<members>Claim.Informa_Siniestro_Rechazado</members>
@@ -351,11 +357,12 @@
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_de_el_Endoso_a_tramite</members>
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
-		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members-->
+		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members>
 		<name>WorkflowAlert</name>
-	</types>
+	</types-->
 	<types>
 		<members>DSALES_Tiempodegarantaextendida</members>
+		<members>DSALES_Region</members>
 		<name>GlobalValueSet</name>
 	</types>
 	<types>
@@ -370,6 +377,8 @@
 	<types>
 		<members>Opportunity.DSales_Garantia_Extendida</members>
 		<members>Opportunity.DSALES_Oportunidad</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</members>
 		<name>RecordType</name>
 	</types>
 	<types>
@@ -408,6 +417,10 @@
 	<types>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<name>PathAssistant</name>
+	</types>
+	<types>
+		<members>DSALES_PermisosAdminPisys</members>
+		<name>PermissionSet</name>
 	</types>
 	<version>53.0</version>
 </Package>

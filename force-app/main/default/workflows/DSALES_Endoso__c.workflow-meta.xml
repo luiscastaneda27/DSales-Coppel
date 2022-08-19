@@ -2,10 +2,6 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Alerta de correo de cambio de estatus a completado</description>
         <protected>false</protected>
         <recipients>
@@ -18,10 +14,6 @@
     </alerts>
     <alerts>
         <fullName>DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Alerta de correo de cambio de estatus a rechazado</description>
         <protected>false</protected>
         <recipients>
@@ -34,10 +26,6 @@
     </alerts>
     <alerts>
         <fullName>DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Alerta de correo de cambio de estatus a requerimiento de información</description>
         <protected>false</protected>
         <recipients>
@@ -50,10 +38,6 @@
     </alerts>
     <alerts>
         <fullName>DSALES_Alerta_de_correo_de_cambio_de_estatus_de_el_Endoso_a_tramite</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Alerta de correo de cambio de estatus de el Endoso a tramite</description>
         <protected>false</protected>
         <recipients>
@@ -66,10 +50,6 @@
     </alerts>
     <alerts>
         <fullName>DSALES_Endoso_Nuevo</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Endoso Nuevo</description>
         <protected>false</protected>
         <recipients>

@@ -4,7 +4,7 @@
     <description>Teléfono de la tienda</description>
     <externalId>false</externalId>
     <label>Teléfono Tienda</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Phone</type>
 </CustomField>

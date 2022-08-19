@@ -4,7 +4,7 @@
     <description>Número celular del cliente</description>
     <externalId>false</externalId>
     <label>Número celular del cliente</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Phone</type>
 </CustomField>

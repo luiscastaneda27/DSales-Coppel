@@ -4,37 +4,4 @@
     <active>true</active>
     <description>Registro de pagos desde el nuevo punto de venta para SM</description>
     <label>Pagos de Venta en NPV de SM</label>
-    <picklistValues>
-        <picklist>DSALES_Estatus__c</picklist>
-        <values>
-            <fullName>Acreditado</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>No Acreditado</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>DSALES_FormaDePago__c</picklist>
-        <values>
-            <fullName>Efectivo</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Tarjeta de crédito</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>DSALES_TipoCompra__c</picklist>
-        <values>
-            <fullName>Producto</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Servicio</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
 </RecordType>
