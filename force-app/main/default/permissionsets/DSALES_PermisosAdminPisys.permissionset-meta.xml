@@ -640,4 +640,12 @@
         <tab>DSales_Matriz_GEX__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <tabSettings>
+        <tab>standard-Claim</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+     <tabSettings>
+        <tab>standard-InsurancePolicy</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>
