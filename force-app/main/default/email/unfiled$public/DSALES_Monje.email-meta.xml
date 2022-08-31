@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar el estatus del endoso</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>DSALES_Membrete_para_endosos</letterhead>
+    <name>Plantilla para envió de estatus en tramitenomigrarmonje</name>
+    <style>formalLetter</style>
+    <subject>Endoso en tramite</subject>
+    <textOnly>Estimado(a) {!Customer.Name}
+No. de Endoso 01020102
+
+Te informamos que tu Endoso {!DSALES_Endoso__c.Name} registrado el día {!DSALES_Endoso__c.CreatedDate} ya se encuentra en tramite.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

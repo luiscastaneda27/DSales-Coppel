@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="text-align: center;"><br></div><div style="text-align: center;"><font size="2"><b><br></b></font></div><div style="text-align: center;"><font size="2"><b><br></b></font></div><div style="text-align: center;"><font size="2"><b>Estimado(a)&nbsp;{!DSALES_Endoso__c.DSALES_Cliente__c}</b></font></div>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="text-align: center;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></span></div><div style="text-align: center;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></span></div><div style="text-align: center;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">No. de Endoso #&nbsp;</span><font face="arial">01020102</font></div><div style="text-align: center;"><font face="arial"><br></font></div><div style="text-align: center;"><font face="arial">Te informamos que para poder completar tu Endoso&nbsp;{!DSALES_Endoso__c.Name}, acudas a tu sucursal&nbsp;</font></div><div style="text-align: center;"><font face="arial">mas cerna con la siguiente información:&nbsp;</font></div><div style="text-align: center;"><font face="arial"><br></font></div><div style="text-align: center;"><font face="arial"><b>1.</b></font></div><div style="text-align: center;"><font face="arial"><b>2.</b></font></div><div style="text-align: center;"><font face="arial"><b>3.</b></font></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font face="arial"><br></font></div><div style="text-align: center;"><font face="arial">Para mayor información&nbsp;te invitamos a que acudas a tu sucursal Coppel mas cerna.</font></div><div style="text-align: center;"><font face="arial"><br></font></div><div style="text-align: center;"><font face="arial">Gracias por tu preferencia&nbsp;</font></div><div style="text-align: center;"><font face="arial">&nbsp;</font></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

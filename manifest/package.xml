@@ -606,5 +606,9 @@
 		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members>
 		<name>WorkflowAlert</name>
 	</types>
+	<types>
+		<members>PersonAccount.DSALES_Regladeduplicidad</members>
+		<name>MatchingRule</name>
+	</types>
 	<version>53.0</version>
 </Package>

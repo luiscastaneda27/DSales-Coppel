@@ -2,10 +2,6 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>DSALES_Poliza_Nueva</fullName>
-        <ccEmails>fernando.nunez@coppel.com</ccEmails>
-        <ccEmails>ana.cruz@coppel.com</ccEmails>
-        <ccEmails>jesus.villarreal@coppel.com</ccEmails>
-        <ccEmails>juan.martinez@coppel.com</ccEmails>
         <description>Póliza Nueva</description>
         <protected>false</protected>
         <recipients>

@@ -1,0 +1,301 @@
+<template>
+    <div style="background-color: #ffffff">
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                Clasificación de Servicios
+            </h1>
+        </div>
+        <lightning-card if:true={showc} icon-name="standard:filter" title="Filtros">
+            <div class="slds-grid slds-grid_vertical-align-center slds-box_x-small">
+                <lightning-input type="search" onchange={changeSku} value={buscarSkuString} placeholder="Buscar SKU">
+                </lightning-input>
+                <div class="slds-col slds-align-bottom">
+                    <lightning-button variant="brand" label="Buscar" title="Primary action" onclick={buscarSku}
+                        class="slds-m-right_x-small"></lightning-button>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-wrap">
+                <div class="slds-grid slds-grid_align-center slds-size_3-of-12 slds-box_x-small">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <lightning-button slds-align-bottom variant="brand" label="Aplicar" title="Primary action"
+                                onclick={mostrarSubcategoria} class="slds-m-right_x-small"> </lightning-button>
+                        </div>
+                    </div>
+                    <lightning-input type="search" onchange={buscadorC} value={buscarCategoria}
+                        placeholder="Buscar Categoría"> </lightning-input>
+                </div>
+
+                <div if:true={show} class="slds-grid slds-grid_align-center slds-size_2-of-12 slds-box_x-small">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <lightning-button variant="brand" label="Aplicar" title="Primary action"
+                                onclick={mostrarClase} class="slds-m-right_x-small"></lightning-button>
+                        </div>
+                    </div>
+                    <lightning-input type="search" onchange={buscadorSubC} value={buscarSCat}
+                        placeholder="Buscar SubCategaría"> </lightning-input>
+                </div>
+
+                <div if:true={show2} class="slds-grid slds-grid_align-center slds-size_3-of-12 slds-box_x-small">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-align-bottom">
+                            <lightning-button variant="brand" label="Aplicar" title="Primary action"
+                                onclick={mostrarFamilia} class="slds-m-right_x-small"></lightning-button>
+                        </div>
+                    </div>
+                    <lightning-input type="search" onchange={buscadorCla} value={buscarClase}
+                        placeholder="Buscar Clase"> </lightning-input>
+                </div>
+
+                <div if:true={show3} class="slds-grid slds-grid_align-center slds-size_3-of-12 slds-box_x-small">
+                    <lightning-input type="search" onchange={buscadorFami} value={buscarFami}
+                        placeholder="Buscar Familia"> </lightning-input>
+
+                </div>
+
+            </div>
+
+            <div class="slds-border_bottom"></div>
+            <div class="slds-grid slds-wrap slds-box_x-small">
+                <div class="slds-col slds-grow-none slds-size_3-of-12 slds-truncate">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <lightning-input type="checkbox" checked={checkCategoria}
+                                        onchange={selectAllCategoria} label="Categoria" name="input"></lightning-input>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={data.listCategorias} for:item="record">
+                                <tr class="slds-hint-parent" key={record.valor} if:true={record.mostrar}>
+                                    <td>
+                                        <lightning-input  checked={record.seleccionado}
+                                            onchange={onclickCategoria} type="checkbox" label={record.etiqueta}
+                                            name={record.valor}>
+                                        </lightning-input>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div if:true={show} class="slds-col slds-grow-none slds-size_2-of-12 slds-truncate">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <lightning-input type="checkbox" checked={checkSubCategoria}
+                                        onchange={selectAllSubCategoria} label="SubCategoria" name="input2">
+                                    </lightning-input>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={data.listSubCategorias} for:item="record">
+                                <tr class="slds-hint-parent" key={record.valor} if:true={record.mostrar}  >
+                                    <td>
+                                        <lightning-input checked={record.seleccionado}
+                                            onchange={onclickSubCategoria} type="checkbox" label={record.etiqueta}
+                                            name={record.valor}>
+                                        </lightning-input>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div if:true={show2} class="slds-col slds-grow-none slds-size_3-of-12 slds-truncate">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <lightning-input type="checkbox" checked={checkClase} onchange={selectAllClase}
+                                        label="Clase" name="input4"></lightning-input>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={data.listClases} for:item="record">
+                                <tr class="slds-hint-parent" key={record.valor} if:true={record.mostrar} >
+                                    <td>
+                                        <lightning-input checked={record.seleccionado}
+                                            onchange={onclicklistClases} type="checkbox" label={record.etiqueta}
+                                            name={record.valor}>
+                                        </lightning-input>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div if:true={show3} class="slds-col slds-grow-none slds-size_3-of-12 slds-truncate">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="" scope="col">
+                                    <lightning-input type="checkbox" checked={checkFamilia} onchange={selectAllFamilia}
+                                        label="Familia" name="input3"></lightning-input>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={data.listFamilias} for:item="record">
+                                <tr class="slds-hint-parent" key={record.valor} if:true={record.mostrar}>
+                                    <td>
+                                        <lightning-input checked={record.seleccionado}
+                                            onchange={onclickListFamilias} type="checkbox" label={record.etiqueta}
+                                            name={record.valor}>
+                                        </lightning-input>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="slds-col slds-grow-none slds-box_x-small slds-size_1-of-12">
+                    <lightning-button variant="brand" label="Buscar" onclick={search} slds-box_x-small>
+                    </lightning-button>
+                </div>
+            </div>
+
+        </lightning-card>
+        <template if:true={popServicios}>
+            <div role="dialog" tabindex="-1" aria-labelledby="header43"
+                class="slds-modal slds-fade-in-open slds-modal_large">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                            title="Close" onclick={cancelar}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse"
+                                size="small"></lightning-icon>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h1 id="modal-heading-00" class="slds-text-heading_medium slds-hyphenate"> Clasificación de
+                            Servicios
+                        </h1>
+                    </div>
+                    <div class="slds-modal__content">
+                        <table if:false={popEdit}
+                            class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped"
+                            aria-label="linea de ordenes">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Nombre">Nombre</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="SKU">SKU</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Categoria">Categoria</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Sub Categoria">Sub Categoria</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Clase">Clase</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Familia">Familia</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Servicio">
+                                            <lightning-input type="checkbox" checked={data.registroServicio}
+                                                onchange={onchangeAllServicio} label="Servicio"></lightning-input>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Seguro">
+                                            <lightning-input type="checkbox" checked={data.registroSeguro}
+                                                onchange={onchangeAllSeguro} label="Seguro"></lightning-input>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Seguro">
+                                            <lightning-input type="checkbox" checked={data.noAplica}
+                                                onchange={onchangeAllNoAplica} label="No Aplica"></lightning-input>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Tipo de Servicio">Tipo de Servicio</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={data.listServicios} for:item="record">
+                                    <tr class="slds-hint-parent" key={record.productId}>
+                                        <td data-label={record.nombre}>
+                                            <div class="slds-truncate" title={record.nombre}>{record.nombre}</div>
+                                        </td>
+                                        <td data-label={record.sku}>
+                                            <div class="slds-truncate" title={record.sku}>{record.sku}</div>
+                                        </td>
+                                        <td data-label={record.categoria} style="text-align: center;">
+                                            <div class="slds-truncate" title={record.categoria}>{record.categoria}</div>
+                                        </td>
+                                        <td data-label={record.subCategoria} style="text-align: center;">
+                                            <div class="slds-truncate" title={record.subCategoria}>{record.subCategoria}
+                                            </div>
+                                        </td>
+                                        <td data-label={record.clase} style="text-align: center;">
+                                            <div class="slds-truncate" title={record.clase}>{record.clase}</div>
+                                        </td>
+                                        <td data-label={record.familia} style="text-align: center;">
+                                            <div class="slds-truncate" title="familia">{record.familia}</div>
+                                        </td>
+                                        <td data-label="Servicio" style="text-align: center;">
+                                            <div class="slds-truncate" title="Servicio">
+                                                <lightning-input type="checkbox" name={record.id}
+                                                    checked={record.servicio} onchange={onchangeServicio}>
+                                                </lightning-input>
+                                            </div>
+                                        </td>
+                                        <td data-label="Seguro" style="text-align: center;">
+                                            <div class="slds-truncate" title="Seguro">
+                                                <lightning-input type="checkbox" name={record.id}
+                                                    checked={record.seguro} onchange={onchangeSeguro}></lightning-input>
+                                            </div>
+                                        </td>
+                                        <td data-label="No Aplica" style="text-align: center;">
+                                            <div class="slds-truncate" title="No Aplica">
+                                                <lightning-input type="checkbox" name={record.id}
+                                                    checked={record.noAplica} onchange={onchangeNoAplica}></lightning-input>
+                                            </div>
+                                        </td>
+                                        <td data-label={record.tipoServicio} style="text-align: center;">
+                                            <div class="slds-truncate" title={record.tipoServicio}>{record.tipoServicio}
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                        <footer class="slds-modal__footer">
+                            <lightning-button label="Guardar" onclick={guardar} variant="brand"
+                                class="slds-m-left_x-small">
+                            </lightning-button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </template>
+
+        <template if:true={showSpinner}>
+            <div id="activityIndicator" class="slds-spinner_container">
+                <div class="slds-spinner--brand slds-spinner slds-spinner--large" role="alert">
+                    <span class="slds-assistive-text">Loading, Please Wait...</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

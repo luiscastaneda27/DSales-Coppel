@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>DSALES_Rutaparaelestadodelsiniestro_c</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Ruta para el estado del siniestro</masterLabel>
+    <recordTypeContext>Master</recordTypeContext>
+    <recordTypeName>__MASTER__</recordTypeName>
+    <sobjectType>Claim</sobjectType>
+    <targetField>DSALES_Estatus_C__c</targetField>
+    <targetFieldChangeToValues>Completado</targetFieldChangeToValues>
+</AnimationRule>

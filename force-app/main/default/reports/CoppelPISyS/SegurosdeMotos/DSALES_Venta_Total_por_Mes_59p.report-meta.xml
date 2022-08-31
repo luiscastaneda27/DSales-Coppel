@@ -58,7 +58,7 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Account.Opportunities.OpportunityLineItems$TotalPrice</field>
     </columns>
-    <description>Muestra la venta total por mes de SM</description>
+    <description>¿Cuánto es la venta por mes de Seguros de Motos?</description>
     <filter>
         <criteriaItems>
             <column>Account.Opportunities$Name</column>

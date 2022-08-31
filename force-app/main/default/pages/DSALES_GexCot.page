@@ -1,0 +1,4 @@
+<apex:page renderAs="PDF" controller="DSALES_ControladorCotizacionGex">
+     <apex:outputText value="{!html}" escape="false"  />
+    
+</apex:page>

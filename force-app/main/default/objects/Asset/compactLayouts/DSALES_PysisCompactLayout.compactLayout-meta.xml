@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_PysisCompactLayout</fullName>
+    <fields>AccountId</fields>
+    <fields>Product2Id</fields>
+    <fields>DSALES_Region__c</fields>
+    <label>Pysis Compact Layout</label>
+</CompactLayout>
