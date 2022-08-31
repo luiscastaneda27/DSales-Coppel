@@ -249,6 +249,7 @@
         <platformActionListItems>
             <actionName>DSALES_VerCotizacion</actionName>
             <actionType>CustomButton</actionType>
+            
             <sortOrder>0</sortOrder>
         </platformActionListItems>
     </platformActionList>
