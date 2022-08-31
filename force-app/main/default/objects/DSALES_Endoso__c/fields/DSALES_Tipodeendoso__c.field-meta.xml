@@ -53,23 +53,27 @@
                 <label>Corrección de RFC</label>
             </value>
             <value>
+                <fullName>Actualización de color</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Actualización de color</label>
+            </value>
+            <value>
                 <fullName>Actualización de correo electrónico</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Actualización de correo electrónico</label>
             </value>
             <value>
                 <fullName>Actualización de teléfono</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Actualización de teléfono</label>
-            </value>
-            <value>
-                <fullName>Actualización de color</fullName>
-                <default>false</default>
-                <label>Actualización de color</label>
             </value>
             <value>
                 <fullName>Beneficiario preferente</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Beneficiario preferente</label>
             </value>
         </valueSetDefinition>
