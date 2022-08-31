@@ -1,79 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DSALES_Categoria__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
     <label>Categoría</label>
+    <referenceTo>DSALES_Categoria__c</referenceTo>
+    <relationshipLabel>Productos</relationshipLabel>
+    <relationshipName>Productos</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
-    <type>Picklist</type>
-    <valueSet>
-        <valueSetDefinition>
-            <sorted>true</sorted>
-            <value>
-                <fullName>CELULARES</fullName>
-                <default>false</default>
-                <label>CELULARES</label>
-            </value>
-            <value>
-                <fullName>ENSERES DOMÉSTICOS</fullName>
-                <default>false</default>
-                <label>ENSERES DOMÉSTICOS</label>
-            </value>
-            <value>
-                <fullName>HOGAR</fullName>
-                <default>false</default>
-                <label>HOGAR</label>
-            </value>
-            <value>
-                <fullName>JOYERÍA, RELOJERÍA Y ACCESORIOS</fullName>
-                <default>false</default>
-                <label>JOYERÍA, RELOJERÍA Y ACCESORIOS</label>
-            </value>
-            <value>
-                <fullName>JUGUETES, BEBÉS Y APARATOS DE EJERCICIO</fullName>
-                <default>false</default>
-                <label>JUGUETES, BEBÉS Y APARATOS DE EJERCICIO</label>
-            </value>
-            <value>
-                <fullName>LÍNEA BLANCA</fullName>
-                <default>false</default>
-                <label>LÍNEA BLANCA</label>
-            </value>
-            <value>
-                <fullName>MEJORAMIENTO DEL HOGAR</fullName>
-                <default>false</default>
-                <label>MEJORAMIENTO DEL HOGAR</label>
-            </value>
-            <value>
-                <fullName>ÓPTICA</fullName>
-                <default>false</default>
-                <label>ÓPTICA</label>
-            </value>
-            <value>
-                <fullName>RECAMARA</fullName>
-                <default>false</default>
-                <label>RECAMARA</label>
-            </value>
-            <value>
-                <fullName>SALUD Y BIENESTAR</fullName>
-                <default>false</default>
-                <label>SALUD Y BIENESTAR</label>
-            </value>
-            <value>
-                <fullName>SERVICIOS COPPEL</fullName>
-                <default>false</default>
-                <label>SERVICIOS COPPEL</label>
-            </value>
-            <value>
-                <fullName>TECNOLOGÍA Y ENTRETENIMIENTO</fullName>
-                <default>false</default>
-                <label>TECNOLOGÍA Y ENTRETENIMIENTO</label>
-            </value>
-            <value>
-                <fullName>TRANSPORTE Y MOVILIDAD</fullName>
-                <default>false</default>
-                <label>TRANSPORTE Y MOVILIDAD</label>
-            </value>
-        </valueSetDefinition>
-    </valueSet>
+    <type>Lookup</type>
 </CustomField>

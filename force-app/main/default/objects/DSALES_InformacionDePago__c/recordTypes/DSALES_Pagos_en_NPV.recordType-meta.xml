@@ -4,4 +4,37 @@
     <active>true</active>
     <description>Aquí se registrarán los pagos d ela venta desde el NPV</description>
     <label>Pagos de Venta en NPV</label>
+    <picklistValues>
+        <picklist>DSALES_Estatus__c</picklist>
+        <values>
+            <fullName>Acreditado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Acreditado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_FormaDePago__c</picklist>
+        <values>
+            <fullName>Efectivo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tarjeta de crédito</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_TipoCompra__c</picklist>
+        <values>
+            <fullName>Producto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>

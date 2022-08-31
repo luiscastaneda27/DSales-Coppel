@@ -17,7 +17,7 @@ public class DSALES_ClonarMatriz_Test {
     
     @isTest
     static void clonarMatriz(){
-        DSales_Matriz_GEX__c tempo =[SELECT Name, Id FROM DSales_Matriz_GEX__c LIMIT 1];
+        DSales_Matriz_GEX__c tempo =[SELECT Name, Id FROM DSales_Matriz_GEX__c where Name = 'Temporal' LIMIT 1];
         DSALES_ClonarMatriz.getClone(tempo.Id);
         String idClon = DSALES_ClonarMatriz.clonarMatriz(tempo.Id);
         DSALES_Matriz_de_Cotizacion__c item = new DSALES_Matriz_de_Cotizacion__c();

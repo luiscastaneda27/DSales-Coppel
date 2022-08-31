@@ -36,7 +36,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Region__c</field>
+                <field>DSALES_RegionList__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

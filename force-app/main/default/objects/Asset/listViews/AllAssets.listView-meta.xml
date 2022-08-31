@@ -6,7 +6,11 @@
     <columns>ASSET.SERIAL_NUMBER</columns>
     <columns>ASSET.NAME</columns>
     <columns>ASSET.PRICE</columns>
-    <columns>DSALES_Oportunidad__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>PRODUCT2.NAME</field>
+        <operation>contains</operation>
+        <value>Motocicleta</value>
+    </filters>
     <label>Todos los productos adquiridos</label>
 </ListView>

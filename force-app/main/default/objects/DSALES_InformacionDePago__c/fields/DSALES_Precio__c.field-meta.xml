@@ -4,7 +4,7 @@
     <description>Precio del artículo</description>
     <externalId>false</externalId>
     <label>Precio</label>
-    <precision>6</precision>
+    <precision>8</precision>
     <required>false</required>
     <scale>2</scale>
     <trackTrending>false</trackTrending>

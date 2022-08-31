@@ -174,10 +174,18 @@
 		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Servicio__c</members>
 		<members>Opportunity.Tipo_de_servicio__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
+		<members>Quote.DSALES_CorreoEnviado__c</members>
+		<members>Quote.DSALES_CotEnviada__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
+		<members>Quote.DSALES_Enviarcotizacion__c</members>
 		<members>Quote.DSALES_Dias_Transcurridos__c</members>
+		<members>Quote.DSALES_EmailCliente__c</members>
 		<members>Quote.DSALES_Fechadecreacionpresupuesto__c</members>
+		<members>Quote.DSALES_Fechadenacimiento__c</members>
 		<members>Quote.DSALES_FormadePago__c</members>
+		<members>Quote.DSALES_NombreCliente__c</members>
+		<members>Quote.DSALES_Nombredelsolicitante__c</members>
+		<members>Quote.DSALES_Region__c</members>
 		<members>Claim.Cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSLAES_GEXPagada__c</members>
 		<members>DSales_Matriz_GEX__c.DSALES_Region__c</members>
@@ -191,6 +199,8 @@
 		<members>DSALES_InformacionDePago__c.DSALES_TelefonoCliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Telefono__c</members>
 		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
+		<members>Quote.DSales_Vendedor__c</members>
+		<members>Quote.Nombre_Cliente_Test__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
 		<name>CustomField</name>
 	</types>
@@ -264,6 +274,7 @@
 		<members>Opportunity-DSALES_OpportunitySM</members>
 		<members>PersonAccount-DSALES_Clientes</members>
 		<members>Asset-Pisys Asset Layout</members>
+		<members>Quote-Venta SM</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -344,6 +355,7 @@
 	</types>
 	<types>
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
+		<members>Quote.DSALES_VerCotizacion</members>
 		<name>WebLink</name>
 	</types>
 	<!--types>
@@ -379,6 +391,8 @@
 		<members>Opportunity.DSALES_Oportunidad</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</members>
 		<members>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</members>
+		<members>Opportunity.FinServ__General</members>
+		<members>Quote.DSALES_VentaSM</members>
 		<name>RecordType</name>
 	</types>
 	<types>

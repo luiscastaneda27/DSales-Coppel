@@ -17,6 +17,10 @@
         <label>Detalles</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Folio_de_oportunidad__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
@@ -30,7 +34,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DSALES_Fecha_creacion__c</field>
+                <field>DSALES_RegionList__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -40,24 +44,12 @@
                 <behavior>Edit</behavior>
                 <field>Probability</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>DSALES_No_Pagos__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>DSALES_No_Presupuesto__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>DSales_Resumen_Tipo_de_Compra_Producto__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>DSales_Resumen_Tipo_de_Compra_Servicio__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>CloseDate</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>DSales_Cotizacion_Entregada__c</field>
@@ -67,12 +59,12 @@
                 <field>DSales_Pago_Registrado__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>CloseDate</field>
+                <behavior>Edit</behavior>
+                <field>Tipo_de_servicio__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Tipo_de_servicio__c</field>
+                <field>DSALES_Division__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -80,7 +72,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>DSALES_Dias_Transcurridos__c</field>
+                <field>DSales_Resumen_Tipo_de_Compra_Servicio__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSales_Resumen_Tipo_de_Compra_Producto__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>DSales_Ingresos_GEX__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

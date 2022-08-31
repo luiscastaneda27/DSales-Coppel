@@ -4,7 +4,7 @@
     <description>Fecha de la venta</description>
     <externalId>false</externalId>
     <label>Fecha de la venta</label>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Date</type>
 </CustomField>

@@ -6,6 +6,29 @@
     <description>Crea las oportunidades para el proceso de Garantía Extendida para grupo Coppel</description>
     <label>Garantía Extendida</label>
     <picklistValues>
+        <picklist>DSALES_Division__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>DSales_Duracion_de_Garantia__c</picklist>
         <values>
             <fullName>12 Meses</fullName>
@@ -59,6 +82,17 @@
         <values>
             <fullName>Default</fullName>
             <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_servicio__c</picklist>
+        <values>
+            <fullName>GEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>

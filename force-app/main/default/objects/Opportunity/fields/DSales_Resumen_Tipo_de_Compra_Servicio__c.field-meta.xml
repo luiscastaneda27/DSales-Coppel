@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>DSales_Resumen_Tipo_de_Compra_Servicio__c</fullName>
     <externalId>false</externalId>
-    <label>Resumen Tipo de Compra Servicio</label>
+    <label>GEX</label>
     <summaryFilterItems>
         <field>DSALES_InformacionDePago__c.DSALES_TipoCompra__c</field>
         <operation>equals</operation>

@@ -7,9 +7,8 @@
     <columns>PRODUCT2.NAME</columns>
     <columns>ASSET.PRICE</columns>
     <columns>DSALES_Oportunidad__c</columns>
-    <filterScope>Everything</filterScope>
-    <!--filterScope>Mine</filterScope-->
-    <label>Mis productos adquridos</label>
+    <filterScope>Mine</filterScope>
+    <label>Mis productos adquiridos</label>
     <sharedTo>
         <role>DSALES_Admin_GEX</role>
         <role>DSALES_Agente_de_servicio_SM</role>

@@ -22,14 +22,14 @@
                 <label>En trámite</label>
             </value>
             <value>
+                <fullName>Pagado</fullName>
+                <default>false</default>
+                <label>Pagado</label>
+            </value>
+            <value>
                 <fullName>Rechazado</fullName>
                 <default>false</default>
                 <label>Rechazado</label>
-            </value>
-            <value>
-                <fullName>Completado</fullName>
-                <default>false</default>
-                <label>Completado</label>
             </value>
         </valueSetDefinition>
     </valueSet>

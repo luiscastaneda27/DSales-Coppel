@@ -28,7 +28,7 @@
             </value>
             <value>
                 <fullName>Activado</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Activado</label>
             </value>
         </valueSetDefinition>

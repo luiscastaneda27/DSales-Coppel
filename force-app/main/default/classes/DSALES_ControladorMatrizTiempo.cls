@@ -10,7 +10,8 @@ public class DSALES_ControladorMatrizTiempo {
         Map<String, ResultWrapper> mapMatriz = getPicklistOptions('DSALES_Matriz_de_Cotizacion__c', 'DSALES_Tiempo_de_Garantia_Extendida_GEX__c', matriz.DSALES_Tiempogex__c);
         for(DSALES_Matriz_de_Cotizacion__c item : 
             [Select DSALES_MatrizItemClone__c  from DSALES_Matriz_de_Cotizacion__c
-             where DSales_Matriz_GEX__c = :recordId and DSales_Matriz_GEX__r.DSALES_EsClone__c = false]){
+             where DSales_Matriz_GEX__c = :recordId and DSales_Matriz_GEX__r.DSALES_EsClone__c = false
+             and DSALES_MatrizItemClone__c != null]){
                  listMatrizItem.add(item.DSALES_MatrizItemClone__c);
              }
         for(DSALES_Matriz_de_Cotizacion__c item : 

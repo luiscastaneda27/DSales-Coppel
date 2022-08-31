@@ -1,39 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>Opportunity.DSALES_Dias_Transcurridos__c</members>
-		<members>Opportunity.DSALES_InformaciondePago__c</members>
-		<members>Opportunity.DSALES_No_Pagos__c</members>
-		<members>Opportunity.DSALES_No_Presupuesto__c</members>
-		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
-		<members>Quote.DSALES_CorreoEnviado__c</members>
-		<members>Quote.DSALES_CotEnviada__c</members>
-		<members>Quote.DSALES_Dias_Transcurridos__c</members>
 		<members>Quote.DSALES_EmailCliente__c</members>
-		<members>Quote.DSALES_Enviarcotizacion__c</members>
-		<members>Quote.DSALES_Fechadecreacionpresupuesto__c</members>
-		<members>Quote.DSALES_Fechadenacimiento__c</members>
-		<members>Quote.DSALES_FormadePago__c</members>
-		<members>Quote.DSALES_NombreCliente__c</members>
-		<members>Quote.DSALES_Nombredelsolicitante__c</members>
-		<members>Quote.DSALES_Region__c</members>
-		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
-		<members>Quote.DSales_Vendedor__c</members>
-		<members>Quote.Nombre_Cliente_Test__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
-		<members>Quote-Venta SM</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>Opportunity.FinServ__General</members>
-		<members>Quote.DSALES_VentaSM</members>
-		<name>RecordType</name>
-	</types>
-	<types>
-		<members>Quote.DSALES_VerCotizacion</members>
-		<name>WebLink</name>
+		<members>Administracion delegada</members>
+		<name>Profile</name>
 	</types>
 	<version>53.0</version>
 </Package>

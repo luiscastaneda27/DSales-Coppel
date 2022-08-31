@@ -7,8 +7,7 @@
     <columns>CREATED_DATE</columns>
     <columns>DSALES_Estatus__c</columns>
     <columns>DSALES_Poliza__c</columns>
-    <filterScope>Everything</filterScope>
-    <!--filterScope>Mine</filterScope-->
+    <filterScope>Mine</filterScope>
     <label>Mis endosos</label>
     <sharedTo>
         <role>DSALES_Admin_SM</role>

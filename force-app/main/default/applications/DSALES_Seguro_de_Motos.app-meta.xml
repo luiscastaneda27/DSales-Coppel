@@ -55,6 +55,14 @@
         <pageOrSobjectType>DSALES_InformacionDePago__c</pageOrSobjectType>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>P_gina_de_inicio_predeterminada</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Quote_Record_Page</content>
@@ -401,6 +409,30 @@
         <type>Flexipage</type>
         <profile>Administrador SM</profile>
     </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>P_gina_de_inicio_predeterminada</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Administrador SM</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>P_gina_de_inicio_predeterminada</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>P_gina_de_inicio_predeterminada</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Atención de servicio SM</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Opportunity</tabs>
@@ -412,6 +444,10 @@
     <tabs>standard-Asset</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>DSALES_Categoria__c</tabs>
+    <tabs>DSALES_SubCategoria__c</tabs>
+    <tabs>DSALES_Clase__c</tabs>
+    <tabs>DSALES_Familia__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Seguro_de_Motos_UtilityBar</utilityBar>
 </CustomApplication>

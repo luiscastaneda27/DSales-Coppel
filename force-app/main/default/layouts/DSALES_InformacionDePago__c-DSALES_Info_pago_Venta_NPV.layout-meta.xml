@@ -16,7 +16,7 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Fecha__c</field>
             </layoutItems>
             <layoutItems>
@@ -24,15 +24,15 @@
                 <field>DSALES_Clave_Tienda__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Nombre_de_la_Tienda__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_DireccionTienda__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Telefono__c</field>
             </layoutItems>
             <layoutItems>
@@ -42,19 +42,19 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Estatus__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Factura__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Vendedor__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Caja__c</field>
             </layoutItems>
             <layoutItems>
@@ -62,7 +62,7 @@
                 <field>DSALES_Nombre_del_Vendedor__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_ExpEn__c</field>
             </layoutItems>
         </layoutColumns>
@@ -79,21 +79,21 @@
                 <field>DSALES_Cliente__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_DireccionCliente__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_No_de_cliente__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_TelefonoCliente__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Celular_del_Cliente__c</field>
             </layoutItems>
         </layoutColumns>
@@ -110,15 +110,15 @@
                 <field>DSALES_ProductoAdquirido__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Marca__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_No_de_serie__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Precio__c</field>
             </layoutItems>
             <layoutItems>
@@ -140,19 +140,19 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_SKU__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Modelo__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_DescripcionArticulo__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>DSALES_Duracion_GEX_meses__c</field>
             </layoutItems>
             <layoutItems>
@@ -187,6 +187,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>LastModifiedById</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSLAES_GEXPagada__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

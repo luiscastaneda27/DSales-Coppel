@@ -10,5 +10,5 @@
         <sharedTo>DSALES_Admin_GEX</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
-    <name>Reportes de Certificados</name>
+    <name>Reportes de Certificados GEX</name>
 </ReportFolder>

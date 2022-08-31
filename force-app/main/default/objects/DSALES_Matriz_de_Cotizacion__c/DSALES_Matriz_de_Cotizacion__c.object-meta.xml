@@ -157,7 +157,7 @@
     <label>Matriz Item</label>
     <nameField>
         <displayFormat>{000000}</displayFormat>
-        <label>SKU</label>
+        <label>Folio</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>

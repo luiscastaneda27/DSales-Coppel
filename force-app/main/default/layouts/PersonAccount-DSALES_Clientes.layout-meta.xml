@@ -5,7 +5,8 @@
     <excludeButtons>CreateAccountChannel</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
+    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -28,10 +29,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>PersonEmail</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Phone</field>
             </layoutItems>
             <layoutItems>
@@ -42,7 +39,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CP_Gender__pc</field>
+                <field>PersonEmail</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -64,6 +61,22 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>Name</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CP_Gender__pc</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CP_WalletCustomerNumber__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CP_WalletCustomerNumberTxt__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CP_ClientCreditNumber__pc</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -198,6 +211,22 @@
         <relatedList>InsurancePolicies</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>Name</fields>
+        <fields>Cliente__c</fields>
+        <fields>ClaimType</fields>
+        <fields>Status</fields>
+        <fields>PolicyNumber</fields>
+        <fields>CreatedDate</fields>
+        <relatedList>Claim.Cliente__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>ClaimType</fields>
+        <fields>Status</fields>
+        <fields>ApprovedAmount</fields>
+        <relatedList>RelatedClaimList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>DSALES_Ticket__c</fields>
         <fields>DSALES_ProductoAdquirido__c</fields>
@@ -232,12 +261,13 @@
         <relatedList>DSALES_Endoso__c.DSALES_Cliente__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>Name</fields>
-        <fields>Account</fields>
-        <fields>ClaimReasonType</fields>
-        <fields>Status</fields>
-        <fields>ApprovedAmount</fields>
-        <relatedList>Claim.Cliente__c</relatedList>
+        <fields>QUOTE.NAME</fields>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>QUOTE.ISSYNCING</fields>
+        <fields>QUOTE.EXPIRATIONDATE</fields>
+        <fields>QUOTE.SUBTOTAL</fields>
+        <fields>QUOTE.TOTALPRICE</fields>
+        <relatedList>Quote.Nombre_Cliente_Test__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
