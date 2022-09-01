@@ -7,6 +7,6 @@
     <recordTypeContext>Master</recordTypeContext>
     <recordTypeName>__MASTER__</recordTypeName>
     <sobjectType>Claim</sobjectType>
-    <targetField>DSALES_Estatus_C__c</targetField>
+    <targetField>DSALES_Estatus__c</targetField>
     <targetFieldChangeToValues>Completado</targetFieldChangeToValues>
 </AnimationRule>

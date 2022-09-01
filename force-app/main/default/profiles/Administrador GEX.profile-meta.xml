@@ -1224,10 +1224,6 @@
         <apexPage>DSALES_NuevaPlantilla</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
-    <pageAccesses>
-        <apexPage>DSALES_Test</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>

@@ -65,7 +65,7 @@
 	<types>
 		<members>DSALES_GarantiaExtendida</members>
 		<members>DSALES_Seguro_de_Motos</members>
-		<name>CustomApplication</name>
+		<name>CustomApplication</name
 	</types>
 	<types>
 		<members>Account.DSALES_Fecha_alta__c</members>
@@ -267,6 +267,7 @@
 		<members>QuoteLineItem.DSALES_SKU__c</members>
 		<members>QuoteLineItem.DSALES_TipoServ__c</members>
 		<members>Account.sumar__c</members>
+		<members>QuoteLineItem.Vigencia_meses__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -480,8 +481,6 @@
 		<members>DSALES_Agente_de_servicios_profilePasswordPolicy1657557034781</members>
 		<members>DSALES_Atenci_n_de_servicio_profilePasswordPolicy1657557245067</members>
 		<members>DSALES_Control_de_Informes_GEX_profilePasswordPolicy1657727625552</members>
-		<members>DSALES_Control_de_Informes_profilePasswordPolicy1657556655266</members>
-		<members>DSALES_Control_de_Informes_profilePasswordPolicy1657660195294</members>
 		<name>ProfilePasswordPolicy</name>
 	</types>
 	<types>
@@ -605,6 +604,7 @@
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members>
+		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<name>WorkflowAlert</name>
 	</types>
 	<types>
