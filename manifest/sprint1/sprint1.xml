@@ -201,6 +201,7 @@
 		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
 		<members>Quote.DSales_Vendedor__c</members>
 		<members>Quote.Nombre_Cliente_Test__c</members>
+		<members>Account.sumar__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
 		<name>CustomField</name>
 	</types>

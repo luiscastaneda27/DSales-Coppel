@@ -35,7 +35,6 @@
 		<members>DSALES_CertificadoPDF</members>
 		<members>DSALES_GexCot</members>
 		<members>DSALES_NuevaPlantilla</members>
-		<members>DSALES_Test</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -267,6 +266,7 @@
 		<members>QuoteLineItem.DSALES_NombreProducto__c</members>
 		<members>QuoteLineItem.DSALES_SKU__c</members>
 		<members>QuoteLineItem.DSALES_TipoServ__c</members>
+		<members>Account.sumar__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -348,8 +348,10 @@
 		<members>Oportunidad_PISYS_GEX</members>
 		<members>P_liza_P_gina_de_registro1</members>
 		<members>Quote_Record_Page</members>
+		<members>P_gina_de_inicio_predeterminada1</members>
 		<members>Seguro_de_Motos_UtilityBar</members>
 		<members>Siniestro_P_gina_de_registro</members>
+		<members>P_gina_de_inicio_predeterminada</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -415,7 +417,6 @@
 	<types>
 		<members>DSALES_Certificados</members>
 		<members>DSALES_Membrete_para_endosos</members>
-		<members>DSales_test</members>
 		<name>Letterhead</name>
 	</types>
 	<types>
