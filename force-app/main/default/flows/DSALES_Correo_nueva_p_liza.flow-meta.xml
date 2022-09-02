@@ -2,7 +2,7 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <description>Ejecuta alerta de email Póliza Nueva</description>
-        <name>DSALES_P_liza_Nueva</name>
+        <name>DSALES_Poliza_Nueva</name>
         <label>Póliza Nueva</label>
         <locationX>176</locationX>
         <locationY>335</locationY>

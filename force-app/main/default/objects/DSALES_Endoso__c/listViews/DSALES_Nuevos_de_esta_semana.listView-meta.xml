@@ -7,7 +7,7 @@
     <columns>CREATED_DATE</columns>
     <columns>DSALES_Estatus__c</columns>
     <columns>DSALES_Poliza__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
     <filters>
         <field>CREATED_DATE</field>
         <operation>equals</operation>
