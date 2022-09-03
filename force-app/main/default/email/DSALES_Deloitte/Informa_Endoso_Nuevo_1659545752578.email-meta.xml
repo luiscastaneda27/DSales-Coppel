@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informa al Cliente estatus Nuevo de Endoso</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Informa Endoso Nuevo</name>
+    <pageDevName>Informa_Endoso_Nuevo</pageDevName>
+    <relatedEntityType>DSALES_Endoso__c</relatedEntityType>
+    <style>none</style>
+    <subject>Registro de endoso</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{DSALES_Endoso__c.DSALES_Cliente__c}}}
+
+Le informamos que su solicitud {{{DSALES_Endoso__c.Name}}} ha sido registrada el día {{{DSALES_Endoso__c.CreatedDate}}} con el numero de Folio {{{DSALES_Endoso__c.DSALES_Folio__c}}} de acuerdo a la documentación presentada en su trámite.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Respetuosamente, 
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

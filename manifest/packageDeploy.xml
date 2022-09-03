@@ -345,6 +345,10 @@
 		<members>unfiled$public/DSALES_Monje</members>
 		<members>unfiled$public/DSALES_Plantilla_para_endoso_en_estatus_requerimiento_de_informaci_n</members>
 		<members>unfiled$public/DSALES_Plantilla_para_envi_de_estatus_en_tramite</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_autorizado_1658419964554</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_Autorizado_1658358976235</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658425997741</members>
+		<members>DSALES_Deloitte/Informa_Endoso_Nuevo_1659545752578</members>
 		<name>EmailTemplate</name>
 	</types>
 	<types>
@@ -427,7 +431,7 @@
 	</types>
 	<types>
 		<members>DSALES_Certificados</members>
-		<members>DSALES_Membrete_para_endosos</members>
+		<members>DSALES_MembreteParaEndoso</members>
 		<name>Letterhead</name>
 	</types>
 	<types>

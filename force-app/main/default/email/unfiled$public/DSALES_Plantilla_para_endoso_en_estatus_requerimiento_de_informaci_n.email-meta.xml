@@ -3,7 +3,7 @@
     <available>true</available>
     <description>Plantilla para informar el estatus del endoso requerimiento de información</description>
     <encodingKey>UTF-8</encodingKey>
-    <letterhead>DSALES_Membrete_para_endosos</letterhead>
+    <letterhead>DSALES_MembreteParaEndoso</letterhead>
     <name>Plantilla para endoso en estatus requerimiento de información</name>
     <style>formalLetter</style>
     <subject>Requerimiento de información de Endoso</subject>
