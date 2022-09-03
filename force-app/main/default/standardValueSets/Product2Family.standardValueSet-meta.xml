@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </standardValue>
+    <standardValue>
+        <fullName>10 • FRIGOBAR</fullName>
+        <default>false</default>
+        <label>10 • FRIGOBAR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Motocicletas</fullName>
+        <default>false</default>
+        <label>Motocicletas</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seguros de motos</fullName>
+        <default>false</default>
+        <label>Seguros de motos</label>
+    </standardValue>
+    <standardValue>
+        <fullName>20 • 8-10 PIES</fullName>
+        <default>false</default>
+        <label>20 • 8-10 PIES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>01 • CAFETERAS</fullName>
+        <default>false</default>
+        <label>01 • CAFETERAS</label>
+    </standardValue>
+</StandardValueSet>

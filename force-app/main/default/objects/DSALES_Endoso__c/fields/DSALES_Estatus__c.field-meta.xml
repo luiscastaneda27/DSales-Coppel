@@ -25,11 +25,6 @@
                 <label>En tramite</label>
             </value>
             <value>
-                <fullName>Recibido</fullName>
-                <default>false</default>
-                <label>Recibido</label>
-            </value>
-            <value>
                 <fullName>Requerimiento de Información</fullName>
                 <color>#F3D904</color>
                 <default>false</default>
@@ -46,6 +41,12 @@
                 <color>#FF0000</color>
                 <default>false</default>
                 <label>Rechazado</label>
+            </value>
+            <value>
+                <fullName>Recibido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Recibido</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -2,7 +2,7 @@
 <EmailTemplateFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>murrutiag@deloitte.com</sharedTo>
+        <sharedTo>lcastanedad@deloitte.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <name>DSALES_Deloitte</name>

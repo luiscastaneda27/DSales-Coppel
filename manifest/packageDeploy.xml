@@ -273,6 +273,9 @@
 	</types>
 	<types>
         <members>AccountType</members>
+		<members>QuoteStatus</members>
+		<members>OpportunityStage</members>
+		<members>Product2Family</members>
         <name>StandardValueSet</name>
     </types>
 	<types>
