@@ -85,6 +85,7 @@
 		<members>Claim.Cliente__c</members>
 		<members>Claim.DSALES_Estatus__c</members>
 		<members>Claim.DSALES_Numero_cliente_credito__c</members>
+		<members>Claim.DSALES_Motivo_rechazo__c</members>
 		<members>DSALES_Certificado__c.DSALES_Caja_GEX__c</members>
 		<members>DSALES_Certificado__c.DSALES_Cliente__c</members>
 		<members>DSALES_Certificado__c.DSALES_Costo_de_Garantia_Extendida__c</members>
@@ -568,13 +569,20 @@
 		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_por_Unidades_GEX_HEV</members>
 		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
 		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
+		<members>CoppelPISyS</members>
+		<members>CoppelPISyS/SegurosdeMotos</members>
 		<members>CoppelPISyS/SegurosdeMotos/Clientes_interesados_en_compra_de_SM_6hT</members>
 		<members>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</members>
 		<members>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</members>
+		<members>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</members>
+		<members>CoppelPISyS/SegurosdeMotos/Top_de_Oportunidades_abiertas_kKq</members>
+		<members>CoppelPISyS/SegurosdeMotos/Oportunidades_sin_actividad_en_60_das_3Tw</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
 		<name>Report</name>
 	</types>
 	<types>
+	    <members>Clientes_con_p_lizas</members>
+		<members>Cuentas_Personales</members>
 		<members>DSALESCuentas_Oportunidades_Productos</members>
 		<members>DSALES_Oportunidades_Productos</members>
 		<members>Oportunidades_con_cotizaciones</members>
