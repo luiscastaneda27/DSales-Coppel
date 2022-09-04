@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<version>53.0</version>
+	<types>
+		<members>DSALES_Estatus_Endosos_Totales_SM_CWd</members>
+		<name>Report</name>
+	</types>
 </Package>

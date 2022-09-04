@@ -7,9 +7,6 @@
 		<name>AnimationRule</name>
 	</types>
 	<types>
-		<members>DSALES_Account</members>
-		<members>DSALES_AccountWrapper</members>
-		<members>DSALES_CertificadoWrapper</members>
 		<members>DSALES_Certificados</members>
 		<members>DSALES_CertificadosHelper</members>
 		<members>DSALES_ClasificacionServicio</members>
@@ -21,14 +18,11 @@
 		<members>DSALES_ControladorCotizacionGex</members>
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
-		<members>DSALES_EmissionWrapper</members>
 		<members>DSALES_GexCotizaciones</members>
 		<members>DSALES_GexCotizacionesHelper</members>
 		<members>DSALES_InformacionDePagoGEX</members>
-		<members>DSALES_ListaNegra</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
-		<members>DSALES_PaymentInfoWrapper</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -575,9 +569,9 @@
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultados_GEX_por_Tiendas_Udp</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Tiendas_Potenciales_GEX_C8S</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_por_Unidades_GEX_HEV</members>
-		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
-		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
 		<members>CoppelPISyS</members>
+		<!--members>CoppelPISyS/SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members-->
+		<members>CoppelPISyS/SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
 		<members>CoppelPISyS/SegurosdeMotos</members>
 		<members>CoppelPISyS/SegurosdeMotos/Clientes_interesados_en_compra_de_SM_6hT</members>
 		<members>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</members>
