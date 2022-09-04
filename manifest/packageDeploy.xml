@@ -342,6 +342,9 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
+	    <members>DSALES_PISYS</members>
+		<members>dupcheck__dcDocuments</members>
+		<members>Experiences_Shared_Document_Folder</members>
 		<members>DSALES_PISYS/DALES_LogoIGEX.png</members>
 		<members>DSALES_PISYS/DSALES_LogoFGEX.png</members>
 		<members>DSALES_PISYS/DSALES_hr.png</members>

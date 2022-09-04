@@ -2,7 +2,7 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
         <description>Ejecuta alerta de email Póliza Nueva</description>
-        <name>DSALES_Poliza_Nueva</name>
+        <name>DSALES_P_liza_Nueva</name>
         <label>Póliza Nueva</label>
         <locationX>176</locationX>
         <locationY>335</locationY>
@@ -18,6 +18,7 @@
     </actionCalls>
     <apiVersion>55.0</apiVersion>
     <description>Despacha correo al Cliente con enlace para descargar su nueva Póliza de Seguro</description>
+    <environments>Default</environments>
     <interviewLabel>Correo nueva póliza {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Correo nueva póliza</label>
     <processMetadataValues>
