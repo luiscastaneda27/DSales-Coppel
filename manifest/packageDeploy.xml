@@ -55,6 +55,7 @@
 	</types>
 	<types>
 		<members>LOGO_COPPEL01</members>
+		<members>LOGO_COPPEL011</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
@@ -343,22 +344,22 @@
 	</types>
 	<types>
 	    <members>DSALES_PISYS</members>
-		<members>dupcheck__dcDocuments</members>
+		<!--members>dupcheck__dcDocuments</members-->
 		<members>Experiences_Shared_Document_Folder</members>
-		<members>DSALES_PISYS/DALES_LogoIGEX.png</members>
-		<members>DSALES_PISYS/DSALES_LogoFGEX.png</members>
-		<members>DSALES_PISYS/DSALES_hr.png</members>
-		<members>DSALES_PISYS/DSALES_hrAmarillo.png</members>
-		<members>DSALES_PISYS/DSALES_hrAzul.png</members>
-		<members>Experiences_Shared_Document_Folder/X1267382794_jpg.jpg</members>
-		<members>dupcheck__dcDocuments/dupcheck__ApplicationIcon2.png</members>
-		<members>dupcheck__dcDocuments/dupcheck__ApplicationLogo2.png</members>
-		<members>dupcheck__dcDocuments/dupcheck__Application_Icon.png</members>
-		<members>dupcheck__dcDocuments/dupcheck__Application_Logo.png</members>
+		<members>DSALES_PISYS/DALES_LogoIGEX</members>
+		<members>DSALES_PISYS/DSALES_LogoFGEX</members>
+		<members>DSALES_PISYS/DSALES_hr</members>
+		<members>DSALES_PISYS/DSALES_hrAmarillo</members>
+		<members>DSALES_PISYS/DSALES_hrAzul</members>
+		<members>Experiences_Shared_Document_Folder/X1267382794_jpg</members>
+		<!--members>dupcheck__dcDocuments/dupcheck__ApplicationIcon2</members>
+		<members>dupcheck__dcDocuments/dupcheck__ApplicationLogo2</members>
+		<members>dupcheck__dcDocuments/dupcheck__Application_Icon</members>
+		<members>dupcheck__dcDocuments/dupcheck__Application_Logo</members-->
 		<name>Document</name>
 	</types>
 	<types>
-		<members>Account.DSales_PersonAccountsDR</members>
+		<members>PersonAccount.DSales_PersonAccountsDR</members>
 		<name>DuplicateRule</name>
 	</types>
 	<types>
@@ -378,6 +379,10 @@
 		<members>DSALES_Deloitte/Informa_Endoso_Nuevo_1659545752578</members>
 		<members>DSALES_Deloitte/Env_a_P_liza_1659559547166</members>
 		<members>DSALES_Deloitte/Envi_de_cotizaci_n_1660589806562</members>
+		<members>DSALES_Deloitte/Siniestro_En_Tr_mite_1660834028554</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Nuevo_1659549870686</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Completado_1659548817745</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Rechazado_1659550884711</members>
 		<name>EmailTemplate</name>
 	</types>
 	<types>
@@ -647,13 +652,14 @@
 		<name>WebLink</name>
 	</types>
 	<types>
+	    <members>Claim</members>
 		<members>DSALES_Endoso__c</members>
 		<members>InsurancePolicy</members>
 		<members>Quote</members>
 		<name>Workflow</name>
 	</types>
 	<types>
-		<members>Claim.DSALES_Informa_Siniestro_En_Tramite</members>
+		<!--members>Claim.DSALES_Informa_Siniestro_En_Tramite</members-->
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
