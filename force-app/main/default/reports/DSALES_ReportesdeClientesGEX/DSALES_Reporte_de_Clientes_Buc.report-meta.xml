@@ -37,9 +37,9 @@
     <columns>
         <field>Account$PersonContact.MobilePhone</field>
     </columns>
-    <columns>
+    <!--columns>
         <field>Account$DSALES_Fecha_alta__c</field>
-    </columns>
+    </columns-->
     <columns>
         <field>Account$Fecha_de_Nacimiento__c</field>
     </columns>

@@ -276,6 +276,19 @@
 		<name>CustomField</name>
 	</types>
 	<types>
+		<!--members>DSALES_ReportedeEndosos</members>
+		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
+		<members>TablerosdeEndosodeSM</members>
+		<members>TablerosdeEndosodeSM/XhYEjwaChGCwQkncVxUjtfkRWoloeo1</members>
+		<members>COPPELPISyS</members-->
+		<members>COPPELPISyS</members>
+		<members>COPPELPISyS/Garantaextendida</members>
+		<members>COPPELPISyS/Segurosdemotos</members>
+		<members>Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
+		<members>Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
         <members>AccountType</members>
 		<members>QuoteStatus</members>
 		<members>OpportunityStage</members>
@@ -553,6 +566,7 @@
 	<types>
 		<members>DSALESCuentas_Oportunidades_Productos</members>
 		<members>DSALES_Oportunidades_Productos</members>
+		<members>Oportunidades_con_cotizaciones</members>
 		<name>ReportType</name>
 	</types>
 	<types>
