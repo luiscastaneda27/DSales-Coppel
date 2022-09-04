@@ -63,10 +63,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DSALES_InformacionDePagoGEX</apexClass>
-        <enabled>false</enabled>
-    </classAccesses> 
-    <classAccesses>
         <apexClass>DSALES_Matriz</apexClass>
         <enabled>false</enabled>
     </classAccesses>

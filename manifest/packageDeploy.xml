@@ -20,7 +20,6 @@
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
 		<members>DSALES_GexCotizaciones</members>
 		<members>DSALES_GexCotizacionesHelper</members>
-		<members>DSALES_InformacionDePagoGEX</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
 		<name>ApexClass</name>
