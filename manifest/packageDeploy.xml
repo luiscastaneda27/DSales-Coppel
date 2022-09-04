@@ -54,6 +54,10 @@
 		<name>BrandingSet</name>
 	</types>
 	<types>
+		<members>LOGO_COPPEL01</members>
+		<name>ContentAsset</name>
+	</types>
+	<types>
 		<members>Asset.DSALES_PysisCompactLayout</members>
 		<members>Claim.DSALES_Formato_compacto_siniestro</members>
 		<members>DSALES_Certificado__c.DSALES_Certificado</members>
@@ -346,6 +350,7 @@
 		<members>unfiled$public/DSALES_Plantilla_para_endoso_en_estatus_requerimiento_de_informaci_n</members>
 		<members>unfiled$public/DSALES_Plantilla_para_envi_de_estatus_en_tramite</members>
 		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_autorizado_1658419964554</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658418823421</members>
 		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_Autorizado_1658358976235</members>
 		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658425997741</members>
 		<members>DSALES_Deloitte/Informa_Endoso_Nuevo_1659545752578</members>
@@ -618,7 +623,6 @@
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members>
-		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<name>WorkflowAlert</name>
 	</types>
 	<types>
