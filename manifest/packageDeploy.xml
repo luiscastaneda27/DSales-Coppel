@@ -284,8 +284,11 @@
 		<members>COPPELPISyS</members>
 		<members>COPPELPISyS/Garantaextendida</members>
 		<members>COPPELPISyS/Segurosdemotos</members>
-		<members>Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
-		<members>Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<members>COPPELPISyS/Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
+		<members>COPPELPISyS/Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<members>COPPELPISyS/Segurosdemotos/hEloTdLxCFXYrohtXkHFluFrIzBbQF</members>
+		<members>COPPELPISyS/Segurosdemotos/iRwyPzDoEOAkagKsTpvddsdZgnEsdP</members>
+		<members>COPPELPISyS/Segurosdemotos/GTlTBYAPdOjzISvFslZpRafnShxOuq</members>
 		<members>Tableros_Venta_GEX</members>
 		<members>Tableros_Venta_GEX/WKEgdHadQdsLxqKdOxltMNwbiGcBqw</members>
 		<name>Dashboard</name>
@@ -565,6 +568,9 @@
 		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_por_Unidades_GEX_HEV</members>
 		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
 		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
+		<members>CoppelPISyS/SegurosdeMotos/Clientes_interesados_en_compra_de_SM_6hT</members>
+		<members>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</members>
+		<members>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
 		<name>Report</name>
 	</types>
