@@ -36,7 +36,7 @@
                 </groupingSortProperties>
                 <header>Importe de Siniestros</header>
                 <legendPosition>Right</legendPosition>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -74,7 +74,7 @@
                 <header>Cantidad de Siniestros</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -112,7 +112,7 @@
                 <header>Cantidad de Siniestros</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -146,7 +146,7 @@
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showPercentage>false</showPercentage>
                 <showRange>false</showRange>
                 <showTotal>true</showTotal>
@@ -188,7 +188,7 @@
                 </groupingSortProperties>
                 <header>Importe de Siniestros</header>
                 <legendPosition>Right</legendPosition>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -218,7 +218,7 @@
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <showRange>false</showRange>
             </dashboardComponent>
             <rowIndex>7</rowIndex>
@@ -265,7 +265,7 @@
                 </flexComponentProperties>
                 <groupingSortProperties/>
                 <header>Top 5 de Siniestros</header>
-                <report>SegurosdeMotos/Siniestros_Bfs</report>
+                <report>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</report>
                 <title>x importe</title>
             </dashboardComponent>
             <rowIndex>7</rowIndex>

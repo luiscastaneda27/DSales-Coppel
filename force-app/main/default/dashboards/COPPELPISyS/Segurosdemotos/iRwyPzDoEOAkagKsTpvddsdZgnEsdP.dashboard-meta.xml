@@ -54,7 +54,7 @@
                     </groupingSorts>
                 </groupingSortProperties>
                 <header>Top 10 de clientes</header>
-                <report>SegurosdeMotos/Plizas_por_Producto_nYk</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</report>
                 <title>x importe de Póliza</title>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
@@ -88,7 +88,7 @@
                 </groupingSortProperties>
                 <header>Importe de Pólizas</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>SegurosdeMotos/Plizas_por_Producto_nYk</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -132,7 +132,7 @@
                 </groupingSortProperties>
                 <header>Pólizas vigentes y renovadas</header>
                 <legendPosition>Right</legendPosition>
-                <report>SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -173,7 +173,7 @@
                 </groupingSortProperties>
                 <header>Pólizas ingresadas v/s activas</header>
                 <legendPosition>Right</legendPosition>
-                <report>SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -211,7 +211,7 @@
                 </groupingSortProperties>
                 <header>Pólizas activas de Clientes</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -250,7 +250,7 @@
                 </groupingSortProperties>
                 <header>Pólizas renovadas</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</report>
                 <showPercentage>false</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -288,7 +288,7 @@
                 <header>Pólizas suscritas</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>SegurosdeMotos/Plizas_por_Producto_nYk</report>
+                <report>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</report>
                 <showPercentage>true</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
