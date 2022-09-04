@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</name>
+        <name>envi_de_cotizaci_n</name>
         <label>envió de cotización</label>
         <locationX>182</locationX>
         <locationY>335</locationY>
@@ -49,6 +49,7 @@
             <label>Cotización rechazada</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <interviewLabel>Envió de correo con cotización {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Envió de correo con cotización</label>
     <processMetadataValues>
