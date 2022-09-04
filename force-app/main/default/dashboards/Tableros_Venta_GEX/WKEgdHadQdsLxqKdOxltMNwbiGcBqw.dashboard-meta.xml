@@ -108,7 +108,7 @@
             <rowIndex>0</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
-        <dashboardGridComponents>
+        <!--dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>4</columnIndex>
             <dashboardComponent>
@@ -155,7 +155,7 @@
             </dashboardComponent>
             <rowIndex>0</rowIndex>
             <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
+        </dashboardGridComponents-->
         <dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>0</columnIndex>
@@ -632,7 +632,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>lcastanedad@deloitte.com.dev</runningUser>
+    <runningUser>lcastanedad@deloitte.com</runningUser>
     <textColor>#000000</textColor>
     <title>Tablero Ventas GEX</title>
     <titleColor>#000000</titleColor>
