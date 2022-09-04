@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Envía enlace para descarga de Póliza suscrita</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Envía Póliza</name>
+    <pageDevName>Env_a_P_liza</pageDevName>
+    <relatedEntityType>InsurancePolicy</relatedEntityType>
+    <style>none</style>
+    <subject>Póliza de Moto</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{InsurancePolicy.DSALES_Asegurado__c}}}
+
+¡En nombre de Coppel, queremos agradecerte inmensamente por la confianza en nuestros productos! Esperamos que estés contento con tu compra, tal como lo estamos nosotros.
+
+¡No solo eso, esperamos que hagas un buen uso de tu Seguro de Motos y que el mismo supere todas tus expectativas!.
+
+Si necesitas ayuda, ¡siempre estamos disponibles!.
+
+Esperando que usted y su familia se encuentren bien, le enviamos un fuerte y cálido abrazo.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+{{{InsurancePolicy.DSALES_PDFpoliza_c__c}}}
+
+Respetuosamente, 
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

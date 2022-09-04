@@ -12,4 +12,10 @@
         <senderType>OrgWideEmailAddress</senderType>
         <template>DSALES_Deloitte/Envi_de_cotizaci_n_1660589806562</template>
     </alerts>
+    <rules>
+        <fullName>test</fullName>
+        <active>false</active>
+        <formula>Id != null</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
 </Workflow>

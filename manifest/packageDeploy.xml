@@ -286,6 +286,8 @@
 		<members>COPPELPISyS/Segurosdemotos</members>
 		<members>Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
 		<members>Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<members>Tableros_Venta_GEX</members>
+		<members>Tableros_Venta_GEX/WKEgdHadQdsLxqKdOxltMNwbiGcBqw</members>
 		<name>Dashboard</name>
 	</types>
 	<types>
@@ -367,6 +369,8 @@
 		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_Autorizado_1658358976235</members>
 		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658425997741</members>
 		<members>DSALES_Deloitte/Informa_Endoso_Nuevo_1659545752578</members>
+		<members>DSALES_Deloitte/Env_a_P_liza_1659559547166</members>
+		<members>DSALES_Deloitte/Envi_de_cotizaci_n_1660589806562</members>
 		<name>EmailTemplate</name>
 	</types>
 	<types>
@@ -626,6 +630,8 @@
 	</types>
 	<types>
 		<members>DSALES_Endoso__c</members>
+		<members>InsurancePolicy</members>
+		<members>Quote</members>
 		<name>Workflow</name>
 	</types>
 	<types>
