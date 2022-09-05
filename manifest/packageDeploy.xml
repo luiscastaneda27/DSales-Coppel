@@ -7,9 +7,6 @@
 		<name>AnimationRule</name>
 	</types>
 	<types>
-		<members>DSALES_Account</members>
-		<members>DSALES_AccountWrapper</members>
-		<members>DSALES_CertificadoWrapper</members>
 		<members>DSALES_Certificados</members>
 		<members>DSALES_CertificadosHelper</members>
 		<members>DSALES_ClasificacionServicio</members>
@@ -21,14 +18,10 @@
 		<members>DSALES_ControladorCotizacionGex</members>
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
-		<members>DSALES_EmissionWrapper</members>
 		<members>DSALES_GexCotizaciones</members>
 		<members>DSALES_GexCotizacionesHelper</members>
-		<members>DSALES_InformacionDePagoGEX</members>
-		<members>DSALES_ListaNegra</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
-		<members>DSALES_PaymentInfoWrapper</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -54,6 +47,11 @@
 		<name>BrandingSet</name>
 	</types>
 	<types>
+		<members>LOGO_COPPEL01</members>
+		<members>LOGO_COPPEL011</members>
+		<name>ContentAsset</name>
+	</types>
+	<types>
 		<members>Asset.DSALES_PysisCompactLayout</members>
 		<members>Claim.DSALES_Formato_compacto_siniestro</members>
 		<members>DSALES_Certificado__c.DSALES_Certificado</members>
@@ -65,7 +63,7 @@
 	<types>
 		<members>DSALES_GarantiaExtendida</members>
 		<members>DSALES_Seguro_de_Motos</members>
-		<name>CustomApplication</name
+		<name>CustomApplication</name>
 	</types>
 	<types>
 		<members>Account.DSALES_Fecha_alta__c</members>
@@ -81,6 +79,7 @@
 		<members>Claim.Cliente__c</members>
 		<members>Claim.DSALES_Estatus__c</members>
 		<members>Claim.DSALES_Numero_cliente_credito__c</members>
+		<members>Claim.DSALES_Motivo_rechazo__c</members>
 		<members>DSALES_Certificado__c.DSALES_Caja_GEX__c</members>
 		<members>DSALES_Certificado__c.DSALES_Cliente__c</members>
 		<members>DSALES_Certificado__c.DSALES_Costo_de_Garantia_Extendida__c</members>
@@ -268,8 +267,34 @@
 		<members>QuoteLineItem.DSALES_TipoServ__c</members>
 		<members>Account.sumar__c</members>
 		<members>QuoteLineItem.Vigencia_meses__c</members>
+		<members>Account.Tipo_de_Cliente__c</members>
 		<name>CustomField</name>
 	</types>
+	<types>
+		<!--members>DSALES_ReportedeEndosos</members>
+		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
+		<members>TablerosdeEndosodeSM</members>
+		<members>TablerosdeEndosodeSM/XhYEjwaChGCwQkncVxUjtfkRWoloeo1</members>
+		<members>COPPELPISyS</members-->
+		<members>COPPELPISyS</members>
+		<members>COPPELPISyS/Garantaextendida</members>
+		<members>COPPELPISyS/Segurosdemotos</members>
+		<members>COPPELPISyS/Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
+		<members>COPPELPISyS/Segurosdemotos/qlMoAFAafYUpLidIIquKMuGnVMWNiU</members>
+		<members>COPPELPISyS/Segurosdemotos/hEloTdLxCFXYrohtXkHFluFrIzBbQF</members>
+		<members>COPPELPISyS/Segurosdemotos/iRwyPzDoEOAkagKsTpvddsdZgnEsdP</members>
+		<members>COPPELPISyS/Segurosdemotos/GTlTBYAPdOjzISvFslZpRafnShxOuq</members>
+		<members>Tableros_Venta_GEX</members>
+		<members>Tableros_Venta_GEX/WKEgdHadQdsLxqKdOxltMNwbiGcBqw</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
+        <members>AccountType</members>
+		<members>QuoteStatus</members>
+		<members>OpportunityStage</members>
+		<members>Product2Family</members>
+        <name>StandardValueSet</name>
+    </types>
 	<types>
 		<members>DSALES_Categoria__c</members>
 		<members>DSALES_Certificado__c</members>
@@ -311,22 +336,27 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
-		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
-		<name>Dashboard</name>
-	</types>
-	<types>
-		<members>DSALES_PISYS/DALES_LogoIGEX.png</members>
-		<members>DSALES_PISYS/DSALES_LogoFGEX.png</members>
-		<members>DSALES_PISYS/DSALES_hr.png</members>
-		<members>DSALES_PISYS/DSALES_hrAmarillo.png</members>
-		<members>DSALES_PISYS/DSALES_hrAzul.png</members>
+	    <members>DSALES_PISYS</members>
+		<!--members>dupcheck__dcDocuments</members-->
+		<members>Experiences_Shared_Document_Folder</members>
+		<members>DSALES_PISYS/DALES_LogoIGEX</members>
+		<members>DSALES_PISYS/DSALES_LogoFGEX</members>
+		<members>DSALES_PISYS/DSALES_hr</members>
+		<members>DSALES_PISYS/DSALES_hrAmarillo</members>
+		<members>DSALES_PISYS/DSALES_hrAzul</members>
+		<members>Experiences_Shared_Document_Folder/X1267382794_jpg</members>
+		<!--members>dupcheck__dcDocuments/dupcheck__ApplicationIcon2</members>
+		<members>dupcheck__dcDocuments/dupcheck__ApplicationLogo2</members>
+		<members>dupcheck__dcDocuments/dupcheck__Application_Icon</members>
+		<members>dupcheck__dcDocuments/dupcheck__Application_Logo</members-->
 		<name>Document</name>
 	</types>
 	<types>
-		<members>Account.DSales_PersonAccountsDR</members>
+		<members>PersonAccount.DSales_PersonAccountsDR</members>
 		<name>DuplicateRule</name>
 	</types>
 	<types>
+		<members>DSALES_Deloitte</members>
 		<members>DSALES_PlantillasCorreos/DSALES_CertificadoGEX</members>
 		<members>DSALES_PlantillasCorreos/DSALES_CertificadoPDF</members>
 		<members>DSALES_PlantillasCorreos/DSALES_Cotizacion</members>
@@ -335,6 +365,17 @@
 		<members>unfiled$public/DSALES_Monje</members>
 		<members>unfiled$public/DSALES_Plantilla_para_endoso_en_estatus_requerimiento_de_informaci_n</members>
 		<members>unfiled$public/DSALES_Plantilla_para_envi_de_estatus_en_tramite</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_autorizado_1658419964554</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658418823421</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_Autorizado_1658358976235</members>
+		<members>DSALES_Deloitte/Plantilla_para_envi_de_estatus_en_tramite_1658425997741</members>
+		<members>DSALES_Deloitte/Informa_Endoso_Nuevo_1659545752578</members>
+		<members>DSALES_Deloitte/Env_a_P_liza_1659559547166</members>
+		<members>DSALES_Deloitte/Envi_de_cotizaci_n_1660589806562</members>
+		<members>DSALES_Deloitte/Siniestro_En_Tr_mite_1660834028554</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Nuevo_1659549870686</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Completado_1659548817745</members>
+		<members>DSALES_Deloitte/Informa_Siniestro_Rechazado_1659550884711</members>
 		<name>EmailTemplate</name>
 	</types>
 	<types>
@@ -417,7 +458,7 @@
 	</types>
 	<types>
 		<members>DSALES_Certificados</members>
-		<members>DSALES_Membrete_para_endosos</members>
+		<members>DSALES_MembreteParaEndoso</members>
 		<name>Letterhead</name>
 	</types>
 	<types>
@@ -526,14 +567,26 @@
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_Zonas_g9H</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultados_GEX_por_Tiendas_Udp</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Tiendas_Potenciales_GEX_C8S</members>
-		<members>SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members>
-		<members>SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
+		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_por_Unidades_GEX_HEV</members>
+		<members>CoppelPISyS</members>
+		<!--members>CoppelPISyS/SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members-->
+		<members>CoppelPISyS/SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
+		<members>CoppelPISyS/SegurosdeMotos</members>
+		<members>CoppelPISyS/SegurosdeMotos/Clientes_interesados_en_compra_de_SM_6hT</members>
+		<members>CoppelPISyS/SegurosdeMotos/Plizas_por_Producto_nYk</members>
+		<members>CoppelPISyS/SegurosdeMotos/Siniestros_Bfs</members>
+		<members>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</members>
+		<members>CoppelPISyS/SegurosdeMotos/Top_de_Oportunidades_abiertas_kKq</members>
+		<members>CoppelPISyS/SegurosdeMotos/Oportunidades_sin_actividad_en_60_das_3Tw</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
 		<name>Report</name>
 	</types>
 	<types>
+	    <members>Clientes_con_p_lizas</members>
+		<members>Cuentas_Personales</members>
 		<members>DSALESCuentas_Oportunidades_Productos</members>
 		<members>DSALES_Oportunidades_Productos</members>
+		<members>Oportunidades_con_cotizaciones</members>
 		<name>ReportType</name>
 	</types>
 	<types>
@@ -592,11 +645,14 @@
 		<name>WebLink</name>
 	</types>
 	<types>
+	    <members>Claim</members>
 		<members>DSALES_Endoso__c</members>
+		<members>InsurancePolicy</members>
+		<members>Quote</members>
 		<name>Workflow</name>
 	</types>
 	<types>
-		<members>Claim.DSALES_Informa_Siniestro_En_Tramite</members>
+		<!--members>Claim.DSALES_Informa_Siniestro_En_Tramite</members-->
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_completado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_rechazado</members>
 		<members>DSALES_Endoso__c.DSALES_Alerta_de_correo_de_cambio_de_estatus_a_requerimiento_de_informaci_n</members>
@@ -604,7 +660,6 @@
 		<members>DSALES_Endoso__c.DSALES_Endoso_Nuevo</members>
 		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<members>Quote.DSALES_Alertadecorreoparaelenvidecotizacin</members>
-		<members>InsurancePolicy.DSALES_Poliza_Nueva</members>
 		<name>WorkflowAlert</name>
 	</types>
 	<types>

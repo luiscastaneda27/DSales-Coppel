@@ -9,19 +9,7 @@
         <application>DSALES_Seguro_de_Motos</application>
         <default>true</default>
         <visible>true</visible>
-    </applicationVisibilities>
-    <classAccesses>
-        <apexClass>DSALES_Account</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_AccountWrapper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_CertificadoWrapper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+    </applicationVisibilities> 
     <classAccesses>
         <apexClass>DSALES_Certificados</apexClass>
         <enabled>false</enabled>
@@ -65,11 +53,7 @@
     <classAccesses>
         <apexClass>DSALES_ControladorMatrizTiempo_Test</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_EmissionWrapper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> 
     <classAccesses>
         <apexClass>DSALES_GexCotizaciones</apexClass>
         <enabled>false</enabled>
@@ -77,15 +61,7 @@
     <classAccesses>
         <apexClass>DSALES_GexCotizacionesHelper</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_InformacionDePagoGEX</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_ListaNegra</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> 
     <classAccesses>
         <apexClass>DSALES_Matriz</apexClass>
         <enabled>false</enabled>
@@ -93,11 +69,7 @@
     <classAccesses>
         <apexClass>DSALES_MatrizHelper</apexClass>
         <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_PaymentInfoWrapper</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
+    </classAccesses> 
     <custom>true</custom>
     <description>Perfil para administradores de la app Seguro de motos.</description>
     <fieldPermissions>

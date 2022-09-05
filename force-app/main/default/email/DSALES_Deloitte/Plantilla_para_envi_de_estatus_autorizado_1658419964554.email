@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initialscale=1.0" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <style type="text/css">@media screen and (max-width: 480px) {slot[style] {margin-right: 0 !important;}.columnDiv {margin-right: 0 !important;}}@media screen and (min-width: 480px) {slot[style] {margin-bottom: 0 !important;}.columnDiv {margin-bottom: 0 !important;}}</style> 
+  <style type="text/css">@media screen and (max-width: 480px) {.contentbuilderBaseColumnRow .columnCell {display:inline-block;width:100%}}</style> 
+  <style type="text/css">.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 600px;}@media only screen and (max-width: 480px) {.contentpageDefaultEmailTemplatePageTemplate .contentRoot {width: 320px;}}</style> 
+ </head> 
+ <body> 
+  <table class="contentpageDefaultEmailTemplatePageTemplate" style="background-color: #E9EAEC;" role="presentation" id="contentpage_emailTemplateBodyContent" width="100%" cellpadding="0" cellspacing="0"> 
+   <tbody> 
+    <tr> 
+     <td width="100%" align="center"> 
+      <table class="contentRoot" style="background-color: #FFFFFF;" role="presentation" width="600" cellpadding="0" cellspacing="0"> 
+       <tbody> 
+        <tr> 
+         <td style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px;"> 
+          <table class="contentbuilderBaseColumnRow" style="background-color:;" role="presentation" width="100%" cellpadding="0" cellspacing="0"> 
+           <tbody> 
+            <tr valign="top"> 
+             <td width="100%" class="columnCell" style="vertical-align: top;display: inline-block"> 
+              <table style="width: 100%; border-collapse: collapse; word-break:break-word;"> 
+               <tbody> 
+                <tr> 
+                 <td> 
+                  <table style="width:100%; border-collapse: collapse; word-break:break-word;" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0"> 
+                   <tbody> 
+                    <tr> 
+                     <td style="padding-bottom: 40px;" align="Center"><img style="width: 100%; display: block; border: none; max-width: 50%;" src="{[devName:LOGO_COPPEL01]}" alt="" width="300" /></td> 
+                    </tr> 
+                   </tbody> 
+                  </table></td> 
+                </tr> 
+                <tr> 
+                 <td> 
+                  <table style="width: 100%; border-collapse: collapse; word-break: break-word; font-size: 14px" id="contentRegion" role="presentation" cellspacing="0" cellpadding="0" locked="0"> 
+                   <tbody> 
+                    <tr> 
+                     <td style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial Black,Arial,Helvetica,sans-serif;"><span style="color:#238dc1;">Club de protección le informa</span></span></span><br /><br /><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><strong>Estimado (a)&nbsp;</strong><strong>{{{DSALES_Endoso__c.DSALES_Cliente__c}}}</strong></span></span><p style="color:#333333;font-family:Arial;font-size:16px;font-weight:normal;margin:0;"><br /><br /><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:normal"><strong><span style="color:#222222">Debido a que la documentación que presentó en su trámite de endoso a su póliza de Club de Protección Motos cumplió con los requisitos necesarios, le informamos que el proceso de validación concluyó de manera satisfactoria.</span></strong></span></span></span><br /> &nbsp;</p><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:normal"><span style="color:#222222">Adjunto en el correo se encuentra su póliza con el endoso aplicado.</span></span><br /><span style="line-height:normal"><span style="color:#222222">Le reiteramos nuestro compromiso de seguir brindándole el servicio y la&nbsp;</span></span><span style="line-height:107%"><span style="line-height:107%"><span style="color:#222222">atención que usted se merece.</span></span></span></span><br /><br /><br /><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:normal"><span style="color:#222222">Esperando que usted y su familia se encuentren bien, le enviamos un&nbsp;</span></span><span style="line-height:normal"><span style="color:#222222">fuerte y cálido abrazo.</span></span><br /><br /><span style="line-height:107%"><span style="line-height:107%"><span style="color:#222222">Respetuosamente,</span></span></span></span><br /><span style="font-family:Arial Black,Arial,Helvetica,sans-serif;"><span style="line-height:107%"><b><span style="line-height:107%"><span style="color:#222222">El equipo de Club de Protección</span></span></b></span></span></span><br /><br /> &nbsp;</td> 
+                    </tr> 
+                   </tbody> 
+                  </table></td> 
+                </tr> 
+               </tbody> 
+              </table></td> 
+            </tr> 
+           </tbody> 
+          </table></td> 
+        </tr> 
+       </tbody> 
+      </table></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </body>
+</html>

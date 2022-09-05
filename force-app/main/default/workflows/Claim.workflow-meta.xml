@@ -12,4 +12,40 @@
         <senderType>OrgWideEmailAddress</senderType>
         <template>DSALES_Deloitte/Siniestro_En_Tr_mite_1660834028554</template>
     </alerts>
+    <alerts>
+        <fullName>Informa_Nuevo_Siniestro</fullName>
+        <description>Informa Nuevo Siniestro</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Correo_electr_nico__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>atencion@coppel.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>DSALES_Deloitte/Informa_Siniestro_Nuevo_1659549870686</template>
+    </alerts>
+    <alerts>
+        <fullName>Informa_Siniestro_Completado</fullName>
+        <description>Informa Siniestro Completado</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Correo_electr_nico__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>atencion@coppel.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>DSALES_Deloitte/Informa_Siniestro_Completado_1659548817745</template>
+    </alerts>
+    <alerts>
+        <fullName>Informa_Siniestro_Rechazado</fullName>
+        <description>Informa Siniestro Rechazado</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Correo_electr_nico__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>atencion@coppel.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>DSALES_Deloitte/Informa_Siniestro_Rechazado_1659550884711</template>
+    </alerts>
 </Workflow>

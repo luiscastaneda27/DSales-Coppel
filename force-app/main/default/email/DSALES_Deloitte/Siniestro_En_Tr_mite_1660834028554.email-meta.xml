@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de correo para el siniestro en etapa &quot;En Trámite&quot;</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Siniestro En Trámite</name>
+    <pageDevName>Siniestro_En_Tr_mite</pageDevName>
+    <relatedEntityType>Claim</relatedEntityType>
+    <style>none</style>
+    <subject>Siniestro En Trámite</subject>
+    <textOnly>Club de Protección le informa
+
+Estimado (a) {{{Claim.Cliente__c}}}
+
+De acuerdo a la documentación presentada se ha comenzado con su solicitud de siniestro de Club de Protección Motos, el proceso de validación esta en trámite.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Respetuosamente,
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

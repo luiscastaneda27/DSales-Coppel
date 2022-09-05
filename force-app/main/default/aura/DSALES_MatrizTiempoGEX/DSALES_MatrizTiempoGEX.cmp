@@ -110,8 +110,6 @@
                                          <td>
                                              <br/>
                                              {!item.codigo}
-                                            <!--br/>
-                                            <lightning:input type="checkbox" label="{! item.codigo }" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag2 }" disabled="{! NOT(v.data.esClone) }" /-->
                                         </td>
                                         <td>
                                             <lightning:input type="number" value="{!item.rangoMenor}" readonly="{! NOT(v.data.esClone) }" />

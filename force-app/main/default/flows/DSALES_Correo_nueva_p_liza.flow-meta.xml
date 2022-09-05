@@ -18,6 +18,7 @@
     </actionCalls>
     <apiVersion>55.0</apiVersion>
     <description>Despacha correo al Cliente con enlace para descargar su nueva Póliza de Seguro</description>
+    <environments>Default</environments>
     <interviewLabel>Correo nueva póliza {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Correo nueva póliza</label>
     <processMetadataValues>

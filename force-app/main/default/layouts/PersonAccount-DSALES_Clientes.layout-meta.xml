@@ -210,7 +210,7 @@
         <fields>ExpirationDate</fields>
         <relatedList>InsurancePolicies</relatedList>
     </relatedLists>
-    <relatedLists>
+    <!--relatedLists>
         <fields>Name</fields>
         <fields>Cliente__c</fields>
         <fields>ClaimType</fields>
@@ -218,7 +218,7 @@
         <fields>PolicyNumber</fields>
         <fields>CreatedDate</fields>
         <relatedList>Claim.Cliente__c</relatedList>
-    </relatedLists>
+    </relatedLists-->
     <relatedLists>
         <fields>Name</fields>
         <fields>ClaimType</fields>

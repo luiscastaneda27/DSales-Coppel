@@ -5,6 +5,6 @@
     <columns>DSALES_ProductoAdquirido__c</columns>
     <columns>DSALES_Fecha__c</columns>
     <columns>DSALES_Cliente__c</columns>
-    <filterScope>Mine</filterScope>
+    <filterScope>Everything</filterScope>
     <label>Mi Información de Pago</label>
 </ListView>

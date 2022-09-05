@@ -12,23 +12,35 @@
             <colSpan>4</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
-                <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
-                <componentType>Bar</componentType>
+                <chartSummary>
+                    <aggregate>Sum</aggregate>
+                    <axisBinding>y</axisBinding>
+                    <column>AMOUNT</column>
+                </chartSummary>
+                <componentType>Donut</componentType>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
                 <enableHover>false</enableHover>
-                <expandOthers>false</expandOthers>
-                <groupingSortProperties/>
+                <expandOthers>true</expandOthers>
+                <groupingColumn>STAGE_NAME</groupingColumn>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortOrder>d</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
                 <header>Tasa de conversión de Cotizaciones GEX</header>
-                <report>DSALES_ReportesdeVentasGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
-                <showPercentage>false</showPercentage>
-                <showPicturesOnCharts>false</showPicturesOnCharts>
-                <showValues>false</showValues>
+                <legendPosition>Right</legendPosition>
+                <report>DSALES_ReportedeCotizacionesGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
+                <showPercentage>true</showPercentage>
+                <showTotal>true</showTotal>
+                <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
-                <title>% cotizaciones finalizadas en venta</title>
-                <useReportChart>true</useReportChart>
+                <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
             <rowSpan>8</rowSpan>
@@ -55,7 +67,7 @@
                 <indicatorHighColor>#00716B</indicatorHighColor>
                 <indicatorLowColor>#C23934</indicatorLowColor>
                 <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>DSALES_ReportesdeVentasGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
+                <report>DSALES_ReportedeCotizacionesGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
                 <showPercentage>false</showPercentage>
                 <showRange>false</showRange>
                 <showTotal>true</showTotal>
@@ -93,7 +105,7 @@
                 <header>Funnel de Ventas</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>DSALES_ReportesdeVentasGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
+                <report>DSALES_ReportedeCotizacionesGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</report>
                 <showPercentage>true</showPercentage>
                 <showValues>true</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -108,7 +120,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>dmorquecho@deloittemx.com.dev</runningUser>
+    <runningUser>lcastanedad@deloitte.com</runningUser>
     <textColor>#000000</textColor>
     <title>Indicadores de Ventas GEX</title>
     <titleColor>#000000</titleColor>

@@ -3,7 +3,7 @@
     <available>true</available>
     <description>Plantilla para informar el estatus del endoso</description>
     <encodingKey>UTF-8</encodingKey>
-    <letterhead>DSALES_Membrete_para_endosos</letterhead>
+    <letterhead>DSALES_MembreteParaEndoso</letterhead>
     <name>Plantilla para envió de estatus en tramite</name>
     <style>formalLetter</style>
     <subject>Endoso en tramite</subject>

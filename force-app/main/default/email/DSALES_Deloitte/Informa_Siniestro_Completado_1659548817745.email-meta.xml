@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informa al Cliente estatus Completado de Siniestro</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Informa Siniestro Completado</name>
+    <pageDevName>Informa_Siniestro_Completado</pageDevName>
+    <relatedEntityType>Claim</relatedEntityType>
+    <style>none</style>
+    <subject>Informa siniestro completado</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{Claim.Cliente__c}}}
+
+Debido a que la documentación que presentó en su trámite de siniestro de Club de Protección Motos cumplió con los requisitos necesarios, le informamos que el proceso de validación concluyó de manera satisfactoria.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Respetuosamente, 
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

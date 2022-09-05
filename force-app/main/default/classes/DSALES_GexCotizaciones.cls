@@ -11,10 +11,7 @@ public class DSALES_GexCotizaciones extends fflib_SObjectDomain {
     
    
     public override void onAfterUpdate(Map<Id, SObject> existingRecords) {
-       
-            DSALES_GexCotizacionesHelper.envioCotizacionGex(JSON.serialize(records));
-        
-        
+        DSALES_GexCotizacionesHelper.envioCotizacionGex(JSON.serialize(records));
     }
     
 

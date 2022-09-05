@@ -49,6 +49,7 @@
             <label>Cotización rechazada</label>
         </rules>
     </decisions>
+    <environments>Default</environments>
     <interviewLabel>Envió de correo con cotización {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Envió de correo con cotización</label>
     <processMetadataValues>
