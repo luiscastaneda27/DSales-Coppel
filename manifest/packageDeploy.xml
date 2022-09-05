@@ -16,6 +16,7 @@
 		<members>DSALES_ControladorCertificadoPDF</members>
 		<members>DSALES_ControladorCertificadoPDFTest</members>
 		<members>DSALES_ControladorCotizacionGex</members>
+		<members>DSALES_ControladorCotizacionGexTest</members>
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
 		<members>DSALES_GexCotizaciones</members>
