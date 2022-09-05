@@ -1,7 +1,4 @@
 public class DSALES_GexCotizacionesHelper {
-    
-   //private  static final String TEMPLETE_NAME = ' DSALES_CertificadoGEX';
-    //private static final STRING TEMPLATE_SG=''
     private static final String TEMPLETE_NAME = 'DSALES_Cotizacion';  
     private static final String DIRECCION_CORREO = 'atencion@coppel.com';  
     
@@ -20,19 +17,14 @@ public class DSALES_GexCotizacionesHelper {
             EmailTemplate templete = [Select Id, HtmlValue, Subject from EmailTemplate Where DeveloperName = :TEMPLETE_NAME];
             OrgWideEmailAddress owa = [Select Id,Address From OrgWideEmailAddress Where Address = :DIRECCION_CORREO LIMIT 1];
             List<Messaging.SingleEmailMessage> MessageList = new List<Messaging.SingleEmailMessage>();
-           
-            for(Quote item: sObjectList){
-               
-                    
-                 Account acc = mapAccount.get(item.AccountId); 
+            
+            for(Quote item: sObjectList){     
+                Account acc = mapAccount.get(item.AccountId); 
                 Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
                 mail.setToAddresses(new string[] {item.DSALES_EmailCliente__c});
                 system.debug('Email: '+item.DSALES_EmailCliente__c);
-                //mail.setTemplateId(templete.Id);
                 mail.setHtmlBody(templete.HtmlValue);
-                 mail.setSubject(templete.Subject);
-                //mail.setWhatId(item.Id);
-                //mail.setTargetObjectId(acc.PersonContactId);
+                mail.setSubject(templete.Subject);
                 mail.setOrgWideEmailAddressId(owa.Id);
                 
                 Blob b = generarPFD(item.Id); 
@@ -44,8 +36,6 @@ public class DSALES_GexCotizacionesHelper {
                 efa.setBody(b);
                 mail.setFileAttachments(new Messaging.EmailFileAttachment[] {efa});
                 MessageList.add(mail);  
-               // UPDATE item;
-                
             }
             Messaging.sendEmail(MessageList, false);
             System.debug('Correo enviado');

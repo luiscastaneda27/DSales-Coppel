@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<version>53.0</version>
+	<types>
+        <members>DSALES_ControladorCotizacionGex</members>
+        <members>DSALES_ControladorCotizacionGexTest</members>
+        <members>DSALES_GexCotizaciones</members>
+        <members>DSALES_GexCotizacionesHelper</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>DSALES_GexCotizacion</members>
+        <name>ApexTrigger</name>
+    </types>
 </Package>

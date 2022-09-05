@@ -19,11 +19,11 @@ public class DSALES_ControladorCotizacionGex {
         html = [select Id, DSALES_Plantilla__c  from DSALES_Generador__c Where Name = :NOMBRE_PLANTILLA LIMIT 1].DSALES_Plantilla__c;    
         //}
         
-        email=[SELECT  DSALES_EmailCliente__c,Name,Id FROM Quote WHERE ID=:recordId].DSales_EmailCliente__c;
-        if(email!=null)
-        {
-            html=html.replace('DSALES_emailCliente__C', email);  
-        }
+       // email=[SELECT  DSALES_EmailCliente__c,Name,Id FROM Quote WHERE ID=:recordId].DSales_EmailCliente__c;
+        //if(email!=null)
+        //{
+          //  html=html.replace('DSALES_emailCliente__C', email);  
+        //}
         
         
         Map<String, String> mapCampos = getField(NOMBRE_OBJETO);
