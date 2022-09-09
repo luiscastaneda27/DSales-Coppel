@@ -1,25 +1,26 @@
-public class DSALES_AccountWrapper {
+global class DSALES_AccountWrapper {
 	
-    public class AccountRequest{
-        public String client_number {get;set;}
-        public String first_name {get; set;}
-        public String middle_name {get;set;}
-        public String last_name {get;set;}
-        public String suffix {get;set;}
-        public String telephone {get;set;}
-        public String email {get;set;}
-        public String contact_method {get;set;}
-        public String gender {get;set;}
-        public Date birthdate {get;set;}
-        public String state_code {get;set;}
-        public String town_code {get;set;}
-        public String suburb_code{get;set;}
-        public String zip_code {get;set;}
-        public Boolean contact_now {get;set;}       
+    global class AccountRequest{
+        global String client_number {get;set;}
+        global String first_name {get; set;}
+        global String middle_name {get;set;}
+        global String last_name {get;set;}
+        global String suffix {get;set;}
+        global String telephone {get;set;}
+        global String email {get;set;}
+        global String contact_method {get;set;}
+        global String gender {get;set;}
+        global Date birthdate {get;set;}
+        global String state_code {get;set;}
+        global String city_code {get;set;}
+        global String town_code {get;set;}
+        global String suburb_code{get;set;}
+        global String zip_code {get;set;}
+        global Boolean contact_now {get;set;}       
     }
-    public class AccountResponse{
-        public Boolean success {get;set;}
-        public String error_message {get;set;}
-        public String account_id {get;set;}
+    global class AccountResponse{
+        global Boolean success {get;set;}
+        global String error_message {get;set;}
+        global String account_id {get;set;}
     }
 }

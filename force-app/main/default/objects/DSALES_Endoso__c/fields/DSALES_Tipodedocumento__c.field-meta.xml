@@ -8,6 +8,7 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <controllingField>DSALES_Tipodeendoso__c</controllingField>
         <valueSetDefinition>
             <sorted>true</sorted>
             <value>
@@ -31,5 +32,28 @@
                 <label>Tarjeta de circulación</label>
             </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cambio de dirección</controllingFieldValue>
+            <controllingFieldValue>Corrección de datos fiscales</controllingFieldValue>
+            <controllingFieldValue>Corrección de nombre</controllingFieldValue>
+            <valueName>Comprobante de domicilio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cambio de placas</controllingFieldValue>
+            <controllingFieldValue>Corrección de RFC</controllingFieldValue>
+            <valueName>Otro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cambio de placas</controllingFieldValue>
+            <controllingFieldValue>Cambio No. motor</controllingFieldValue>
+            <controllingFieldValue>Cambio No. serie</controllingFieldValue>
+            <valueName>Tarjeta de circulación</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cambio de titular</controllingFieldValue>
+            <controllingFieldValue>Corrección de datos fiscales</controllingFieldValue>
+            <controllingFieldValue>Corrección de RFC</controllingFieldValue>
+            <valueName>Identificación oficial</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>

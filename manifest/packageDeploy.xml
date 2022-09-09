@@ -23,6 +23,23 @@
 		<members>DSALES_GexCotizacionesHelper</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
+		<members>DSALES_EndorsementCalls</members>
+        <members>DSALES_EndorsementCallsTest</members>
+        <members>DSALES_EndorsementController</members>
+        <members>DSALES_EndorsementController_Test</members>
+        <members>DSALES_EndorsementWrapper</members>
+        <members>DSALES_EndorsementWrapper_Test</members>
+        <members>DSALES_MockHttpResponseEndoso</members>
+        <members>DSALES_UpdateEndor</members>
+        <members>DSALES_UpdateEndorTest</members>
+        <members>DSALES_Utility</members>
+        <members>DSALES_UtilityTest</members>
+		<members>DSALES_AccountWrapper</members>
+		<members>DSALES_AccountWrapperRequesCredit_Test</members>
+		<members>DSALES_AccountWrapperReques_Test</members>
+		<members>DSALES_AccountWrapperRequest</members>
+		<members>DSALES_AccountWrapperRequestCredit</members>
+
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -59,6 +76,7 @@
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
 		<members>DSALES_InformacionDePago__c.InfoPagoVenta</members>
 		<members>InsurancePolicy.DSALES_Formato_compacto_p_liza</members>
+		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -269,8 +287,18 @@
 		<members>Account.sumar__c</members>
 		<members>QuoteLineItem.Vigencia_meses__c</members>
 		<members>Account.Tipo_de_Cliente__c</members>
+		 <members>DSALES_Endoso__c.DSALES_NuevaPoliza__c</members>
+        <members>DSALES_Endoso__c.DSALES_uid__c</members>
+        <members>DSALES_RutaIntegracion__mdt.DSALES_Endpoint__c</members>
+        <members>InsurancePolicy.DSALES_Estatusdepliza__c</members>
+		<members>Contact.DSALES_Metodocontacto__c</members>
 		<name>CustomField</name>
 	</types>
+	 <types>
+        <members>DSALES_RutaIntegracion.DSALES_ConsultarEndoso</members>
+        <members>DSALES_RutaIntegracion.DSALES_CrearEndoso</members>
+        <name>CustomMetadata</name>
+    </types>
 	<types>
 		<!--members>DSALES_ReportedeEndosos</members>
 		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
@@ -307,6 +335,7 @@
 		<members>DSALES_Matriz_de_Cotizacion__c</members>
 		<members>DSALES_SubCategoria__c</members>
 		<members>DSales_Matriz_GEX__c</members>
+		<members>DSALES_RutaIntegracion__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -464,6 +493,7 @@
 	</types>
 	<types>
 		<members>dSALES_ClasificacionServiciolwc</members>
+		 <members>dSALES_Endorsementbutton</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
@@ -529,6 +559,7 @@
 		<members>DSALES_Endoso__c.DSALES_Enviaraproveedor</members>
 		<members>DSales_Matriz_GEX__c.DSALES_ActualizarMatriz</members>
 		<members>DSales_Matriz_GEX__c.DSALES_ClonarMatriz</members>
+		<members>DSALES_Endoso__c.DSALES_Enviar_Endoso</members>
 		<name>QuickAction</name>
 	</types>
 	<types>
