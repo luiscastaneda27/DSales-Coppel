@@ -1088,7 +1088,7 @@
         <layout>DSALES_Clase__c-Formato Clase</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_Endoso__c-Formato Endoso</layout>
+        <layout>DSALES_Endoso__c-Visualización de Endoso</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>DSALES_Familia__c-Formato Familia</layout>

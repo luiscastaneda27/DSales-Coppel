@@ -76,7 +76,6 @@
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
 		<members>DSALES_InformacionDePago__c.InfoPagoVenta</members>
 		<members>InsurancePolicy.DSALES_Formato_compacto_p_liza</members>
-		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -470,7 +469,6 @@
 		<members>DSALES_Categoria__c-Formato Categoría</members>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Clase__c-Formato Clase</members>
-		<members>DSALES_Endoso__c-Formato Endoso</members>
 		<members>DSALES_Familia__c-Formato Familia</members>
 		<members>DSALES_Generador__c-Formato Generador Plantillas</members>
 		<members>DSALES_InformacionDePago__c-DSALES_Info_pago_Venta_NPV</members>
@@ -484,6 +482,8 @@
 		<members>PersonAccount-DSALES_Clientes</members>
 		<members>Quote-Venta SM</members>
 		<members>QuoteLineItem-DSALES_GEXQuote</members>
+		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
+		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<name>Layout</name>
 	</types>
 	<types>
