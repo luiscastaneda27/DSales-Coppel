@@ -1,40 +1,38 @@
-public class DSALES_CertificadoWrapper {
+global class DSALES_CertificadoWrapper {
     
-    public class CertificadoRequest{
-        public String first_name{get;set;}
-        public String middle_name{get;set;}
-        public String last_name{get;set;}
-        public String suffix {get;set;}
-        public String client_number{get;set;}
-        public String birthdate {get;set;}
-        public	String	store_id	{get;set;}
-        public	String	coppel_box_number	{get;set;}
-        public	Integer	salesman_id	{get;set;}
-        public	String	salesman_name	{get;set;}
-        public	String	client_fullname	{get;set;}
-        public	String	client_address	{get;set;}
-        public	String	client_email	{get;set;}
-        public	String	client_telephone	{get;set;}
-        public	String	client_cellphone	{get;set;}
-        public	Integer	sku	{get;set;}
-        public	String	model_product	{get;set;}
-        public	String	brand_product	{get;set;}
-        public	String	serial_number	{get;set;}
-        public	String	description_product	{get;set;}
-        public	Double	product_price	{get;set;}
-        public	Date	purchase_product_date	{get;set;}
-        public	Integer	warranty_duration	{get;set;}
-        public	Date	purchase_warranty_date	{get;set;}
-        public	Date	extended_warranty_effective_date	{get;set;}
-        public	Double	cost_warranty	{get;set;}
-        public	Date	extended_warranty_end_date	{get;set;}
+    global class CertificadoRequest{
+        global String id_asset{get;set;}
+        global String ticket {get;set;}
+        global String client_number{get;set;}
+        global	String	store_id	{get;set;}
+        global	String	coppel_box_number	{get;set;}
+        global	String	salesman_id	{get;set;}
+        global	String	salesman_name	{get;set;}
+        global	String	client_fullname	{get;set;}
+        global	String	client_address	{get;set;}
+        global	String	client_email	{get;set;}
+        global	String	client_telephone	{get;set;}
+        global	String	client_cellphone	{get;set;}
+        global	String	sku	{get;set;}
+        global	String	model_product	{get;set;}
+        global	String	brand_product	{get;set;}
+        global	String	serial_number	{get;set;}
+        global	String	description_product	{get;set;}
+        global	Double	product_price	{get;set;}
+        global	Date	purchase_product_date	{get;set;}
+        global	Double	warranty_duration	{get;set;}
+        global	Date	purchase_warranty_date	{get;set;}
+        global  Date 	sales_date {get;set;}
+        global	Date	extended_warranty_effective_date	{get;set;}
+        global	Double	cost_warranty	{get;set;}
+        global	Date	extended_warranty_end_date	{get;set;}
         
     }
     
-    public class CertificadoResponse{
-        public Boolean success {get;set;}
-        public String error_message {get;set;}
-        public String certificado_id {get;set;}
+    global class CertificadoResponse{
+        global Boolean success {get;set;}
+        global String error_message {get;set;}
+        global String certificado_id {get;set;}
     }
     
 }

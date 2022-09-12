@@ -39,7 +39,12 @@
 		<members>DSALES_AccountWrapperReques_Test</members>
 		<members>DSALES_AccountWrapperRequest</members>
 		<members>DSALES_AccountWrapperRequestCredit</members>
-
+		<members>DSALES_AssetWrapper</members>
+		<members>DSALES_AssetWrapperRequest</members>
+		<members>DSALES_AssetWrapperTest</members>
+		<members>DSALES_CertificadoWrapper</members>
+		<members>DSALES_CertificadoWrapperRequest</members>
+		<members>DSALES_CertificadoWrapperTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -94,6 +99,15 @@
 		<members>Asset.DSALES_RegionList__c</members>
 		<members>Asset.DSALES_Region__c</members>
 		<members>Asset.DSALES_Servicio__c</members>
+		<members>Asset.DSALES_CategoriaBuscar__c</members>
+		<members>Asset.DSALES_ClaseBuscar__c</members>
+		<members>Asset.DSALES_Division__c</members>
+		<members>Asset.DSALES_DuracionDeGEX__c</members>
+		<members>Asset.DSALES_FamiliaBuscar__c</members>
+		<members>Asset.DSALES_SubCategoriaBuscar__c</members>
+		<members>Asset.DSALES_TipoProducto__c</members>
+		<members>Asset.DSALES_TipoSeguro__c</members>
+		<members>Asset.DSALES_TipoServicio__c</members>
 		<members>Claim.Cliente__c</members>
 		<members>Claim.DSALES_Estatus__c</members>
 		<members>Claim.DSALES_Numero_cliente_credito__c</members>
@@ -457,6 +471,8 @@
 		<members>DSALES_Division</members>
 		<members>DSALES_Region</members>
 		<members>DSALES_Tiempodegarantaextendida</members>
+		<members>DSALES_TipoSeguro</members>
+		<members>DSALES_TipoServicio</members>
 		<name>GlobalValueSet</name>
 	</types>
 	<types>
