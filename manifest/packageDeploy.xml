@@ -45,6 +45,20 @@
 		<members>DSALES_CertificadoWrapper</members>
 		<members>DSALES_CertificadoWrapperRequest</members>
 		<members>DSALES_CertificadoWrapperTest</members>
+		<members>DSALES_CreateDocument</members>
+        <members>DSALES_CreateDocumentTest</members>
+        <members>DSALES_GetDocumentBody</members>
+        <members>DSALES_GetDocumentBodyTest</members>
+        <members>DSALES_MockHttpResponseSiniestro</members>
+        <members>DSALES_MockHttpResponseSiniestroTest</members>
+        <members>DSALES_SiniestroCalls</members>
+        <members>DSALES_SiniestroCallsTest</members>
+        <members>DSALES_SiniestroController</members>
+        <members>DSALES_SiniestroControllerTest</members>
+        <members>DSALES_SiniestroWrapper</members>
+        <members>DSALES_SiniestroWrapperTest</members>
+        <members>DSALES_UpdateSiniestroJob</members>
+        <members>DSALES_UpdateSiniestroJobTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -63,6 +77,7 @@
 		<members>DSALES_ClasificacionServicio</members>
 		<members>DSALES_ClonarMatriz</members>
 		<members>DSALES_MatrizTiempoGEX</members>
+		 <members>DSALES_SiniestroQuickAction</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -305,11 +320,23 @@
         <members>DSALES_RutaIntegracion__mdt.DSALES_Endpoint__c</members>
         <members>InsurancePolicy.DSALES_Estatusdepliza__c</members>
 		<members>Contact.DSALES_Metodocontacto__c</members>
+		<members>Claim.DSALES_Ano__c</members>
+        <members>Claim.DSALES_Causa__c</members>
+        <members>Claim.DSALES_Descripcion__c</members>
+        <members>Claim.DSALES_Indemnizacionaprobada__c</members>
+        <members>Claim.DSALES_Marca__c</members>
+        <members>Claim.DSALES_Nombre_conductor__c</members>
+        <members>Claim.DSALES_Reporte__c</members>
+        <members>Claim.DSALES_Serie__c</members>
+        <members>Claim.DSALES_SiniestroUid__c</members>
 		<name>CustomField</name>
 	</types>
 	 <types>
         <members>DSALES_RutaIntegracion.DSALES_ConsultarEndoso</members>
         <members>DSALES_RutaIntegracion.DSALES_CrearEndoso</members>
+		<members>DSALES_RutaIntegracion.DSALES_ActualizaSiniestro</members>
+        <members>DSALES_RutaIntegracion.DSALES_ConsultarSiniestro</members>
+        <members>DSALES_RutaIntegracion.DSALES_EnviarSiniestro</members>
         <name>CustomMetadata</name>
     </types>
 	<types>
@@ -335,6 +362,7 @@
 		<members>QuoteStatus</members>
 		<members>OpportunityStage</members>
 		<members>Product2Family</members>
+		<members>ClaimType</members>
         <name>StandardValueSet</name>
     </types>
 	<types>
@@ -500,6 +528,7 @@
 		<members>QuoteLineItem-DSALES_GEXQuote</members>
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
+		<members>Claim-Visualización de Siniestro</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -510,6 +539,7 @@
 	<types>
 		<members>dSALES_ClasificacionServiciolwc</members>
 		 <members>dSALES_Endorsementbutton</members>
+		 <members>dSALES_SiniestroButton</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
@@ -576,6 +606,7 @@
 		<members>DSales_Matriz_GEX__c.DSALES_ActualizarMatriz</members>
 		<members>DSales_Matriz_GEX__c.DSALES_ClonarMatriz</members>
 		<members>DSALES_Endoso__c.DSALES_Enviar_Endoso</members>
+		<members>Claim.DSALES_ButtonSiniestro</members>
 		<name>QuickAction</name>
 	</types>
 	<types>
@@ -690,6 +721,7 @@
 	<types>
 		<members>DSALES_Certificado__c.DSALES_VerCertificado</members>
 		<members>Quote.DSALES_VerCotizacion</members>
+		 <members>Claim.DSALES_Enviar_proveedor</members>
 		<name>WebLink</name>
 	</types>
 	<types>

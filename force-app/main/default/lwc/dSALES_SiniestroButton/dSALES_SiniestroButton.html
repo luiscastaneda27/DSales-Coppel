@@ -1,0 +1,17 @@
+<template>   
+        <lightning-quick-action-panel>
+                <header class="slds-modal__header">
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Envio de Siniestro</h2>
+                </header>
+                <div class="slds-text-align_center">¿ Esta seguro de enviar Siniestro al Proveedeor ?</div>
+                <div slot="footer">
+                    <lightning-button variant="neutral"
+                     label="Cancelar" onclick={closeQuickAction}>
+                    </lightning-button>
+                    <lightning-button variant="brand"
+                     label="Enviar" onclick={sendSiniestro} 
+                     class="slds-m-left_x-small">
+                    </lightning-button>
+                </div>
+            </lightning-quick-action-panel>
+</template>
