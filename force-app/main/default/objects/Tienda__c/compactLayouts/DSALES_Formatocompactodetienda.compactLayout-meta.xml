@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Formatocompactodetienda</fullName>
+    <fields>Name</fields>
+    <fields>DSALES_Telfono__c</fields>
+    <fields>DSALES_Estado__c</fields>
+    <fields>DSALES_Ciudad__c</fields>
+    <fields>DSALES_Regin__c</fields>
+    <fields>Dsales_Divisin__c</fields>
+    <fields>DSALES_Cdigopostal__c</fields>
+    <label>Formato compacto de tienda</label>
+</CompactLayout>

@@ -67,6 +67,9 @@
 		<members>DSALES_MockHttpResponsePolizaTest</members>
 		<members>DSALES_ResumenPagos</members>
 		<members>DSALES_SiniestrosHelper</members>
+		<members>DSALES_QuoteGexWrapper</members>
+        <members>DSALES_QuoteGexWrapperRequest</members>
+        <members>DSALES_QuoteGexWrapperRequestTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -346,6 +349,17 @@
         <members>Claim.DSALES_Serie__c</members>
         <members>Claim.DSALES_SiniestroUid__c</members>
 		<members>ClaimPaymentSummary.DSALES_Tipopago__c</members>
+		<members>Account.DSALES_ClienteCoppel__c</members>
+        <members>Product2.DSales_Tipo_de_Producto__c</members>
+        <members>Quote.DSALES_EmailNew__c</members>
+        <members>Quote.DSales_Division__c</members>
+        <members>Quote.DSales_ID_Tienda__c</members>
+        <members>Quote.DSales_Tienda__c</members>
+        <members>Quote.ID_Vendedor__c</members>
+        <members>QuoteLineItem.DSales_Articulo__c</members>
+        <members>QuoteLineItem.DSales_Fecha_de_entrega_estimada__c</members>
+        <members>QuoteLineItem.DSales_Marca__c</members>
+        <members>QuoteLineItem.DSales_Modelo__c</members>
 		<name>CustomField</name>
 	</types>
 	 <types>
@@ -396,6 +410,7 @@
 		<members>DSALES_SubCategoria__c</members>
 		<members>DSales_Matriz_GEX__c</members>
 		<members>DSALES_RutaIntegracion__mdt</members>
+		<members>Tienda__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -484,6 +499,7 @@
 		<members>Seguro_de_Motos_UtilityBar</members>
 		<members>Siniestro_P_gina_de_registro</members>
 		<members>P_gina_de_inicio_predeterminada</members>
+		 <members>Tienda_P_gina_de_registro</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
