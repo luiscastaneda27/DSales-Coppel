@@ -12,6 +12,16 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
+                <fullName>En solicitud</fullName>
+                <default>true</default>
+                <label>En solicitud</label>
+            </value>
+            <value>
+                <fullName>En trámite</fullName>
+                <default>false</default>
+                <label>En trámite</label>
+            </value>
+            <value>
                 <fullName>Vigente</fullName>
                 <default>false</default>
                 <label>Vigente</label>

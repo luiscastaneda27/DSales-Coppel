@@ -59,6 +59,14 @@
         <members>DSALES_SiniestroWrapperTest</members>
         <members>DSALES_UpdateSiniestroJob</members>
         <members>DSALES_UpdateSiniestroJobTest</members>
+		<members>DSALES_ActualizarSiniestroTest</members>
+		<members>DSALES_DocumentsToTest</members>
+		<members>DSALES_EndosoTest</members>
+		<members>DSALES_Endosos</members>
+		<members>DSALES_EndososHelper</members>
+		<members>DSALES_MockHttpResponsePolizaTest</members>
+		<members>DSALES_ResumenPagos</members>
+		<members>DSALES_SiniestrosHelper</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -71,6 +79,8 @@
 		<members>DSALES_CertificadoTrigger</members>
 		<members>DSALES_GexCotizacion</members>
 		<members>DSALES_MatrizTrigger</members>
+		<members>DSALES_Endoso</members>
+		<members>DSALES_ResumenDePagos</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -245,6 +255,7 @@
 		<members>InsurancePolicy.DSALES_RFC__c</members>
 		<members>InsurancePolicy.DSALES_Tipodepersona__c</members>
 		<members>InsurancePolicy.DSALES_VigenciacumplidaSM__c</members>
+		<members>InsurancePolicy.DSALES_Activodeplizadeseguro__c</members>
 		<members>Opportunity.DSALES_Certificado__c</members>
 		<members>Opportunity.DSALES_Dias_Transcurridos__c</members>
 		<members>Opportunity.DSALES_Division__c</members>
@@ -319,6 +330,11 @@
         <members>DSALES_Endoso__c.DSALES_uid__c</members>
         <members>DSALES_RutaIntegracion__mdt.DSALES_Endpoint__c</members>
         <members>InsurancePolicy.DSALES_Estatusdepliza__c</members>
+		<members>InsurancePolicy.DSALES_Gastos_expedicion__c</members>
+		<members>InsurancePolicy.DSALES_IVA__c</members>
+		<members>InsurancePolicy.DSALES_Prima_Neta__c</members>
+		<members>InsurancePolicy.DSALES_Prima_total__c</members>
+		<members>InsurancePolicyAsset.DSALES_Account__c</members>
 		<members>Contact.DSALES_Metodocontacto__c</members>
 		<members>Claim.DSALES_Ano__c</members>
         <members>Claim.DSALES_Causa__c</members>
@@ -329,6 +345,7 @@
         <members>Claim.DSALES_Reporte__c</members>
         <members>Claim.DSALES_Serie__c</members>
         <members>Claim.DSALES_SiniestroUid__c</members>
+		<members>ClaimPaymentSummary.DSALES_Tipopago__c</members>
 		<name>CustomField</name>
 	</types>
 	 <types>
@@ -337,6 +354,8 @@
 		<members>DSALES_RutaIntegracion.DSALES_ActualizaSiniestro</members>
         <members>DSALES_RutaIntegracion.DSALES_ConsultarSiniestro</members>
         <members>DSALES_RutaIntegracion.DSALES_EnviarSiniestro</members>
+		<members>DSALES_RutaIntegracion.DSALES_ActualizarEstadoSiniestro</members>
+		<members>DSALES_RutaIntegracion.DSALES_ObtenerPoliza</members>
         <name>CustomMetadata</name>
     </types>
 	<types>
