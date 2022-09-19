@@ -61,7 +61,7 @@ public with sharing class DSALES_EndososHelper {
                     Decimal gastosExp =Decimal.valueOf(!String.isEmpty(respuesta.data.policy_shippingcosts) ? respuesta.data.policy_shippingcosts : '0');
                     polizaNueva.DSALES_Gastos_expedicion__c=gastosExp;
                     polizaNueva.DSALES_IVA__c=Decimal.valueOf(!String.isEmpty(respuesta.data.policy_iva) ? respuesta.data.policy_iva : '0');
-                    //polizaNueva.ChangeSubtype=respuesta.data.policy_type;
+                    polizaNueva.PlanTier=respuesta.data.policy_plantier;
                     polizaNueva.DSALES_CorreoElectronico__c=e.DSALES_Poliza__r.DSALES_CorreoElectronico__c;
                     polizaNueva.DSALES_Activodeplizadeseguro__c=e.DSALES_Poliza__r.DSALES_Activodeplizadeseguro__c;
                     polizaNueva.SourceQuoteId=e.DSALES_Poliza__r.SourceQuoteId;
@@ -131,7 +131,7 @@ public with sharing class DSALES_EndososHelper {
         public String policy_totalpremium {get; set;}
         public String policy_shippingcosts {get;set;}
         public String policy_iva {get;set;}
-        //public String policy_type {get;set;}
+        public String policy_plantier {get;set;}
         
         
     }

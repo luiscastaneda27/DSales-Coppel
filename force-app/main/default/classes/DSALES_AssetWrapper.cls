@@ -15,11 +15,14 @@ global class DSALES_AssetWrapper {
         global String region {get;set;}
         global String division {get;set;}
         global String sku {get;set;}
-        global Integer warranty_duration {get;set;}
+        global String warranty_duration {get;set;}
         global String serial_number {get;set;}
         global Date purchase_date {get;set;}
         global Integer quantity{get;set;}
         global Double price {get;set;}
+        global Double price_w_discount_w_vat {get;set;}
+        global Double price_w_discount_no_vat {get;set;}
+        global Double price_no_vat {get;set;}
         
    
     }

@@ -40,6 +40,9 @@
 		<members>DSALES_AccountWrapperRequest</members>
 		<members>DSALES_AccountWrapperRequestCredit</members>
 		<members>DSALES_AssetWrapper</members>
+		<members>DSALES_IPAssetWrapper</members>
+		<members>DSALES_IPAssetWrapperRequest</members>
+		<members>DSALES_IPAssetWrapperTest</members>
 		<members>DSALES_AssetWrapperRequest</members>
 		<members>DSALES_AssetWrapperTest</members>
 		<members>DSALES_CertificadoWrapper</members>
@@ -211,6 +214,7 @@
 		<members>DSALES_InformacionDePago__c.DSALES_FormaDePago__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Ganodineroelec__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Marca__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Motoexterna__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Menospagoinicial__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Modelo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Motor__c</members>
@@ -332,7 +336,7 @@
 		<members>Account.sumar__c</members>
 		<members>QuoteLineItem.Vigencia_meses__c</members>
 		<members>Account.Tipo_de_Cliente__c</members>
-		 <members>DSALES_Endoso__c.DSALES_NuevaPoliza__c</members>
+		<members>DSALES_Endoso__c.DSALES_NuevaPoliza__c</members>
         <members>DSALES_Endoso__c.DSALES_uid__c</members>
         <members>DSALES_RutaIntegracion__mdt.DSALES_Endpoint__c</members>
         <members>InsurancePolicy.DSALES_Estatusdepliza__c</members>
@@ -341,6 +345,22 @@
 		<members>InsurancePolicy.DSALES_Prima_Neta__c</members>
 		<members>InsurancePolicy.DSALES_Prima_total__c</members>
 		<members>InsurancePolicyAsset.DSALES_Account__c</members>
+		<members>InsurancePolicyAsset.DSALES_Clavevehicular__c</members>
+		<members>InsurancePolicyAsset.DSALES_InformacionPago__c</members>
+		<members>InsurancePolicyAsset.DSALES_Modelo__c</members>
+		<members>InsurancePolicyAsset.DSALES_Marca__c</members>
+		<members>InsurancePolicyAsset.DSALES_ClaveAMIS__c</members>
+		<members>InsurancePolicyAsset.DSALES_Colaborador__c</members>
+		<members>InsurancePolicyAsset.DSALES_Descripcion__c</members>
+		<members>InsurancePolicyAsset.DSALES_Motoexterna__c</members>
+		<members>InsurancePolicyAsset.DSALES_Numeromotor__c</members>
+		<members>InsurancePolicyAsset.DSALES_Numeroserie__c</members>
+		<members>InsurancePolicyAsset.DSALES_Placas__c</members>
+		<members>InsurancePolicyAsset.DSALES_Servicio__c</members>
+		<members>InsurancePolicyAsset.DSALES_Tienda__c</members>
+		<members>InsurancePolicyAsset.DSALES_Uso__c</members>
+		<members>InsurancePolicyAsset.DSALES_Valorfactura__c</members>
+		<members>InsurancePolicyAsset.Estatus__c</members>
 		<members>Contact.DSALES_Metodocontacto__c</members>
 		<members>Claim.DSALES_Ano__c</members>
         <members>Claim.DSALES_Causa__c</members>
@@ -364,6 +384,11 @@
         <members>QuoteLineItem.DSales_Marca__c</members>
         <members>QuoteLineItem.DSales_Modelo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Montototal__c</members>
+		<members>Asset.DSALES_DuracionGEX__c</members>
+		<members>Asset.DSALES_PrecioSINIVA__c</members>
+		<members>Asset.DSALES_Precio_con_descuento_con_IVA__c</members>
+		<members>Asset.DSALES_Precio_con_descuento_sin_IVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Poliza__c</members>
 		<name>CustomField</name>
 	</types>
 	 <types>
