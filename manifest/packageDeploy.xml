@@ -76,6 +76,13 @@
 		<members>DSALES_PaymentInfoWrapper</members>
 		<members>DSALES_PaymentInfoWrapperRequest</members>
 		<members>DSALES_PaymentInfoWrapperTest</members>
+		<members>DSALES_ConsultaListaNegra</members>
+		<members>DSALES_ConsultaListaNegraTest</members>
+		<members>DSALES_InformacionPagoHandler</members>
+		<members>DSALES_ListaNegraWrapper</members>
+		<members>DSALES_ListaNegraWrapperTest</members>
+		<members>DSALES_MockHttpResponseSiniestro</members>
+		<members>DSALES_UpdateClienteTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -90,6 +97,7 @@
 		<members>DSALES_MatrizTrigger</members>
 		<members>DSALES_Endoso</members>
 		<members>DSALES_ResumenDePagos</members>
+		<members>DSALES_UpdateCliente</members>
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -399,6 +407,7 @@
         <members>DSALES_RutaIntegracion.DSALES_EnviarSiniestro</members>
 		<members>DSALES_RutaIntegracion.DSALES_ActualizarEstadoSiniestro</members>
 		<members>DSALES_RutaIntegracion.DSALES_ObtenerPoliza</members>
+		<members>DSALES_RutaIntegracion.DSALES_ListaNegra</members>
         <name>CustomMetadata</name>
     </types>
 	<types>
