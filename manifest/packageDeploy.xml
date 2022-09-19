@@ -70,6 +70,9 @@
 		<members>DSALES_QuoteGexWrapper</members>
         <members>DSALES_QuoteGexWrapperRequest</members>
         <members>DSALES_QuoteGexWrapperRequestTest</members>
+		<members>DSALES_PaymentInfoWrapper</members>
+		<members>DSALES_PaymentInfoWrapperRequest</members>
+		<members>DSALES_PaymentInfoWrapperTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -360,6 +363,7 @@
         <members>QuoteLineItem.DSales_Fecha_de_entrega_estimada__c</members>
         <members>QuoteLineItem.DSales_Marca__c</members>
         <members>QuoteLineItem.DSales_Modelo__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_Montototal__c</members>
 		<name>CustomField</name>
 	</types>
 	 <types>

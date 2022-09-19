@@ -3,7 +3,7 @@ global class DSALES_QuoteGexWrapper {
         //global String tangible_name	{get; set;}
         //global Double tangible_price {get; set;}
         //global String type_service {get; set;}
-        global String vendor_id	{get; set;}
+        //global String vendor_id	{get; set;}
         global String store_id {get; set;}
         global String client_number {get;set;}
         global String first_name {get; set;}
@@ -18,14 +18,13 @@ global class DSALES_QuoteGexWrapper {
         //global String telephone {get;set;}
         global Date Estimated_delivery_date {get;set;}
         global String Address_Store {get;set;}
-        global String vendedor_name {get;set;}
+        //global String vendedor_name {get;set;}
         global String store_name {get;set;}
         global List<Product> productList {get;set;}
  }
 	global class Product {
 		global String sku {get;set;}
 		global Double Quantity_tangible_products {get;set;}
-		global Double discount {get;set;}
         global String article {get; set;}
         global String model {get; set;}
         global String brand {get; set;}

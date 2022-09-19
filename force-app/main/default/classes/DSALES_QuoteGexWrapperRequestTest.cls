@@ -55,7 +55,6 @@ public class DSALES_QuoteGexWrapperRequestTest{
         presupuesto.PricebookEntryId = customPrice.Id;
         presupuesto.Product2Id = prod.Id;
         presupuesto.Quantity = 1.0;
-        presupuesto.Discount = 0.0;
         presupuesto.UnitPrice = customPrice.UnitPrice;
         presupuesto.DSALES_ListaArticulo__c = 'Producto';
         insert presupuesto;
@@ -65,7 +64,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest(){
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
-        String body = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"discount": 0.0,"article": "GEX test","brand": " test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "45654","Address_Store": "calle 123 sur"}';
+        String body = '{"type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "GEX test","brand": " test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "45654","Address_Store": "calle 123 sur"}';
         req.requestURI = '/apexrest/insertQuote';
         req.httpMethod = 'POST';
         RestContext.request = req;
@@ -83,7 +82,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest2(){
         RestRequest req2 = new RestRequest();
         RestResponse res2 = new RestResponse();
-        String body2 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"discount": 0.0,"article": "GEX test","brand": "Garantia extendida test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "111111","Address_Store": "calle 123 sur"}';
+        String body2 = '{"type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "GEX test","brand": "Garantia extendida test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "111111","Address_Store": "calle 123 sur"}';
         req2.requestURI = '/apexrest/insertQuote';
         req2.httpMethod = 'POST';
         RestContext.request = req2;
@@ -101,7 +100,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest3(){
         RestRequest req3 = new RestRequest();
         RestResponse res3 = new RestResponse();
-        String body3 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"discount": 0.0,"article": "GEX test","brand": "Garantia extendida test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "90001","Address_Store": "calle 123 sur"}';
+        String body3 = '{"type_service": "Servicio","suffix": "credito","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "GEX test","brand": "Garantia extendida test","model": "gx1","product_type":"Producto"}],"middle_name": "gonzalez","method_payment": "Credito","last_name": "lopez","first_name": "Emmanuel","Estimated_delivery_date": "2022-10-10","email": "clientenuevoLuis@gmail.com","division": "3","client_number": "90001","Address_Store": "calle 123 sur"}';
         req3.requestURI = '/apexrest/insertQuote';
         req3.httpMethod = 'POST';
         RestContext.request = req3;

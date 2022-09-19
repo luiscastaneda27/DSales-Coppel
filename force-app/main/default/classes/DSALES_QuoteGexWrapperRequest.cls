@@ -54,10 +54,10 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             //cotiza.DSALES_Fechadenacimiento__c = data.birthdate;
                             cotiza.DSALES_FormadePago__c = data.method_payment;
                             //cotiza.DSALES_EmailNew__c = data.email;
-                            cotiza.DSales_Vendedor__c = data.vendedor_name;
+                            //cotiza.DSales_Vendedor__c = data.vendedor_name;
                             cotiza.DSales_ID_Tienda__c = data.store_id;
                             cotiza.DSales_Tienda__c = tiendas[0].Id;
-                            cotiza.ID_Vendedor__c = data.vendor_id;
+                            //cotiza.ID_Vendedor__c = data.vendor_id;
                             cotiza.DSales_Direccion_de_la_tienda__c = data.Address_Store;
                             cotiza.DSALES_Region__c = data.region;
                             cotiza.DSales_Division__c= data.division;
@@ -78,7 +78,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                 partidapre.PricebookEntryId = item.Id;
                                 partidapre.Product2Id = producto.Id;
                                 partidapre.Quantity = p.Quantity_tangible_products;
-                                partidapre.Discount = p.discount;
                                 partidapre.UnitPrice = item.UnitPrice;
                                 partidapre.DSales_Fecha_de_entrega_estimada__c = data.Estimated_delivery_date;
                                 partidapre.DSales_Articulo__c = p.article;
@@ -115,10 +114,10 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             cotiza.OpportunityId = oppor.Id;
                             //cotiza.DSALES_Fechadenacimiento__c = data.birthdate;
                             cotiza.DSALES_FormadePago__c = data.method_payment;
-                            cotiza.DSales_Vendedor__c = data.vendedor_name;
+                            //cotiza.DSales_Vendedor__c = data.vendedor_name;
                             cotiza.DSales_ID_Tienda__c = data.store_id;
                             cotiza.DSales_Tienda__c = tiendas[0].Id;
-                            cotiza.ID_Vendedor__c = data.vendor_id;
+                            //cotiza.ID_Vendedor__c = data.vendor_id;
                             cotiza.DSales_Direccion_de_la_tienda__c = data.Address_Store;
                             cotiza.DSALES_Region__c = data.region;
                             cotiza.DSales_Division__c= data.division;
@@ -138,7 +137,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                 partidapre.PricebookEntryId = item.Id;
                                 partidapre.Product2Id = item.Product2Id;
                                 partidapre.Quantity = p.Quantity_tangible_products;
-                                partidapre.Discount = p.discount;
                                 partidapre.UnitPrice = item.UnitPrice;
                                 partidapre.DSales_Fecha_de_entrega_estimada__c = data.Estimated_delivery_date;
                                 partidapre.DSales_Articulo__c = p.article;
@@ -167,10 +165,10 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             //cotiza.DSALES_Fechadenacimiento__c = data.birthdate;
                             cotiza.DSALES_FormadePago__c = data.method_payment;
                             cotiza.DSALES_EmailNew__c = data.email;
-                            cotiza.DSales_Vendedor__c = data.vendedor_name;
+                            //cotiza.DSales_Vendedor__c = data.vendedor_name;
                             cotiza.DSales_ID_Tienda__c = data.store_id;
                         	cotiza.DSales_Tienda__c = tiendas[0].Id;
-                            cotiza.ID_Vendedor__c = data.vendor_id;
+                            //cotiza.ID_Vendedor__c = data.vendor_id;
                         	cotiza.DSales_Direccion_de_la_tienda__c = data.Address_Store;
                             cotiza.DSALES_Region__c = data.region;
                             cotiza.DSales_Division__c= data.division;
@@ -189,7 +187,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                 partidapre.PricebookEntryId = item.Id;
                                 partidapre.Product2Id = item.Product2Id;
                                 partidapre.Quantity = p.Quantity_tangible_products;
-                                partidapre.Discount = p.discount;
                                 partidapre.UnitPrice = item.UnitPrice;
                                 partidapre.DSales_Fecha_de_entrega_estimada__c = data.Estimated_delivery_date;
                                 partidapre.DSales_Articulo__c = p.article;
