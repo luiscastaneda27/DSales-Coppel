@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DSALES_ContactMethod</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>metodo de contacto</shortDescription>
+        <value>EMAIL</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_NombreAseguradora</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>Nombre de aseguradora</shortDescription>
+        <value>qualitas</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_business</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>business</shortDescription>
+        <value>coppel</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_vehicleService</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>vehicle_service</shortDescription>
+        <value>PARTICULAR</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_vehicleType</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>vehicle_type</shortDescription>
+        <value>MOTO</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_vehicleUse</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>vehicle_use</shortDescription>
+        <value>NORMAL</value>
+    </labels>
+</CustomLabels>

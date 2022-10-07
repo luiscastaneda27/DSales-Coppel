@@ -1,5 +1,5 @@
 public class DSALES_Utility {
-    
+    public static final String NUMERO_CLIENTE_GENERICO = '90001';
     
     public static String getEndpoint(String nombreURL){
         try{

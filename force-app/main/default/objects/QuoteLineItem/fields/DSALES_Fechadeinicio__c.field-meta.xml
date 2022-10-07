@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DSALES_Fechadenacimiento__c</fullName>
-    <description>Campo para capturar la fecha de nacimiento del solicitante de la cotización.</description>
+    <fullName>DSALES_Fechadeinicio__c</fullName>
     <externalId>false</externalId>
-    <label>Fecha de nacimiento</label>
+    <label>Fecha de inicio</label>
     <required>false</required>
     <type>Date</type>
 </CustomField>
