@@ -122,6 +122,21 @@ public class DSALES_QuoteGexWrapperRequestTest{
         presupuesto.UnitPrice = customPrice.UnitPrice;
         presupuesto.DSALES_ListaArticulo__c = 'Producto';
         insert presupuesto;
+        
+        Asset proAdquirido = new Asset();
+        proAdquirido.Name = 'test';
+        proAdquirido.DSALES_TipoProducto__c = 'Producto';
+        proAdquirido.AccountId = acc.id;
+        proAdquirido.DSALES_ClaseBuscar__c = classs.Id;
+        insert proAdquirido;
+        
+        DSALES_InformacionDePago__c info = new DSALES_InformacionDePago__c();
+        info.DSALES_Factura__c = 'FAC001';
+        info.DSALES_Oportunidad__c = opp.Id;
+        info.DSALES_Cliente__c = acc.Id;
+        info.DSALES_Clave_Tienda__c = 'T-7798';
+        info.DSALES_ProductoAdquirido__c = proAdquirido.Id;
+        insert info;
     }
     
     @isTest 
@@ -194,5 +209,23 @@ public class DSALES_QuoteGexWrapperRequestTest{
         Test.stopTest();
         RestContext.request = req4;
         RestContext.response= res4;
+    }
+    
+    @isTest 
+    static void CreateQuoteRecordTest5(){
+        RestRequest req5 = new RestRequest();
+        RestResponse res5 = new RestResponse();
+        String body5 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "45555555555","bill":"FAC001","Address_Store": "Paseo de los virreyes"}';
+        req5.requestURI = '/apexrest/insertQuoteGex';
+        req5.httpMethod = 'POST';
+        RestContext.request = req5;
+        req5.requestBody = Blob.valueof(body5);
+        RestContext.response = res5;
+        DSALES_QuoteGexWrapper.QuoteGexRequest data5 = (DSALES_QuoteGexWrapper.QuoteGexRequest)JSON.deserialize(body5, DSALES_QuoteGexWrapper.QuoteGexRequest.class);
+        Test.startTest();
+        DSALES_QuoteGexWrapperRequest.createQuote();
+        Test.stopTest();
+        RestContext.request = req5;
+        RestContext.response= res5;
     }
 }

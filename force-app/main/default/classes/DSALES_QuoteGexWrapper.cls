@@ -12,6 +12,7 @@ global class DSALES_QuoteGexWrapper {
         global Date Estimated_delivery_date {get;set;}
         global String Address_Store {get;set;}
         global String store_name {get;set;}
+        global String bill {get;set;}
         global List<Product> productList {get;set;}
  }
 	global class Product {
