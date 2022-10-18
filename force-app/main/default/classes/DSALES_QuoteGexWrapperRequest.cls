@@ -55,6 +55,120 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                     List<Account> UniversalAccount = [Select Id from Account WHERE DSALES_ClienteCoppel__c = :DSALES_Utility.NUMERO_CLIENTE_GENERICO];
                     List<Tienda__c> tiendas = [Select Id from Tienda__c WHERE DSales_TiendaID__c =: data.store_id];
                     
+                    if(data.bill != null){
+                        DSALES_InformacionDePago__c newOpportunity =[Select id,DSALES_Oportunidad__c,DSALES_Oportunidad__r.Name, DSALES_Cliente__c from DSALES_InformacionDePago__c where DSALES_Factura__c= :data.bill];
+                        oppor.AccountId = newOpportunity.DSALES_Cliente__c;
+                        oppor.Name = newOpportunity.DSALES_Oportunidad__r.Name+' '+'GEX';
+                        oppor.CloseDate = date.today()+30;
+                        oppor.StageName = 	'Nuevo';
+                        oppor.RecordTypeId = recordTypeId;
+                        oppor.DSALES_Tienda__c = data.store_name;
+                        oppor.Pricebook2Id = precioLista[0].Id;
+                        oppor.DSALES_OppPrin__c = newOpportunity.DSALES_Oportunidad__c;
+                        insert oppor;
+                        
+                        cotiza.Name = newOpportunity.DSALES_Oportunidad__r.Name+' '+'GEX';
+                        cotiza.OpportunityId = oppor.Id;
+                        cotiza.RecordTypeId =recordTypeQuoteId;
+                        cotiza.DSALES_FormadePago__c = data.method_payment;
+                        cotiza.DSales_ID_Tienda__c = data.store_id;
+                        cotiza.DSales_Tienda__c = tiendas[0].Id;
+                        cotiza.DSales_Direccion_de_la_tienda__c = data.Address_Store;
+                        cotiza.DSALES_Region__c = data.region;
+                        cotiza.DSales_Division__c= data.division;
+                        cotiza.ExpirationDate = date.today()+14;
+                        insert cotiza;
+                        
+                        for(PricebookEntry item : precioEn){
+                            QuoteLineItem partidapre = new QuoteLineItem();
+                            
+                            DSALES_QuoteGexWrapper.Product p =  mapProducts.get(item.Product2.StockKeepingUnit);
+                            Product2 producto = new Product2();
+                            for(Product2 pro: produc){
+                                if(pro.StockKeepingUnit == item.Product2.StockKeepingUnit){
+                                    producto = pro;
+                                }
+                            }
+                        String intangibleId;
+                            for(DSales_Asignacion_de_Productos__c asigProduc: productAsig){
+                                if(asigProduc.DSales_Servicio_Seguro__c == item.Product2Id){
+                                    intangibleId = asigProduc.DSales_Producto__c;
+                                }
+                            }
+                            for(PricebookEntry item2 : precioEnGEX){
+                                if(item2.Product2Id == intangibleId){
+                                    
+                                    QuoteLineItem partidapreGEX = new QuoteLineItem();
+                                    Double price1 =0;
+                                    Double price2=0;
+                                    
+                                    if(item2.Product2.DSales_Aplicaporcentajecobro__c==true){
+                                        price1= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
+                                        price2= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
+                                    }else{
+                                        for(DSALES_Matriz_de_Cotizacion__c mPrice : matPrice1Year){
+                                            if(mPrice.DSALES_Rango_interior_GEX__c<= p.tangible_price && mPrice.DSALES_Rango_Superior_GEX__c>= p.tangible_price && mPrice.DSALES_Tiempo_de_Garantia_Extendida_GEX__c =='1 año'){
+                                                price1 = mPrice.SALES_Precio_GEX__c;
+                                            }
+                                            if(mPrice.DSALES_Rango_interior_GEX__c<= p.tangible_price && mPrice.DSALES_Rango_Superior_GEX__c>= p.tangible_price && mPrice.DSALES_Tiempo_de_Garantia_Extendida_GEX__c =='2 años'){
+                                                price2 = mPrice.SALES_Precio_GEX__c;
+                                            }
+                                        }
+                                    }
+                                    partidapreGEX.QuoteId = cotiza.Id;
+                                    partidapreGEX.PricebookEntryId = item2.Id;
+                                    partidapreGEX.Product2Id = item2.Product2Id;
+                                    partidapreGEX.Quantity = 1;
+                                    partidapreGEX.UnitPrice = price1;
+                                    partidapreGEX.Vigencia_meses__c = '12';
+                                    partidapreGEX.DSALES_ListaArticulo__c = item2.Product2.DSales_Tipo_de_Producto__c;
+                                    listaPartida.add(partidapreGEX);
+                                    
+                                    partidapreGEX = new QuoteLineItem();
+                                    partidapreGEX.QuoteId = cotiza.Id;
+                                    partidapreGEX.PricebookEntryId = item2.Id;
+                                    partidapreGEX.Product2Id = item2.Product2Id;
+                                    partidapreGEX.Quantity = 1;
+                                    partidapreGEX.UnitPrice = price2;
+                                    partidapreGEX.Vigencia_meses__c = '24';
+                                    partidapreGEX.DSALES_ListaArticulo__c = item2.Product2.DSales_Tipo_de_Producto__c;
+                                    listaPartida.add(partidapreGEX);
+                                }
+                            }
+                        }
+                        insert listaPartida;
+                        
+                        DSALES_QuoteGexWrapper.respuestaNPV respuestaNpvList = new DSALES_QuoteGexWrapper.respuestaNPV();
+                        respuestaNpvList.quote_id = cotiza.Id;
+                        respuestaNpvList.response =  new List<DSALES_QuoteGexWrapper.QuoteGexResponse>();
+                        
+                        List<QuoteLineItem> ConsultaRespuesta = new List<QuoteLineItem> ();
+                        List<QuoteLineItem> ConsultaRespuestaGEX = new List<QuoteLineItem> ();
+                        
+                        for(QuoteLineItem item: [Select Id,Product2.Id,Product2.Name,ListPrice,UnitPrice,Quantity,Vigencia_meses__c,Quote.GrandTotal,Product2.DSales_Tipo_de_Producto__c,Product2.DSALES_Familia__r.Name,Product2.DSALES_Clase__r.Name,Product2.DSALES_Categoria__r.Name from QuoteLineItem WHERE QuoteId=: cotiza.Id]){
+                            if(item.Product2.DSales_Tipo_de_Producto__c == 'Producto'){
+                                ConsultaRespuesta.add(item);
+                            }else{
+                                ConsultaRespuestaGEX.add(item);
+                            }
+                        }
+                        for(QuoteLineItem resIntangible : ConsultaRespuestaGEX){
+                            DSALES_QuoteGexWrapper.QuoteGexResponse responsePayload = new DSALES_QuoteGexWrapper.QuoteGexResponse();
+                            responsePayload.total_cost = resIntangible.UnitPrice;
+                            responsePayload.price = resIntangible.UnitPrice;
+                            responsePayload.service_type = resIntangible.Product2.DSales_Tipo_de_Producto__c;
+                            responsePayload.intangible_name = resIntangible.Product2.Name;
+                            responsePayload.tangible_name = 'Product';
+                            responsePayload.category = resIntangible.Product2.DSALES_Categoria__r.Name;
+                            responsePayload.class1 = resIntangible.Product2.DSALES_Clase__r.Name;
+                            responsePayload.family = resIntangible.Product2.DSALES_Familia__r.Name;
+                            responsePayload.message = message;
+                            responsePayload.validity_months = resIntangible.Vigencia_meses__c;
+                            respuestaNpvList.response.add(responsePayload);
+                        }
+                    return respuestaNpvList;
+                }
+                    
                     List<Account> clienteContado = [SELECT Id,FirstName,LastName FROM Account WHERE FirstName=: data.first_name and LastName=: data.last_name and PersonEmail= :data.email];
                     if(data.client_number == '' || data.client_number == null ){
                         
@@ -116,11 +230,8 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                     
                                     if(item2.Product2.DSales_Aplicaporcentajecobro__c==true){
                                         price1= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                        system.debug('precio '+p.tangible_price+' Precio con %:'+ price1);
                                         price2= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                        system.debug('precio 2'+p.tangible_price+' Precio con %:'+ price2);
                                     }else{
-                                        system.debug('unit price: '+p.tangible_price+'item2 id'+item2.Id);
                                         for(DSALES_Matriz_de_Cotizacion__c mPrice : matPrice1Year){
                                             if(mPrice.DSALES_Rango_interior_GEX__c<= p.tangible_price && mPrice.DSALES_Rango_Superior_GEX__c>= p.tangible_price && mPrice.DSALES_Tiempo_de_Garantia_Extendida_GEX__c =='1 año'){
                                                 price1 = mPrice.SALES_Precio_GEX__c;
@@ -319,11 +430,8 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                             
                                             if(item2.Product2.DSales_Aplicaporcentajecobro__c==true){
                                                 price1= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                                system.debug('precio '+p.tangible_price+' Precio con %:'+ price1);
                                                 price2= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                                system.debug('precio 2'+p.tangible_price+' Precio con %:'+ price2);
                                             }else{
-                                                system.debug('unit price: '+p.tangible_price+'item2 id'+item2.Id);
                                                 for(DSALES_Matriz_de_Cotizacion__c mPrice : matPrice1Year){
                                                     if(mPrice.DSALES_Rango_interior_GEX__c<= p.tangible_price && mPrice.DSALES_Rango_Superior_GEX__c>= p.tangible_price && mPrice.DSALES_Tiempo_de_Garantia_Extendida_GEX__c =='1 año'){
                                                         price1 = mPrice.SALES_Precio_GEX__c;
@@ -419,11 +527,8 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                         
                                         if(item2.Product2.DSales_Aplicaporcentajecobro__c==true){
                                             price1= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                            system.debug('precio '+p.tangible_price+' Precio con %:'+ price1);
                                             price2= (p.tangible_price * item2.Product2.DSales_PorcentajeCobro__c)/100;
-                                            system.debug('precio 2'+p.tangible_price+' Precio con %:'+ price2);
                                         }else{
-                                            system.debug('unit price: '+p.tangible_price+'item2 id'+item2.Id);
                                             for(DSALES_Matriz_de_Cotizacion__c mPrice : matPrice1Year){
                                                 if(mPrice.DSALES_Rango_interior_GEX__c<= p.tangible_price && mPrice.DSALES_Rango_Superior_GEX__c>= p.tangible_price && mPrice.DSALES_Tiempo_de_Garantia_Extendida_GEX__c =='1 año'){
                                                     price1 = mPrice.SALES_Precio_GEX__c;

@@ -340,6 +340,7 @@
 		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Producto__c</members>
 		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Servicio__c</members>
 		<members>Opportunity.Tipo_de_servicio__c</members>
+		<members>Opportunity.DSALES_OppPrin__c</members>
 		<members>OpportunityLineItem.DSALES_PrecioServ__c</members>
 		<members>OpportunityLineItem.DSALES_Producto__c</members>
 		<members>OpportunityLineItem.DSALES_Servicio__c</members>
