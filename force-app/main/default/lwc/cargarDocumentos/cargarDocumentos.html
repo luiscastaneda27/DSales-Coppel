@@ -1,0 +1,74 @@
+<template>
+    <lightning-quick-action-panel header="Carga De Documentos">
+        <div class="slds-m-around_medium">
+
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Movimientos">MOVIMIENTOS</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="MAPFRE">MAPFRE
+                        </div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Qualitas">QUALITAS
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="slds-hint-parent">
+                    <th data-label="CORRECCIÓN DE NOMBRE" scope="row">
+                        <div class="slds-truncate" title="CORRECCIÓN DE NOMBRE">
+                            <a href="#" tabindex="-1">  CORRECCIÓN DE NOMBRE </a>
+                        </div>
+                    </th>
+                    <td data-label="Upload file">
+                        <div class="slds-truncate">
+                            <lightning-file-upload name="fileUploader" accept={acceptedFormats}
+                                record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                            </lightning-file-upload>
+                        </div>
+                    </td>
+                    <td data-label="Upload file">
+                        <div class="slds-truncate">
+                            <lightning-file-upload  name="fileUploader" accept={acceptedFormats}
+                                record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                            </lightning-file-upload>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr class="slds-hint-parent">
+                    <th data-label="Cambio De Titular" scope="row">
+                        <div class="slds-truncate" title="Cambio De Titular">
+                            <a href="#" tabindex="-1">CAMBIO DE TITULAR</a>
+                        </div>
+                    </th>
+                    <td data-label="Upload file">
+                        <div class="slds-truncate">
+                            <lightning-file-upload name="fileUploader" accept={acceptedFormats}
+                                record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                            </lightning-file-upload>
+                        </div>
+                    </td>
+                    <td data-label="Upload file">
+                        <div class="slds-truncate">
+                            <lightning-file-upload name="fileUploader" accept={acceptedFormats}
+                                record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                            </lightning-file-upload>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Cancel" onclick={closeAction} ></lightning-button>
+            &nbsp;&nbsp;
+            <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
