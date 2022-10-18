@@ -3,6 +3,5 @@
     <fullName>DSALES_PysisCompactLayout</fullName>
     <fields>AccountId</fields>
     <fields>Product2Id</fields>
-    <fields>DSALES_Region__c</fields>
     <label>Pysis Compact Layout</label>
 </CompactLayout>

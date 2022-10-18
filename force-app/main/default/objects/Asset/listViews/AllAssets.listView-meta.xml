@@ -7,10 +7,5 @@
     <columns>ASSET.NAME</columns>
     <columns>ASSET.PRICE</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>PRODUCT2.NAME</field>
-        <operation>contains</operation>
-        <value>Motocicleta</value>
-    </filters>
     <label>Todos los productos adquiridos</label>
 </ListView>

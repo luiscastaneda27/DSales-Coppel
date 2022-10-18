@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_GEX</fullName>
+    <active>true</active>
+    <label>Garantía Extendida</label>
+    <picklistValues>
+        <picklist>DSALES_TipoSeguro__c</picklist>
+        <values>
+            <fullName>Seguro de Motos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_TipoServicio__c</picklist>
+        <values>
+            <fullName>Garantía Extendida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_Tipodeproducto__c</picklist>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
