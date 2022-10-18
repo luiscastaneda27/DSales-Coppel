@@ -205,6 +205,7 @@
 		<members>DSALES_Certificado__c.DSALES_Vigenciacumplida__c</members>
 		<members>DSALES_Certificado__c.DSALES_enviado__c</members>
 		<members>DSALES_Certificado__c.NOMIGRAR__c</members>
+		<members>DSALES_Endoso__c.DSALES_Dosdiassinupdate__c</members>
 		<members>DSALES_Endoso__c.DSALES_Cliente__c</members>
 		<members>DSALES_Endoso__c.DSALES_CorreoElectronico__c</members>
 		<members>DSALES_Endoso__c.DSALES_Estatus__c</members>
