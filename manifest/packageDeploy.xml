@@ -123,14 +123,6 @@
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
 		<members>DSALES_InformacionDePago__c.InfoPagoVenta</members>
 		<members>InsurancePolicy.DSALES_Formato_compacto_p_liza</members>
-		<members>Asset-Garantia Extendida</members>
-		<members>DSALES_Categoria__c-DSALES_GEX</members>
-		<members>DSALES_Categoria__c-DSALES_SM</members>
-		<members>DSALES_Clase__c-DSALES_GEX</members>
-		<members>DSALES_Clase__c-DSALES_SM</members>
-		<members>DSALES_Familia__c-DSALES_GEX</members>
-		<members>DSALES_Familia__c-DSALES_SM</members>
-		<members>Quote-Venta GEX</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -447,8 +439,8 @@
 		<members>Quote.ID_Vendedor__c</members>
 		<members>Quote.Horas_transcurridas__c</members>
 		<members>Quote.Nombre_Cliente_Test__c</members>
-    <members>Quote.DSALES_Contado__c</members>
-    <members>Quote.Tiempo_transcurrido__c</members>
+    	<members>Quote.DSALES_Contado__c</members>
+    	<members>Quote.Tiempo_transcurrido__c</members>
 		<members>QuoteLineItem.DSALES_Derechosdepliza__c</members>
 		<members>QuoteLineItem.DSALES_Fechadecompra__c</members>
 		<members>QuoteLineItem.DSALES_Fechadeinicio__c</members>
@@ -640,10 +632,10 @@
 		<members>DSales_Etapa_Cerrada_Perdida_GEX</members>
 		<members>DSales_Etapa_de_Oportunidad_en_GEX</members>
 		<members>Dsales_Agregarelcorreoelectrnicodelclienteenelcampocorreodelendoso</members>
-    <members>Actualiza_GEX_Vendidas</members>
+    	<members>Actualiza_GEX_Vendidas</members>
 		<members>DSales_Activa_90001</members>
 		<members>Estatus_Cerrada_Ganada</members>
-    <members>Carga_Cliente_en_Endoso</members>
+    	<members>Carga_Cliente_en_Endoso</members>
 		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
 		<name>Flow</name>
 	</types>
@@ -775,8 +767,8 @@
 		<members>DSALES_Endoso__c.DSALES_Enviar_Endoso</members>
 		<members>DSALES_Endoso__c.DSALES_CargarDocumentos</members>
 		<members>Claim.DSALES_ButtonSiniestro</members>
-    <members>Duplicar</members>
-    <name>QuickAction</name>
+    	<members>Duplicar</members>
+    	<name>QuickAction</name>
 	</types>
 	<types>
 		<members>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</members>
