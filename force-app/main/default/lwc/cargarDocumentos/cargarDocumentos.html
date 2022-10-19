@@ -1,0 +1,62 @@
+<template>
+    <lightning-quick-action-panel header="Carga De Documentos">
+        <div class="slds-m-around_medium">
+            <template if:true={pickListValues}>
+                <lightning-card>
+                    <lightning-combobox name="TipoDeEndoso" label="Tipo de Endoso" value={value} placeholder="-Select--"
+                        options={pickListValues} onchange={handleChange}>
+                    </lightning-combobox>
+                </lightning-card>
+            </template>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Movimientos">MOVIMIENTOS</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Qualitas">QUALITAS
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="slds-hint-parent">
+                        <th data-label="ID Oficial" scope="row">
+                            <div class="slds-truncate" title="ID Oficial">
+                                <a href="#" tabindex="-1">ID Oficial</a>
+                            </div>
+                        </th>
+                        <td data-label="Upload file">
+                            <div class="slds-truncate">
+                                <lightning-file-upload name="fileUploader" accept={acceptedFormats}
+                                    record-id={myRecordId} onuploadfinished={handleUploadFinished}
+                                    onchange={openfileUpload} multiple>
+                                </lightning-file-upload>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="slds-hint-parent">
+                        <th data-label="ID Oficial" scope="row">
+                            <div class="slds-truncate" title="ID Oficial">
+                                <a href="#" tabindex="-1">ID Oficial</a>
+                            </div>
+                        </th>
+                        <td data-label="Upload file">
+                            <div class="slds-truncate">
+                                <lightning-file-upload name="fileUploader" accept={acceptedFormats}
+                                    record-id={myRecordId} onuploadfinished={handleUploadFinished} multiple>
+                                </lightning-file-upload>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Cancel" onclick={closeAction}></lightning-button>
+            &nbsp;&nbsp;
+            <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

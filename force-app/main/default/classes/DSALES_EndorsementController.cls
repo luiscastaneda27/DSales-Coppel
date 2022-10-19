@@ -18,6 +18,7 @@ public with sharing class DSALES_EndorsementController {
         request.setMethod('POST');
         request.setBody(body);
         HttpResponse response = http.send(request);
+        System.debug('body de la consulta : '+ body);
         if(response.getStatusCode() == 200 || response.getStatusCode() == 201 ){
             DSALES_EndorsementWrapper.endorsementResponse respuesta = (DSALES_EndorsementWrapper.endorsementResponse) JSON.deserialize(response.getbody(), DSALES_EndorsementWrapper.endorsementResponse.class);
             if(respuesta.ok == 'true'){
@@ -66,13 +67,18 @@ public with sharing class DSALES_EndorsementController {
         if(response.getStatusCode() == 200 || response.getStatusCode() == 201){
             system.debug('Codigo de Estatus regresado: ' + response.getStatusCode());
             return response.getBody();
-            
         }else{
             System.debug(response.getBody());
             return null;
                 
         }
        
+    }
+
+    @AuraEnabled
+    public static Integer validarDoc(String  idObject){
+        List<ContentDocumentLink > docs=[SELECT ContentDocumentId,ContentDocument.title,Id,LinkedEntityId,ShareType FROM ContentDocumentLink WHERE LinkedEntityId=:idObject];
+        return docs.size();
     }
 
 }
