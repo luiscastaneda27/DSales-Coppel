@@ -23,15 +23,15 @@
 		<members>DSALES_GexCotizacionesHelper</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
-		<members>DSALES_EndorsementCalls</members>
-        <members>DSALES_EndorsementCallsTest</members>
+		<!--<members>DSALES_EndorsementCalls</members>
+        <members>DSALES_EndorsementCallsTest</members>-->
         <members>DSALES_EndorsementController</members>
         <members>DSALES_EndorsementController_Test</members>
         <members>DSALES_EndorsementWrapper</members>
         <members>DSALES_EndorsementWrapper_Test</members>
         <members>DSALES_MockHttpResponseEndoso</members>
-        <members>DSALES_UpdateEndor</members>
-        <members>DSALES_UpdateEndorTest</members>
+        <!--<members>DSALES_UpdateEndor</members>
+        <members>DSALES_UpdateEndorTest</members>-->
         <members>DSALES_Utility</members>
         <members>DSALES_UtilityTest</members>
 		<members>DSALES_AccountWrapper</members>
@@ -64,9 +64,6 @@
         <members>DSALES_UpdateSiniestroJobTest</members>
 		<members>DSALES_ActualizarSiniestroTest</members>
 		<members>DSALES_DocumentsToTest</members>
-		<members>DSALES_EndosoTest</members>
-		<members>DSALES_Endosos</members>
-		<members>DSALES_EndososHelper</members>
 		<members>DSALES_MockHttpResponsePolizaTest</members>
 		<members>DSALES_ResumenPagos</members>
 		<members>DSALES_SiniestrosHelper</members>
@@ -99,7 +96,6 @@
 		<members>DSALES_CertificadoTrigger</members>
 		<members>DSALES_GexCotizacion</members>
 		<members>DSALES_MatrizTrigger</members>
-		<members>DSALES_Endoso</members>
 		<members>DSALES_ResumenDePagos</members>
 		<members>DSALES_UpdateCliente</members>
 		<name>ApexTrigger</name>
@@ -136,6 +132,7 @@
 	</types>
 	<types>
 		<members>Account.DSALES_ClienteCoppel__c</members>
+		<members>Account.DSALES_DeseaserContactado__c</members>
 		<members>Account.DSALES_Fecha_alta__c</members>
 		<members>Account.DSALES_Ingreso_mensual__c</members>
 		<members>Account.DSALES_Puesto_trabajo__c</members>
@@ -209,6 +206,7 @@
 		<members>DSALES_Endoso__c.DSALES_Cliente__c</members>
 		<members>DSALES_Endoso__c.DSALES_CorreoElectronico__c</members>
 		<members>DSALES_Endoso__c.DSALES_Estatus__c</members>
+		<members>DSALES_Endoso__c.DSALES_Enviadoaproveedor__c</members>
 		<members>DSALES_Endoso__c.DSALES_Folio__c</members>
 		<members>DSALES_Endoso__c.DSALES_MotivoDevolucion__c</members>
 		<members>DSALES_Endoso__c.DSALES_MotivoRechazo__c</members>
@@ -372,6 +370,8 @@
 		<members>Quote.DSALES_Cdigodeestado__c</members>
 		<members>Quote.DSALES_Cdigodemunicipio__c</members>
 		<members>Quote.DSALES_Cdigopostal__c</members>
+		<members>Quote.DSALES_Cdigodepromocin__c</members>
+		<members>Quote.DSALES_Contactarsolicitante__c</members>
 		<members>Quote.DSALES_Cobertura__c</members>
 		<members>Quote.DSALES_CorreoEnviado__c</members>
 		<members>Quote.DSALES_CotEnviada__c</members>
@@ -382,11 +382,14 @@
 		<members>Quote.DSALES_Fechadecomienzodepliza__c</members>
 		<members>Quote.DSALES_Fechadecreacionpresupuesto__c</members>
 		<members>Quote.DSALES_Fechadenacimiento__c</members>
+		<members>Quote.DSALES_fechadecreacion__c</members>
 		<members>Quote.DSALES_FormadePago__c</members>
 		<members>Quote.DSALES_Gnero__c</members>
 		<members>Quote.DSALES_IDdelvehculo__c</members>
+		<members>Quote.DSALES_IDdelasociado__c</members>
 		<members>Quote.DSALES_NombreCliente__c</members>
 		<members>Quote.DSALES_Nombredelsolicitante__c</members>
+		<members>Quote.DSALES_Mtododecontacto__c</members>
 		<members>Quote.DSALES_Opcindepago__c</members>
 		<members>Quote.DSALES_Region__c</members>
 		<members>Quote.DSALES_Suburbcode__c</members>
@@ -394,9 +397,14 @@
 		<members>Quote.DSales_Division__c</members>
 		<members>Quote.DSales_ID_Tienda__c</members>
 		<members>Quote.DSales_Tienda__c</members>
+		<members>Quote.DSALES_Tipodeserviciodelvehculo__c</members>
+		<members>Quote.DSALES_Tipodevehculo__c</members>
+		<members>Quote.DSALES_Usodelvehculo__c</members>
 		<members>Quote.DSales_Vendedor__c</members>
 		<members>Quote.ID_Vendedor__c</members>
+		<members>Quote.Horas_transcurridas__c</members>
 		<members>Quote.Nombre_Cliente_Test__c</members>
+		<members>Quote.Tiempo_transcurrido__c</members>
 		<members>QuoteLineItem.DSALES_Derechosdepliza__c</members>
 		<members>QuoteLineItem.DSALES_Fechadecompra__c</members>
 		<members>QuoteLineItem.DSALES_Fechadeinicio__c</members>
@@ -414,6 +422,8 @@
 		<members>QuoteLineItem.DSales_Modelo__c</members>
 		<members>QuoteLineItem.Vigencia_meses__c</members>
 		<members>Tienda__c.DSALES_Cdigopostal__c</members>
+		<members>Quote.DSALES_Aseguradora__c</members>
+		<members>Quote.DSALES_Negocio__c</members>
 		<members>Tienda__c.DSALES_Region__c</members>
 		<name>CustomField</name>
 	</types>
@@ -571,6 +581,7 @@
 	<types>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
+		<!--<members>Cambio_de_formato_de_pagina_Endosos</members>-->
 		<members>DSALES_Certificado_Cancelado</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
 		<members>DSALES_Correo_nueva_p_liza</members>
@@ -580,6 +591,8 @@
 		<members>DSales_Etapa_Cerrada_Perdida_GEX</members>
 		<members>DSales_Etapa_de_Oportunidad_en_GEX</members>
 		<members>Dsales_Agregarelcorreoelectrnicodelclienteenelcampocorreodelendoso</members>
+		<members>Carga_Cliente_en_Endoso</members>
+		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
 		<name>Flow</name>
 	</types>
 	<types>
@@ -641,6 +654,7 @@
 		<members>dSALES_ClasificacionServiciolwc</members>
 		 <members>dSALES_Endorsementbutton</members>
 		 <members>dSALES_SiniestroButton</members>
+		 <members>cargarDocumentos</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
@@ -707,7 +721,9 @@
 		<members>DSales_Matriz_GEX__c.DSALES_ActualizarMatriz</members>
 		<members>DSales_Matriz_GEX__c.DSALES_ClonarMatriz</members>
 		<members>DSALES_Endoso__c.DSALES_Enviar_Endoso</members>
+		<members>DSALES_Endoso__c.DSALES_CargarDocumentos</members>
 		<members>Claim.DSALES_ButtonSiniestro</members>
+
 		<name>QuickAction</name>
 	</types>
 	<types>

@@ -1193,6 +1193,16 @@
         <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <recordTypeVisibilities>   
+        <default>true</default>
+        <recordType>DSALES_Endoso__c.Registro_de_endoso</recordType>
+        <visible>true</visible>  
+    </recordTypeVisibilities>
+        <recordTypeVisibilities>
+   <default>false</default>
+      <recordType>DSALES_Endoso__c.Registro_de_endoso_completo</recordType>
+      <visible>true</visible>  
+    </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
@@ -1213,7 +1223,7 @@
         <recordType>Opportunity.FinServ__General</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
-    <recordTypeVisibilities>
+    <!-- <recordTypeVisibilities>
         <default>true</default>
         <recordType>Product2.DSALES_ProdIntangible</recordType>
         <visible>true</visible>
@@ -1222,7 +1232,7 @@
         <default>false</default>
         <recordType>Product2.DSALES_ProdTangible</recordType>
         <visible>false</visible>
-    </recordTypeVisibilities>
+    </recordTypeVisibilities>-->
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Quote.DSALES_VentaGEX</recordType>

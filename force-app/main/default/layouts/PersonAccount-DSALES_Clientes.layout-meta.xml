@@ -32,8 +32,16 @@
                 <field>Phone</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Edit</behavior>
                 <field>PersonMobilePhone</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSALES_Metodocontacto__pc</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSALES_DeseaserContactado__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -42,11 +50,7 @@
                 <field>PersonEmail</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>DSALES_Fecha_alta__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>PersonBirthdate</field>
             </layoutItems>
         </layoutColumns>
@@ -68,15 +72,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>DSALES_ClienteCoppel__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>CP_WalletCustomerNumber__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CP_WalletCustomerNumberTxt__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CP_ClientCreditNumber__pc</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -87,6 +87,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>FinServ__Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>CP_CRMCustomerNumber__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -210,20 +214,12 @@
         <fields>ExpirationDate</fields>
         <relatedList>InsurancePolicies</relatedList>
     </relatedLists>
-    <!--relatedLists>
-        <fields>Name</fields>
-        <fields>Cliente__c</fields>
-        <fields>ClaimType</fields>
-        <fields>Status</fields>
-        <fields>PolicyNumber</fields>
-        <fields>CreatedDate</fields>
-        <relatedList>Claim.Cliente__c</relatedList>
-    </relatedLists-->
     <relatedLists>
         <fields>Name</fields>
         <fields>ClaimType</fields>
         <fields>Status</fields>
         <fields>ApprovedAmount</fields>
+        <fields>Cliente__c</fields>
         <relatedList>RelatedClaimList</relatedList>
     </relatedLists>
     <relatedLists>
@@ -268,6 +264,12 @@
         <fields>QUOTE.SUBTOTAL</fields>
         <fields>QUOTE.TOTALPRICE</fields>
         <relatedList>Quote.Nombre_Cliente_Test__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>InsurancePolicy</fields>
+        <fields>CustomerProperty</fields>
+        <relatedList>InsurancePolicyAsset.DSALES_Account__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
