@@ -8,11 +8,6 @@
     <columns>ASSET.STATUS</columns>
     <columns>PRODUCT2.STOCK_KEEPING_UNIT</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>PRODUCT2.NAME</field>
-        <operation>contains</operation>
-        <value>Motocicleta</value>
-    </filters>
     <label>Nuevos de esta semana</label>
     <sharedTo>
         <role>DSALES_Admin_GEX</role>

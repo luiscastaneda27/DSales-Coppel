@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_TipoServicio__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo de Servicio</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>DSALES_Tipodeproducto__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Garantía Extendida</fullName>
+                <default>false</default>
+                <label>Garantía Extendida</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Servicio</controllingFieldValue>
+            <valueName>Garantía Extendida</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
