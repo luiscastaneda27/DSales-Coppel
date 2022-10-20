@@ -746,6 +746,7 @@
 		<members>DSales_Matriz_GEX__c.All</members>
 		<members>Quote.All</members>
 		<members>Quote.DSALES_Nuevosdeestasemana</members>
+		<members>Tienda__c.All</members>
 		<name>ListView</name>
 	</types>
 	<types>
