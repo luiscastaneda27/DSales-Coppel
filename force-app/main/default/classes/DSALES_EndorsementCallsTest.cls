@@ -18,15 +18,20 @@ public class DSALES_EndorsementCallsTest {
         poli.DSALES_CorreoElectronico__c='nuevo@gma.com';
         insert poli;
         
-        DSALES_Endoso__c tempo = new DSALES_Endoso__c();
-        tempo.DSALES_Poliza__c = poli.Id;
-        tempo.DSALES_uid__c = 'iszxxzxaxa';
-        tempo.DSALES_Estatus__c = 'En tramite';
-        tempo.DSALES_Tipodedocumento__c='Identificación oficial';
-        tempo.DSALES_Tipodeendoso__c='Cambio de titular';
-        tempo.DSALES_Tipodedato__c='RFC';
-        tempo.DSALES_Valor__c='DFERR';
-        insert tempo;      
+        DSALES_Endoso__c endoso = new DSALES_Endoso__c();
+        String recordTypeId = Schema.SObjectType.DSALES_Endoso__c.getRecordTypeInfosByName().get('Registro de endoso completo').getRecordTypeId();
+        endoso.RecordTypeId = recordTypeId;
+        endoso.DSALES_Cliente__c = acc.Id;
+        endoso.DSALES_Folio__c = '323232';
+        endoso.DSALES_Poliza__c = poli.Id;
+        endoso.DSALES_uid__c = 'iszxxzxaxa';
+        endoso.DSALES_Estatus__c = 'En tramite';
+        endoso.DSALES_Tipodedocumento__c='Identificación oficial';
+        endoso.DSALES_Tipodeendoso__c='Cambio de titular';
+        endoso.DSALES_Tipodedato__c='RFC';
+        endoso.DSALES_Valor__c='DFERR';
+        endoso.DSALES_CorreoElectronico__c='sds@fs.com';
+        insert endoso;      
     }
     
 	@isTest static void testCallout() {

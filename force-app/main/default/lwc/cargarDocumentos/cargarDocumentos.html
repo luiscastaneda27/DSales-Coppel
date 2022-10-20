@@ -1,13 +1,13 @@
 <template>
     <lightning-quick-action-panel header="Carga De Documentos">
         <div class="slds-m-around_medium">
-            <template if:true={pickListValues}>
-                <lightning-card>
+            <lightning-card>
+                <template if:true={pickListValues}>
                     <lightning-combobox name="TipoDeEndoso" label="Tipo de Endoso" value={value} placeholder="-Select--"
                         options={pickListValues} onchange={handleChange}>
                     </lightning-combobox>
-                </lightning-card>
-            </template>
+                </template>
+            </lightning-card>
             <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="">
                 <thead>
                     <tr class="slds-line-height_reset">
@@ -37,9 +37,9 @@
                         </td>
                     </tr>
                     <tr class="slds-hint-parent">
-                        <th data-label="ID Oficial" scope="row">
-                            <div class="slds-truncate" title="ID Oficial">
-                                <a href="#" tabindex="-1">ID Oficial</a>
+                        <th data-label="RFC" scope="row">
+                            <div class="slds-truncate" title="RFC">
+                                <a href="#" tabindex="-1">RFC</a>
                             </div>
                         </th>
                         <td data-label="Upload file">

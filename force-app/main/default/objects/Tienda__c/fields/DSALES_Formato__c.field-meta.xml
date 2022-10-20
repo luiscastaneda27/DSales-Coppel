@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Formato__c</fullName>
+    <description>Indica los diferentes formatos de tienda y sucursales</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica los diferentes formatos de tienda y sucursales</inlineHelpText>
+    <label>Formato</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TIENDA COPPEL</fullName>
+                <default>true</default>
+                <label>TIENDA COPPEL</label>
+            </value>
+            <value>
+                <fullName>COPPEL REMATE</fullName>
+                <default>false</default>
+                <label>COPPEL REMATE</label>
+            </value>
+            <value>
+                <fullName>TIENDA MUEBLES</fullName>
+                <default>false</default>
+                <label>TIENDA MUEBLES</label>
+            </value>
+            <value>
+                <fullName>COPPEL DIGITAL</fullName>
+                <default>false</default>
+                <label>COPPEL DIGITAL</label>
+            </value>
+            <value>
+                <fullName>TIENDA MUEBLES + ZAPATERÍA</fullName>
+                <default>false</default>
+                <label>TIENDA MUEBLES + ZAPATERÍA</label>
+            </value>
+            <value>
+                <fullName>ZAPATERÍA</fullName>
+                <default>false</default>
+                <label>ZAPATERÍA</label>
+            </value>
+            <value>
+                <fullName>ZAPATERÍA + COPPEL DIGITAL</fullName>
+                <default>false</default>
+                <label>ZAPATERÍA + COPPEL DIGITAL</label>
+            </value>
+            <value>
+                <fullName>TIENDA ROPA</fullName>
+                <default>false</default>
+                <label>TIENDA ROPA</label>
+            </value>
+            <value>
+                <fullName>TIENDA VIRTUAL</fullName>
+                <default>false</default>
+                <label>TIENDA VIRTUAL</label>
+            </value>
+            <value>
+                <fullName>SUCURSAL BANCARIA</fullName>
+                <default>false</default>
+                <label>SUCURSAL BANCARIA</label>
+            </value>
+            <value>
+                <fullName>BANCOPPEL STAND ALONE</fullName>
+                <default>false</default>
+                <label>BANCOPPEL STAND ALONE</label>
+            </value>
+            <value>
+                <fullName>FASHION MARKET</fullName>
+                <default>false</default>
+                <label>FASHION MARKET</label>
+            </value>
+            <value>
+                <fullName>COPPEL MOTOS</fullName>
+                <default>false</default>
+                <label>COPPEL MOTOS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
