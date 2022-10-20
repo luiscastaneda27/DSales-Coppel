@@ -1,35 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
-		<name>CompactLayout</name>
-	</types>
-	<types>
-		<members>DSALES_Endoso__c.DSALES_Enviadoaproveedor__c</members>
-		<name>CustomField</name>
-	</types>
-	<types>
-		<members>Cambio_de_formato_de_pagina_Endosos</members>
-		<members>Carga_Cliente_en_Endoso</members>
-		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
-		<name>Flow</name>
-	</types>
-	<types>
-		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
-		<members>DSALES_Endoso__c-Visualización de Endoso</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>cargarDocumentos</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>DSALES_Plantillas_de_construcci_n</members>
-		<name>PermissionSet</name>
-	</types>
-	<types>
-		<members>DSALES_Endoso__c.DSALES_CargarDocumentos</members>
-		<name>QuickAction</name>
-	</types>
 	<version>55.0</version>
 </Package>

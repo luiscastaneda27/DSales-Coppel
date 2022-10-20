@@ -126,6 +126,10 @@
 		<name>CompactLayout</name>
 	</types>
 	<types>
+		<members>DSALES_Pisys</members>
+		<name>ConnectedApp</name>
+	</types>
+	<types>
 		<members>DSALES_GarantiaExtendida</members>
 		<members>DSALES_Seguro_de_Motos</members>
 		<name>CustomApplication</name>
