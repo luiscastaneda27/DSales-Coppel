@@ -40,8 +40,8 @@ public class DSALES_EndorsementWrapper {
         public String FechaAplicacionEndoso { get; set; }
         public string Estatus { get; set; }
         public string ComentarioEstatus { get; set; }
-        public documento Documentos { get; set; } 
-        public dato Datos { get; set; } 
+        public List<documento> Documentos { get; set;}
+        public List<dato> Datos { get; set;} 
         public string salesforceid { get; set; } 
     }
     
