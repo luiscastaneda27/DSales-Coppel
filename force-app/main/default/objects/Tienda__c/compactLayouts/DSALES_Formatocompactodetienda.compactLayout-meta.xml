@@ -5,7 +5,6 @@
     <fields>DSALES_Telfono__c</fields>
     <fields>DSALES_Estado__c</fields>
     <fields>DSALES_Ciudad__c</fields>
-    <fields>DSALES_Regin__c</fields>
     <fields>Dsales_Divisin__c</fields>
     <fields>DSALES_Cdigopostal__c</fields>
     <label>Formato compacto de tienda</label>
