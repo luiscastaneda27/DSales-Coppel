@@ -1,15 +1,14 @@
-import { LightningElement,wire, track} from "lwc";
+import { LightningElement, wire, track, api} from "lwc";
 import { CloseActionScreenEvent } from "lightning/actions";
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 import DSALES_TIPO_DE_ENDOSO__C from '@salesforce/schema/DSALES_Endoso__c.DSALES_Tipodeendoso__c';
 
-
 export default class QuickActionLWC extends LightningElement {
-    
+   
     @track pickListValues;
     @track error;
     @track values;
-    
+
     @wire(getPicklistValues, { 
         recordTypeId: '012000000000000AAA', 
         fieldApiName: DSALES_TIPO_DE_ENDOSO__C 

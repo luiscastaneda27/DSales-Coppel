@@ -16,22 +16,22 @@
 		<members>DSALES_ControladorCertificadoPDF</members>
 		<members>DSALES_ControladorCertificadoPDFTest</members>
 		<members>DSALES_ControladorCotizacionGex</members>
-		<members>DSALES_ControladorCotizacionGexTest</members>
+		<!--<members>DSALES_ControladorCotizacionGexTest</members>-->
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
 		<members>DSALES_GexCotizaciones</members>
-		<members>DSALES_GexCotizacionesHelper</members>
+		<!--<members>DSALES_GexCotizacionesHelper</members>-->
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
-		<!--<members>DSALES_EndorsementCalls</members>
-        <members>DSALES_EndorsementCallsTest</members>-->
+		<members>DSALES_EndorsementCalls</members>
+        <members>DSALES_EndorsementCallsTest</members>
         <members>DSALES_EndorsementController</members>
         <members>DSALES_EndorsementController_Test</members>
         <members>DSALES_EndorsementWrapper</members>
         <members>DSALES_EndorsementWrapper_Test</members>
         <members>DSALES_MockHttpResponseEndoso</members>
-        <!--<members>DSALES_UpdateEndor</members>
-        <members>DSALES_UpdateEndorTest</members>-->
+        <members>DSALES_UpdateEndor</members>
+        <members>DSALES_UpdateEndorTest</members>
         <members>DSALES_Utility</members>
         <members>DSALES_UtilityTest</members>
 		<members>DSALES_AccountWrapper</members>
@@ -123,6 +123,7 @@
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
 		<members>DSALES_InformacionDePago__c.InfoPagoVenta</members>
 		<members>InsurancePolicy.DSALES_Formato_compacto_p_liza</members>
+		<members>Quote.DSALES_FormatocompactoSM</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -461,6 +462,17 @@
 		<members>Quote.DSALES_Aseguradora__c</members>
 		<members>Quote.DSALES_Negocio__c</members>
 		<members>Tienda__c.DSALES_Region__c</members>
+		<members>Tienda__c.DSALES_A_o_de_ltima_remodelaci_n__c</members>
+		<members>Tienda__c.DSALES_Banco__c</members>
+		<members>Tienda__c.DSALES_Gerente_de_Tienda_de_Zona__c</members>
+		<members>Tienda__c.DSALES_Formato__c</members>
+		<members>Tienda__c.DSALES_M_dulo_AFORE__c</members>
+		<members>Tienda__c.DSALES_Nombre_GerentedeTiendadeZona__c</members>
+		<members>Tienda__c.DSALES_N_mero_Celular__c</members>
+		<members>Tienda__c.DSALES_Tel_fono_TiendaBase__c</members>
+		<members>Tienda__c.DSALES_Tienda_Base__c</members>
+		<members>Tienda__c.Tipo_de_Tienda_Inmueble_Renta__c</members>
+		<members>Tienda__c.DSALES_Optica__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -553,6 +565,7 @@
 		<members>DSALES_Matriz_de_Cotizacion__c</members>
 		<members>DSALES_SubCategoria__c</members>
 		<members>DSales_Matriz_GEX__c</members>
+		<members>Tienda__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
@@ -620,6 +633,7 @@
 		<name>FlexiPage</name>
 	</types>
 	<types>
+	    <members>DSALES_Activacindecasilladeenviarcotizacin</members>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
 		<!--<members>Cambio_de_formato_de_pagina_Endosos</members>-->
@@ -637,6 +651,7 @@
 		<members>Estatus_Cerrada_Ganada</members>
     	<members>Carga_Cliente_en_Endoso</members>
 		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
+		
 		<name>Flow</name>
 	</types>
 	<types>
@@ -684,6 +699,7 @@
 		<members>PersonAccount-DSALES_Clientes</members>
 		<members>Quote-Venta SM</members>
 		<members>QuoteLineItem-DSALES_GEXQuote</members>
+		<members>QuoteLineItem-DSALES_Partida_SM</members>
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<members>Claim-Visualización de Siniestro</members>
@@ -733,6 +749,7 @@
 		<name>ListView</name>
 	</types>
 	<types>
+	    <members>DSALES_RutadepresupuestoSM</members>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<members>DSales_Oportunidad_en_GEX</members>
 		<name>PathAssistant</name>

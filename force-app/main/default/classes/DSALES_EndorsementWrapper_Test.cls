@@ -37,14 +37,19 @@ public class DSALES_EndorsementWrapper_Test {
         obj2.ComentarioEstatus = 'gg';
         //
         obj2.salesforceid = 'gg';
-        obj2.Datos = new DSALES_EndorsementWrapper.dato();
-        obj2.Datos.TipoDato = 'gg';
-        obj2.Datos.Valor = 'gg';
-        obj2.Datos.IdDato = 'gg';
-        obj2.Documentos = new DSALES_EndorsementWrapper.documento();
-        obj2.Documentos.TipoDocumento = 'gg';
-        obj2.Documentos.Documento = 'gg';
-        obj2.Documentos.IdDocumento='gg';
+        obj2.Datos = new List<DSALES_EndorsementWrapper.dato>();
+        DSALES_EndorsementWrapper.dato datoAux = new DSALES_EndorsementWrapper.dato();
+        datoAux.TipoDato = 'gg';
+        datoAux.Valor = 'gg';
+        datoAux.IdDato = 'gg';
+        obj2.Datos.add(datoAux);
+        obj2.Documentos = new List<DSALES_EndorsementWrapper.documento>();
+        DSALES_EndorsementWrapper.documento docuAux = new DSALES_EndorsementWrapper.documento();
+        docuAux.TipoDocumento = 'gg';
+        docuAux.Documento = 'gg';
+        docuAux.IdDocumento='gg';
+        obj2.Documentos.add(docuAux);
+       
         
         
     }
