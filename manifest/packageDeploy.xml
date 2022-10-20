@@ -388,14 +388,18 @@
 		<members>OrderItem.DSales_SKU__c</members>
 		<members>OrderItem.DSales_Servicio__c</members>
 		<members>OrderItem.DSales_Tipo__c</members>
+		<members>Product2.DSALES_VigenciaMeses__c</members>
+		<members>Product2.DSALES_Vinculado__c</members>
 		<members>OrderItem.DSales_Vigencia__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
 		<members>Product2.DSALES_Clase__c</members>
 		<members>Product2.DSALES_Familia__c</members>
 		<members>Product2.DSALES_Noaplica__c</members>
+		<members>Product2.DSales_Nombre_del_Producto__c</members>
 		<members>Product2.DSALES_Regiones__c</members>
 		<members>Product2.DSALES_Seguro__c</members>
 		<members>Product2.DSALES_Servicio__c</members>
+		<members>Product2.DSALES_ServEspecifico__c</members>
 		<members>Product2.DSALES_SubCategoria__c</members>
 		<members>Product2.DSALES_TipoServicio__c</members>
 		<members>Product2.DSales_Aplicaporcentajecobro__c</members>
@@ -405,6 +409,7 @@
 		<members>Product2.DSALES_Class__c</members>
 		<members>Product2.DSALES_Depa__c</members>
 		<members>Product2.DSALES_Fam__c</members>
+		<members>Product2.DSALES_Family__c</members>
 		<members>Product2.DSALES_SubCategorias__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
 		<members>Quote.DSALES_Cdigodeestado__c</members>
@@ -456,6 +461,7 @@
 		<members>QuoteLineItem.DSALES_NombreProducto__c</members>
 		<members>QuoteLineItem.DSALES_Primaneta__c</members>
 		<members>QuoteLineItem.DSALES_SKU__c</members>
+		<members>QuoteLineItem.DSales_SKU_Producto__c</members>
 		<members>QuoteLineItem.DSALES_TipoServ__c</members>
 		<members>QuoteLineItem.DSales_Articulo__c</members>
 		<members>QuoteLineItem.DSales_Fecha_de_entrega_estimada__c</members>
@@ -706,6 +712,8 @@
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<members>Claim-Visualización de Siniestro</members>
+		<members>Product2-Garantía Extendida</members>
+		<members>Product2-Seguro de Motos</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -756,6 +764,7 @@
 	    <members>DSALES_RutadepresupuestoSM</members>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<members>DSales_Oportunidad_en_GEX</members>
+		<members>Certificado</members>
 		<name>PathAssistant</name>
 	</types>
 	<types>

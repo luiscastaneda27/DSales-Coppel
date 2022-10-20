@@ -4,7 +4,7 @@
     <decisions>
         <name>DSales_Oportunidad_Cerrada_GEX</name>
         <label>Oportunidad Cerrada GEX</label>
-        <locationX>314</locationX>
+        <locationX>182</locationX>
         <locationY>335</locationY>
         <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
         <rules>
@@ -50,29 +50,8 @@
             </connector>
             <label>Cerrada Perdida</label>
         </rules>
-        <rules>
-            <name>DSales_Cerrada_Ganada</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>DSales_Garantia_Extendida</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.DSales_Resumen_Tipo_de_Compra_Servicio__c</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
-                <rightValue>
-                    <numberValue>1.0</numberValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Cerrada_Ganada</targetReference>
-            </connector>
-            <label>Cerrada Ganada</label>
-        </rules>
     </decisions>
+    <environments>Default</environments>
     <interviewLabel>Etapa Cerrada Perdida GEX {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Etapa Cerrada Perdida GEX</label>
     <processMetadataValues>
@@ -95,19 +74,6 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
-        <name>Cerrada_Ganada</name>
-        <label>Cerrada Ganada</label>
-        <locationX>314</locationX>
-        <locationY>455</locationY>
-        <inputAssignments>
-            <field>StageName</field>
-            <value>
-                <stringValue>Cerrada ganada</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>DSales_Cerrar_Oportunidad_GEX</name>
         <label>Cerrar Oportunidad</label>
         <locationX>50</locationX>
@@ -121,7 +87,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>188</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>DSales_Oportunidad_Cerrada_GEX</targetReference>
