@@ -697,6 +697,8 @@
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<members>Claim-Visualización de Siniestro</members>
+		<members>Product2-Garantía Extendida</members>
+		<members>Product2-Seguro de Motos</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -745,6 +747,7 @@
 	<types>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<members>DSales_Oportunidad_en_GEX</members>
+		<members>Certificado</members>
 		<name>PathAssistant</name>
 	</types>
 	<types>
