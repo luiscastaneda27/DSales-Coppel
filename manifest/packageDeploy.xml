@@ -636,7 +636,7 @@
 	    <members>DSALES_Activacindecasilladeenviarcotizacin</members>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
-		<!--<members>Cambio_de_formato_de_pagina_Endosos</members>-->
+		<members>Cambio_de_formato_de_pagina_Endosos</members>
 		<members>DSALES_Certificado_Cancelado</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
 		<members>DSALES_Correo_nueva_p_liza</members>
@@ -651,7 +651,6 @@
 		<members>Estatus_Cerrada_Ganada</members>
     	<members>Carga_Cliente_en_Endoso</members>
 		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
-		
 		<name>Flow</name>
 	</types>
 	<types>
