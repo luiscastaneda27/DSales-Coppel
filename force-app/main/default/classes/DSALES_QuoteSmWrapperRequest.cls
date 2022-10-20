@@ -6,7 +6,6 @@ global class DSALES_QuoteSmWrapperRequest {
     @HttpPost
     global static DSALES_QuoteSmWrapper.RespuestaParaNpv createQuoteSM(){
         String numeroCliente = DSALES_Utility.NUMERO_CLIENTE_GENERICO;
-        //String numeroCliente = '90001';
         String message = '';
         Account client = new Account();
         Opportunity oppor = new Opportunity();
