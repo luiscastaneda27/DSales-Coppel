@@ -434,6 +434,9 @@
 		<members>Product2.DSALES_Depa__c</members>
 		<members>Product2.DSALES_Fam__c</members>
 		<members>Product2.DSALES_Family__c</members>
+		<members>Product2.DSALES_Matriz__c</members>
+		<members>Product2.DSALES_SegEspecifico__c</members>
+		 <members>Product2.DSALES_ServicioSeguro__c</members>
 		<members>Product2.DSALES_SubCategorias__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
 		<members>Quote.DSALES_Cdigodeestado__c</members>
@@ -751,7 +754,7 @@
 		<name>Letterhead</name>
 	</types>
 	<types>
-		<members>dSALES_ClasificacionServiciolwc</members>
+		 <members>dSALES_ClasificacionServiciolwc</members>
 		 <members>dSALES_Endorsementbutton</members>
 		 <members>dSALES_SiniestroButton</members>
 		 <members>cargarDocumentos</members>
