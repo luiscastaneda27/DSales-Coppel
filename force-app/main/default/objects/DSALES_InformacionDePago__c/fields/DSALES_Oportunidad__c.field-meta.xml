@@ -5,9 +5,8 @@
     <externalId>false</externalId>
     <label>Oportunidad</label>
     <referenceTo>Opportunity</referenceTo>
-    <relationshipLabel>Información de Pagos</relationshipLabel>
     <relationshipName>InformaciondePagos</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>

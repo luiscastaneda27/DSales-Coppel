@@ -521,7 +521,6 @@
 		<members>COPPELPISyS/Segurosdemotos/iRwyPzDoEOAkagKsTpvddsdZgnEsdP</members>
 		<members>COPPELPISyS/Segurosdemotos/GTlTBYAPdOjzISvFslZpRafnShxOuq</members>
 		<members>Tableros_Venta_GEX</members>
-		<members>Tableros_Venta_GEX/WKEgdHadQdsLxqKdOxltMNwbiGcBqw</members>
 		<name>Dashboard</name>
 	</types>
 	<types>
@@ -588,10 +587,6 @@
 		<members>DSALES_PISYS/DSALES_hrAmarillo</members>
 		<members>DSALES_PISYS/DSALES_hrAzul</members>
 		<members>Experiences_Shared_Document_Folder/X1267382794_jpg</members>
-		<!--members>dupcheck__dcDocuments/dupcheck__ApplicationIcon2</members>
-		<members>dupcheck__dcDocuments/dupcheck__ApplicationLogo2</members>
-		<members>dupcheck__dcDocuments/dupcheck__Application_Icon</members>
-		<members>dupcheck__dcDocuments/dupcheck__Application_Logo</members-->
 		<name>Document</name>
 	</types>
 	<types>
@@ -836,20 +831,13 @@
 		<members>DSALES_ReportesdeClientesGEX/DSALES_Reporte_de_Clientes_Buc</members>
 		<members>DSALES_ReportesdeClientesGEX/DSALES_Reporte_de_Clientes_Candidatos_8R9</members>
 		<members>DSALES_ReportesdeVentasGEX/DSALES_ResultadoDivision_9XK</members>
-		<members>DSALES_ReportesdeVentasGEX/DSALES_Tiendas_con_menor_venta_GEX_SVV</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Indicadores_GEX_Region_yPR</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Indicadores_GEX_Resultado_Nacional_4TL</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Indicadores_GEX_por_Trimestre_7oC</members>
-		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_GEX_por_Regin_Def</members>
-		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_Tiendas_GEX_hY8</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_DivisionRegion_I6Q</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_Region_qfw</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_Zonas_g9H</members>
-		<members>DSALES_ReportesdeVentasGEX/DSales_Resultados_GEX_por_Tiendas_Udp</members>
-		<members>DSALES_ReportesdeVentasGEX/DSales_Tiendas_Potenciales_GEX_C8S</members>
-		<members>DSALES_ReportesdeVentasGEX/DSales_Ranking_por_Unidades_GEX_HEV</members>
 		<members>CoppelPISyS</members>
-		<!--members>CoppelPISyS/SegurosdeMotos/DSALES_Estatus_Endosos_Totales_SM_CWd</members-->
 		<members>CoppelPISyS/SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
 		<members>CoppelPISyS/SegurosdeMotos</members>
 		<members>CoppelPISyS/SegurosdeMotos/Clientes_interesados_en_compra_de_SM_6hT</members>
