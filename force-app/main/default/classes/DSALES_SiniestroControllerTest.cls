@@ -39,7 +39,7 @@ public class DSALES_SiniestroControllerTest {
         
         List<ContentVersion> documentos = new list<ContentVersion>(); 
         documentos.add(DSALES_CreateDocument.CreaDocument('sdsd','Factura'));
-        documentos.add(DSALES_CreateDocument.CreaDocument('sdsd', 'ContanciaBajaPlacas'));
+        documentos.add(DSALES_CreateDocument.CreaDocument('sdsd', 'ConstanciaBajaPlacas'));
         documentos.add(DSALES_CreateDocument.CreaDocument('sdsd', 'Descripcion'));
         documentos.add(DSALES_CreateDocument.CreaDocument('sdsd', 'Comprobante'));
         documentos.add(DSALES_CreateDocument.CreaDocument('sdsd', 'IdComprobante'));
@@ -73,6 +73,7 @@ public class DSALES_SiniestroControllerTest {
         Test.startTest();
         Test.setMock(HttpCalloutMock.class, new DSALES_MockHttpResponseSiniestro(1));
         String cx = DSALES_SiniestroController.Siniestro(siniestro.Id);
+        Integer val=DSALES_SiniestroController.validarDoc(siniestro.Id);
         //String cx2 = DSALES_SiniestroController.Siniestro(siniestro.Id);     
 		Test.stopTest();             
     }

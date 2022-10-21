@@ -4,32 +4,5 @@
     <entityName>DSALES_Endoso__c</entityName>
     <fieldName>DSALES_Estatus__c</fieldName>
     <masterLabel>Ruta de estatus de Endosos</masterLabel>
-    <pathAssistantSteps>
-        <fieldNames>DSALES_Folio__c</fieldNames>
-        <info>&lt;p&gt;El Endoso fue completado con éxito. &lt;/p&gt;</info>
-        <picklistValueName>Autorizado</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
-        <info>&lt;p&gt;Pasar a a estatus En tramite cuando se mande el Endoso a proveedor &lt;/p&gt;</info>
-        <picklistValueName>En tramite</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
-        <fieldNames>Name</fieldNames>
-        <fieldNames>DSALES_Estatus__c</fieldNames>
-        <fieldNames>DSALES_Cliente__c</fieldNames>
-        <fieldNames>DSALES_CorreoElectronico__c</fieldNames>
-        <info>&lt;p&gt;Ingresar los campos claves para un endoso&lt;/p&gt;</info>
-        <picklistValueName>Nuevo</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
-        <fieldNames>DSALES_MotivoRechazo__c</fieldNames>
-        <picklistValueName>Rechazado</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
-        <fieldNames>DSALES_MotivoDevolucion__c</fieldNames>
-        <fieldNames>DSALES_SolucionDevolucion__c</fieldNames>
-        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;Solicitar información requerida al cliente por proveedor.&lt;/span&gt;&lt;/p&gt;</info>
-        <picklistValueName>Requerimiento de Información</picklistValueName>
-    </pathAssistantSteps>
-    <recordTypeName>__MASTER__</recordTypeName>
+    <recordTypeName>Registro_de_endoso_completo</recordTypeName>
 </PathAssistant>
