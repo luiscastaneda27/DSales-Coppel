@@ -137,7 +137,6 @@
 	</types>
 	<types>
 		<members>Account.DSALES_ClienteCoppel__c</members>
-		<members>Account.DSALES_DeseaserContactado__c</members>
 		<members>Account.DSALES_Fecha_alta__c</members>
 		<members>Account.DSALES_Ingreso_mensual__c</members>
 		<members>Account.DSALES_Puesto_trabajo__c</members>
@@ -173,9 +172,11 @@
 		<members>Claim.DSALES_Motivo_rechazo__c</members>
 		<members>Claim.DSALES_Nombre_conductor__c</members>
 		<members>Claim.DSALES_Numero_cliente_credito__c</members>
+		<members>Claim.N_mero_de_Siniestro__c</members>
 		<members>Claim.DSALES_Reporte__c</members>
 		<members>Claim.DSALES_Serie__c</members>
 		<members>Claim.DSALES_SiniestroUid__c</members>
+		<members>Claim.N_mero_de_Siniestro__c</members>
 		<members>ClaimPaymentSummary.DSALES_Tipopago__c</members>
 		<members>Contact.DSALES_Metodocontacto__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoProducto__c</members>
@@ -314,26 +315,48 @@
 		<members>DASALES_Porcentajedecobro__c.DSALES_Anios__c</members>
 		<members>DASALES_Porcentajedecobro__c.DSALES_Porcentaje__c</members>
 		<members>DASALES_Porcentajedecobro__c.DSALES_Product__c</members>
+		<members>InsurancePolicy.DSALES_Aseguradora__c</members>
 		<members>InsurancePolicy.DSALES_Activodeplizadeseguro__c</members>
 		<members>InsurancePolicy.DSALES_Armadora__c</members>
 		<members>InsurancePolicy.DSALES_Asegurado__c</members>
 		<members>InsurancePolicy.DSALES_Clavevehicular__c</members>
+		<members>InsurancePolicy.DSALES_ClaveAMIS__c</members>
 		<members>InsurancePolicy.DSALES_CorreoElectronico__c</members>
+		<members>InsurancePolicy.DSALES_Cobertura__c</members>
+		<members>InsurancePolicy.DSALES_Codigocolonia__c</members>
+		<members>InsurancePolicy.DSALES_Codigoestado__c</members>
+		<members>InsurancePolicy.DSALES_Codigomunicipio__c</members>
+		<members>InsurancePolicy.DSALES_Codigopostal__c</members>
 		<members>InsurancePolicy.DSALES_Descripcion__c</members>
 		<members>InsurancePolicy.DSALES_Estatusdepliza__c</members>
+		<members>InsurancePolicy.DSALES_Fechanacimiento__c</members>
+		<members>InsurancePolicy.DSALES_Genero__c</members>
 		<members>InsurancePolicy.DSALES_Gastos_expedicion__c</members>
 		<members>InsurancePolicy.DSALES_IVA__c</members>
+		<members>InsurancePolicy.DSALES_IDemision__c</members>
 		<members>InsurancePolicy.DSALES_Modelo__c</members>
+		<members>InsurancePolicy.DSALES_Marca__c</members>
 		<members>InsurancePolicy.DSALES_Nmerodemotor__c</members>
+		<members>InsurancePolicy.DSALES_Negocio__c</members>
+		<members>InsurancePolicy.DSALES_Numeroseguimiento__c</members>
 		<members>InsurancePolicy.DSALES_Numeroserie__c</members>
 		<members>InsurancePolicy.DSALES_Oportunidad__c</members>
+		<members>InsurancePolicy.DSALES_Opcionpago__c</members>
 		<members>InsurancePolicy.DSALES_PDFpoliza__c</members>
+		<members>InsurancePolicy.DSALES_PDF_poliza__c</members>
+		<members>InsurancePolicy.DSALES_Placas__c</members>
+		<members>InsurancePolicy.DSALES_Polizaenviada__c</members>
 		<members>InsurancePolicy.DSALES_Prima_Neta__c</members>
 		<members>InsurancePolicy.DSALES_Prima_total__c</members>
 		<members>InsurancePolicy.DSALES_Productoadquirido__c</members>
 		<members>InsurancePolicy.DSALES_RFC__c</members>
+		<members>InsurancePolicy.DSALES_Servicio__c</members>
+		<members>InsurancePolicy.DSALES_Telefono__c</members>
+		<members>InsurancePolicy.DSALES_Tipovehiculo__c</members>
 		<members>InsurancePolicy.DSALES_Tipodepersona__c</members>
+		<members>InsurancePolicy.DSALES_Uso__c</members>
 		<members>InsurancePolicy.DSALES_VigenciacumplidaSM__c</members>
+		<members>InsurancePolicy.Fecha_de_emisi_n__c</members>
 		<members>InsurancePolicyAsset.DSALES_Account__c</members>
 		<members>InsurancePolicyAsset.DSALES_ClaveAMIS__c</members>
 		<members>InsurancePolicyAsset.DSALES_Clavevehicular__c</members>
@@ -638,10 +661,13 @@
 		<name>FlexiPage</name>
 	</types>
 	<types>
+	    <members>Actualiza_N_mero_de_Siniestro</members>
 	    <members>DSALES_Activacindecasilladeenviarcotizacin</members>
+		<members>DSALES_Actualiza_correo_en_siniestro</members>
 		<members>DSALES_Alerta_certificado_caduco</members>
 		<members>DSALES_Alerta_p_liza_caduca</members>
 		<members>Cambio_de_formato_de_pagina_Endosos</members>
+		<members>DSALES_Cambio_Tipo_Registro_Siniestro</members>
 		<members>DSALES_Certificado_Cancelado</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
 		<members>DSALES_Correo_nueva_p_liza</members>
@@ -655,6 +681,9 @@
 		<members>DSales_Activa_90001</members>
 		<members>Estatus_Cerrada_Ganada</members>
     	<members>Carga_Cliente_en_Endoso</members>
+		<members>Carga_Cliente_en_Siniestro</members>
+		<members>Carga_de_correo_en_siniestro</members>
+		<members>Envi_de_correo_en_las_etapas_de_siniestro</members>
 		<members>Envi_de_correos_para_los_estatus_de_endosos</members>
 		<name>Flow</name>
 	</types>
@@ -698,6 +727,7 @@
 		<members>DSALES_Matriz_de_Cotizacion__c-Formato Matriz de Cotización</members>
 		<members>DSALES_SubCategoria__c-Formato Subcategoría</members>
 		<members>DSales_Matriz_GEX__c-Formato Matriz</members>
+		<members>InsurancePolicy-Formato de póliza de seguro</members>
 		<members>Opportunity-DSALES_OpportunityPISYSGEX</members>
 		<members>Opportunity-DSALES_OpportunitySM</members>
 		<members>PersonAccount-DSALES_Clientes</members>
@@ -707,6 +737,7 @@
 		<members>QuoteLineItem-DSALES_Partida_SM</members>
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
+		<members>Claim-Ingreso de Siniestro</members>
 		<members>Claim-Visualización de Siniestro</members>
 		<members>Product2-Garantía Extendida</members>
 		<members>Product2-Seguro de Motos</members>
@@ -815,6 +846,8 @@
 		<members>DSALES_Clase__c.DSALES_SM</members>
 		<members>DSALES_Familia__c.DSALES_GEX</members>
 		<members>DSALES_Familia__c.DSALES_SM</members>
+		<members>Claim.DSALES_Nuevo_Siniestro</members>
+		<members>Claim.DSALES_Siniestro</members>
 		<name>RecordType</name>
 	</types>
 	<types>
