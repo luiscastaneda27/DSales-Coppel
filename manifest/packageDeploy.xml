@@ -124,6 +124,7 @@
 		<members>DSALES_InformacionDePago__c.InfoPagoVenta</members>
 		<members>InsurancePolicy.DSALES_Formato_compacto_p_liza</members>
 		<members>Quote.DSALES_FormatocompactoSM</members>
+		<members>QuoteLineItem.DSALES_FormatocompactoSM</members>
 		<name>CompactLayout</name>
 	</types>
 	<types>
@@ -653,6 +654,7 @@
 		<members>Matriz_Item_P_gina_de_registro</members>
 		<members>Oportunidad_PISYS_GEX</members>
 		<members>P_liza_P_gina_de_registro1</members>
+		<members>Partida_de_presupuesto_P_gina_de_registro</members>
 		<members>Quote_Record_Page</members>
 		<members>P_gina_de_inicio_predeterminada1</members>
 		<members>Seguro_de_Motos_UtilityBar</members>
@@ -792,7 +794,9 @@
 	</types>
 	<types>
 	    <members>DSALES_RutadepresupuestoSM</members>
+		<members>DSALES_RutaparaoportunidadesdeSM</members>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
+		<members>DSALES_Rutaparapliza</members>
 		<members>DSales_Oportunidad_en_GEX</members>
 		<members>Certificado</members>
 		<name>PathAssistant</name>

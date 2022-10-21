@@ -7,7 +7,7 @@ public class DSALES_SiniestroController {
         String cuerpo='no hizo consulta';
         String query = 'SELECT Id, Name, DSALES_SiniestroUid__c,DSALES_Reporte__c,IncidentSiteStreet,IncidentSiteState,IncidentSiteCountry, ClaimType, CreatedDate, DSALES_Nombre_conductor__c, DSALES_Causa__c, DSALES_Descripcion__c, DSALES_Ano__c, DSALES_Marca__c, DSALES_Serie__c, InitiationDate, FinalizedDate, Cliente__r.Name, P_liza__r.Name, ClaimReason, DSALES_Estatus__c FROM Claim WHERE Id = \'' + idSiniestro +'\'';       
         Claim obj = DataBase.query(query);
-        if(obj.DSALES_Estatus__c != 'Nuevo'){
+        if(obj.DSALES_Estatus__c != 'Nuevo' && obj.DSALES_Estatus__c != 'Documentado'){
             cuerpo = actualizaSiniestro(obj);
         }
         else{
@@ -155,7 +155,7 @@ public class DSALES_SiniestroController {
         
         objpost.DocumentosVehiculo = new DSALES_SiniestroWrapper.documentosVehiculo();
         objpost.DocumentosVehiculo.Factura = DSALES_GetDocumentBody.blodBody(obj.Id, 'Factura');
-        objpost.DocumentosVehiculo.ContanciaBajaPlacas = DSALES_GetDocumentBody.blodBody(obj.Id, 'ContanciaBajaPlacas');
+        objpost.DocumentosVehiculo.ContanciaBajaPlacas = DSALES_GetDocumentBody.blodBody(obj.Id, 'ConstanciaBajaPlacas');
         objpost.DocumentosVehiculo.ComprobantesTenencia = new list<DSALES_SiniestroWrapper.comprobantesTenencia>();
         DSALES_SiniestroWrapper.comprobantesTenencia aux = new DSALES_SiniestroWrapper.comprobantesTenencia();
         aux.Descripcion = DSALES_GetDocumentBody.blodBody(obj.Id, 'Descripcion');
@@ -185,6 +185,12 @@ public class DSALES_SiniestroController {
         objpost.salesforceid  = obj.Id;
         String str = JSON.serialize(objpost);
         return str;
+    }
+
+    @AuraEnabled
+    public static Integer validarDoc(String  idObject){
+        List<ContentDocumentLink > docs=[SELECT ContentDocumentId,ContentDocument.title,Id,LinkedEntityId,ShareType FROM ContentDocumentLink WHERE LinkedEntityId=:idObject];
+        return docs.size();
     }
 
 }
