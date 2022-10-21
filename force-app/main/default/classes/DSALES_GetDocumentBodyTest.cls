@@ -56,9 +56,6 @@ public class DSALES_GetDocumentBodyTest {
         ContentVersion version = DSALES_CreateDocument.CreaDocument('Cadena64bits','nombreArchivo');
         ContentVersion v = [SELECT ContentDocumentId, VersionData FROM ContentVersion where ContentDocument.Title ='Archivo'];
         DSALES_CreateDocument.Crealink(v, siniestro.Id);
-       
-        
-        
     }
     
 
