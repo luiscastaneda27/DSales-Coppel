@@ -394,12 +394,15 @@
 		<members>Product2.DSALES_Categoria__c</members>
 		<members>Product2.DSALES_Clase__c</members>
 		<members>Product2.DSALES_Familia__c</members>
+		<members>Product2.DSALES_Matriz__c</members>
 		<members>Product2.DSALES_Noaplica__c</members>
 		<members>Product2.DSales_Nombre_del_Producto__c</members>
 		<members>Product2.DSALES_Regiones__c</members>
 		<members>Product2.DSALES_Seguro__c</members>
+		<members>Product2.DSALES_SegEspecifico__c</members>
 		<members>Product2.DSALES_Servicio__c</members>
 		<members>Product2.DSALES_ServEspecifico__c</members>
+		<members>Product2.DSALES_ServicioSeguro__c</members>
 		<members>Product2.DSALES_SubCategoria__c</members>
 		<members>Product2.DSALES_TipoServicio__c</members>
 		<members>Product2.DSales_Aplicaporcentajecobro__c</members>
