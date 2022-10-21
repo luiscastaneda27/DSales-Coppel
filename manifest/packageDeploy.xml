@@ -249,9 +249,15 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Cambio__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Celular_del_Cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Certificado__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioDesIVA__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_GEXPagada__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioDesSinIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioSinIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_dineroelectronico__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_CreditoIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSales_Tienda__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DescripcionArticulo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DireccionCliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>

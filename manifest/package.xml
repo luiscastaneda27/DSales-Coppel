@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>DSALES_SiniestroController</members>
-		<members>DSALES_SiniestroControllerTest</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>QuoteLineItem.DSALES_FormatocompactoSM</members>
-		<name>CompactLayout</name>
-	</types>
-	<types>
-		<members>Partida_de_presupuesto_P_gina_de_registro</members>
-		<name>FlexiPage</name>
-	</types>
-	<types>
-		<members>Cambio_de_formato_de_pagina_Endosos</members>
-		<members>DSALES_Activacindecasilladeenviarcotizacin</members>
-		<name>Flow</name>
-	</types>
-	<types>
-		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
-		<members>DSALES_RutaparaoportunidadesdeSM</members>
-		<name>PathAssistant</name>
-	</types>
+	
 	<version>55.0</version>
 </Package>

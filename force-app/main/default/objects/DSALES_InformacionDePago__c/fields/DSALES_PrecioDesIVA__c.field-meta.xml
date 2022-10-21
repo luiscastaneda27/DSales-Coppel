@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_PrecioDesIVA__c</fullName>
+    <description>Indica el precio del producto tangible (original con descuento con IVA)</description>
+    <externalId>false</externalId>
+    <label>Precio con descuento con IVA</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
