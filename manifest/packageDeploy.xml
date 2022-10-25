@@ -525,6 +525,8 @@
 		<members>Tienda__c.DSALES_Tienda_Base__c</members>
 		<members>Tienda__c.Tipo_de_Tienda_Inmueble_Renta__c</members>
 		<members>Tienda__c.DSALES_Optica__c</members>
+		<members>Claim.DSALES_Monto__c</members>
+		<members>Claim.DSALES_Tipo_pago__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
