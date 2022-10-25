@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>Quote.DSALES_FormatocompactoSM</members>
+		<members>QuoteLineItem.DSALES_FormatocompactoSM</members>
+		<name>CompactLayout</name>
+	</types>
+	<types>
 		<members>Claim.DSALES_Monto__c</members>
 		<members>Claim.DSALES_Tipo_pago__c</members>
 		<name>CustomField</name>
-	</types>
-	<types>
-		<members>P_liza_P_gina_de_registro1</members>
-		<name>FlexiPage</name>
 	</types>
 	<version>55.0</version>
 </Package>
