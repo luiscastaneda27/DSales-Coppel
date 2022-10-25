@@ -5,7 +5,6 @@
     <externalId>false</externalId>
     <label>Certificado</label>
     <referenceTo>DSALES_Certificado__c</referenceTo>
-    <relationshipLabel>Información de Pagos</relationshipLabel>
     <relationshipName>DSALES_Informaci_n_de_Pagos</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>

@@ -445,7 +445,6 @@
 		<members>DSALES_Familia__c-Formato Familia</members>
 		<members>DSALES_Generador__c-Formato Generador Plantillas</members>
 		<members>DSALES_InformacionDePago__c-DSALES_Info_pago_Venta_NPV</members>
-		<members>DSALES_InformacionDePago__c-DSALES_InformaciondepagosSM_c</members>
 		<members>DSALES_InformacionDePago__c-Formato Información de Pago</members>
 		<members>DSALES_Matriz_de_Cotizacion__c-Formato Matriz de Cotización</members>
 		<members>DSALES_SubCategoria__c-Formato Subcategoría</members>

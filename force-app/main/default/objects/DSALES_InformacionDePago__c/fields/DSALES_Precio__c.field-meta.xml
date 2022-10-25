@@ -3,8 +3,8 @@
     <fullName>DSALES_Precio__c</fullName>
     <description>Precio del artículo</description>
     <externalId>false</externalId>
-    <label>Precio</label>
-    <precision>8</precision>
+    <label>Precio con IVA</label>
+    <precision>10</precision>
     <required>false</required>
     <scale>2</scale>
     <trackTrending>false</trackTrending>

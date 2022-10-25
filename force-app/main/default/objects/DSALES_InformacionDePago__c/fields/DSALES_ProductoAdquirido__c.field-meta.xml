@@ -5,10 +5,18 @@
     <description>Relación entre el objeto Producto Adquirido y el Pago.</description>
     <externalId>false</externalId>
     <label>Producto Adquirido</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Asset.DSALES_TipoProducto__c</field>
+            <operation>equals</operation>
+            <value>Producto</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>Asset</referenceTo>
-    <relationshipLabel>Información de Pagos</relationshipLabel>
     <relationshipName>Informaci_n_de_Pagos</relationshipName>
-    <required>true</required>
+    <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

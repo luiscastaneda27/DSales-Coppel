@@ -593,13 +593,6 @@
 		<members>DSALES_Partidadepago__c</members>
 		<members>Account</members>
 		<members>Account</members>
-		<members>InsuranceContract</members>
-		<members>InsurancePolicy</members>
-		<members>InsurancePolicyAsset</members>
-		<members>InsurancePolicyCoverage</members>
-		<members>InsurancePolicyParticipant</members>
-		<members>InsurancePolicySurcharge</members>
-		<members>InsurancePolicyTransaction</members>
 		<members>Opportunity</members>
 		<members>Quote</members>
 		<members>Claim</members>
@@ -613,7 +606,7 @@
 		<members>DSALES_Endoso__c-es_MX</members>
 		<members>DSALES_Familia__c-es_MX</members>
 		<members>DSALES_Generador__c-es_MX</members>
-		<members>DSALES_InformacionDePago__c-es_MX</members>
+		<!--members>DSALES_InformacionDePago__c-es_MX</members-->
 		<members>DSALES_Matriz_de_Cotizacion__c-es_MX</members>
 		<members>DSALES_SubCategoria__c-es_MX</members>
 		<members>DSales_Matriz_GEX__c-es_MX</members>
@@ -693,6 +686,7 @@
 		<members>Tienda_P_gina_de_registro</members>
 		<members>Partida_de_pago_Record_Page</members>
 		<members>Producto_Adquirido_Record_Page</members>
+		<members>Activo_de_p_liza_de_seguro_P_gina_de_registro</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -757,7 +751,6 @@
 		<members>DSALES_Familia__c-Formato Familia</members>
 		<members>DSALES_Generador__c-Formato Generador Plantillas</members>
 		<members>DSALES_InformacionDePago__c-DSALES_Info_pago_Venta_NPV</members>
-		<members>DSALES_InformacionDePago__c-DSALES_InformaciondepagosSM_c</members>
 		<members>DSALES_InformacionDePago__c-Formato Información de Pago</members>
 		<members>DSALES_Matriz_de_Cotizacion__c-Formato Matriz de Cotización</members>
 		<members>DSALES_SubCategoria__c-Formato Subcategoría</members>
