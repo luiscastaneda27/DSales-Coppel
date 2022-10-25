@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>QuoteLineItem.DSALES_FormatocompactoSM</members>
-		<name>CompactLayout</name>
-	</types>
-	<types>
 		<members>QuoteLineItem</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
-		<members>Activo_de_p_liza_de_seguro_P_gina_de_registro</members>
-		<name>FlexiPage</name>
+		<members>QuoteLineItem-DSALES_Partida_SM</members>
+		<name>Layout</name>
 	</types>
 	<version>55.0</version>
 </Package>
