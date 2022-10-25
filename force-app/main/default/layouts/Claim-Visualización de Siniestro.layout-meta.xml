@@ -25,6 +25,10 @@
                 <behavior>Edit</behavior>
                 <field>Correo_electr_nico__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSALES_Monto__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -127,7 +131,12 @@
                 <field>IncidentSite</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DSALES_SiniestroUid__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -163,6 +172,13 @@
             <quickActionName>FeedItem.MobileSmartActions</quickActionName>
         </quickActionListItems>
     </quickActionList>
+    <relatedLists>
+        <fields>Name</fields>
+        <fields>Claim</fields>
+        <fields>PaymentAmount</fields>
+        <fields>PaymentStatus</fields>
+        <relatedList>ClaimPaymentSummaries</relatedList>
+    </relatedLists>
     <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
