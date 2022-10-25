@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DSALES_Montototal__c</fullName>
+    <fullName>DSALES_Motoentregada__c</fullName>
+    <defaultValue>false</defaultValue>
     <externalId>false</externalId>
-    <label>Monto total</label>
-    <precision>18</precision>
-    <required>false</required>
-    <scale>2</scale>
+    <label>Moto entregada</label>
     <trackTrending>false</trackTrending>
-    <type>Currency</type>
+    <type>Checkbox</type>
 </CustomField>

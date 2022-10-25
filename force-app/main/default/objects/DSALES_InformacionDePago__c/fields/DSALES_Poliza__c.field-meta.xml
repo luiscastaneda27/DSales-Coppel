@@ -5,7 +5,6 @@
     <externalId>false</externalId>
     <label>Póliza</label>
     <referenceTo>InsurancePolicy</referenceTo>
-    <relationshipLabel>Información de Pagos</relationshipLabel>
     <relationshipName>Informaci_n_de_Pagos</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>

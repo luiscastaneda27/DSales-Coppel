@@ -3,7 +3,7 @@
     <fullName>DSALES_Pagos_en_NPV</fullName>
     <active>true</active>
     <description>Aquí se registrarán los pagos d ela venta desde el NPV</description>
-    <label>Pagos de Venta en NPV</label>
+    <label>Pagos de Venta en NPV de GEX</label>
     <picklistValues>
         <picklist>DSALES_Estatus__c</picklist>
         <values>

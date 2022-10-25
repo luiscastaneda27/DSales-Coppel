@@ -3,11 +3,10 @@
     <fullName>DSALES_Vendedor__c</fullName>
     <description>Número de vendedor</description>
     <externalId>false</externalId>
-    <label>Vendedor</label>
-    <precision>10</precision>
+    <label>ID Vendedor</label>
+    <length>7</length>
     <required>false</required>
-    <scale>0</scale>
     <trackTrending>false</trackTrending>
-    <type>Number</type>
+    <type>Text</type>
     <unique>false</unique>
 </CustomField>

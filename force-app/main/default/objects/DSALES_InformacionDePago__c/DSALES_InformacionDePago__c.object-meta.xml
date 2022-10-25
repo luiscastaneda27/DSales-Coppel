@@ -155,10 +155,11 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <gender>Feminine</gender>
-    <label>Información de Pago</label>
+    <label>Información de pago</label>
     <nameField>
-        <label>Nombre de Información de Pago</label>
-        <type>Text</type>
+        <displayFormat>INF{00000}</displayFormat>
+        <label>Folio</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Información de Pagos</pluralLabel>
     <searchLayouts>

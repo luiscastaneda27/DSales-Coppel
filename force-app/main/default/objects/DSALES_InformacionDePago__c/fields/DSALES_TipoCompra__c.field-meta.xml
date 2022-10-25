@@ -3,7 +3,7 @@
     <fullName>DSALES_TipoCompra__c</fullName>
     <description>Indica si el producto adquirido fue un producto tangible o un servicio</description>
     <externalId>false</externalId>
-    <label>Tipo de compra</label>
+    <label>Tipo de producto</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
