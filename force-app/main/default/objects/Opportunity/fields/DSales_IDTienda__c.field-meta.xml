@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>DSALES_Clave_Tienda__c</fullName>
-    <description>Se visualizará la clave de la tienda</description>
+    <fullName>DSales_IDTienda__c</fullName>
     <externalId>false</externalId>
-    <label>Clave Tienda</label>
-    <length>7</length>
+    <formula>SyncedQuote.DSales_ID_Tienda__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ID Tienda</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
     <type>Text</type>

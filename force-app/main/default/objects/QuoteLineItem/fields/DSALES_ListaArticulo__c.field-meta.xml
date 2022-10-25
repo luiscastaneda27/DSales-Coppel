@@ -4,26 +4,39 @@
     <description>Ayuda a definir el artículo seleccionado y a separarlo con su listado correspondiente</description>
     <externalId>false</externalId>
     <inlineHelpText>Un artículo como Refrigerador o Cafetera, caería en producto</inlineHelpText>
-    <label>Tipo de Artículo</label>
-    <required>true</required>
+    <label>Tipo de Producto</label>
+    <required>false</required>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
-            <sorted>true</sorted>
-            <value>
-                <fullName>GEX</fullName>
-                <default>false</default>
-                <label>GEX</label>
-            </value>
+            <sorted>false</sorted>
             <value>
                 <fullName>Producto</fullName>
                 <default>false</default>
                 <label>Producto</label>
             </value>
             <value>
+                <fullName>Servicio</fullName>
+                <default>false</default>
+                <label>Servicio</label>
+            </value>
+            <value>
+                <fullName>GEX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GEX</label>
+            </value>
+            <value>
+                <fullName>Producto (Seguro de Motos)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Producto (Seguro de Motos)</label>
+            </value>
+            <value>
                 <fullName>Seguro Motos</fullName>
                 <default>false</default>
+                <isActive>false</isActive>
                 <label>Seguro Motos</label>
             </value>
         </valueSetDefinition>

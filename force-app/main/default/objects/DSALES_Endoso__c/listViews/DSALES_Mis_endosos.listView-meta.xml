@@ -8,6 +8,11 @@
     <columns>DSALES_Estatus__c</columns>
     <columns>DSALES_Poliza__c</columns>
     <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>10/5/2022 12:00 AM</value>
+    </filters>
     <label>Mis endosos</label>
     <sharedTo>
         <role>DSALES_Admin_SM</role>

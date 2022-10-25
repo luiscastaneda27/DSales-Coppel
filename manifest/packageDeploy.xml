@@ -249,9 +249,15 @@
 		<members>DSALES_InformacionDePago__c.DSALES_Cambio__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Celular_del_Cliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Certificado__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioDesIVA__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Clave_Tienda__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_GEXPagada__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_Cliente__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioDesSinIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_PrecioSinIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSALES_dineroelectronico__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_CreditoIVA__c</members>
+		<members>DSALES_InformacionDePago__c.DSales_Tienda__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DescripcionArticulo__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DireccionCliente__c</members>
 		<members>DSALES_InformacionDePago__c.DSALES_DireccionTienda__c</members>
@@ -375,6 +381,7 @@
 		<members>InsurancePolicyAsset.DSALES_Uso__c</members>
 		<members>InsurancePolicyAsset.DSALES_Valorfactura__c</members>
 		<members>InsurancePolicyAsset.Estatus__c</members>
+		<members>InsurancePolicyAsset.DSALES_Factura__c</members>
 		<members>Opportunity.DSALES_Certificado__c</members>
 		<members>Opportunity.DSALES_Dias_Transcurridos__c</members>
 		<members>Opportunity.DSALES_Fecha_Inicio__c</members>
@@ -400,10 +407,13 @@
 		<members>Opportunity.DSales_Resumen_Tipo_de_Compra_Servicio__c</members>
 		<members>Opportunity.Tipo_de_servicio__c</members>
 		<members>Opportunity.DSALES_OppPrin__c</members>
+		<members>Opportunity.DSales_IDTienda__c</members>
+		<members>Opportunity.DSales_NombreVendedor__c</members>
 		<members>OpportunityLineItem.DSALES_PrecioServ__c</members>
 		<members>OpportunityLineItem.DSALES_Producto__c</members>
 		<members>OpportunityLineItem.DSALES_Servicio__c</members>
 		<members>OpportunityLineItem.DSALES_TipoServ__c</members>
+		<members>Opportunity.DSales_IDVendedor__c</members>
 		<members>OpportunityLineItem.DSALES_Vendido__c</members>
 		<members>OrderItem.DSales_Cantidad_de_Servicio__c</members>
 		<members>OrderItem.DSales_Descuento_de_Servicio__c</members>
@@ -436,7 +446,7 @@
 		<members>Product2.DSALES_Family__c</members>
 		<members>Product2.DSALES_Matriz__c</members>
 		<members>Product2.DSALES_SegEspecifico__c</members>
-		 <members>Product2.DSALES_ServicioSeguro__c</members>
+		<members>Product2.DSALES_ServicioSeguro__c</members>
 		<members>Product2.DSALES_SubCategorias__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
 		<members>Quote.DSALES_Cdigodeestado__c</members>
@@ -477,6 +487,7 @@
 		<members>Quote.Horas_transcurridas__c</members>
 		<members>Quote.Nombre_Cliente_Test__c</members>
     	<members>Quote.DSALES_Contado__c</members>
+		<members>Quote.DSALES_Numerodepartidas__c</members>
     	<members>Quote.Tiempo_transcurrido__c</members>
 		<members>QuoteLineItem.DSALES_Derechosdepliza__c</members>
 		<members>QuoteLineItem.DSALES_Fechadecompra__c</members>
@@ -495,6 +506,10 @@
 		<members>QuoteLineItem.DSales_Marca__c</members>
 		<members>QuoteLineItem.DSales_Modelo__c</members>
 		<members>QuoteLineItem.Vigencia_meses__c</members>
+		<members>QuoteLineItem.DSALES_Vendido__c</members>
+		<members>QuoteLineItem.DSales_Categoria__c</members>
+		<members>QuoteLineItem.DSales_Clase__c</members>
+		<members>QuoteLineItem.DSales_Familia__c</members>
 		<members>Tienda__c.DSALES_Cdigopostal__c</members>
 		<members>Quote.DSALES_Aseguradora__c</members>
 		<members>Quote.DSALES_Negocio__c</members>
@@ -510,6 +525,8 @@
 		<members>Tienda__c.DSALES_Tienda_Base__c</members>
 		<members>Tienda__c.Tipo_de_Tienda_Inmueble_Renta__c</members>
 		<members>Tienda__c.DSALES_Optica__c</members>
+		<members>Claim.DSALES_Monto__c</members>
+		<members>Claim.DSALES_Tipo_pago__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -574,6 +591,19 @@
 		<members>Asset</members>
 		<members>DASALES_Porcentajedecobro__c</members>
 		<members>DSALES_Partidadepago__c</members>
+		<members>Account</members>
+		<members>Account</members>
+		<members>InsuranceContract</members>
+		<members>InsurancePolicy</members>
+		<members>InsurancePolicyAsset</members>
+		<members>InsurancePolicyCoverage</members>
+		<members>InsurancePolicyParticipant</members>
+		<members>InsurancePolicySurcharge</members>
+		<members>InsurancePolicyTransaction</members>
+		<members>Opportunity</members>
+		<members>Quote</members>
+		<members>Claim</members>
+		<members>QuoteLineItem</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -837,6 +867,7 @@
 	<types>
 		<members>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</members>
 		<members>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</members>
+		<members>DSALES_Endoso__c.Registro_de_endoso_completo</members>
 		<members>Opportunity.DSALES_Oportunidad</members>
 		<members>Opportunity.DSales_Garantia_Extendida</members>
 		<members>Opportunity.FinServ__General</members>
