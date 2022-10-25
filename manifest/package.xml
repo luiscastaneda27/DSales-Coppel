@@ -6,9 +6,12 @@
 		<name>CompactLayout</name>
 	</types>
 	<types>
-		<members>Claim.DSALES_Monto__c</members>
-		<members>Claim.DSALES_Tipo_pago__c</members>
-		<name>CustomField</name>
+		<members>DSALES_Endoso__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Endoso_P_gina_de_registro</members>
+		<name>FlexiPage</name>
 	</types>
 	<version>55.0</version>
 </Package>
