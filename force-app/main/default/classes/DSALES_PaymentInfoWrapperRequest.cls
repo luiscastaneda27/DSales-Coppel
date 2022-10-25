@@ -19,7 +19,7 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
 
                     info.DSALES_Oportunidad__c = oportunidad.Id;
                     info.DSALES_Cliente__c = oportunidad.AccountId;
-                    info.Name = 'Pago -'+' '+oportunidad.Account.Name+' '+date.today().year()+'-'+date.today().month()+'-'+date.today().day();
+                    //info.Name = 'Pago -'+' '+oportunidad.Account.Name+' '+date.today().year()+'-'+date.today().month()+'-'+date.today().day();
                     info.DSALES_Estatus__c = 'Acreditado';
                     info.DSALES_Fecha__c = date.today();
                     info.DSALES_FormaDePago__c = pago.payment_method;

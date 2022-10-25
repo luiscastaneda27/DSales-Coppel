@@ -10,7 +10,7 @@ global with sharing class DSALES_IPAssetWrapperTest {
         insert ip;
         Asset producto= new Asset(Name='Danny',AccountId=ac.id);
         insert producto;
-        DSALES_InformaciondePago__c pago = new DSALES_InformaciondePago__c(Name='Danny',DSALES_Oportunidad__c=op.id,DSALES_Cliente__c=ac.Id,DSALES_Poliza__c=ip.id,DSALES_Clave_Tienda__c='2',DSALES_ProductoAdquirido__c=producto.id);
+        DSALES_InformaciondePago__c pago = new DSALES_InformaciondePago__c(DSALES_Oportunidad__c=op.id,DSALES_Cliente__c=ac.Id,DSALES_Poliza__c=ip.id,DSALES_Clave_Tienda__c='2',DSALES_ProductoAdquirido__c=producto.id);
         insert pago;
     }
     @isTest static void CreateRecordTest()

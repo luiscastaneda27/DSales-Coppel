@@ -17145,7 +17145,7 @@
         <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_InformacionDePago__c-DSALES_InformaciondepagosSM_c</layout>
+        <layout>DSALES_InformacionDePago__c-DSALESInformaciondepagosSM</layout>
         <recordType>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
     </layoutAssignments>
     <layoutAssignments>

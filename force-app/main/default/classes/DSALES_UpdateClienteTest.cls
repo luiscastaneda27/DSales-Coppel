@@ -49,7 +49,7 @@ public class DSALES_UpdateClienteTest {
         insert customPrice;
         Asset nuev = new Asset(Name='test',AccountId=acc.Id);
         insert nuev;
-        DSALES_InformacionDePago__c pago = new DSALES_InformacionDePago__c(Name='Nueva', DSALES_Oportunidad__c=op.Id,
+        DSALES_InformacionDePago__c pago = new DSALES_InformacionDePago__c(DSALES_Oportunidad__c=op.Id,
                                                                            DSALES_Estatus__c='No Acreditado',
                                                                           DSALES_FormaDePago__c='Efectivo',
                                                                           DSALES_Factura__c='sdfsfs',

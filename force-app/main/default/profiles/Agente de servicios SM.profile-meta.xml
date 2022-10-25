@@ -17148,11 +17148,11 @@
         <layout>DSALES_Generador__c-Formato Generador Plantillas</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_InformacionDePago__c-DSALES_InformaciondepagosSM_c</layout>
+        <layout>DSALES_InformacionDePago__c-DSALESInformaciondepagosSM</layout>
         <recordType>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>DSALES_InformacionDePago__c-DSALES_InformaciondepagosSM_c</layout>
+        <layout>DSALES_InformacionDePago__c-DSALESInformaciondepagosSM</layout>
         <recordType>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -17653,7 +17653,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>DSALES_Endoso__c.Registro_de_endoso_completo</recordType>
-        <visible>false</visible>
+        <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>

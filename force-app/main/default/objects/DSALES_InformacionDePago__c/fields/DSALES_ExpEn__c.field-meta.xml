@@ -3,7 +3,7 @@
     <fullName>DSALES_ExpEn__c</fullName>
     <description>Campo que indica donde fue expedido el ticket</description>
     <externalId>false</externalId>
-    <label>Exp en</label>
+    <label>Expedido en</label>
     <length>50</length>
     <required>false</required>
     <trackTrending>false</trackTrending>
