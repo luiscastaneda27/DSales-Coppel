@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	
 	<types>
 		<members>Administrador GEX</members>
 		<members>Administrador SM</members>
@@ -11,6 +10,9 @@
 		<members>DSALES_Agente de Ventas</members>
 		<name>Profile</name>
 	</types>
-	
-	<version>53.0</version>
+	<types>
+		<members>DSALES_Endoso__c.Registro_de_endoso_completo</members>
+		<name>RecordType</name>
+	</types>
+	<version>55.0</version>
 </Package>

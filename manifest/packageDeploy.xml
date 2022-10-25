@@ -867,6 +867,7 @@
 	<types>
 		<members>DSALES_InformacionDePago__c.DSALES_Pagos_en_NPV</members>
 		<members>DSALES_InformacionDePago__c.DSALES_PagosdeVentaenNPVSM_c</members>
+		<members>DSALES_Endoso__c.Registro_de_endoso_completo</members>
 		<members>Opportunity.DSALES_Oportunidad</members>
 		<members>Opportunity.DSales_Garantia_Extendida</members>
 		<members>Opportunity.FinServ__General</members>
