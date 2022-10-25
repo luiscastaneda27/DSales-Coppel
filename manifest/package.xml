@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	
 	<types>
-		<members>Quote.DSALES_FormatocompactoSM</members>
-		<members>QuoteLineItem.DSALES_FormatocompactoSM</members>
-		<name>CompactLayout</name>
+		<members>Administrador GEX</members>
+		<members>Administrador SM</members>
+		<members>Agente de servicios SM</members>
+		<members>Atención de servicio SM</members>
+		<members>Control de Informes GEX</members>
+		<members>Control de Informes SM</members>
+		<members>DSALES_Agente de Ventas</members>
+		<name>Profile</name>
 	</types>
-	<types>
-		<members>DSALES_Endoso__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Endoso_P_gina_de_registro</members>
-		<name>FlexiPage</name>
-	</types>
-	<version>55.0</version>
+	
+	<version>53.0</version>
 </Package>
