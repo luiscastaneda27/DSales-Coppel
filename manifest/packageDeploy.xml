@@ -589,7 +589,7 @@
 		<members>Asset</members>
 		<members>DASALES_Porcentajedecobro__c</members>
 		<members>DSALES_Partidadepago__c</members>
-		<-members>Account</members>
+		<members>Account</members>
 		<members>Account</members>
 		<members>InsuranceContract</members>
 		<members>InsurancePolicy</members>
