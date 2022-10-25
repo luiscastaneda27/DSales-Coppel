@@ -593,13 +593,6 @@
 		<members>DSALES_Partidadepago__c</members>
 		<members>Account</members>
 		<members>Account</members>
-		<members>InsuranceContract</members>
-		<members>InsurancePolicy</members>
-		<members>InsurancePolicyAsset</members>
-		<members>InsurancePolicyCoverage</members>
-		<members>InsurancePolicyParticipant</members>
-		<members>InsurancePolicySurcharge</members>
-		<members>InsurancePolicyTransaction</members>
 		<members>Opportunity</members>
 		<members>Quote</members>
 		<members>Claim</members>
@@ -613,7 +606,7 @@
 		<members>DSALES_Endoso__c-es_MX</members>
 		<members>DSALES_Familia__c-es_MX</members>
 		<members>DSALES_Generador__c-es_MX</members>
-		<members>DSALES_InformacionDePago__c-es_MX</members>
+		<!--members>DSALES_InformacionDePago__c-es_MX</members-->
 		<members>DSALES_Matriz_de_Cotizacion__c-es_MX</members>
 		<members>DSALES_SubCategoria__c-es_MX</members>
 		<members>DSales_Matriz_GEX__c-es_MX</members>
