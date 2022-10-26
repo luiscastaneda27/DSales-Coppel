@@ -2,6 +2,7 @@ global class DSALES_AssetWrapper {
     global class AssetRequest{
         global String name{get;set;}
         global String client_number{get;set;}
+        global String account_id {get;set;}
         global String contact_id{get;set;}
         global String product_type {get;set;}
         global String insurance_type {get;set;}
@@ -12,17 +13,15 @@ global class DSALES_AssetWrapper {
         global String family {get;set;}
         //picklist values for Status: Adquirido,Cancelado,Devuelto 
         global String status {get;set;}
-        global String region {get;set;}
-        global String division {get;set;}
+        global String months{get;set;}
         global String sku {get;set;}
         global String warranty_duration {get;set;}
         global String serial_number {get;set;}
         global Date purchase_date {get;set;}
         global Integer quantity{get;set;}
-        global Double price {get;set;}
-        global Double price_w_discount_w_vat {get;set;}
-        global Double price_w_discount_no_vat {get;set;}
-        global Double price_no_vat {get;set;}
+        global String brand{get;set;}
+        global String model{get;set;}
+            global String description{get;set;}    
         
    
     }

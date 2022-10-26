@@ -16,5 +16,5 @@
     <protected>false</protected>
     <showsLocation>false</showsLocation>
     <showsStatus>false</showsStatus>
-    <url>/apex/DSALES_GexCot?quoteId={!Quote.Id}</url>
+    <url>/apex/Cotizacion?quoteId={!Quote.Id}</url>
 </WebLink>
