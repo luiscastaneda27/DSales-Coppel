@@ -963,6 +963,7 @@
 		<members>DSALES_Certificado__c</members>
 		<members>DSALES_Familia__c</members>
 		<members>DSALES_Generador__c</members>
+		<members>InsurancePolicy</members>
 		<name>SharingRules</name>
 	</types>
 	<types>
