@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Productoadquirido__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo para relacionar el producto adquirido con el pago.</description>
+    <externalId>false</externalId>
+    <label>Producto adquirido</label>
+    <referenceTo>Asset</referenceTo>
+    <relationshipLabel>Partidas de pagos</relationshipLabel>
+    <relationshipName>Partidas_de_pagos</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

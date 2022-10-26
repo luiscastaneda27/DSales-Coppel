@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSales_Seguro_de_Motos</fullName>
+    <active>true</active>
+    <description>Productos para Seguro de Motos</description>
+    <label>Seguro de Motos</label>
+    <picklistValues>
+        <picklist>DSALES_Regiones__c</picklist>
+        <values>
+            <fullName>AZCAPOTZALCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIUDAD JUAREZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUAUTITLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CULIACAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOMEZ PALACIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUADALAJARA I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUADALAJARA II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HERMOSILLO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IXTAPALUCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IZTAPALAPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOS MOCHIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERIDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEXICALI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTERREY I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTERREY II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OAXACA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUEBLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAN LUIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECAMAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEXCOCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOLUCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todas las regiones</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VERACRUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VILLAHERMOSA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>01 %E2%80%A2 CAFETERAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 %E2%80%A2 FRIGOBAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 %E2%80%A2 8-10 PIES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motocicletas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seguros de motos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Each</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

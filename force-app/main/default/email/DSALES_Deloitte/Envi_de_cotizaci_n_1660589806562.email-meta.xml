@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Envía la cotización por correo electrónico cuando no se adquiere una póliza</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Envió de cotización</name>
+    <pageDevName>Envi_de_cotizaci_n</pageDevName>
+    <relatedEntityType>Quote</relatedEntityType>
+    <style>none</style>
+    <subject>Cotización seguro de motos</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) 
+
+Sabemos que usted está interesado en adquirir el producto de Seguro de Motos que Club de Protección le brinda
+
+Le enviamos esta cotización para que conozca a detalle lo que ofrecemos
+
+Si necesitas ayuda, ¡siempre estamos disponibles!
+
+Esperando que usted y su familia se encuentren bien, le enviamos un fuerte y cálido abrazo.
+
+Respetuosamente, 
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

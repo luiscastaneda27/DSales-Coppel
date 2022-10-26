@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>DSALES_ID_Matriz_GEX__c</columns>
+    <columns>DSales_Matriz_GEX__c</columns>
+    <columns>DSALES_MatrizItemClone__c</columns>
+    <columns>OBJECT_ID</columns>
+    <filterScope>Everything</filterScope>
+    <label>Todos</label>
+</ListView>

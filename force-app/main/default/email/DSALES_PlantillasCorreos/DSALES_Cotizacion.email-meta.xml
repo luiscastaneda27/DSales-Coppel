@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>DSALES_Cotizacion</name>
+    <style>none</style>
+    <subject>Aún estás a tiempo de extender su garantía / Aún estás a tiempo de extender la garantía de tu producto</subject>
+    <textOnly>¡Felicidades por tu compra! Recuerda que aún estás a tiempo de extender la garantía de tu producto adquirido en coppel por 1 o 2 años adicionales.
+
+Tienes hasta 30 días naturales después de la fecha de compra de tu producto para poder adquirir el servicio de Garantía Extendida en tienda.
+
+Te compartimos la cotización, ¡No dejes pasar esta oportunidad!</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

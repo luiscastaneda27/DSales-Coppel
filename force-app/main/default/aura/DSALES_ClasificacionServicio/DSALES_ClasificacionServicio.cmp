@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable,force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+	<c:dSALES_ClasificacionServiciolwc></c:dSALES_ClasificacionServiciolwc>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Gerente_de_Tienda_de_Zona__c</fullName>
+    <description>Indica el email del Gerente  de Tienda Zona</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica el email del Gerente  de Tienda Zona</inlineHelpText>
+    <label>E-mail Gerente de Tienda de Zona</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<table border="0" cellpadding="5" width="600" cellspacing="5" height="400" >
+<tr valign="top" height="50" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-size: medium;"><b>Estimado(a) {!Customer.Name}</b></span></div>]]></td>
+</tr>
+<tr valign="top" height="300" >
+<td tEditID="c1r2" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r2" locked="0" >
+<![CDATA[<div style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-size: medium;">No. de Endoso <b>01020102</b>&nbsp;&nbsp;</span></div><div style="text-align: center;"><span style="font-family: &quot;Times New Roman&quot;; font-size: medium;"><br></span></div><div style="text-align: center;"><span style="font-size: medium; font-family: &quot;Times New Roman&quot;;">Te informamos que tu Endoso&nbsp;</span><span style="font-size: 12pt;">{!DSALES_Endoso__c.Name}</span><span style="font-size: medium; font-family: &quot;Times New Roman&quot;;">&nbsp;registrado</span><span style="font-size: 12pt;">&nbsp;el día {!DSALES_Endoso__c.CreatedDate}&nbsp;ya se encuentra en tramite.</span></div>]]></td>
+</tr>
+<tr valign="top" height="50" >
+<td tEditID="c1r3" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r3" locked="0" >
+<![CDATA[]]></td>
+</tr>
+</table>

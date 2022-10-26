@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Mis_endosos</fullName>
+    <columns>NAME</columns>
+    <columns>DSALES_Folio__c</columns>
+    <columns>DSALES_Cliente__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>DSALES_Estatus__c</columns>
+    <columns>DSALES_Poliza__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>10/5/2022 12:00 AM</value>
+    </filters>
+    <label>Mis endosos</label>
+    <sharedTo>
+        <role>DSALES_Admin_SM</role>
+        <role>DSALES_Agente_de_servicio_SM</role>
+        <role>DSALES_Atenci_n_a_servicio</role>
+    </sharedTo>
+</ListView>

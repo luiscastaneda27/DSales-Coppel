@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Certificado_por_sucursal</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DSALES_Tienda__c</field>
+        <operation>equals</operation>
+        <value>T 0983</value>
+    </filters>
+    <label>Certificado por sucursal</label>
+</ListView>

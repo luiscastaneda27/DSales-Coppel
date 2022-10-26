@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Información de Pago</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Información de Pagos</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>DSALES_Info_pago_Venta_NPV</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información General</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información de la Tienda</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información de la Venta</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Cliente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>DSALES_InformaciondepagosSM_c</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información General</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información de la Tienda</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información de la Venta</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Información del Cliente</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>DSALES_Pagos_en_NPV</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>DSALES_PagosdeVentaenNPVSM_c</name>
+    </recordTypes>
+</CustomObjectTranslation>

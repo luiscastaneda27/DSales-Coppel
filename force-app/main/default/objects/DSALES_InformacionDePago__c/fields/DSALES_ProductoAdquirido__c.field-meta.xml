@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_ProductoAdquirido__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Relación entre el objeto Producto Adquirido y el Pago.</description>
+    <externalId>false</externalId>
+    <label>Producto Adquirido</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Asset.DSALES_TipoProducto__c</field>
+            <operation>equals</operation>
+            <value>Producto</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Asset</referenceTo>
+    <relationshipName>Informaci_n_de_Pagos</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

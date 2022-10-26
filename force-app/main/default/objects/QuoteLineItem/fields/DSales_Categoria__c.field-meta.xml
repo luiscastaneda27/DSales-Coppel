@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSales_Categoria__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Categoría</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Partidas de presupuesto (Categoría)</relationshipLabel>
+    <relationshipName>Partidas_de_presupuesto1</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

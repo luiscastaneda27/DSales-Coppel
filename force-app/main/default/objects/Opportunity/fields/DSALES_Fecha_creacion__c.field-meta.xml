@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Fecha_creacion__c</fullName>
+    <defaultValue>TODAY()</defaultValue>
+    <description>Campo que muestra la fecha de creación de la opoetunidad, este campo es para las pruebas.</description>
+    <externalId>false</externalId>
+    <label>Fecha de creación</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>
