@@ -2,35 +2,96 @@
 public class DSALES_ActualizarSiniestroTest {
 	@testSetup
     public static void makeData(){
+        Test.setMock(HttpCalloutMock.class, new DSALES_MockHttpResponsePolizaTest());
         String recordTypeId = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('PersonAccount').getRecordTypeId();
-        Test.enableChangeDataCapture();
+       	String recordTypeIdOpp=Schema.SObjectType.Opportunity.getRecordTypeInfosByDeveloperName().get('Seguro_de_Moto').getRecordTypeId();
+       	String recordTypeIdQuote=Schema.SObjectType.Quote.getRecordTypeInfosByDeveloperName().get('DSALES_VentaSM').getRecordTypeId();
+        String recordTypeIdPago=Schema.SObjectType.DSALES_InformacionDePago__c.getRecordTypeInfosByDeveloperName().get('DSALES_PagosdeVentaenNPVSM_c').getRecordTypeId();
+
         Account cuenta = new Account();
         cuenta.RecordTypeId=recordTypeId;
-        cuenta.firstName='Prueba';
-        cuenta.lastName='Test';
+        cuenta.firstName='Sayra';
+        cuenta.lastName='Martinez';
         cuenta.PersonEmail= 'prub@invalid.com';
         cuenta.Phone = '93617359';
+        cuenta.PersonBirthdate=Date.parse('10/01/1997');
         insert cuenta;
-        
-        InsurancePolicy poliza = new InsurancePolicy();
-        poliza.NameInsuredId=cuenta.Id;
-        poliza.DSALES_Tipodepersona__c='Física';
-        poliza.Name='Test';
-        poliza.DSALES_Estatusdepliza__c='Vigente';
-        
-        poliza.DSALES_CorreoElectronico__c='pruebastest@invalid.com';
-        //poliza.DSALES_Activodeplizadeseguro__c=activo.Id;
-        insert poliza;
-        
-        InsurancePolicyAsset activo = new InsurancePolicyAsset();  
-        activo.AssetName='Pruebas activo';
-        activo.InsurancePolicyId=poliza.Id;
-        activo.DSALES_Account__c=cuenta.Id;
-        insert activo;
+        Opportunity op= new Opportunity();
+        op.recordTypeId=recordTypeIdOpp;
+        op.AccountId=cuenta.Id;
+        op.Name='Sayra Oppty';
+        op.StageName='Nuevo';
+        op.CloseDate=Date.today()+2;
+        op.DSALES_Nombredelsolicitante__c='Keira Martinez';
+        insert op;
+
+        Quote cot= new Quote();
+        cot.recordTypeId=recordTypeIdQuote;
+        cot.Name='Sayra Martinez';
+        cot.DSALES_Fechadenacimiento__c=Date.parse('11/01/1990');
+        cot.Email='prib@23.mx';
+        cot.OpportunityId=op.Id;
+       	cot.DSALES_Cobertura__c='PLUS';
+        cot.DSALES_Opcindepago__c='Mensual';
+        cot.DSALES_Gnero__c='Femenino';
+        cot.Phone='5631234567';
+        cot.DSALES_Cdigodeestado__c='1';
+        cot.DSALES_Cdigodemunicipio__c='2';
+        cot.DSALES_Cdigopostal__c='3';
+        cot.DSALES_Suburbcode__c=34;
+        cot.DSALES_Aseguradora__c='Qualitas';
+        cot.DSALES_Negocio__c='Coppel';
+        insert cot;
+        Asset producto= new Asset(Name='Nelson',AccountId=cuenta.id);
+        insert producto;
        
+        Test.enableChangeDataCapture();
+        DSALES_InformacionDePago__c pago =new DSALES_InformacionDePago__c();
+        pago.recordTypeId=recordTypeIdPago;
+        pago.DSALES_Nombre_del_cliente__c=cuenta.Id;
+        pago.DSALES_Oportunidad__c=op.Id;
+        pago.DSALES_FormaDePago__c='Efectivo';
+        pago.DSALES_Factura__c='1';
+        pago.DSALES_SKU__c='1';
+        //pago.DSALES_ProductoAdquirido__c=producto.Id;
+        //pago.DSALES_Motoexterna__c=true;
+        pago.DSALES_Cliente__c=cuenta.Id;
+        insert pago;
+        Test.getEventBus().deliver();
+        DSALES_InformacionDePago__c p=[SELECT Id, DSALES_Poliza__c,DSALES_Motoentregada__c,DSALES_Motoexterna__c,DSALES_SKU__c FROM DSALES_InformacionDePago__c LIMIT 1];
+        System.debug('poliza en pago:'+p.DSALES_Poliza__c);
+       /* InsurancePolicy poliza=new InsurancePolicy();
+        poliza.NameInsuredId=cuenta.Id;
+        poliza.DSALES_Estatusdepliza__c='En trámite';
+        poliza.Name='Test';
+        poliza.DSALES_CorreoElectronico__c=cuenta.PersonEmail;
+        insert poliza;*/
+        
+        
+        Test.enableChangeDataCapture();
+        InsurancePolicyAsset activo = new InsurancePolicyAsset();
+        activo.AssetName='Test';
+        activo.DSALES_Account__c=cuenta.Id;
+        activo.InsurancePolicyId=p.DSALES_Poliza__c;
+        activo.DSALES_InformacionPago__c=p.Id;
+        activo.DSALES_Clavevehicular__c='Test';
+        activo.DSALES_Modelo__c='Test';
+        activo.DSALES_Numeroserie__c='Test';
+        activo.DSALES_Numeromotor__c='Test';
+        activo.DSALES_Descripcion__c='Test';
+        activo.DSALES_Servicio__c='Test';
+        activo.DSALES_Placas__c='Test';
+        activo.DSALES_Marca__c='Test';
+        activo.DSALES_Uso__c='Test';
+        activo.DSALES_ClaveAMIS__c='Test';
+        //activo.DSALES_Motoexterna__c=true;
+        activo.Estatus__c='Activo';
+        activo.DSALES_Valorfactura__c=10000;
+        insert activo;
+       Test.enableChangeDataCapture();
         Claim sin = new Claim();
         sin.Name='Prueba Actualizar';
-        sin.P_liza__c=poliza.Id;
+        sin.P_liza__c=p.DSALES_Poliza__c;
         sin.ClaimType='Perdida Total';
         sin.ClaimReason='Pruebas';
         insert sin;
@@ -65,18 +126,7 @@ public class DSALES_ActualizarSiniestroTest {
         
         insert contDoc; 
          
-                
-        
-        
-        
-    }
-    
-    @isTest
-    public static void actualizarSiniestro(){
-        Claim sin=[SELECT Id,P_liza__c,DSALES_Estatus__c FROM Claim LIMIT 1];
-        System.debug('estatus antes de pago:'+sin.DSALES_Estatus__c);
-        InsurancePolicy pol=[SELECT Id,DSALES_Estatusdepliza__c FROM InsurancePolicy WHERE Id=:sin.P_liza__c LIMIT 1];
-         System.debug('estatus de póliza despues de pago:'+pol.DSALES_Estatusdepliza__c);
+         Test.enableChangeDataCapture();      
         ClaimPaymentSummary pagos = new ClaimPaymentSummary();
         pagos.Name='Pago prueba';
         pagos.ClaimId=sin.Id;
@@ -84,12 +134,19 @@ public class DSALES_ActualizarSiniestroTest {
         pagos.DSALES_Tipopago__c='Pago a cuenta Coppel';
         insert pagos;
         
+        
+        
+    }
+    
+    @isTest
+    public static void actualizarSiniestro(){
+        
         Test.startTest();
-       	Test.setMock(HttpCalloutMock.class, new DSALES_MockHttpResponseSiniestroTest());
+       	
 		Test.getEventBus().deliver();
-        sin=[SELECT Id,P_liza__c,DSALES_Estatus__c FROM Claim LIMIT 1];
+        Claim sin=[SELECT Id,P_liza__c,DSALES_Estatus__c FROM Claim LIMIT 1];
         System.debug('estatus despues de pago:'+sin.DSALES_Estatus__c);
-        pol=[SELECT Id,DSALES_Estatusdepliza__c FROM InsurancePolicy WHERE Id=:sin.P_liza__c LIMIT 1];
+        InsurancePolicy pol=[SELECT Id,DSALES_Estatusdepliza__c FROM InsurancePolicy  LIMIT 1];
         System.debug('estatus de póliza despues de pago:'+pol.DSALES_Estatusdepliza__c);
         
         Test.stopTest(); 

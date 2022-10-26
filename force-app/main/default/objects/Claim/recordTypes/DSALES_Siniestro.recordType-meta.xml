@@ -26,6 +26,36 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>DSALES_Estatus__c</picklist>
+        <values>
+            <fullName>En trámite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nuevo</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pagado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rechazado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_Tipo_pago__c</picklist>
+        <values>
+            <fullName>Pago a Cliente</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pago a cuenta Coppel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>FnolChannel</picklist>
         <values>
             <fullName>Chatbot</fullName>

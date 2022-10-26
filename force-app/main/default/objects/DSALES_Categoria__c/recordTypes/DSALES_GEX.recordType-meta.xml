@@ -6,8 +6,12 @@
     <picklistValues>
         <picklist>DSALES_TipoProducto__c</picklist>
         <values>
-            <fullName>Servicio</fullName>
+            <fullName>Producto</fullName>
             <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>

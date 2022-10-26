@@ -1,22 +1,23 @@
-public class DSALES_ResumenPagos  {
-/*extends fflib_SObjectDomain {
+public class DSALES_ResumenPagos extends fflib_SObjectDomain {
     public DSALES_ResumenPagos(List<ClaimPaymentSummary> sObjectList){
         Super(sObjectList);
+        
     }
     
     public class Constructor implements fflib_SObjectDomain.IConstructable{
-        public fflib_SObjectDomain construct(List<ClaimPaymentSummary> sObjectList){
+        public fflib_SObjectDomain construct(List<Sobject> sObjectList){
             return new DSALES_ResumenPagos(sObjectList);
         }
-    }*/
+    }
+        
     
-    
-    public static void onAfterInsert(Map<Id, ClaimPaymentSummary> newMap) {
+    public override void onAfterInsert() {
+        List<ClaimPaymentSummary> listRecord = (List<ClaimPaymentSummary>)records;
         List<ClaimPaymentSummary> listPagos = new List<ClaimPaymentSummary>();
-        for(ClaimPaymentSummary pago:newMap.Values()){ 
-            if(newMap.get(pago.Id).DSALES_Tipopago__c=='Pago a Cliente' || newMap.get(pago.Id).DSALES_Tipopago__c=='Pago a cuenta Coppel'){
+        for(ClaimPaymentSummary pago:listRecord){ 
+            if(pago.DSALES_Tipopago__c=='Pago a Cliente' || pago.DSALES_Tipopago__c=='Pago a cuenta Coppel'){
                 System.debug('entró a la condición del handler');  
-                listPagos.add(newMap.get(pago.Id));
+                listPagos.add(pago);
             }
         }
         if(listPagos.size()>0){

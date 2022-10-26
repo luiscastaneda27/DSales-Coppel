@@ -55,8 +55,8 @@ public class DSALES_UpdateClienteTest {
                                                                           DSALES_Factura__c='sdfsfs',
                                                                           DSALES_DescripcionArticulo__c='ada',
                                                                           DSALES_Cliente__c=acc.Id,
-                                                                          DSALES_Clave_Tienda__c='daadsa',
-                                                                          DSALES_ProductoAdquirido__c=nuev.Id
+                                                                          DSALES_Clave_Tienda__c='daadsa'
+                                                                         
                                                                           );
         insert pago;
         
@@ -67,7 +67,7 @@ public class DSALES_UpdateClienteTest {
     
     @isTest 
     static void CambiaCautivoClienteTest(){
-        DSALES_InformacionDePago__c Objpago = [Select Id,Name, DSALES_Estatus__c FROM DSALES_InformacionDePago__c WHERE Name = 'Nueva' LIMIT 1];
+        DSALES_InformacionDePago__c Objpago = [Select Id,Name, DSALES_Estatus__c FROM DSALES_InformacionDePago__c LIMIT 1];
         Test.startTest();
         Objpago.DSALES_Estatus__c='Acreditado';
         update Objpago;

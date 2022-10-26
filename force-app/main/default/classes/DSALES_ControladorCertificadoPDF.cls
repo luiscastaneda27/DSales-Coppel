@@ -5,10 +5,12 @@ public class DSALES_ControladorCertificadoPDF {
     private static final String NOMBRE_PLANTILLA = 'Certificado PDF';
     private static final String NOMBRE_DATE = 'DATE';
     private static final String NOMBRE_DOUBLE = 'DOUBLE';
+    private static final String myfilename='Cotizacion';
     
     public DSALES_ControladorCertificadoPDF(){
         
         String recordId = ApexPages.currentPage().getParameters().get('certificadoId');
+        //Apexpages.currentPage().getHeaders().put('content-disposition', 'inline; filename='+myfilename);
         //html = [Select Id, HtmlValue, Subject from EmailTemplate Where DeveloperName = :NOMBRE_PLANTILLA].HtmlValue;
         html = [select Id, DSALES_Plantilla__c  from DSALES_Generador__c Where Name = :NOMBRE_PLANTILLA].DSALES_Plantilla__c;
         html = html.replace('border-color: #ffffff;', 'border-image: initial; border: 1px solid blue;');
