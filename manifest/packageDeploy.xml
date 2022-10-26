@@ -40,9 +40,13 @@
 		<members>DSALES_AccountWrapperRequest</members>
 		<members>DSALES_AccountWrapperRequestCredit</members>
 		<members>DSALES_AssetWrapper</members>
+		<members>DSALES_IPServiceToEXE</members>
+		<members>DSALES_IPServiceToNPV</members>
 		<members>DSALES_IPAssetWrapper</members>
 		<members>DSALES_IPAssetWrapperRequest</members>
 		<members>DSALES_IPAssetWrapperTest</members>
+		<members>DSALES_IPAssetWrapperRequestActivo</members>
+		<members>DSALES_IPAssetWrapperRequestActivoTest</members>
 		<members>DSALES_AssetWrapperRequest</members>
 		<members>DSALES_AssetWrapperTest</members>
 		<members>DSALES_CertificadoWrapper</members>
@@ -63,7 +67,12 @@
         <members>DSALES_UpdateSiniestroJob</members>
         <members>DSALES_UpdateSiniestroJobTest</members>
 		<members>DSALES_ActualizarSiniestroTest</members>
+		<members>DSALES_CreateInsurancePolicy</members>
+		<members>DSALES_CreateInsurancePolicyTest</members>
 		<members>DSALES_DocumentsToTest</members>
+		<members>DSALES_GetPolicyPDF</members>
+		<members>DSALES_GetPolicyPdfWrapper</members>
+		<members>DSALES_GetPolicyPdfWrapperTest</members>
 		<members>DSALES_MockHttpResponsePolizaTest</members>
 		<members>DSALES_ResumenPagos</members>
 		<members>DSALES_SiniestrosHelper</members>
@@ -73,13 +82,21 @@
 		<members>DSALES_PaymentInfoWrapper</members>
 		<members>DSALES_PaymentInfoWrapperRequest</members>
 		<members>DSALES_PaymentInfoWrapperTest</members>
+		<members>DSALES_PolizaWrapper</members>
+		<members>DSALES_PolizaWrapperTest</members>
 		<members>DSALES_ConsultaListaNegra</members>
 		<members>DSALES_ConsultaListaNegraTest</members>
+		<members>DSALES_InformacionDePago</members>
 		<members>DSALES_InformacionPagoHandler</members>
+		<members>DSALES_InsurancePolicyAssets</members>
+		<members>DSALES_InsurancePolicyAssetsHandler</members>
+		<members>DSALES_InsurancePolicyHandler</members>
 		<members>DSALES_ListaNegraWrapper</members>
 		<members>DSALES_ListaNegraWrapperTest</members>
 		<members>DSALES_MockHttpResponseSiniestro</members>
+		<members>DSALES_NuevaPoliza</members>
 		<members>DSALES_UpdateClienteTest</members>
+		<members>DSALES_UpdateInfoPago</members>
 		<members>DSALES_QuoteSmWrapper</members>
 		<members>DSALES_QuoteSmWrapperRequest</members>
 		<members>DSALES_QuoteSmWrapperRequestTest</members>
@@ -95,6 +112,9 @@
 	<types>
 		<members>DSALES_CertificadoTrigger</members>
 		<members>DSALES_GexCotizacion</members>
+		<members>DSALES_InformacionPago</members>
+		<members>DSALES_InsurancePolicy</members>
+		<members>DSALES_InsurancePolicyAsset</members>
 		<members>DSALES_MatrizTrigger</members>
 		<members>DSALES_ResumenDePagos</members>
 		<members>DSALES_UpdateCliente</members>
@@ -541,12 +561,15 @@
 	 <types>
         <members>DSALES_RutaIntegracion.DSALES_ConsultarEndoso</members>
         <members>DSALES_RutaIntegracion.DSALES_CrearEndoso</members>
+		<members>DSALES_RutaIntegracion.DSALES_createPoliza</members>
 		<members>DSALES_RutaIntegracion.DSALES_ActualizaSiniestro</members>
         <members>DSALES_RutaIntegracion.DSALES_ConsultarSiniestro</members>
         <members>DSALES_RutaIntegracion.DSALES_EnviarSiniestro</members>
+		<members>DSALES_RutaIntegracion.DSALES_GetPolicyPDF</members>
 		<members>DSALES_RutaIntegracion.DSALES_ActualizarEstadoSiniestro</members>
 		<members>DSALES_RutaIntegracion.DSALES_ObtenerPoliza</members>
 		<members>DSALES_RutaIntegracion.DSALES_ListaNegra</members>
+		<members>DSALES_RutaIntegracion.DSALES_SendPdfToNVP</members>
 		<members>DSALES_RutaIntegracion.DSALES_QuoteSM</members>
         <name>CustomMetadata</name>
     </types>

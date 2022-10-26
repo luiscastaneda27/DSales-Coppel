@@ -22,7 +22,7 @@ public with sharing class DSALES_SiniestrosHelper {
        	System.debug('listToUpdatePoliza size:'+listToUpdatePoliza.size());
         if(listToUpdatePoliza.size()>0){ 
             for(InsurancePolicy p: listToUpdatePoliza){
-                p.ChangeSubtype='Sinestrada';
+                p.ChangeSubtype='Siniestrada';
                 p.DSALES_Estatusdepliza__c='Cancelada';
                 //p.DSALES_Activodeplizadeseguro__c=null;
                 System.debug('se asignaron los datos');
@@ -115,7 +115,6 @@ public with sharing class DSALES_SiniestrosHelper {
         objpost.DocumentosAseguradora = new DSALES_SiniestroWrapper.documentosAseguradora();
        	objpost.DocumentosVehiculo.Factura=getDocument(obj.Id,'Factura');
         objpost.DocumentosVehiculo.ContanciaBajaPlacas=getDocument(obj.Id,'ContanciaBajaPlacas');
-        System.debug('constancia baja placas:'+objpost.DocumentosVehiculo.ContanciaBajaPlacas);
         for(DSALES_SiniestroWrapper.comprobantesTenencia comp:objpost.DocumentosVehiculo.ComprobantesTenencia){
             System.debug('entra al for de tenencia'); 
             comp.Descripcion=getDocument(obj.Id,'Descripcion');
