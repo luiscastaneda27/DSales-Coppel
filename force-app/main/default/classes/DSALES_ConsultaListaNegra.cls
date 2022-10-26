@@ -32,11 +32,33 @@ public class DSALES_ConsultaListaNegra{
         }
     
         public static String getRFC(String nombre, String nombre2, String apellidoPat, String apellidoMat,date cumpleanos){
-        String part1 = getPart1(apellidoPat.toUpperCase());
-        String part2 = getPart2(apellidoMat.toUpperCase());
-        String part3 = getPart3(nombre.toUpperCase());
-        String part4 = getPart4(cumpleanos);
-        String rfc = part1+part2+part3+part4;    
+        String rfc;
+        String part1;
+        String part2;
+        String part3;
+        String part4;
+        if(apellidoMat==null){
+            part1 = getPart1(apellidoPat.toUpperCase());
+            //part2 = getPart2(apellidoMat.toUpperCase());
+            part3 = getPart3(nombre.toUpperCase());
+            part4 = getPart4(cumpleanos);
+            rfc = part1+part3+part4;  
+        }
+        else if(apellidoPat==null){
+            //part1 = getPart1(apellidoPat.toUpperCase());
+            part2 = getPart2(apellidoMat.toUpperCase());
+            part3 = getPart3(nombre.toUpperCase());
+            part4 = getPart4(cumpleanos);
+            rfc = part2+part3+part4;
+        }
+        else{
+            part1 = getPart1(apellidoPat.toUpperCase());
+            part2 = getPart2(apellidoMat.toUpperCase());
+            part3 = getPart3(nombre.toUpperCase());
+            part4 = getPart4(cumpleanos);
+            rfc = part1+part2+part3+part4; 
+        }
+          
         return rfc;
         
     }

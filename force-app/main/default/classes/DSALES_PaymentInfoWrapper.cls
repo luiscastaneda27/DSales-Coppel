@@ -10,11 +10,26 @@ global class DSALES_PaymentInfoWrapper {
     global double total {get;set;}
     global String salesman_name {get;set;}
     global String opportunity_name {get;set;}
+    global boolean moto_delivered {get;set;}
+    global boolean external_moto {get;set;}
+    global boolean moto_noInsurance {get;set;}
+    global String tipoProducto{get;set;}
+    
+    //Lo nuevo
+    global String quoteid {get;set;}
+    global String AccountId {get;set;}
+    global List<pago> ListadePagos{get;set;}
+    
 }
-global class PaymentResponse{
+global class PaymentResponse{ 
     global Boolean success {get;set;}
     global String error_message {get;set;}
-    global String paymentInfo_id {get;set;}
+    global List<Id> paymentInfo_ids {get;set;}
+    }
+    
+global class pago{
+    global double total {get;set;}
+    global String producto {get;set;}
     }
 
 }

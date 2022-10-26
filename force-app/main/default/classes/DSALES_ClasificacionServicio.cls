@@ -37,7 +37,7 @@ public without sharing class DSALES_ClasificacionServicio {
           /*  producto= [select Id, RecordTypeId from product2 Where RecordTypeId = ];
            String recordId= producto[0].Id;
            String recordId */
-        //String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByDeveloperName().get('DSALES_ProdTangible').getRecordTypeId();
+        //String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByName().get('Garantía Extendida').getRecordTypeId();
         
         String query = 'Select Id, Name, StockKeepingUnit, DSALES_Categoria__r.Name, DSALES_SubCategoria__r.Name, DSALES_Clase__r.Name, ';
         query += ' DSALES_Familia__r.Name, DSales_Servicio__c, DSales_Seguro__c, DSALES_TipoServicio__c, DSALES_Noaplica__c, RecordTypeId ';
@@ -137,8 +137,8 @@ public without sharing class DSALES_ClasificacionServicio {
             idproducto.add(producto[i].DSales_Servicio_Seguro__c);
         }
         
-        for(Product2 item: [Select Id, (Select Id from Asignaciones_de_Productos1__r Where DSales_Producto__c = :servicio and DSALES_Activo__c=false), Name, StockKeepingUnit, DSALES_Depa__c, DSALES_SubCategorias__c, DSALES_Class__c,
-                            DSALES_Family__c from Product2 Where DSales_Tipo_de_Producto__c= 'Producto' and Id not in :idproducto and isActive = true order by Name asc])
+        for(Product2 item: [Select Id, (Select Id from Asignaciones_de_Productos1__r Where DSales_Producto__c = :servicio and DSALES_Activo__c=false), Name, StockKeepingUnit, DSALES_Categoria__r.Name, DSALES_SubCategoria__r.Name, DSALES_Clase__r.Name,
+                            DSALES_Familia__r.Name from Product2 Where DSales_Tipo_de_Producto__c= 'Producto' and Id not in :idproducto and isActive = true order by Name asc])
         {
             AsignarProductos asignarProductos = new AsignarProductos(); 
             if(item.Asignaciones_de_Productos1__r.size()>0){
@@ -150,10 +150,10 @@ public without sharing class DSALES_ClasificacionServicio {
             asignarProductos.nombre = item.Name;
             //asignarProductos.servicio = item.DSales_Producto__c;
             asignarProductos.sku = item.StockKeepingUnit;
-            asignarProductos.departamento = item.DSALES_Depa__c;
-            asignarProductos.subcategoria = item.DSALES_SubCategorias__c;
-            asignarProductos.familia = item.DSALES_Family__c;
-            asignarProductos.clase = item.DSALES_Class__c;
+            asignarProductos.departamento = item.DSALES_Categoria__r.Name;
+            asignarProductos.subcategoria = item.DSALES_SubCategoria__r.Name;
+            asignarProductos.familia = item.DSALES_Familia__r.Name;
+            asignarProductos.clase = item.DSALES_Clase__r.Name;
             asignarProductos.seleccionadoSku= false;
             listproductos.add(asignarProductos); 
             
@@ -501,49 +501,64 @@ public without sharing class DSALES_ClasificacionServicio {
             return pickListValuesList2;
             }
 
-            @AuraEnabled
-            public static List<PicklistOp> getPickListValuesIntoList3(){
-                List<PicklistOp> pickListValuesList3= new List<PicklistOp>();
-                Schema.DescribeFieldResult fieldResult = Product2.DSALES_Matriz__c.getDescribe();
-                List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-                for( Schema.PicklistEntry pickListVal : ple){
-                    PicklistOp option = new PicklistOp();
-                    option.label= pickListVal.getLabel();
-                    option.value = pickListVal.getValue();
-                    pickListValuesList3.add(option);
-                }
-                return pickListValuesList3;
-                }
+        @AuraEnabled
+        public static List<PicklistOp> getPickListValuesIntoList3(){
+            List<PicklistOp> pickListValuesList3= new List<PicklistOp>();
+            Schema.DescribeFieldResult fieldResult = Product2.DSALES_Matriz__c.getDescribe();
+            List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+            for( Schema.PicklistEntry pickListVal : ple){
+                PicklistOp option = new PicklistOp();
+                option.label= pickListVal.getLabel();
+                option.value = pickListVal.getValue();
+                pickListValuesList3.add(option);
+            }
+            return pickListValuesList3;
+            }
 
-                @AuraEnabled
-                public static List<PicklistOp> getPickListValuesIntoList4(){
-                    List<PicklistOp> pickListValuesList4= new List<PicklistOp>();
-                    Schema.DescribeFieldResult fieldResult = Product2.DSALES_SegEspecifico__c.getDescribe();
-                    List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-                    for( Schema.PicklistEntry pickListVal : ple){
-                        PicklistOp option = new PicklistOp();
-                        option.label= pickListVal.getLabel();
-                        option.value = pickListVal.getValue();
-                        pickListValuesList4.add(option);
-                    }
-                    return pickListValuesList4;
-                    }
+        @AuraEnabled
+        public static List<PicklistOp> getPickListValuesIntoList4(){
+            List<PicklistOp> pickListValuesList4= new List<PicklistOp>();
+            Schema.DescribeFieldResult fieldResult = Product2.DSALES_SegEspecifico__c.getDescribe();
+            List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+            for( Schema.PicklistEntry pickListVal : ple){
+                PicklistOp option = new PicklistOp();
+                option.label= pickListVal.getLabel();
+                option.value = pickListVal.getValue();
+                pickListValuesList4.add(option);
+            }
+            return pickListValuesList4;
+            }
 
               
 
+
+                    
     @AuraEnabled
     public static Product2 createProductIntan(Product2 productIntan, String sku){
         try{
             insert productIntan;
-            return productIntan;
-            
+            return productIntan;  
         }
         catch(Exception e){
            
         throw new AuraHandledException(e.getMessage());
     }
                     
-    }     
+    }
+
+    @AuraEnabled
+    public static String RecordTypeId(String tipoRegistro){
+        try{
+            String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByName().get(tipoRegistro).getRecordTypeId();
+            return tipoRegistroId;
+        }
+        catch(Exception e){
+           
+        throw new AuraHandledException(e.getMessage());
+    }
+                    
+    }
+
     @AuraEnabled
     public static void insertPocentajeCobro(String idservicio, String JSONP){
        // List<String> listaPorcentajes = (List<String>) JSON.deserialize(JSONP, List<String>.class);
