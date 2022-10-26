@@ -23,6 +23,7 @@ global class DSALES_IPAssetWrapper {
         global String service{get;set;}
         global String use{get;set;}
         global String asset_name{get;set;}
+        global String motorcycle_delivered{get;set;}
         
         
         

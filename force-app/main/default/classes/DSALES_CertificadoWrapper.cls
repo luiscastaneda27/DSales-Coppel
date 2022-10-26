@@ -1,7 +1,9 @@
 global class DSALES_CertificadoWrapper {
     
     global class CertificadoRequest{
-        global String id_asset{get;set;}
+        global String sku_tangible {get;set;}
+        global String account_id{get;set;}
+        global String asset_id{get;set;}
         global String ticket {get;set;}
         global String client_number{get;set;}
         global	String	store_id	{get;set;}

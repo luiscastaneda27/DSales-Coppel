@@ -347,7 +347,6 @@ public class DSALES_ControladorCotizacionGex {
               html=html.replace('YYY',string.valueOf(tdPrice));
       }
         html=html.replace('null', '________');
-        html=html.replace('Tienda__c', '');
         system.debug('Discount: '+discount);
         system.debug('Price: '+tdPrice);
         system.debug('Total: '+total);
