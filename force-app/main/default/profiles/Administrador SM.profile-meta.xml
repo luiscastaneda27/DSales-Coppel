@@ -17879,7 +17879,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>DSALES_Endoso__c.Registro_de_endoso_completo</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
