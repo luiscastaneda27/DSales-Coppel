@@ -31,6 +31,12 @@
                 <default>false</default>
                 <label>Rechazado</label>
             </value>
+            <value>
+                <fullName>Completado</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Completado</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
