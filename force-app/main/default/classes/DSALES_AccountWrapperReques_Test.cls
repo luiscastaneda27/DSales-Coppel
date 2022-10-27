@@ -6,7 +6,7 @@ public class DSALES_AccountWrapperReques_Test{
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
     
-        String body = '{"client_number": "90001","first_name": "prueba","middle_name": "Rojas","last_name": "Lopez","suffix": "prueba contado","telephone": "555 666 7779","email": "rosita55@gmail.com","contact_method": "Email","gender": "F","state_code": "Veracruz","city_code": "Xalapa","town_code": "Mexico","suburb_code": "Calle verazcruz 23","zip_code": "91000"}';
+        String body = '{"client_number": "","first_name": "prueba Rojas","last_name": "Lopez prueba","telephone": "555 666 7779","email": "rosita55@gmail.com","contact_method": "Email","gender": "F","state_code": "Veracruz","city_code": "Xalapa","town_code": "Mexico","suburb_code": "Calle verazcruz 23","zip_code": "91000"}';
 		
         req.requestURI = '/apexrest/insertAccount';
         req.httpMethod = 'POST';

@@ -108,6 +108,57 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>DSALES_SegEspecifico__c</picklist>
+        <values>
+            <fullName>Seguro de Motos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_ServEspecifico__c</picklist>
+        <values>
+            <fullName>Garantía Extendida</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_ServicioSeguro__c</picklist>
+        <values>
+            <fullName>Seguro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_VigenciaMeses__c</picklist>
+        <values>
+            <fullName>12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSales_Tipo_de_Producto__c</picklist>
+        <values>
+            <fullName>Producto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seguro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Servicio</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Family</picklist>
         <values>
             <fullName>01 %E2%80%A2 CAFETERAS</fullName>

@@ -163,8 +163,8 @@
     </nameField>
     <pluralLabel>Información de Pagos</pluralLabel>
     <searchLayouts>
-        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <excludedStandardButtons>Import</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <searchResultsAdditionalFields>DSALES_Cliente__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_ProductoAdquirido__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>DSALES_Fecha__c</searchResultsAdditionalFields>

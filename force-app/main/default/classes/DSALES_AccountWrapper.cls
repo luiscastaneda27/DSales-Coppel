@@ -6,6 +6,7 @@ global class DSALES_AccountWrapper {
         global String middle_name {get;set;}
         global String last_name {get;set;}
         global String suffix {get;set;}
+        global string marital_status {get;set;}
         global String telephone {get;set;}
         global String email {get;set;}
         global String contact_method {get;set;}
