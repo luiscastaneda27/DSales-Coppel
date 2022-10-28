@@ -1032,5 +1032,11 @@
 		<members>PersonAccount.DSALES_Regladeduplicidad</members>
 		<name>MatchingRule</name>
 	</types>
+	<types>
+		<members>DSALES_createPoliza</members>
+		<members>DSALES_getPdf</members>
+		<members>DSALES_sendPdfToNPV</members>
+		<name>RemoteSiteSetting</name>
+	</types>
 	<version>53.0</version>
 </Package>
