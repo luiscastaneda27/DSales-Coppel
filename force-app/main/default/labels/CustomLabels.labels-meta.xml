@@ -42,4 +42,18 @@
         <shortDescription>vehicle_use</shortDescription>
         <value>NORMAL</value>
     </labels>
+    <labels>
+        <fullName>DSALES_coberturaAmp</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>cobertura amp</shortDescription>
+        <value>PLUS</value>
+    </labels>
+    <labels>
+        <fullName>DSALES_coberturaRc</fullName>
+        <language>es_MX</language>
+        <protected>false</protected>
+        <shortDescription>cobertura rc</shortDescription>
+        <value>RC</value>
+    </labels>
 </CustomLabels>
