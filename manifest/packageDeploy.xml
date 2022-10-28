@@ -568,6 +568,8 @@
 	</types>
 	<types>
 		<members>DSALES_ContactMethod</members>
+		<members>DSALES_coberturaAmp</members>
+		<members>DSALES_coberturaRc</members>
 		<members>DSALES_NombreAseguradora</members>
 		<members>DSALES_business</members>
 		<members>DSALES_vehicleService</members>
