@@ -233,6 +233,9 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>DSALES_Poliza__c</fields>
+        <fields>DSALES_Estatus__c</fields>
+        <fields>DSALES_Tipodeendoso__c</fields>
         <relatedList>DSALES_Endoso__c.DSALES_Cliente__c</relatedList>
     </relatedLists>
     <relatedLists>
