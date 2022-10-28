@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
     <interviewLabel>Agregar el correo electrónico del cliente en el campo correo del endoso {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Agregar el correo electrónico del cliente en el campo correo del endoso</label>
     <processMetadataValues>
@@ -39,13 +40,6 @@
                 <elementReference>$Record.DSALES_Cliente__r.Id</elementReference>
             </value>
         </filters>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>0124W000001h6CCQAY</stringValue>
-            </value>
-        </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Account</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -55,13 +49,21 @@
         <label>Actualizar correo</label>
         <locationX>176</locationX>
         <locationY>455</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
         <inputAssignments>
             <field>DSALES_CorreoElectronico__c</field>
             <value>
                 <elementReference>Obtener_correo_de_cliente.PersonEmail</elementReference>
             </value>
         </inputAssignments>
-        <inputReference>$Record</inputReference>
+        <object>DSALES_Endoso__c</object>
     </recordUpdates>
     <start>
         <locationX>50</locationX>
