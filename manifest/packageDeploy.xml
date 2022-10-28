@@ -82,6 +82,9 @@
 		<members>DSALES_PaymentInfoWrapper</members>
 		<members>DSALES_PaymentInfoWrapperRequest</members>
 		<members>DSALES_PaymentInfoWrapperTest</members>
+		<members>DSALES_PaymentInfoWrapperGEX</members>
+		<members>DSALES_PaymentInfoWrapperGexRequest</members>
+		<members>DSALES_PaymentInfoWrapperGexTest</members>
 		<members>DSALES_PolizaWrapper</members>
 		<members>DSALES_PolizaWrapperTest</members>
 		<members>DSALES_ConsultaListaNegra</members>
@@ -101,6 +104,10 @@
 		<members>DSALES_QuoteSmWrapperRequest</members>
 		<members>DSALES_QuoteSmWrapperRequestTest</members>
 		<members>DSALES_QuoteSmWrapperTest</members>
+		<members>DSALES_VentaGEX</members>
+		<members>DSALES_VentaGEXRest</members>
+		<members>DSALES_VentaGEXRestTest</members>
+		<members>DSALES_ValidarClienteHelper</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
