@@ -599,7 +599,6 @@
         <name>StandardValueSet</name>
     </types>
 	<types>
-		<members>DSales_Asignacion_de_Productos__c</members>
 		<members>DSALES_Categoria__c</members>
 		<members>DSALES_Certificado__c</members>
 		<members>DSALES_Clase__c</members>
@@ -711,12 +710,10 @@
 		<members>Partida_de_pago_Record_Page</members>
 		<members>Producto_Adquirido_Record_Page</members>
 		<members>Activo_de_p_liza_de_seguro_P_gina_de_registro</members>
-		<members>Asignaci_n_de_Productos_P_gina_de_registro</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
 	    <members>Actualiza_N_mero_de_Siniestro</members>
-		<members>Actualizaci_n_de_correo_en_cotizaci_n</members>
 	    <members>DSALES_Activacindecasilladeenviarcotizacin</members>
 		<members>DSALES_Actualiza_correo_en_siniestro</members>
 		<members>DSALES_Alerta_certificado_caduco</members>
@@ -725,7 +722,6 @@
 		<members>DSALES_Cambio_Tipo_Registro_Siniestro</members>
 		<members>DSALES_Certificado_Cancelado</members>
 		<members>DSALES_Certificado_cambio_de_estatus_activado</members>
-		<members>DSALES_CotizacionEnviada</members>
 		<members>DSALES_Correo_nueva_p_liza</members>
 		<members>DSALES_Envidecorreoconcotizacin</members>
 		<members>DSALES_Presupuesto_Vencido</members>
@@ -783,7 +779,6 @@
 		<members>DSALES_SubCategoria__c-Formato Subcategoría</members>
 		<members>DSales_Matriz_GEX__c-Formato Matriz</members>
 		<members>DSALES_Partidadepago__c-Partida de pago Layout</members>
-		<members>DASALES_Porcentajedecobro__c-Porcentage de cobro Layout</members>
 		<members>InsurancePolicy-Formato de póliza de seguro</members>
 		<members>Opportunity-DSALES_OpportunityPISYSGEX</members>
 		<members>Opportunity-DSALES_OpportunitySM</members>
@@ -792,7 +787,6 @@
 		<members>Quote-Venta GEX</members>
 		<members>QuoteLineItem-DSALES_GEXQuote</members>
 		<members>QuoteLineItem-DSALES_Partida_SM</members>
-		<members>QuoteLineItem-Quote Line Item Layout</members>
 		<members>DSALES_Endoso__c-Ingreso de Endoso</members>
 		<members>DSALES_Endoso__c-Visualización de Endoso</members>
 		<members>Claim-Ingreso de Siniestro</members>
