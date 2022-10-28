@@ -207,6 +207,15 @@
 		<members>Claim.N_mero_de_Siniestro__c</members>
 		<members>ClaimPaymentSummary.DSALES_Tipopago__c</members>
 		<members>Contact.DSALES_Metodocontacto__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_Activo__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_Clase__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_Departamento__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_Familia__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_SKU__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSALES_Subcategoria__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSales_NombreProducto__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSales_Producto__c</members>
+		<members>DSales_Asignacion_de_Productos__c.DSales_Servicio_Seguro__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoProducto__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoSeguro__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoServicio__c</members>
@@ -851,6 +860,7 @@
 		<members>Quote.All</members>
 		<members>Quote.DSALES_Nuevosdeestasemana</members>
 		<members>Tienda__c.All</members>
+		<members>DSales_Asignacion_de_Productos__c.All</members>
 		<name>ListView</name>
 	</types>
 	<types>
