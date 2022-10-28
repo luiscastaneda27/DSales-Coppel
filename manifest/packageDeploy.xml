@@ -869,6 +869,7 @@
 		<members>DSALES_RutaparaoportunidadesdeSM</members>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<members>DSALES_Rutaparapliza</members>
+		<members>DSALES_Ruta_siniestros</members>
 		<members>DSales_Oportunidad_en_GEX</members>
 		<members>Certificado</members>
 		<name>PathAssistant</name>
