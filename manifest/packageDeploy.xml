@@ -1056,7 +1056,9 @@
 	<types>
 		<members>DSALES_createPoliza</members>
 		<members>DSALES_getPdf</members>
-		<members>DSALES_sendPdfToNPV</members>
+		<members>DSALES_Postman</members>
+		<members>DSALES_PostmanQuote</members>
+		<members>DSALES_sendPdfToNPV</members>		
 		<name>RemoteSiteSetting</name>
 	</types>
 	<version>53.0</version>
