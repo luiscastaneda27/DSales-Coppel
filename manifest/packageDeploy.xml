@@ -107,6 +107,9 @@
 		<members>DSALES_VentaGEX</members>
 		<members>DSALES_VentaGEXRest</members>
 		<members>DSALES_VentaGEXRestTest</members>
+		<members>DSALES_VentaSM</members>
+		<members>DSALES_VentaSMRest</members>
+		<members>DSALES_VentaSMRestTest</members>
 		<members>DSALES_ValidarClienteHelper</members>
 		<name>ApexClass</name>
 	</types>
