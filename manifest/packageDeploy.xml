@@ -62,6 +62,9 @@
         <members>DSALES_SiniestroCallsTest</members>
         <members>DSALES_SiniestroController</members>
         <members>DSALES_SiniestroControllerTest</members>
+		<members>DSALES_SiniestroRPWrapper</members>
+		<members>DSALES_SiniestroResumenPagos</members>
+		<members>DSALES_SiniestroResumenPagosTest</members>
         <members>DSALES_SiniestroWrapper</members>
         <members>DSALES_SiniestroWrapperTest</members>
         <members>DSALES_UpdateSiniestroJob</members>
