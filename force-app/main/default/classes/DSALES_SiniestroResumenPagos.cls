@@ -39,7 +39,7 @@ global with sharing class DSALES_SiniestroResumenPagos {
         responsePayload.error_message = message;
         responsePayload.claimpayment_id = SiniestroRPRecord.id;
         
-         System.debug('Hola Say');
+         System.debug('Termina proceso');
         return responsePayload;
         
     }	     

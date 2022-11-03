@@ -52,6 +52,7 @@ global with sharing class DSALES_SiniestroResumenPagosTest {
         Test.stopTest();
         RestContext.request = request;
         RestContext.response= response;
+        System.debug('ok');
     }
     
 }
