@@ -11,10 +11,19 @@ global with sharing class DSALES_AssetWrapperRequest {
                 try{
                     DSALES_AssetWrapper.AssetRequest producto = (DSALES_AssetWrapper.AssetRequest)JSON.deserialize(body, DSALES_AssetWrapper.AssetRequest.class);
                     responsePayload = insertAssets(producto);
-                }catch(Exception e){
+                }
+                catch(Exception.JSONException e)
+                {
                     responsePayload.success = false;
-                    responsePayload.error_message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
-                    system.debug('message' +responsePayload.error_message);
+                    responsePayload.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
+                    responsePayload.error_code=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    
+                }
+                catch(Exception e){
+                    responsePayload.success = false;
+                    responsePayload.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    responsePayload.error_code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    
                     
                 }
             }
@@ -26,15 +35,29 @@ global with sharing class DSALES_AssetWrapperRequest {
     global static DSALES_AssetWrapper.AssetResponse insertAssets(DSALES_AssetWrapper.AssetRequest product){
         Boolean success=false;
         String message='';
+         String code='';
         Asset assetRecord = new Asset();
-       
+       DSALES_Categoria__c categoria= new DSALES_Categoria__c(); 
+         DSALES_Clase__c clase=new  DSALES_Clase__c();
+        DSALES_familia__c familia = new DSALES_familia__c();
           
                 try{
                  system.debug('Product: '+product);   
                   
-                    DSALES_Categoria__c categoria=[SELECT id FROM DSALES_categoria__c WHERE name=:product.category ];
-                    DSALES_Clase__c clase=[SELECT id FROM DSALES_clase__c WHERE name=:product.class_type];
-                    DSALES_familia__c familia=[SELECT id FROM DSALES_familia__c WHERE name=:product.family];
+                    if(product.category!=null)
+                    {
+                    	 categoria=[SELECT id FROM DSALES_categoria__c WHERE name=:product.category LIMIT 1];    
+                    }
+                    else if (product.class_type!=null)
+                    {
+                    clase=[SELECT id FROM DSALES_clase__c WHERE name=:product.class_type];    
+                    }
+                    else if (product.family!=null)
+                        {
+                             familia=[SELECT id FROM DSALES_familia__c WHERE name=:product.family];
+                        }
+                    
+                    
                     
                     //cuando se crea un cliente, será de crédito/contado.
                     // if(product.client_number!=null || product.client_number!='')
@@ -57,7 +80,7 @@ global with sharing class DSALES_AssetWrapperRequest {
                     assetRecord.Status=product.status;
                     assetRecord.DSALES_VigenciaMeses__c=product.months;
                     assetRecord.DSALES_SKU__c=product.sku;
-                    assetRecord.DSALES_DuracionGEX__c=product.warranty_duration;
+                    //assetRecord.DSALES_DuracionGEX__c=product.warranty_duration;
                     assetRecord.SerialNumber=product.serial_number;
                     assetRecord.PurchaseDate=product.purchase_date;
                     assetRecord.Quantity=product.quantity;
@@ -72,7 +95,7 @@ global with sharing class DSALES_AssetWrapperRequest {
                         
                   //  }
                     success = true;
-                    message = 'Asset successfully saved';
+                    message = '';
                     system.debug('Product Creado ');
                    
                     
@@ -81,8 +104,8 @@ global with sharing class DSALES_AssetWrapperRequest {
                 }catch(Exception e){
                     
                     success = false;
-                    message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
-                    system.debug('message' +message);
+                    message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                  code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
                     
                 }
             
@@ -90,6 +113,7 @@ global with sharing class DSALES_AssetWrapperRequest {
         DSALES_AssetWrapper.AssetResponse responsePayload = new DSALES_AssetWrapper.AssetResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code=code;
         responsePayload.Asset_id = AssetRecord.id;
         
         return responsePayload;
