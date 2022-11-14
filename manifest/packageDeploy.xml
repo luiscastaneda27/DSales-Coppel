@@ -62,6 +62,9 @@
         <members>DSALES_SiniestroCallsTest</members>
         <members>DSALES_SiniestroController</members>
         <members>DSALES_SiniestroControllerTest</members>
+		<members>DSALES_SiniestroRPWrapper</members>
+		<members>DSALES_SiniestroResumenPagos</members>
+		<members>DSALES_SiniestroResumenPagosTest</members> 
         <members>DSALES_SiniestroWrapper</members>
         <members>DSALES_SiniestroWrapperTest</members>
         <members>DSALES_UpdateSiniestroJob</members>
@@ -107,6 +110,9 @@
 		<members>DSALES_VentaGEX</members>
 		<members>DSALES_VentaGEXRest</members>
 		<members>DSALES_VentaGEXRestTest</members>
+		<members>DSALES_VentaSM</members>
+		<members>DSALES_VentaSMRest</members>
+		<members>DSALES_VentaSMRestTest</members>
 		<members>DSALES_ValidarClienteHelper</members>
 		<name>ApexClass</name>
 	</types>
@@ -132,6 +138,7 @@
 		<members>DSALES_ClonarMatriz</members>
 		<members>DSALES_MatrizTiempoGEX</members>
 		 <members>DSALES_SiniestroQuickAction</members>
+		 <members>DSALES_claimCargarDocumentos</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -567,6 +574,8 @@
 	</types>
 	<types>
 		<members>DSALES_ContactMethod</members>
+		<members>DSALES_coberturaAmp</members>
+		<members>DSALES_coberturaRc</members>
 		<members>DSALES_NombreAseguradora</members>
 		<members>DSALES_business</members>
 		<members>DSALES_vehicleService</members>
@@ -868,6 +877,7 @@
 		<members>DSALES_RutaparaoportunidadesdeSM</members>
 		<members>DSALES_Ruta_de_estatus_de_Endosos</members>
 		<members>DSALES_Rutaparapliza</members>
+		<members>DSALES_Ruta_siniestros</members>
 		<members>DSales_Oportunidad_en_GEX</members>
 		<members>Certificado</members>
 		<name>PathAssistant</name>
@@ -902,6 +912,7 @@
 		<members>DSALES_Endoso__c.DSALES_Enviar_Endoso</members>
 		<members>DSALES_Endoso__c.DSALES_CargarDocumentos</members>
 		<members>Claim.DSALES_ButtonSiniestro</members>
+		<members>Claim.Cargar_Documentos</members>
     	<members>Duplicar</members>
     	<name>QuickAction</name>
 	</types>
@@ -1051,7 +1062,9 @@
 	<types>
 		<members>DSALES_createPoliza</members>
 		<members>DSALES_getPdf</members>
-		<members>DSALES_sendPdfToNPV</members>
+		<members>DSALES_Postman</members>
+		<members>DSALES_PostmanQuote</members>
+		<members>DSALES_sendPdfToNPV</members>		
 		<name>RemoteSiteSetting</name>
 	</types>
 	<version>53.0</version>

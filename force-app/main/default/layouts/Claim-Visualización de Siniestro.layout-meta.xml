@@ -170,6 +170,11 @@
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Claim.Cargar_Documentos</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
     </platformActionList>
     <quickActionList>
         <quickActionListItems>
@@ -178,7 +183,6 @@
     </quickActionList>
     <relatedLists>
         <fields>Name</fields>
-        <fields>Claim</fields>
         <fields>PaymentAmount</fields>
         <fields>PaymentStatus</fields>
         <relatedList>ClaimPaymentSummaries</relatedList>

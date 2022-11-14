@@ -124,7 +124,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementCalls</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementCallsTest</apexClass>
@@ -132,7 +132,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementController</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementController_Test</apexClass>
@@ -140,7 +140,7 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementWrapper</apexClass>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>DSALES_EndorsementWrapper_Test</apexClass>
@@ -10033,7 +10033,7 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
+        <editable>false</editable>
         <field>InsurancePolicy.DSALES_Activodeplizadeseguro__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -17287,6 +17287,15 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>ClaimPaymentSummary</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
         <allowEdit>true</allowEdit>
@@ -17618,6 +17627,15 @@
         <modifyAllRecords>false</modifyAllRecords>
         <object>InsurancePolicy</object>
         <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>InsurancePolicyAsset</object>
+        <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
