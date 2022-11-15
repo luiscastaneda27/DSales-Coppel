@@ -5,6 +5,7 @@ global with sharing class DSALES_SiniestroResumenPagos {
     {
         Boolean success=false;
         String message='';
+        Integer code;
         ClaimPaymentSummary SiniestroRPRecord = new ClaimPaymentSummary();
         if(RestContext.request != null){
             String Body = System.RestContext.request.requestBody.toString();
@@ -21,15 +22,20 @@ global with sharing class DSALES_SiniestroResumenPagos {
                             SiniestroRPRecord.PaymentDate= SiniestroRP.payment_date;
 							upsert SiniestroRPRecord;
                             
-                            
+                             
                             success = true;
-                            message = 'Claim Payment Summary successfully saved';
+                            
                     
                     
+                }catch(Exception.JSONException ed){
+                    success =false;
+                    message= DSALES_Utility.BAD_REQUEST_MSJ;
+                    code= DSALES_Utility.BAD_REQUEST_CODE;
+
                 }catch(Exception e){
-                    success = false;
-                    message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
-                    
+                    success =false;
+                    message= DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    code= DSALES_Utility.INTERNAL_ERROR_CODE; 
                 }
                 
             }
@@ -37,6 +43,7 @@ global with sharing class DSALES_SiniestroResumenPagos {
         DSALES_SiniestroRPWrapper.SiniestroRPResponse responsePayload = new DSALES_SiniestroRPWrapper.SiniestroRPResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code = code;
         responsePayload.claimpayment_id = SiniestroRPRecord.id;
         
          System.debug('Termina proceso');

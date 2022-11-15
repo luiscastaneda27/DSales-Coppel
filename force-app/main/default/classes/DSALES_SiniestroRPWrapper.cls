@@ -16,6 +16,7 @@ global class DSALES_SiniestroRPWrapper {
     global class SiniestroRPResponse{ 
         global Boolean success {get;set;}
         global String error_message {get;set;}
+        global Integer error_code {get;set;}
         global String claimpayment_id {get;set;}
     }
     

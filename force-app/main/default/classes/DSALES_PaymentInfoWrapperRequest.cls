@@ -3,19 +3,31 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
     
     @HttpPost
     global static DSALES_PaymentInfoWrapper.PaymentResponse createPayment(){
-        DSALES_PaymentInfoWrapper.PaymentResponse responsePayload = new DSALES_PaymentInfoWrapper.PaymentResponse();
+        DSALES_PaymentInfoWrapper.PaymentResponse responsePayload = new DSALES_PaymentInfoWrapper.PaymentResponse();      
+        Integer errorCode;
+        Boolean success = true;
+        String message='';
         if(RestContext.request != null){
             try{
                 String body = System.RestContext.request.requestBody.toString();
                 if(String.isNotBlank(body)){
-                    DSALES_PaymentInfoWrapper.PaymentRequest pago = (DSALES_PaymentInfoWrapper.PaymentRequest)JSON.deserialize(body, DSALES_PaymentInfoWrapper.PaymentRequest.class);
+                    DSALES_PaymentInfoWrapper.PaymentRequest pago = (DSALES_PaymentInfoWrapper.PaymentRequest)JSON.deserialize(body, DSALES_PaymentInfoWrapper.PaymentRequest.class);            
                     responsePayload = insertPagos(pago);
-                }          
+                }
+            }catch(Exception.JSONException jsonException){
+                success = false;
+                message = DSALES_Utility.BAD_REQUEST_MSJ;
+                errorCode = DSALES_Utility.BAD_REQUEST_CODE; 
             }catch(Exception e){
-                responsePayload.success = false;
-                responsePayload.error_message = 'Error: ' + e.getMessage() +' '+e.getLineNumber();              
+                success = false;
+                message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
             }
         }
+        responsePayload.success = success;
+        responsePayload.message = message;
+        responsePayload.errorCode = errorCode;
+        
         return responsePayload;
     }
     public static Id creaInfoPago(DSALES_PaymentInfoWrapper.PaymentRequest pago, Quote cotizacion, String sku, String article_description){
@@ -45,11 +57,8 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
     }
     
     public static DSALES_PaymentInfoWrapper.PaymentResponse insertPagos(DSALES_PaymentInfoWrapper.PaymentRequest pago){
-        Boolean success = false;
-        String message = '';
         String consulta='no ha entrado en nada';
         List<Id> listaPagos = new List<Id>();
-        try{
             Quote cotizacion = [Select id, Name,DSales_ID_Tienda__c, DSales_Tienda__c, ExpirationDate, RecordTypeId, DSALES_Fechadecreacionpresupuesto__c, Lista_negra__c, Motivo_de_lista_negra__c, Phone,
                                 DSALES_Fechadenacimiento__c, DSALES_Cdigodeestado__c, DSALES_Cdigodemunicipio__c, DSALES_Suburbcode__c, DSALES_Cdigopostal__c, DSALES_IDdelvehculo__c, DSALES_Opcindepago__c,
                                 DSALES_Cobertura__c, DSales_Vendedor__c, DSALES_Gnero__c, DSALES_Fechadecomienzodepliza__c,Email, TotalPrice, IsSyncing, OpportunityId from Quote where Id =:pago.quoteid];
@@ -108,16 +117,10 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
                     }
                 }               
             }
-            success = true;
-            message = 'Exito al registrar informacion de pago '+consulta;
-            
-        }catch(Exception e){
-            success = false;
-            message = 'Error: ' + e.getMessage() +' '+e.getLineNumber()+', consulta: '+consulta;              
-        }
+          
         DSALES_PaymentInfoWrapper.PaymentResponse responsePayload = new DSALES_PaymentInfoWrapper.PaymentResponse();
-        responsePayload.success = success;
-        responsePayload.error_message = message;
+        responsePayload.message = consulta;
+        system.debug('Resultado del pago:'+consulta);
         responsePayload.paymentInfo_ids = listaPagos;
         return responsePayload;
     }
