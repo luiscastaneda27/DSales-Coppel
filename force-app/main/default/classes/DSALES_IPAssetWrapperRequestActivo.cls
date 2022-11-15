@@ -14,7 +14,7 @@ global with sharing class DSALES_IPAssetWrapperRequestActivo {
                 try{
                     
                     DSALES_IPAssetWrapper.IPAssetRequest policyAsset = (DSALES_IPAssetWrapper.IPAssetRequest)JSON.deserialize(body, DSALES_IPAssetWrapper.IPAssetRequest.class);
-                    DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoentregada__c, DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=: '01287474757asd'];
+                    DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoentregada__c, DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=: policyAsset.payment_info];
                     policyAssetRes=insertActivo(policyAsset);
                     
                     success= true;
