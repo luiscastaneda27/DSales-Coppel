@@ -34,6 +34,7 @@ global class DSALES_PaymentInfoWrapperGEX {
 	}
 	global class PaymentGEXResponse{
         global Boolean success {get;set;}
+        global String error_code {get;set;}
         global String error_message {get;set;}
         global String paymentInfo_id {get;set;}
      }
