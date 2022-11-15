@@ -9,11 +9,12 @@ global class DSALES_VentaGEX {
     }
     
     global class VentaGexResponse{
-        //global Boolean success {get;set;}
-        //global List<String> error_messages {get;set;}
-        //global String error_message {get;set;}
-        global String message {get;set;}
-        //global List<String> assets_id {get;set;}
+        global Boolean success {get;set;}
+        global String error_message {get;set;}
+        global String error_code {get;set;}
+        global List<String> assets_id {get;set;}
+        global List<String> certifieds_id {get;set;}
+        global List<String> payments_id {get;set;}
     }
     
 }
