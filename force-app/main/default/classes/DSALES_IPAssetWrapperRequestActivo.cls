@@ -5,6 +5,7 @@ global with sharing class DSALES_IPAssetWrapperRequestActivo {
     {
         Boolean success=false;
         String message='';
+        Integer code;
         DSALES_IPAssetWrapper.IPAssetResponse policyAssetRes= new DSALES_IPAssetWrapper.IPAssetResponse();
         if(RestContext.request != null){
             String Body = System.RestContext.request.requestBody.toString();
@@ -13,30 +14,45 @@ global with sharing class DSALES_IPAssetWrapperRequestActivo {
                 try{
                     
                     DSALES_IPAssetWrapper.IPAssetRequest policyAsset = (DSALES_IPAssetWrapper.IPAssetRequest)JSON.deserialize(body, DSALES_IPAssetWrapper.IPAssetRequest.class);
-                    DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoentregada__c, DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=:policyAsset.payment_info];
+                    DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoentregada__c, DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=: '01287474757asd'];
                     policyAssetRes=insertActivo(policyAsset);
-                                  
-                }catch(Exception e){
-                    policyAssetRes.success=false;
-                    policyAssetRes.error_message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
                     
+                    success= true;
+                }catch(Exception.JSONException ed){
+                    success =false;
+                    message= DSALES_Utility.BAD_REQUEST_MSJ;
+                    code= DSALES_Utility.BAD_REQUEST_CODE;
+
+                }catch(Exception e){
+                    success =false;
+                    message= DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    code= DSALES_Utility.INTERNAL_ERROR_CODE; 
                 }
 
             }
+            
 
         }
-        return policyAssetRes;
+        DSALES_IPAssetWrapper.IPAssetResponse responsePayload = new DSALES_IPAssetWrapper.IPAssetResponse();
+        responsePayload.success = success;
+        responsePayload.error_message = message;
+        responsePayload.error_code = code;
+        responsePayload.Asset_id = policyAssetRes.asset_id;
+
+        return responsePayload;
+        
        
         
     }	 
     public static DSALES_IPAssetWrapper.IPAssetResponse insertActivo(DSALES_IPAssetWrapper.IPAssetRequest policyAsset){
         Boolean success=false;
         String message='';
+        Integer code;
 
         InsurancePolicyAsset IPassetRecord  = new InsurancePolicyAsset();
         try{
             DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoentregada__c,DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=:policyAsset.payment_info];
-            Account cliente =[SELECT Id,Name FROM ACCOUNT WHERE CP_WalletCustomerNumber__c=:Double.valueOf(policyAsset.client_number) LIMIT 1];
+            Account cliente =[SELECT Id,Name FROM ACCOUNT WHERE Id=:policyAsset.client_id LIMIT 1];
             if(pago.DSALES_Motosinseguro__c == false) {
 
                 IPassetRecord.DSALES_InformacionPago__c=pago.Id;
@@ -72,13 +88,15 @@ global with sharing class DSALES_IPAssetWrapperRequestActivo {
             }
         
         }catch(Exception e){
-            success = false;
-            message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
-            
+            success =false;
+            message= DSALES_Utility.INTERNAL_ERROR_MSJ;
+            code= DSALES_Utility.INTERNAL_ERROR_CODE;
         }
+
         DSALES_IPAssetWrapper.IPAssetResponse responsePayload = new DSALES_IPAssetWrapper.IPAssetResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code = code;
         responsePayload.Asset_id = IPAssetRecord.id;
         
         return responsePayload;
