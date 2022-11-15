@@ -6,6 +6,7 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
     global static DSALES_QuoteGexWrapper.respuestaNPV createQuote(){
         Boolean success = false;
         String message = '';
+        String code = '';
         String regions = 'Todas las regiones';
         String tipoProducto = 'Servicio';
         String originalMat = 'Matriz Original';
@@ -44,10 +45,12 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                     for(DSales_Asignacion_de_Productos__c da : productAsig){
                         DSales_ProductoSetId.add(da.DSales_Producto__c);
                     }
+                    system.debug('Asignacion de productos: '+ DSales_ProductoSetId);
                     
                     List<DSales_Matriz_GEX__c> mat = [SELECT id, Name, DSALES_Activo__c, DSALES_Region__c, DSALES_Tipo__c FROM DSales_Matriz_GEX__c WHERE DSALES_Servicio__c =: DSales_ProductoSetId and DSALES_Activo__c =true and DSALES_Tipo__c=:originalMat and DSALES_Region__c INCLUDES (:data.region,:regions)];
                     List<DSALES_Matriz_de_Cotizacion__c> matPrice1Year = [SELECT id, Name,SALES_Precio_GEX__c,DSales_Matriz_GEX__c,DSALES_Rango_interior_GEX__c,DSALES_Rango_Superior_GEX__c,DSALES_Tiempo_de_Garantia_Extendida_GEX__c FROM DSALES_Matriz_de_Cotizacion__c WHERE DSales_Matriz_GEX__c =: mat ORDER BY SALES_Precio_GEX__c DESC];
-                    
+                    system.debug('MAtriz: '+ mat);
+                    system.debug('MAtriz item: '+ matPrice1Year);
                     List<Pricebook2> precioLista = [SELECT id,Name FROM Pricebook2 WHERE Name= 'Standard Price Book' and IsActive=true LIMIT 1];
                     List<PricebookEntry> precioEn = [SELECT Id,UnitPrice,Name,Product2Id,Pricebook2Id,Product2.StockKeepingUnit,Product2.DSales_PorcentajeCobro__c,Product2.DSales_Aplicaporcentajecobro__c FROM PricebookEntry WHERE Product2Id =: produc and Pricebook2Id=: precioLista];
                     List<PricebookEntry> precioEnGEX = [SELECT Id,Name,UnitPrice,Product2Id,Pricebook2Id,Product2.StockKeepingUnit,Product2.DSales_Tipo_de_Producto__c,Product2.DSales_PorcentajeCobro__c,Product2.DSales_Aplicaporcentajecobro__c FROM PricebookEntry WHERE Product2Id =: DSales_ProductoSetId and Pricebook2Id=: precioLista];
@@ -57,6 +60,7 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                     
                     if(data.bill != null){
                         DSALES_InformacionDePago__c newOpportunity =[Select id,DSALES_Oportunidad__c,DSALES_Oportunidad__r.Name, DSALES_Cliente__c from DSALES_InformacionDePago__c where DSALES_Factura__c= :data.bill];
+                        system.debug('SOlo GEX : '+ newOpportunity);
                         oppor.AccountId = newOpportunity.DSALES_Cliente__c;
                         oppor.Name = newOpportunity.DSALES_Oportunidad__r.Name+' '+'GEX';
                         oppor.CloseDate = date.today()+30;
@@ -67,8 +71,8 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                         oppor.DSALES_OppPrin__c = newOpportunity.DSALES_Oportunidad__c;
                         insert oppor;
                         
-                        cotiza.Name = newOpportunity.DSALES_Oportunidad__r.Name+' '+'GEX';
                         cotiza.OpportunityId = oppor.Id;
+                        cotiza.Name = newOpportunity.DSALES_Oportunidad__r.Name+' '+'GEX';
                         cotiza.RecordTypeId =recordTypeQuoteId;
                         cotiza.DSALES_FormadePago__c = data.method_payment;
                         cotiza.DSales_ID_Tienda__c = data.store_id;
@@ -79,7 +83,7 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                         cotiza.ExpirationDate = date.today()+14;
                         insert cotiza;
                         
-                        for(PricebookEntry item : precioEn){
+                       for(PricebookEntry item : precioEn){
                             QuoteLineItem partidapre = new QuoteLineItem();
                             
                             DSALES_QuoteGexWrapper.Product p =  mapProducts.get(item.Product2.StockKeepingUnit);
@@ -137,9 +141,15 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             }
                         }
                         insert listaPartida;
+                        success=true;
+                        code = '';
+                        message = '';
                         
                         DSALES_QuoteGexWrapper.respuestaNPV respuestaNpvList = new DSALES_QuoteGexWrapper.respuestaNPV();
                         respuestaNpvList.quote_id = cotiza.Id;
+                        respuestaNpvList.success = success;
+                        respuestaNpvList.error_code = code;
+                        respuestaNpvList.error_message = message;
                         respuestaNpvList.response =  new List<DSALES_QuoteGexWrapper.QuoteGexResponse>();
                         
                         List<QuoteLineItem> ConsultaRespuesta = new List<QuoteLineItem> ();
@@ -162,12 +172,11 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             responsePayload.category = resIntangible.Product2.DSALES_Categoria__r.Name;
                             responsePayload.class1 = resIntangible.Product2.DSALES_Clase__r.Name;
                             responsePayload.family = resIntangible.Product2.DSALES_Familia__r.Name;
-                            responsePayload.message = message;
                             responsePayload.validity_months = resIntangible.Vigencia_meses__c;
                             respuestaNpvList.response.add(responsePayload);
                         }
                     return respuestaNpvList;
-                }
+                    } 
                     
                     List<Account> clienteContado = [SELECT Id,FirstName,LastName FROM Account WHERE FirstName=: data.first_name and LastName=: data.last_name and PersonEmail= :data.email];
                     if(data.client_number == '' || data.client_number == null ){
@@ -212,7 +221,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             partidapre.DSales_Articulo__c = p.article;
                             partidapre.DSales_Marca__c = p.brand;
                             partidapre.DSales_Modelo__c = p.model;
-                            partidapre.DSALES_ListaArticulo__c = p.product_type;
                             listaPartida.add(partidapre);
                             
                             String intangibleId;
@@ -263,13 +271,14 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                             }
                         }
                         insert listaPartida;
-                        
+                        success=true;
+                        code = '';
+                        message = '';
                         //message = 'Entro a prueba de cliente contado';
                     }else{
                         if(data.client_number != DSALES_Utility.NUMERO_CLIENTE_GENERICO){
                             List<Account> result = [Select Id,FirstName,MiddleName,LastName from Account WHERE CP_WalletCustomerNumber__c =:Decimal.valueOf(data.client_number)];
                             if(result.size()!= 0){
-                                
                                 oppor.AccountId = result[0].Id;
                                 oppor.Name = result[0].FirstName+' '+result[0].LastName;
                                 oppor.CloseDate = date.today()+30;
@@ -311,7 +320,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                     partidapre.DSales_Articulo__c = p.article;
                                     partidapre.DSales_Marca__c = p.brand;
                                     partidapre.DSales_Modelo__c = p.model;
-                                    partidapre.DSALES_ListaArticulo__c = p.product_type;
                                     listaPartida.add(partidapre);
                                     
                                     String intangibleId;
@@ -361,7 +369,9 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                     }
                                 }
                                 insert listaPartida;
-                                
+                                success=true;
+                                code = '';
+                                message = '';
                                 //message = 'ERES CLIENTE COPPEL Y SE CREO SOLO OPORTUNIDAD Y COTIZACION'; 
                             }else{
                                 cliente.CP_WalletCustomerNumber__c = Decimal.valueOf(data.client_number);
@@ -412,7 +422,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                     partidapre.DSales_Articulo__c = p.article;
                                     partidapre.DSales_Marca__c = p.brand;
                                     partidapre.DSales_Modelo__c = p.model;
-                                    partidapre.DSALES_ListaArticulo__c = p.product_type;
                                     listaPartida.add(partidapre);
                                     
                                     String intangibleId;
@@ -463,7 +472,9 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                     }
                                 }
                                 insert listaPartida;
-                                
+                                success=true;
+                                code = '';
+                                message = '';
                                 //message = 'AHORA YA ERES UN CLIENTE NUEVO Y SE CREO CLIENTE DE CREDITO, OPORTUNIDAD Y COTIZACION';  
                             }
                         }else{
@@ -509,7 +520,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                 partidapre.DSales_Articulo__c = p.article;
                                 partidapre.DSales_Marca__c = p.brand;
                                 partidapre.DSales_Modelo__c = p.model;
-                                partidapre.DSALES_ListaArticulo__c = p.product_type;
                                 listaPartida.add(partidapre);
                                 
                                 String intangibleId;
@@ -560,19 +570,30 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                                 }
                             }
                             insert listaPartida;
-                            
+                            success=true;
+                            code = '';
+                            message = '';
                             //message = 'SE CREO CLIENTE DE CONTADO, OPORTUNIDAD Y COTIZACION';
                         }
                     }
                     
+                }catch(JSONException e){
+                    success = false;
+                    code = String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    message = DSALES_Utility.BAD_REQUEST_MSJ;
                 }catch(Exception e){
-                    message = 'Error: ' + e.getMessage() +' '+e.getLineNumber();
+                    success = false;
+                    code = String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    message = DSALES_Utility.INTERNAL_ERROR_MSJ;
                 }
             }
         }
         
         DSALES_QuoteGexWrapper.respuestaNPV respuestaNpvList = new DSALES_QuoteGexWrapper.respuestaNPV();
         respuestaNpvList.quote_id = cotiza.Id;
+        respuestaNpvList.success = success;
+        respuestaNpvList.error_code = code;
+        respuestaNpvList.error_message = message;
         respuestaNpvList.response =  new List<DSALES_QuoteGexWrapper.QuoteGexResponse>();
         
         List<QuoteLineItem> ConsultaRespuesta = new List<QuoteLineItem> ();
@@ -596,7 +617,9 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
             responsePayloadError.family = null;
             responsePayloadError.class1 = null;
             responsePayloadError.category = null;
-            responsePayloadError.message = 'Producto no aplicable a Garantía Extendida';
+            respuestaNpvList.success = false;
+            respuestaNpvList.error_code = code;
+            respuestaNpvList.error_message = message;
             respuestaNpvList.response.add(responsePayloadError);
             return respuestaNpvList;
         }else{
@@ -618,7 +641,6 @@ global with sharing class DSALES_QuoteGexWrapperRequest {
                         responsePayload.category = resIntangible.Product2.DSALES_Categoria__r.Name;
                         responsePayload.class1 = resIntangible.Product2.DSALES_Clase__r.Name;
                         responsePayload.family = resIntangible.Product2.DSALES_Familia__r.Name;
-                        responsePayload.message = message;
                         responsePayload.validity_months = resIntangible.Vigencia_meses__c;
                         respuestaNpvList.response.add(responsePayload);
                     }

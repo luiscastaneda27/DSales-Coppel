@@ -14,9 +14,14 @@ global with sharing class DSALES_AccountWrapperRequest {
                 try{
                     DSALES_AccountWrapper.AccountRequest cliente = (DSALES_AccountWrapper.AccountRequest)JSON.deserialize(body, DSALES_AccountWrapper.AccountRequest.class);
                     responsePayload = upsertAccount(cliente);
+                }catch(JSONException e){
+                    responsePayload.success = false;
+                    responsePayload.error_code = String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    responsePayload.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
                 }catch(Exception e){
                     responsePayload.success = false;
-                    responsePayload.error_message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
+                    responsePayload.error_code = String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    responsePayload.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
                 }
             }
         }
@@ -28,6 +33,7 @@ global with sharing class DSALES_AccountWrapperRequest {
     global static  DSALES_AccountWrapper.AccountResponse upsertAccount (DSALES_AccountWrapper.AccountRequest cliente){
         Boolean success = false;
         String message = '';
+        String code = '';
         Account accountRecord = new Account();
         try{
             String nombre = cliente.first_name + ' '+ cliente.last_name;
@@ -82,17 +88,20 @@ global with sharing class DSALES_AccountWrapperRequest {
             upsert accountRecord;
             
             success = true;
-            message = 'Account successfully saved';
+            message = '';
+            code = '';
             
         }catch(Exception e){
             success = false;
-            message = 'Error: ' + e.getMessage()+' '+e.getLineNumber();
+            message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+            code = String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
         }
         
         
         DSALES_AccountWrapper.AccountResponse responsePayload = new DSALES_AccountWrapper.AccountResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code = code;
         responsePayload.account_id = accountRecord.id;
         
         return responsePayload;

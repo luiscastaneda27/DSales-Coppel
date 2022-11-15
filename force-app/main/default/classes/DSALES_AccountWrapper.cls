@@ -21,6 +21,7 @@ global class DSALES_AccountWrapper {
     }
     global class AccountResponse{
         global Boolean success {get;set;}
+        global String error_code {get;set;}
         global String error_message {get;set;}
         global String account_id {get;set;}
     }

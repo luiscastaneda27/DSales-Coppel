@@ -12,9 +12,14 @@ global with sharing class DSALES_PaymentInfoWrapperGexRequest {
                 try{
                     DSALES_PaymentInfoWrapperGEX.PaymentGEXRequest pago = (DSALES_PaymentInfoWrapperGEX.PaymentGEXRequest)JSON.deserialize(body, DSALES_PaymentInfoWrapperGEX.PaymentGEXRequest.class);
                     responsePayload = insertPaymentGex(pago);
+                }catch(JSONException e){
+                    responsePayload.success = false;
+                    responsePayload.error_code = String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    responsePayload.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
                 }catch(Exception e){
                     responsePayload.success = false;
-                    responsePayload.error_message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
+                    responsePayload.error_code = String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    responsePayload.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
                 }
             }
         }
@@ -24,6 +29,7 @@ global with sharing class DSALES_PaymentInfoWrapperGexRequest {
     global static DSALES_PaymentInfoWrapperGEX.PaymentGEXResponse insertPaymentGex(DSALES_PaymentInfoWrapperGEX.PaymentGEXRequest payment){
         Boolean success = false;
         String message = '';
+        String code = '';
         DSALES_InformacionDePago__c info = new DSALES_InformacionDePago__c();
                 try{
                     String recordTypeId = Schema.SObjectType.DSALES_InformacionDePago__c.getRecordTypeInfosByName().get('Pagos de Venta en NPV de GEX').getRecordTypeId();
@@ -60,15 +66,18 @@ global with sharing class DSALES_PaymentInfoWrapperGexRequest {
                     
                     insert info;
                     success = true;
-                    message = 'Exito al registrar informacion de pago';
+                    message = '';
+                    code = '';
                 }catch(Exception e){
                     success = false;
-                    message = 'Error Pago: ' + e.getMessage() +' Line: '+e.getLineNumber();
+                    message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    code = String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
 
         }
         DSALES_PaymentInfoWrapperGEX.PaymentGEXResponse responsePayload = new DSALES_PaymentInfoWrapperGEX.PaymentGEXResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code = code;
         responsePayload.paymentInfo_id = info.Id;
         
         return responsePayload;
