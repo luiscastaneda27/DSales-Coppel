@@ -1,5 +1,8 @@
 global class DSALES_AssetWrapper {
     global class AssetRequest{
+         global String first_name {get; set;}
+        global String last_name {get;set;}
+        global String email {get;set;}
         global String name{get;set;}
         global String client_number{get;set;}
         global String account_id {get;set;}
@@ -28,6 +31,7 @@ global class DSALES_AssetWrapper {
     global class AssetResponse{
         global Boolean success {get;set;}
         global String error_message {get;set;}
+        global String error_code{get;set;}
         global String asset_id {get;set;}
     }
 }

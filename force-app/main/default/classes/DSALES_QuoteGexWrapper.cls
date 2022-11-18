@@ -21,7 +21,6 @@ global class DSALES_QuoteGexWrapper {
         global String article {get; set;}
         global String model {get; set;}
         global String brand {get; set;}
-        global String product_type {get; set;}
         global Double tangible_price {get; set;}
     }
     global class QuoteGexResponse{
@@ -33,11 +32,14 @@ global class DSALES_QuoteGexWrapper {
         global double	price	{get;set;}
         global double	total_cost	{get;set;}
         global String	service_type	{get;set;}
-        global String 	message {get;set;}
         global String 	validity_months {get;set;}
+        
     }
-    global class respuestaNPV{
+    global class respuestaNPV{        
+        global Boolean 	success {get;set;}
         global String	quote_id	{get;set;}
+        global String 	error_code {get;set;}
+        global String 	error_message {get;set;}
         global List<QuoteGexResponse> response {get;set;}
     }
     
