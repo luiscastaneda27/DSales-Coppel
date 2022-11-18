@@ -21,9 +21,10 @@ global class DSALES_PaymentInfoWrapper {
     global List<pago> ListadePagos{get;set;}
     
 }
-global class PaymentResponse{ 
+global class PaymentResponse{
+    global String message {get;set;}
+    global Integer errorCode {get;set;}
     global Boolean success {get;set;}
-    global String error_message {get;set;}
     global List<Id> paymentInfo_ids {get;set;}
     }
     

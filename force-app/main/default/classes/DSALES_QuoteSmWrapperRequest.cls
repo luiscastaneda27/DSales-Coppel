@@ -15,6 +15,8 @@ global class DSALES_QuoteSmWrapperRequest {
         DSALES_QuoteSmWrapper.respuestaDelProveedor respuestaDeProveedor2 = new DSALES_QuoteSmWrapper.respuestaDelProveedor();
         DSALES_ListaNegraWrapper.responseListaNegra respuestaListaNegra = new DSALES_ListaNegraWrapper.responseListaNegra();
         Boolean listaNegra = false;
+        Integer errorCode;
+        Boolean succes = true;
         if(RestContext.request != null){
             String body = System.RestContext.request.requestBody.toString();
             if(String.isNotBlank(body)){
@@ -37,10 +39,7 @@ global class DSALES_QuoteSmWrapperRequest {
                         listaNegra = true;
                         message = 'Esta en la Lista negra';
                     }
-                }catch(Exception e){
-                    message = 'Error Lista Negra: ' + e.getMessage() +' '+e.getLineNumber();
-                }
-                try{
+
                     DSALES_QuoteSmWrapper.QuotePostProvedor datosEnviar = new DSALES_QuoteSmWrapper.QuotePostProvedor();
                     datosEnviar.business = Label.DSALES_business;
                     datosEnviar.insurance = Label.DSALES_NombreAseguradora; //sales-fijo
@@ -72,11 +71,7 @@ global class DSALES_QuoteSmWrapperRequest {
                         datosEnviar.packagge = coberturaPlus;
                         respuestaDeProveedor2 = crearQuoteSm(datosEnviar);
                     }
-        
-                }catch(Exception e){
-                    message = 'Error: ' + e.getMessage() +' '+e.getLineNumber();
-                }
-                try{
+  
                     //data = (DSALES_QuoteSmWrapper.QuoteSmRequest)JSON.deserialize(body, DSALES_QuoteSmWrapper.QuoteSmRequest.class);
                     Account UniversalAccount = [Select Id from Account WHERE DSALES_ClienteCoppel__c = :numeroCliente LIMIT 1];
                     Tienda__c tienda = [Select Id from Tienda__c WHERE DSales_TiendaID__c =: data.store_id LIMIT 1];
@@ -126,8 +121,14 @@ global class DSALES_QuoteSmWrapperRequest {
                             }       
                     }
                     //llma a inter cotizar
+                }catch(Exception.JSONException jsonException){
+                    message = DSALES_Utility.BAD_REQUEST_MSJ;
+                    errorCode = DSALES_Utility.BAD_REQUEST_CODE;
+                    succes = false;      
                 }catch(Exception e){
-                    message = 'Error: ' + e.getMessage() +' '+e.getLineNumber();
+                    message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
+                    succes = false;
                 }
             }
         }
@@ -135,17 +136,27 @@ global class DSALES_QuoteSmWrapperRequest {
         
         
         DSALES_QuoteSmWrapper.RespuestaParaNpv response = new DSALES_QuoteSmWrapper.RespuestaParaNpv();
-        response.quoteId = 'test';
         response.message =  message;
-        response.Cliente = 'Cliente: '+client.Id;
-        response.oppor = 'Oport: '+oppor.Id;
-        response.cotiza = 'mensaje: '+ data.contact_email;
+        response.errorCode = errorCode;
+        response.success = succes;
+        response.quoteId = cotiza.Id;
+        //response.Cliente = 'Cliente: '+client.Id;
+        //response.oppor = 'Oport: '+oppor.Id;
+        //response.cotiza = 'mensaje: '+ data.contact_email;
+        response.listaNegra = listaNegra;
         response.rc = new DSALES_QuoteSmWrapper.Receipt();
         response.amp = new DSALES_QuoteSmWrapper.Receipt();
-        if(!listaNegra && (respuestaListaNegra!= null) && (respuestaDeProveedor!= null) && (respuestaDeProveedor2!= null)){
-            System.debug('Respuesta Proveedor____: ' + respuestaDeProveedor.data.receipts[0]);
-            response.rc = respuestaDeProveedor.data.receipts[0];
-            response.amp = respuestaDeProveedor2.data.receipts[0];
+        try{
+            if(!listaNegra && (respuestaListaNegra!= null) && (respuestaDeProveedor!= null) && (respuestaDeProveedor2!= null)){
+                System.debug('Respuesta Proveedor____: ' + respuestaDeProveedor.data.receipts[0]);    
+                response.rc = respuestaDeProveedor.data.receipts[0];
+                response.amp = respuestaDeProveedor2.data.receipts[0];
+        	}        
+        }catch(Exception e){
+            message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+            errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
+            succes = false;
+            
         }
         return response;
     }
@@ -166,7 +177,7 @@ global class DSALES_QuoteSmWrapperRequest {
         }else{
             System.debug('___Fallo____: comuncacion: ' + response.getBody());
             return null;
-        }       
+        }     
     }
 
     public static Account creaCliente (DSALES_QuoteSmWrapper.QuoteSmRequest data){

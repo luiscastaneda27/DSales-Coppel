@@ -32,7 +32,7 @@ global class DSALES_IPAssetWrapper {
     global class IPAssetResponse{
         global Boolean success {get;set;}
         global String error_message {get;set;}
-        global String error_code{get;set;}
+        global Integer error_code {get;set;}
         global String asset_id {get;set;}
     }
 }

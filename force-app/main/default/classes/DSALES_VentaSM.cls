@@ -7,6 +7,10 @@ global class DSALES_VentaSM {
 		}
 
 		global class VentaSMResponse{
+			global Boolean success {get;set;}
+			global String error_message {get;set;}
+			global Integer error_code {get;set;}
 			global String message {get;set;}
+		
 		}
 }
