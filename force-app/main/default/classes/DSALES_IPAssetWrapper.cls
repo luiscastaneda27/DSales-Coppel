@@ -1,11 +1,11 @@
 global class DSALES_IPAssetWrapper {
     global class IPAssetRequest{
         global String store{get;set;}
-        //Información de Pago	
+        //Información de Pago
         global String payment_info{get;set;}
         //global String ticket{get;set;}
         global String partner{get;set;}
-        global String client_id{get;set;}
+       // global String client_id{get;set;}
         //global String client_name{get;set;}
         global Boolean external_motorcycle{get;set;}
         //global String invoice_number{get;set;}

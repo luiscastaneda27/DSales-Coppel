@@ -8,9 +8,11 @@ global class DSALES_VentaSM {
 
 		global class VentaSMResponse{
 			global Boolean success {get;set;}
+			global String client_id{get;set;}
+			global List<String> payments_id {get;set;}
+			global List<String> assets_id {get;set;}
 			global String error_message {get;set;}
 			global Integer error_code {get;set;}
-			global String message {get;set;}
 		
 		}
 }
