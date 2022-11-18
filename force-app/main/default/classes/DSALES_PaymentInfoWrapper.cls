@@ -25,7 +25,7 @@ global class PaymentResponse{
     global String message {get;set;}
     global Integer errorCode {get;set;}
     global Boolean success {get;set;}
-    global List<Id> paymentInfo_ids {get;set;}
+    global List<String> paymentInfo_ids {get;set;}
     }
     
 global class pago{
