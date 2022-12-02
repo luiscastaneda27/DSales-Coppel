@@ -2,22 +2,26 @@
 global class DSALES_VentaSMRest {
 	@HttpPost
     global static DSALES_VentaSM.VentaSMResponse createVenta() {
+        String client_id='';
+        List<String> paymentIds= new List<String>();
+        List<String> assetsId = new List<String>();
         Boolean success=false;
         String error_message='';
-        String message='';
         Integer code;
         DSALES_VentaSM.VentaSMResponse ventaSM= new DSALES_VentaSM.VentaSMResponse();
         
         if(RestContext.request != null){
 
             String Body = System.RestContext.request.requestBody.toString();
-            message='El body es: '+success;
+           
             
             if(String.isNotBlank(Body)){
                 try{
+                    
                     DSALES_VentaSM.VentaSMRequest venta = (DSALES_VentaSM.VentaSMRequest)JSON.deserialize(body, DSALES_VentaSM.VentaSMRequest.class);
                     System.debug('venta'+venta);
                     DSALES_AccountWrapper.AccountResponse cliente = DSALES_AccountWrapperRequest.upsertAccount(venta.cliente);
+                    client_id=cliente.account_id;
                     System.debug('cliente: '+ cliente);
                     //values=json.serialize(cliente);
                     venta.pagos.AccountId=cliente.account_id;
@@ -27,18 +31,13 @@ global class DSALES_VentaSMRest {
                     DSALES_PaymentInfoWrapper.PaymentResponse resp= DSALES_PaymentInfoWrapperRequest.insertPagos(venta.pagos);
                     System.debug('pagos: '+resp);
 					System.debug('activo:'+venta.activos);
-                    String temp='';
-                    List<String> assetIds = new List<String>();
+                    
                     for(Id ids:resp.paymentInfo_ids){
-                        temp=insertIPAsset(venta.activos,ids,cliente.account_id);
-                        assetIds.add(temp);
+                        String temp=insertIPAsset(venta.activos,ids,cliente.account_id);
+                        paymentIds.add(ids);
+                        assetsId.add(temp);
                     }
-                    
-                    
-                    message= 'Sale created correctly.\n '+ 'QuoteID: ' +venta.quoteId + ' ClientId: '+ cliente.account_id + ' Payment list: ' +resp.paymentInfo_ids + ' IPAsset list:' + assetIds;
                     success=true;
-                    //message='Sale created correctly. '+'QuoteID: '+venta.quoteId + 'ClientId: '+cliente.account_id+'Payment list: ' +venta.pagos + ' IPAsset list: '+venta.activos;
-                    
                 }catch(Exception.JSONException je ){
                     success =false;
                     error_message=DSALES_Utility.BAD_REQUEST_MSJ;
@@ -52,9 +51,13 @@ global class DSALES_VentaSMRest {
 
         }
         ventaSM.success=success;
-        ventaSM.error_message=error_message;
         ventaSM.error_code=code;
-        ventaSM.message=message;
+        ventaSM.error_message=error_message;
+        ventaSM.client_id=client_id;
+        ventaSM.payments_id=paymentIds;
+        ventaSM.assets_id=assetsId;
+       
+        
 		return ventaSM;
     }
 
@@ -70,7 +73,7 @@ global class DSALES_VentaSMRest {
         DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_SKU__c FROM DSALES_InformacionDePago__c WHERE Id=:pagoId];
         //for(DSALES_IPAssetWrapper.IPAssetRequest asset:AssetInformation){
        // asset.client_number=String.valueof(clientNumber.CP_WalletCustomerNumber__c);
-       asset.client_id=clientNumber.Id;
+       //asset.client_id=clientNumber.Id;
         asset.payment_info = pagoId;
         if(pago.DSALES_SKU__c!=null){
             response= DSALES_IPAssetWrapperRequestActivo.insertActivo(asset);//moto entregada

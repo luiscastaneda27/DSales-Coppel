@@ -18,13 +18,13 @@ global with sharing class DSALES_IPAssetWrapperRequest {
                 {
                     policyAssetRes.success = false;
                     policyAssetRes.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
-                    policyAssetRes.error_code=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    policyAssetRes.error_code=DSALES_Utility.BAD_REQUEST_CODE;
                     
                 }
                 catch(Exception e){
                     policyAssetRes.success = false;
                     policyAssetRes.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
-                    policyAssetRes.error_code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    policyAssetRes.error_code=DSALES_Utility.INTERNAL_ERROR_CODE;
                     
                     
                 }
@@ -40,18 +40,18 @@ global with sharing class DSALES_IPAssetWrapperRequest {
     {
         Boolean success=false;
         String message='';
-        String code='';
+        Integer code;
 
         InsurancePolicyAsset IPassetRecord  = new InsurancePolicyAsset();
 
 
 
         try {
-            Account cliente =[SELECT Id,Name FROM ACCOUNT WHERE Id=:policyAsset.client_id LIMIT 1];
-            DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoexterna__c,DSALES_Motosinseguro__c FROM DSALES_InformacionDePago__c WHERE id=:policyAsset.payment_info];
+            //Account cliente =[SELECT Id,Name FROM ACCOUNT WHERE Id=:policyAsset.client_id LIMIT 1];
+            DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_Poliza__c, DSALES_Motoexterna__c,DSALES_Motosinseguro__c,DSALES_Cliente__c FROM DSALES_InformacionDePago__c WHERE id=:policyAsset.payment_info];
             if(pago.DSALES_Motosinseguro__c == false) {
                 IPassetRecord.DSALES_InformacionPago__c=pago.Id;
-                IPassetRecord.DSALES_Account__c=cliente.Id;
+                IPassetRecord.DSALES_Account__c=pago.DSALES_Cliente__c;
                 IPassetRecord.DSALES_Tienda__c=policyAsset.store;
                 IPassetRecord.DSALES_Colaborador__c=policyAsset.partner;
                 IPassetRecord.DSALES_Motoexterna__c=policyAsset.external_motorcycle; 
@@ -89,7 +89,7 @@ global with sharing class DSALES_IPAssetWrapperRequest {
         } catch (Exception e) {
             success = false;
            message = DSALES_Utility.BAD_REQUEST_MSJ;
-                    code=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    code=DSALES_Utility.BAD_REQUEST_CODE;
         }
 
         DSALES_IPAssetWrapper.IPAssetResponse responsePayload = new DSALES_IPAssetWrapper.IPAssetResponse();
