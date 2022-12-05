@@ -16,11 +16,11 @@
 		<members>DSALES_ControladorCertificadoPDF</members>
 		<members>DSALES_ControladorCertificadoPDFTest</members>
 		<members>DSALES_ControladorCotizacionGex</members>
-		<!--<members>DSALES_ControladorCotizacionGexTest</members>-->
+		<members>DSALES_ControladorCotizacionGexTest</members>
 		<members>DSALES_ControladorMatrizTiempo</members>
 		<members>DSALES_ControladorMatrizTiempo_Test</members>
 		<members>DSALES_GexCotizaciones</members>
-		<!--<members>DSALES_GexCotizacionesHelper</members>-->
+		<members>DSALES_GexCotizacionesHelper</members>
 		<members>DSALES_Matriz</members>
 		<members>DSALES_MatrizHelper</members>
 		<members>DSALES_EndorsementCalls</members>
@@ -118,7 +118,7 @@
 	</types>
 	<types>
 		<members>DSALES_CertificadoPDF</members>
-		<members>DSALES_GexCot</members>
+		<members>Cotizacion</members>
 		<members>DSALES_NuevaPlantilla</members>
 		<name>ApexPage</name>
 	</types>
@@ -130,7 +130,7 @@
 		<members>DSALES_InsurancePolicyAsset</members>
 		<members>DSALES_MatrizTrigger</members>
 		<members>DSALES_ResumenDePagos</members>
-		<members>DSALES_UpdateCliente</members>
+		<!--<members>DSALES_UpdateCliente</members>-->
 		<name>ApexTrigger</name>
 	</types>
 	<types>
@@ -598,13 +598,13 @@
 		<members>DSALES_RutaIntegracion.DSALES_QuoteSM</members>
         <name>CustomMetadata</name>
     </types>
-	<types>
+	<!--<types>-->
 		<!--members>DSALES_ReportedeEndosos</members>
 		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
 		<members>TablerosdeEndosodeSM</members>
 		<members>TablerosdeEndosodeSM/XhYEjwaChGCwQkncVxUjtfkRWoloeo1</members>
 		<members>COPPELPISyS</members-->
-		<members>COPPELPISyS</members>
+		<!--<members>COPPELPISyS</members>
 		<members>COPPELPISyS/Garantaextendida</members>
 		<members>COPPELPISyS/Segurosdemotos</members>
 		<members>COPPELPISyS/Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
@@ -614,7 +614,7 @@
 		<members>COPPELPISyS/Segurosdemotos/GTlTBYAPdOjzISvFslZpRafnShxOuq</members>
 		<members>Tableros_Venta_GEX</members>
 		<name>Dashboard</name>
-	</types>
+	</types>-->
 	<types>
         <members>AccountType</members>
 		<members>QuoteStatus</members>
@@ -680,7 +680,7 @@
 	    <members>DSALES_PISYS</members>
 		<!--members>dupcheck__dcDocuments</members-->
 		<members>Experiences_Shared_Document_Folder</members>
-		<members>DSALES_PISYS/DALES_LogoIGEX</members>
+		<!--<members>DSALES_PISYS/DALES_LogoIGEX</members>-->
 		<members>DSALES_PISYS/DSALES_LogoFGEX</members>
 		<members>DSALES_PISYS/DSALES_hr</members>
 		<members>DSALES_PISYS/DSALES_hrAmarillo</members>
@@ -940,7 +940,7 @@
 		<members>Claim.DSALES_Siniestro</members>
 		<name>RecordType</name>
 	</types>
-	<types>
+	<!--<types>
 		<members>CarpetaDanny/DSALES_Indicadores_RAR</members>
 		<members>CarpetaDanny/DSALES_Venta</members>
 		<members>CarpetaDanny/DSales_Resultado_GEX_Division_Region_rhF</members>
@@ -971,14 +971,14 @@
 		<members>CoppelPISyS/SegurosdeMotos/Oportunidades_sin_actividad_en_60_das_3Tw</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
 		<name>Report</name>
-	</types>
-	<types>
+	</types>-->
+	<!--<types>
 	    <members>Clientes_con_p_lizas</members>
 		<members>Cuentas_Personales</members>
 		<members>DSALESCuentas_Oportunidades_Productos</members>
 		<members>DSALES_Oportunidades_Productos</members>
 		<members>Oportunidades_con_cotizaciones</members>
-		<name>ReportType</name>
+		<name>ReportType</name>-->
 	</types>
 	<types>
 		<members>DSALES_Admin_GEX</members>
