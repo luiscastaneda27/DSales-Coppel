@@ -14,7 +14,7 @@ public class DSALES_ControladorCotizacionGex {
         private static final String myfilename = 'Cotizacion';
     
     public DSALES_ControladorCotizacionGex(){
-        Apexpages.currentPage().getHeaders().put('content-disposition', 'inline; filename=hey');
+        //Apexpages.currentPage().getHeaders().put('content-disposition', 'inline; filename=hey');
         String recordId = ApexPages.currentPage().getParameters().get('quoteId');
         Quote recordCoti=[SELECT Id, RecordTypeId FROM Quote Where Id=:recordId];
         RECORDTYPE motos= [SELECT Id, Name FROM RECORDTYPE WHERE Id=:recordCoti.RecordTypeId ];

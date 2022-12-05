@@ -114,6 +114,8 @@
 		<members>DSALES_VentaSMRest</members>
 		<members>DSALES_VentaSMRestTest</members>
 		<members>DSALES_ValidarClienteHelper</members>
+		<members>DSALES_ListaNegra2</members>
+		<members>DSALES_ListaNegra2Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -152,6 +154,7 @@
 	</types>
 	<types>
 		<members>Asset.DSALES_PysisCompactLayout</members>
+		<members>DSALES_Endoso__c-Formato Endoso</members>
 		<members>Claim.DSALES_Formato_compacto_siniestro</members>
 		<members>DSALES_Certificado__c.DSALES_Certificado</members>
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
@@ -198,9 +201,13 @@
 		<members>Asset.DSALES_TipoSeguro__c</members>
 		<members>Asset.DSALES_TipoServicio__c</members>
 		<members>Claim.Cliente__c</members>
+		<members>Claim.DSALES_Monto__c</members>
+		<members>Claim.DSALES_Tipo_pago__c</members>
+		<members>Claim.P_liza__c</members>
 		<members>Claim.DSALES_Ano__c</members>
 		<members>Claim.DSALES_Causa__c</members>
 		<members>Claim.DSALES_Descripcion__c</members>
+		<members>Claim.Correo_electr_nico__c</members>
 		<members>Claim.DSALES_Estatus__c</members>
 		<members>Claim.DSALES_Indemnizacionaprobada__c</members>
 		<members>Claim.DSALES_Marca__c</members>
@@ -426,6 +433,9 @@
 		<members>InsurancePolicyAsset.Estatus__c</members>
 		<members>InsurancePolicyAsset.DSALES_Factura__c</members>
 		<members>Opportunity.DSALES_Certificado__c</members>
+		<members>Opportunity.A_o_anterior__c</members>
+		<members>Opportunity.Ingresos_GEX_A_o_anterior__c</members>
+		<members>Opportunity.Muebles__c</members>
 		<members>Opportunity.DSALES_Dias_Transcurridos__c</members>
 		<members>Opportunity.DSALES_Fecha_Inicio__c</members>
 		<members>Opportunity.DSALES_Fecha_creacion__c</members>
@@ -453,6 +463,8 @@
 		<members>Opportunity.DSales_IDTienda__c</members>
 		<members>Opportunity.DSales_NombreVendedor__c</members>
 		<members>OpportunityLineItem.DSALES_PrecioServ__c</members>
+		<members>Opportunity.Folio_de_oportunidad__c</members>
+		<members>Opportunity.Posici_n__c</members>
 		<members>OpportunityLineItem.DSALES_Producto__c</members>
 		<members>OpportunityLineItem.DSALES_Servicio__c</members>
 		<members>OpportunityLineItem.DSALES_TipoServ__c</members>
@@ -465,9 +477,11 @@
 		<members>OrderItem.DSales_SKU__c</members>
 		<members>OrderItem.DSales_Servicio__c</members>
 		<members>OrderItem.DSales_Tipo__c</members>
+		<members>OrderItem.DSales_Vigencia__c</members>
 		<members>Product2.DSALES_VigenciaMeses__c</members>
 		<members>Product2.DSALES_Vinculado__c</members>
-		<members>OrderItem.DSales_Vigencia__c</members>
+		<members>Product2.DSales_Marca__c</members>
+		<members>Product2.DSales_Modelo__c</members>
 		<members>Product2.DSALES_Categoria__c</members>
 		<members>Product2.DSALES_Clase__c</members>
 		<members>Product2.DSALES_Familia__c</members>
@@ -568,8 +582,6 @@
 		<members>Tienda__c.DSALES_Tienda_Base__c</members>
 		<members>Tienda__c.Tipo_de_Tienda_Inmueble_Renta__c</members>
 		<members>Tienda__c.DSALES_Optica__c</members>
-		<members>Claim.DSALES_Monto__c</members>
-		<members>Claim.DSALES_Tipo_pago__c</members>
 		<name>CustomField</name>
 	</types>
 	<types>
@@ -621,6 +633,7 @@
 		<members>OpportunityStage</members>
 		<members>Product2Family</members>
 		<members>ClaimType</members>
+		<members>LeadSource</members>
         <name>StandardValueSet</name>
     </types>
 	<types>
@@ -646,6 +659,7 @@
 		<members>Quote</members>
 		<members>Claim</members>
 		<members>QuoteLineItem</members>
+		<members>Tipo_de_endoso__mdt</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -674,6 +688,9 @@
 		<members>DSALES_SubCategoria__c</members>
 		<members>DSales_Matriz_GEX__c</members>
 		<members>Tienda__c</members>
+		<members>DSales_Asignacion_de_Productos__c</members>
+		<members>DASALES_Porcentajedecobro__c</members>
+		<members>DSALES_Partidadepago__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
@@ -825,6 +842,8 @@
 		<members>Product2-Garantía Extendida</members>
 		<members>Product2-Seguro de Motos</members>
 		<members>Tienda__c-Formato Tienda</members>
+		<members>DSALES_Endoso__c-Formato Endoso</members>
+		<members>DSALES_InformacionDePago__c-DSALESInformaciondepagosSM</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -929,6 +948,7 @@
 		<members>Quote.DSALES_VentaSM</members>
 		<members>Opportunity.Seguro_de_Moto</members>
 		<members>Product2.DSales_Seguro_de_Motos</members>
+		<members>Product2.DSales_Garantia_Extendida</members>
 		<members>Asset.DSALES_Garantia_Extendida</members>
 		<members>DSALES_Categoria__c.DSALES_GEX</members>
 		<members>DSALES_Categoria__c.DSALES_SM</members>
