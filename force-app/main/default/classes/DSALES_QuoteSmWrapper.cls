@@ -63,9 +63,9 @@ global class DSALES_QuoteSmWrapper {
 
     global class RespuestaParaNpv{
         global String quoteId {get;set;}
-        //global String Cliente {get;set;}
-        //global String oppor {get;set;}
-        //global String cotiza {get;set;}
+        global String Cliente {get;set;}
+        global String oppor {get;set;}
+        global String cotiza {get;set;}
         global Receipt rc {get;set;}
         global Receipt amp {get;set;}
         global String message {get;set;}
