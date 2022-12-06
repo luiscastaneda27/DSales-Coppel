@@ -116,6 +116,7 @@
 		<members>DSALES_ValidarClienteHelper</members>
 		<members>DSALES_ListaNegra2</members>
 		<members>DSALES_ListaNegra2Test</members>
+		<members>DSALES_ValidarClienteHelperTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
