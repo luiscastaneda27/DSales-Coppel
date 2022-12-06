@@ -117,7 +117,7 @@ public class DSALES_ClasificacionServicio_Test {
         DSALES_ClasificacionServicio.RecordTypeId('Garantía Extendida');
         DSALES_ClasificacionServicio.updateMatriz('["a3075000000D4YcAAK"]', DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
         //DSALES_ClasificacionServicio.insertListaPrecios('01t75000000nGHOAA2','1','[]');
-        DSALES_ClasificacionServicio.insertPocentajeCobro(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'),'{"anio1":"6","anio2":"5","anio3":"9","anio4":0,"anio5":0,"anio6":0}');
+        DSALES_ClasificacionServicio.insertPocentajeCobro(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'),'{"anio1":"6","anio2":"5","anio3":"9","anio4":3,"anio5":2,"anio6":1}');
         DSALES_ClasificacionServicio.getPickListValuesIntoList1();
         DSALES_ClasificacionServicio.getPickListValuesIntoList2();
         DSALES_ClasificacionServicio.getPickListValuesIntoList3();

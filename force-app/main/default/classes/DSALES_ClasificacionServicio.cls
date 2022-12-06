@@ -37,8 +37,8 @@ public without sharing class DSALES_ClasificacionServicio {
           /*  producto= [select Id, RecordTypeId from product2 Where RecordTypeId = ];
            String recordId= producto[0].Id;
            String recordId */
-        //String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByDeveloperName().get('DSALES_ProdTangible').getRecordTypeId();
-        
+        //String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByName().get('Garantía Extendida').getRecordTypeId();
+        String producto= 'Producto';
         String query = 'Select Id, Name, StockKeepingUnit, DSALES_Categoria__r.Name, DSALES_SubCategoria__r.Name, DSALES_Clase__r.Name, ';
         query += ' DSALES_Familia__r.Name, DSales_Servicio__c, DSales_Seguro__c, DSALES_TipoServicio__c, DSALES_Noaplica__c, RecordTypeId ';
         query += 'from Product2 Where RecordTypeId != null and DSALES_Noaplica__c = false and DSales_Servicio__c = false and DSales_Seguro__c= false ';
@@ -46,6 +46,7 @@ public without sharing class DSALES_ClasificacionServicio {
         query += listSubCategorias.size() > 0 ? ' And DSALES_SubCategoria__c in :listSubCategorias ' : '';
         query += listClases.size() > 0 ? ' And DSales_Clase__c in :listClases ' : '';
         query += listFamilias.size() > 0 ? ' And DSALES_Familia__c in :listFamilias ' : '';
+        query += '  and DSales_Tipo_de_Producto__c= :producto';
         query += ' order by DSales_Servicio__c asc';
         objeto.listServicios = consultarProductos(DataBase.query(query));
         System.debug('Query: '+query);
@@ -129,16 +130,32 @@ public without sharing class DSALES_ClasificacionServicio {
         List<AsignarProductos> listproductos = new List<AsignarProductos>();
         List<String> idproducto= new List<String>();
         List<DSales_Asignacion_de_Productos__c> producto= new List<DSales_Asignacion_de_Productos__c>(); 
-        
-        producto= [Select DSales_Servicio_Seguro__c from DSales_Asignacion_de_Productos__c Where DSALES_Activo__c=true and DSales_Producto__c=:servicio ];
+        String checkProfile = checkProfileType('Administrador SM');
+        Boolean boolserv = false;
+        Boolean boolseg = false;
+        producto= [Select DSales_Servicio_Seguro__c from DSales_Asignacion_de_Productos__c Where DSALES_Activo__c=true];
         
         for(integer i=0; i<producto.size(); i++)
         {
             idproducto.add(producto[i].DSales_Servicio_Seguro__c);
         }
-        
-        for(Product2 item: [Select Id, (Select Id from Asignaciones_de_Productos1__r Where DSales_Producto__c = :servicio and DSALES_Activo__c=false), Name, StockKeepingUnit, DSALES_Depa__c, DSALES_SubCategorias__c, DSALES_Class__c,
-                            DSALES_Family__c from Product2 Where DSales_Tipo_de_Producto__c= 'Producto' and Id not in :idproducto and isActive = true order by Name asc])
+        if(checkProfile== 'Administrador SM')
+        {
+            boolserv = false;
+            boolseg = true;
+
+        }
+        else if (checkProfile== 'Administrador del sistema') {
+            boolserv = true;
+            boolseg = false;
+        }
+        else {
+            boolserv = true;
+            boolseg = false;
+        }
+       
+        for(Product2 item: [Select Id, (Select Id from Asignaciones_de_Productos1__r Where DSales_Producto__c = :servicio and DSALES_Activo__c=false), Name, StockKeepingUnit, DSALES_Categoria__r.Name, DSALES_SubCategoria__r.Name, DSALES_Clase__r.Name,
+                            DSALES_Familia__r.Name from Product2 Where DSales_Tipo_de_Producto__c= 'Producto' and Id not in :idproducto and isActive = true  and DSALES_Servicio__c = :boolserv and DSALES_Seguro__c= :boolseg order by Name asc])
         {
             AsignarProductos asignarProductos = new AsignarProductos(); 
             if(item.Asignaciones_de_Productos1__r.size()>0){
@@ -150,10 +167,10 @@ public without sharing class DSALES_ClasificacionServicio {
             asignarProductos.nombre = item.Name;
             //asignarProductos.servicio = item.DSales_Producto__c;
             asignarProductos.sku = item.StockKeepingUnit;
-            asignarProductos.departamento = item.DSALES_Depa__c;
-            asignarProductos.subcategoria = item.DSALES_SubCategorias__c;
-            asignarProductos.familia = item.DSALES_Family__c;
-            asignarProductos.clase = item.DSALES_Class__c;
+            asignarProductos.departamento = item.DSALES_Categoria__r.Name;
+            asignarProductos.subcategoria = item.DSALES_SubCategoria__r.Name;
+            asignarProductos.familia = item.DSALES_Familia__r.Name;
+            asignarProductos.clase = item.DSALES_Clase__r.Name;
             asignarProductos.seleccionadoSku= false;
             listproductos.add(asignarProductos); 
             
@@ -164,6 +181,7 @@ public without sharing class DSALES_ClasificacionServicio {
 
     @AuraEnabled
     public static void upsertVinculacion(String dataJSON){
+        system.debug(dataJSON);
         List<AsignarProductos> listSkuSelected= (List<AsignarProductos>) JSON.deserialize(dataJSON, List<AsignarProductos>.class);
        
         List<DSales_Asignacion_de_Productos__c> listUpsertVinculacion = new List<DSales_Asignacion_de_Productos__c>();
@@ -246,7 +264,6 @@ public without sharing class DSALES_ClasificacionServicio {
     @AuraEnabled
     public static void upsertRecord(String allData){
         List<Servicio> objeto= (List<Servicio>) JSON.deserialize(allData, List<Servicio>.class);
-        system.debug(objeto);
         List<Product2> listProductos= new List<Product2>();
         for(Servicio item: objeto){
             listProductos.add(new Product2(Id = item.id, DSALES_Servicio__c = item.servicio, 
@@ -451,6 +468,7 @@ public without sharing class DSALES_ClasificacionServicio {
 
     @AuraEnabled
     public static void insertListaPrecios(String idproductoservicio, String opcion, String JSON2){
+        system.debug(JSON2);
         List<Servicio> listaPreciosSelected = (List<Servicio>) JSON.deserialize(JSON2, List<Servicio>.class);
         List<Pricebook2> idlistaprecios= new List<Pricebook2>(); 
         idlistaprecios= [select id, name, IsStandard from Pricebook2 where  name= 'Standard Price Book' limit 1];
@@ -501,61 +519,104 @@ public without sharing class DSALES_ClasificacionServicio {
             return pickListValuesList2;
             }
 
-            @AuraEnabled
-            public static List<PicklistOp> getPickListValuesIntoList3(){
-                List<PicklistOp> pickListValuesList3= new List<PicklistOp>();
-                Schema.DescribeFieldResult fieldResult = Product2.DSALES_Matriz__c.getDescribe();
-                List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-                for( Schema.PicklistEntry pickListVal : ple){
-                    PicklistOp option = new PicklistOp();
-                    option.label= pickListVal.getLabel();
-                    option.value = pickListVal.getValue();
-                    pickListValuesList3.add(option);
-                }
-                return pickListValuesList3;
-                }
+        @AuraEnabled
+        public static List<PicklistOp> getPickListValuesIntoList3(){
+            List<PicklistOp> pickListValuesList3= new List<PicklistOp>();
+            Schema.DescribeFieldResult fieldResult = Product2.DSALES_Matriz__c.getDescribe();
+            List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+            for( Schema.PicklistEntry pickListVal : ple){
+                PicklistOp option = new PicklistOp();
+                option.label= pickListVal.getLabel();
+                option.value = pickListVal.getValue();
+                pickListValuesList3.add(option);
+            }
+            return pickListValuesList3;
+            }
 
-                @AuraEnabled
-                public static List<PicklistOp> getPickListValuesIntoList4(){
-                    List<PicklistOp> pickListValuesList4= new List<PicklistOp>();
-                    Schema.DescribeFieldResult fieldResult = Product2.DSALES_SegEspecifico__c.getDescribe();
-                    List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
-                    for( Schema.PicklistEntry pickListVal : ple){
-                        PicklistOp option = new PicklistOp();
-                        option.label= pickListVal.getLabel();
-                        option.value = pickListVal.getValue();
-                        pickListValuesList4.add(option);
-                    }
-                    return pickListValuesList4;
-                    }
+        @AuraEnabled
+        public static List<PicklistOp> getPickListValuesIntoList4(){
+            List<PicklistOp> pickListValuesList4= new List<PicklistOp>();
+            Schema.DescribeFieldResult fieldResult = Product2.DSALES_SegEspecifico__c.getDescribe();
+            List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+            for( Schema.PicklistEntry pickListVal : ple){
+                PicklistOp option = new PicklistOp();
+                option.label= pickListVal.getLabel();
+                option.value = pickListVal.getValue();
+                pickListValuesList4.add(option);
+            }
+            return pickListValuesList4;
+            }
 
               
 
+
+                    
     @AuraEnabled
     public static Product2 createProductIntan(Product2 productIntan, String sku){
         try{
             insert productIntan;
-            return productIntan;
-            
+            return productIntan;  
         }
         catch(Exception e){
            
         throw new AuraHandledException(e.getMessage());
     }
                     
-    }     
+    }
+
+    @AuraEnabled
+    public static String RecordTypeId(String tipoRegistro){
+        try{
+            String tipoRegistroId = Schema.SObjectType.Product2.getRecordTypeInfosByName().get(tipoRegistro).getRecordTypeId();
+            return tipoRegistroId;
+        }
+        catch(Exception e){
+           
+        throw new AuraHandledException(e.getMessage());
+    }
+                    
+    }
+
     @AuraEnabled
     public static void insertPocentajeCobro(String idservicio, String JSONP){
-       // List<String> listaPorcentajes = (List<String>) JSON.deserialize(JSONP, List<String>.class);
-       DSALES_ClasificacionServicioWrapper objeto = (DSALES_ClasificacionServicioWrapper) JSON.deserialize(JSONP, DSALES_ClasificacionServicioWrapper.class);
-       system.debug(objeto);
+       //List<porcentajesCobro> listaPorcentajes = (List<porcentajesCobro>) JSON.deserialize(JSONP, List<porcentajesCobro>.class);
+       //DSALES_ClasificacionServicioWrapper objeto = (DSALES_ClasificacionServicioWrapper) JSON.deserialize(JSONP, DSALES_ClasificacionServicioWrapper.class);
+       //system.debug(listaPorcentajes);
+       String listPorc= '['+JSONP+ ']';
+       List<porcentajesCobro> listaPorcentajes = (List<porcentajesCobro>) JSON.deserialize(listPorc, List<porcentajesCobro>.class);
+       system.debug(listPorc);
+       system.debug(listaPorcentajes);
        List<DASALES_Porcentajedecobro__c> listInsertPorcentajes= new List <DASALES_Porcentajedecobro__c>();
-        
-           /* for(Integer i=0; listaPorcentajes.size()>i; i++)
-            {
-                    listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=1, DSALES_Porcentaje__c=listaPorcentajes[i], DSALES_Product__c= idservicio));
+    
+        for(porcentajesCobro item: listaPorcentajes)
+        {
+            if(item.anio1!= 0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=1, DSALES_Porcentaje__c=item.anio1, DSALES_Product__c= idservicio));
             }
-            insert listInsertPorcentajes;*/
+
+            if(item.anio2!= 0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=2, DSALES_Porcentaje__c=item.anio2, DSALES_Product__c= idservicio));
+            }
+
+            if(item.anio3!=  0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=3, DSALES_Porcentaje__c=item.anio3, DSALES_Product__c= idservicio));
+            }
+
+            if(item.anio4!=  0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=4, DSALES_Porcentaje__c=item.anio4, DSALES_Product__c= idservicio));
+            }
+
+            if(item.anio5!=  0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=5, DSALES_Porcentaje__c=item.anio5, DSALES_Product__c= idservicio));
+            }
+
+            if(item.anio6!=  0){
+                listInsertPorcentajes.add(new DASALES_Porcentajedecobro__c(DSALES_Anios__c=6, DSALES_Porcentaje__c=item.anio6, DSALES_Product__c= idservicio));
+            }
+            
+
+        }
+        insert listInsertPorcentajes;
             
         
                     
@@ -649,13 +710,16 @@ public without sharing class DSALES_ClasificacionServicio {
         @AuraEnabled public String createdDate;
         @AuraEnabled public Boolean estado;
         @AuraEnabled public Boolean seleccionadoSku;
-        @AuraEnabled public String idasignacion;
-        
-
-
-
-       
+        @AuraEnabled public String idasignacion;    
     }
 
+    public class porcentajesCobro{
+        @AuraEnabled public integer anio1;
+        @AuraEnabled public integer anio2;
+        @AuraEnabled public integer anio3;
+        @AuraEnabled public integer anio4;
+        @AuraEnabled public integer anio5;
+        @AuraEnabled public integer anio6;      
+    }
     //guardo correctamente 5:25 pm"
 }

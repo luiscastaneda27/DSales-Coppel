@@ -1,12 +1,6 @@
 public class DSALES_ValidarClienteHelper {
     
-    
-    public class DSALES_ObtenerProductos{
-        public String nombre {get;set;}
-        public String sku {get;set;}
-        public String vigencia{get;set;}
-        public String tipoArticulo {get;set;}
-    }
+   
     //quote has Client´s email & name
     
     public static void recepcionProductos(List<DSALES_CertificadoWrapper.CertificadoRequest>certificado, String quoteId)
@@ -43,7 +37,6 @@ public class DSALES_ValidarClienteHelper {
             if(quoteLineMapTang.containsKey(assets.sku)){
                 quoteLineMapTang.remove(assets.sku);
             }
-            system.debug('Map tangibles @@: '+ quoteLineMapTang);
         }
         DELETE quoteLineMapTang.values();
     }
@@ -70,6 +63,7 @@ public class DSALES_ValidarClienteHelper {
         DELETE quoteLineMap.values();
        
     }*/
+    /*
     public static String ValidarCliente(String quoteId)
     {
         String clienteId;
@@ -135,7 +129,7 @@ public class DSALES_ValidarClienteHelper {
         return clienteId;
         
     }
-    
+    */
     //comparing QuoteLineItem products with Asset object 
    /* 
     public static void insertProduct(List<DSALES_AssetWrapper.AssetRequest> lstAsset, String accountId, String quoteId){
