@@ -416,10 +416,6 @@
         <apexClass>DSALES_VentaGEXRestTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>DSALES_claimCargarDocumentocontroller</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>DSALES_Certificado__c.DSALES_Caja_GEX__c</field>

@@ -150,6 +150,11 @@
 	<types>
 		<members>LOGO_COPPEL01</members>
 		<members>LOGO_COPPEL011</members>
+		<members>PISYS_Color</members>
+		<members>PISYS_Color1</members>
+		<members>PISYS_Color2</members>
+		<members>PISYS_Color3</members>
+		<members>PISYS_Color4</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
@@ -610,13 +615,13 @@
 		<members>DSALES_RutaIntegracion.DSALES_QuoteSM</members>
         <name>CustomMetadata</name>
     </types>
-	<!--<types>-->
-		<!--members>DSALES_ReportedeEndosos</members>
+	<types>
+	<!--members>DSALES_ReportedeEndosos</members>
 		<members>DSALES_ReportedeEndosos/XhYEjwaChGCwQkncVxUjtfkRWoloeo</members>
 		<members>TablerosdeEndosodeSM</members>
 		<members>TablerosdeEndosodeSM/XhYEjwaChGCwQkncVxUjtfkRWoloeo1</members>
 		<members>COPPELPISyS</members-->
-		<!--<members>COPPELPISyS</members>
+		<members>COPPELPISyS</members>
 		<members>COPPELPISyS/Garantaextendida</members>
 		<members>COPPELPISyS/Segurosdemotos</members>
 		<members>COPPELPISyS/Garantaextendida/qlMoAFAafYUpLidIIquKMuGnVMWNiU1</members>
@@ -625,8 +630,9 @@
 		<members>COPPELPISyS/Segurosdemotos/iRwyPzDoEOAkagKsTpvddsdZgnEsdP</members>
 		<members>COPPELPISyS/Segurosdemotos/GTlTBYAPdOjzISvFslZpRafnShxOuq</members>
 		<members>Tableros_Venta_GEX</members>
+		<members>Tableros_Venta_GEX/WKEgdHadQdsLxqKdOxltMNwbiGcBqw</members>
 		<name>Dashboard</name>
-	</types>-->
+	</types>
 	<types>
         <members>AccountType</members>
 		<members>QuoteStatus</members>
@@ -702,6 +708,8 @@
 		<members>DSALES_PISYS/DSALES_hr</members>
 		<members>DSALES_PISYS/DSALES_hrAmarillo</members>
 		<members>DSALES_PISYS/DSALES_hrAzul</members>
+		<members>DSALES_PISYS/DSALES_LogoInicial</members>
+		<members>DSALES_PISYS/DSALES_logoFinal</members>
 		<members>Experiences_Shared_Document_Folder/X1267382794_jpg</members>
 		<name>Document</name>
 	</types>
@@ -711,6 +719,7 @@
 	</types>
 	<types>
 		<members>DSALES_Deloitte</members>
+		<members>DSALES_PlantillasCorreos</members>
 		<members>DSALES_PlantillasCorreos/DSALES_CertificadoGEX</members>
 		<members>DSALES_PlantillasCorreos/DSALES_CertificadoPDF</members>
 		<members>DSALES_PlantillasCorreos/DSALES_Cotizacion</members>
@@ -960,19 +969,25 @@
 		<members>Claim.DSALES_Siniestro</members>
 		<name>RecordType</name>
 	</types>
-	<!--<types>
+	<types>
+		<members>CarpetaDanny</members>
 		<members>CarpetaDanny/DSALES_Indicadores_RAR</members>
 		<members>CarpetaDanny/DSALES_Venta</members>
 		<members>CarpetaDanny/DSales_Resultado_GEX_Division_Region_rhF</members>
 		<members>CarpetaDanny/DSales_Resultado_GEX_por_Mes_por_Tiendas_bWe</members>
 		<members>CarpetaDanny/DSales_Resultados_GEX_Tiendas_Bay</members>
+		<members>DSALES_ReportedeCotizacionesGEX</members>
 		<members>DSALES_ReportedeCotizacionesGEX/DSALES_Reporte_de_Cotizaciones_QP1</members>
 		<members>DSALES_ReportedeCotizacionesGEX/DSALES_TasaConversionGEX</members>
 		<members>DSALES_ReportedeCotizacionesGEX/DSALES_Tasa_de_conversin_de_Cotizaciones_GEX</members>
+		<members>DSALES_ReportedeCotizacionesSM</members>
 		<members>DSALES_ReportedeCotizacionesSM/DSALES_estatus_cotizaciones_POE</members>
+		<members>DSALES_ReportesdeCertificadosGEX</members>
 		<members>DSALES_ReportesdeCertificadosGEX/DSALES_reporte_de_CertificadosPrueba_ibX</members>
+		<members>DSALES_ReportesdeClientesGEX</members>
 		<members>DSALES_ReportesdeClientesGEX/DSALES_Reporte_de_Clientes_Buc</members>
 		<members>DSALES_ReportesdeClientesGEX/DSALES_Reporte_de_Clientes_Candidatos_8R9</members>
+		<members>DSALES_ReportesdeVentasGEX</members>
 		<members>DSALES_ReportesdeVentasGEX/DSALES_ResultadoDivision_9XK</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Indicadores_GEX_Region_yPR</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Indicadores_GEX_Resultado_Nacional_4TL</members>
@@ -989,16 +1004,18 @@
 		<members>CoppelPISyS/SegurosdeMotos/Plizas_de_Clientes_Sk7</members>
 		<members>CoppelPISyS/SegurosdeMotos/Top_de_Oportunidades_abiertas_kKq</members>
 		<members>CoppelPISyS/SegurosdeMotos/Oportunidades_sin_actividad_en_60_das_3Tw</members>
+		<members>CoppelPISyS/SegurosdeMotos/Clientes_con_cotizaciones_jaC</members>
+		<members>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
 		<name>Report</name>
-	</types>-->
-	<!--<types>
+	</types>
+	<types>
 	    <members>Clientes_con_p_lizas</members>
 		<members>Cuentas_Personales</members>
 		<members>DSALESCuentas_Oportunidades_Productos</members>
 		<members>DSALES_Oportunidades_Productos</members>
 		<members>Oportunidades_con_cotizaciones</members>
-		<name>ReportType</name>-->
+		<name>ReportType</name>>
 	</types>
 	<types>
 		<members>DSALES_Admin_GEX</members>
