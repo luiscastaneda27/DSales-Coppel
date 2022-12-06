@@ -19,19 +19,16 @@ global class DSALES_VentaSMRest {
                 try{
                     
                     DSALES_VentaSM.VentaSMRequest venta = (DSALES_VentaSM.VentaSMRequest)JSON.deserialize(body, DSALES_VentaSM.VentaSMRequest.class);
-                    System.debug('venta'+venta);
                     DSALES_AccountWrapper.AccountResponse cliente = DSALES_AccountWrapperRequest.upsertAccount(venta.cliente);
                     client_id=cliente.account_id;
-                    System.debug('cliente: '+ cliente);
-                    //values=json.serialize(cliente);
                     venta.pagos.AccountId=cliente.account_id;
                     venta.pagos.quoteid=venta.quoteId;
-                    System.debug('venta pagos:'+venta.pagos);
-
+                    Quote opp=[SELECT  OpportunityId FROM Quote WHERE Id=:venta.quoteId];
+                    Opportunity oppor=[SELECT StageName,SyncedQuoteId FROM Opportunity WHERE Id=:opp.OpportunityId ];
+                    oppor.StageName = 'Cerrada ganada';
+                	oppor.SyncedQuoteId = venta.quoteId;
+                    update oppor;
                     DSALES_PaymentInfoWrapper.PaymentResponse resp= DSALES_PaymentInfoWrapperRequest.insertPagos(venta.pagos);
-                    System.debug('pagos: '+resp);
-					System.debug('activo:'+venta.activos);
-                    
                     for(Id ids:resp.paymentInfo_ids){
                         String temp=insertIPAsset(venta.activos,ids,cliente.account_id);
                         paymentIds.add(ids);
@@ -64,16 +61,10 @@ global class DSALES_VentaSMRest {
 
     
     public static String insertIPAsset(DSALES_IPAssetWrapper.IPAssetRequest asset, String pagoId, String clientId){
-        System.debug('Asset: '+asset);
-        System.debug('cliente id: '+ clientId);
-        System.debug('pago id: '+pagoId);
         String assetId='';
         DSALES_IPAssetWrapper.IPAssetResponse response = new DSALES_IPAssetWrapper.IPAssetResponse();
         Account clientNumber =[ SELECT Id, CP_WalletCustomerNumber__c FROM Account WHERE ID= :clientId];
         DSALES_InformacionDePago__c pago=[SELECT Id,DSALES_SKU__c FROM DSALES_InformacionDePago__c WHERE Id=:pagoId];
-        //for(DSALES_IPAssetWrapper.IPAssetRequest asset:AssetInformation){
-       // asset.client_number=String.valueof(clientNumber.CP_WalletCustomerNumber__c);
-       //asset.client_id=clientNumber.Id;
         asset.payment_info = pagoId;
         if(pago.DSALES_SKU__c!=null){
             response= DSALES_IPAssetWrapperRequestActivo.insertActivo(asset);//moto entregada
