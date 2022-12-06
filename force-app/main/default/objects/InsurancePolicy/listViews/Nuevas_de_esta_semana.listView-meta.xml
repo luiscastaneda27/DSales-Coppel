@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nuevas_de_esta_semana</fullName>
+    <columns>Name</columns>
+    <columns>NameInsured</columns>
+    <columns>ExpirationDate</columns>
+    <columns>PremiumAmount</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CreatedDate</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Nuevas de esta semana</label>
+    <sharedTo>
+        <role>DSALES_Admin_SM</role>
+        <role>DSALES_Agente_de_servicio_SM</role>
+        <role>DSALES_Atenci_n_a_servicio</role>
+        <role>DSALES_Control_de_informes_SM</role>
+    </sharedTo>
+</ListView>

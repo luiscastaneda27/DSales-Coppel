@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar el estatus del endoso requerimiento de información</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>DSALES_MembreteParaEndoso</letterhead>
+    <name>Plantilla para endoso en estatus requerimiento de información</name>
+    <style>formalLetter</style>
+    <subject>Requerimiento de información de Endoso</subject>
+    <textOnly>Estimado(a) {!DSALES_Endoso__c.DSALES_Cliente__c}
+
+
+No. de Endoso # 01020102
+
+Te informamos que para poder completar tu Endoso {!DSALES_Endoso__c.Name}, acudas a tu sucursal
+mas cerna con la siguiente información:
+
+1.
+2.
+3.
+
+
+Para mayor información te invitamos a que acudas a tu sucursal Coppel mas cerna.
+
+Gracias por tu preferencia</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

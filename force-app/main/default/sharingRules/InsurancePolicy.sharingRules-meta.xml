@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Acceso_Control_de_Informes</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Acceso Control de Informes</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>DSALES_Control_de_informes_SM</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>DSALES_Gerente_Venta_seguros</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

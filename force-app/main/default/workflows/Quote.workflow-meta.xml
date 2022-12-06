@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>DSALES_Alertadecorreoparaelenvidecotizacin</fullName>
+        <description>Alerta de correo para el envió de cotización</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>atencion@coppel.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>DSALES_Deloitte/Envi_de_cotizaci_n_1660589806562</template>
+    </alerts>
+    <rules>
+        <fullName>test</fullName>
+        <active>false</active>
+        <formula>Id != null</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

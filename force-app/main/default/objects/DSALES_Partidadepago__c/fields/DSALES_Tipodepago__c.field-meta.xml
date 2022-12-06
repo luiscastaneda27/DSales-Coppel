@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Tipodepago__c</fullName>
+    <description>Campo para registrar que tipo de pago es.</description>
+    <externalId>false</externalId>
+    <label>Tipo de pago</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Crédito</fullName>
+                <default>false</default>
+                <label>Crédito</label>
+            </value>
+            <value>
+                <fullName>Débito</fullName>
+                <default>false</default>
+                <label>Débito</label>
+            </value>
+            <value>
+                <fullName>Contado</fullName>
+                <default>false</default>
+                <label>Contado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

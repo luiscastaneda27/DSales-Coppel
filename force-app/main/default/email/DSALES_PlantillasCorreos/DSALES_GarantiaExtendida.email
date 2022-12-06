@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>simple</title>
+      <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0," />
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css' />
+      <style type="text/css">
+      </style>
+   </head>
+   <body>
+      <div style="text-align: center;" >
+         <img style="width: 200px;" height="100px;" src="https://coppelmx--devpysis--c.visualforce.com/resource/1658326410000/DSALES_LogoGarantiaExtendida">
+      </div>
+      <p style="font-size: 18px;font-family:'sans-serif';color:rgb(0, 101, 173);" >{nombreCliente}
+         <br/><br/>
+         ¡Felicidades!, acabas de extender la garantía de tu producto adquirido en Coppel.<br/>
+         Te invitamos a consultar el certificado de tu Garantía Extendida en donde te compartimos el
+         detalle del servicio de protección que adquiriste y sus términos y condiciones para disfrutar de
+         sus beneficios.
+      </p>
+      <br/><br/>
+      <div style="text-align: center;" >
+         <img style="width: 350px;height: 135px;" src="https://coppelmx--devpysis--c.visualforce.com/resource/1658326396000/DSALES_LogoCoppelGEX">
+      </div>
+   </body>
+</html>

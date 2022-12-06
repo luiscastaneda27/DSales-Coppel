@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1 año</fullName>
+        <default>false</default>
+        <label>1 año</label>
+    </customValue>
+    <customValue>
+        <fullName>2 años</fullName>
+        <default>false</default>
+        <label>2 años</label>
+    </customValue>
+    <customValue>
+        <fullName>3 años</fullName>
+        <default>false</default>
+        <label>3 años</label>
+    </customValue>
+    <customValue>
+        <fullName>4 años</fullName>
+        <default>false</default>
+        <label>4 años</label>
+    </customValue>
+    <customValue>
+        <fullName>5 años</fullName>
+        <default>false</default>
+        <label>5 años</label>
+    </customValue>
+    <customValue>
+        <fullName>6 años</fullName>
+        <default>false</default>
+        <label>6 años</label>
+    </customValue>
+    <customValue>
+        <fullName>7 años</fullName>
+        <default>false</default>
+        <label>7 años</label>
+    </customValue>
+    <customValue>
+        <fullName>8 años</fullName>
+        <default>false</default>
+        <label>8 años</label>
+    </customValue>
+    <customValue>
+        <fullName>9 años</fullName>
+        <default>false</default>
+        <label>9 años</label>
+    </customValue>
+    <customValue>
+        <fullName>10 años</fullName>
+        <default>false</default>
+        <label>10 años</label>
+    </customValue>
+    <masterLabel>Tiempo de garantía extendida</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

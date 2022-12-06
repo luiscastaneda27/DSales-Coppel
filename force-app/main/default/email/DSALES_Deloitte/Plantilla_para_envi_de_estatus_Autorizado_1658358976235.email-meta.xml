@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informa al cliente que se requiere mas información para seguir con el procesos de su endoso</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Plantilla para envió de estatus requerimiento de info</name>
+    <pageDevName>Plantilla_para_envi_de_estatus_Autorizado</pageDevName>
+    <relatedEntityType>DSALES_Endoso__c</relatedEntityType>
+    <style>none</style>
+    <subject>Tramite en requerimiento de información</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{DSALES_Endoso__c.DSALES_Cliente__c}}}
+
+Debido a que la documentación presentada en su trámite de Endoso de su póliza de Club de Protección Motos está incompleta, no ha sido posible concluir el proceso de validación de manera satisfactoria.
+
+Sin embargo, le invitamos al área de cajas muebles de la tienda Coppel donde inició el trámite para que el gerente le dé mayores informes sobre la documentación requerida.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Respetuosamente,
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

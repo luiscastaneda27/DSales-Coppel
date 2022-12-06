@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinServ__General</fullName>
+    <active>true</active>
+    <businessProcess>FinServ__Opportunity Process</businessProcess>
+    <label>General</label>
+    <picklistValues>
+        <picklist>DB_Competitor__c</picklist>
+        <values>
+            <fullName>Competitor A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_Division__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSALES_RegionList__c</picklist>
+        <values>
+            <fullName>AZCAPOTZALCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIUDAD JUAREZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CUAUTITLAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CULIACAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GOMEZ PALACIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUADALAJARA I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GUADALAJARA II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HERMOSILLO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IXTAPALUCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IZTAPALAPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LEON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LOS MOCHIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERIDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MEXICALI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTERREY I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MONTERREY II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OAXACA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PUEBLA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAN LUIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TECAMAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEXCOCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOLUCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VERACRUZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VILLAHERMOSA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSales_Duracion_de_Garantia__c</picklist>
+        <values>
+            <fullName>12 Meses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 Meses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DSales_Extension_de_Garantia__c</picklist>
+        <values>
+            <fullName>12 Meses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 Meses</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tipo_de_servicio__c</picklist>
+        <values>
+            <fullName>GEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

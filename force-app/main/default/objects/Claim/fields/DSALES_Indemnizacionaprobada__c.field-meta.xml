@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Indemnizacionaprobada__c</fullName>
+    <description>Campo resumen para el conteo de pagos en resumen de pago de siniestro</description>
+    <externalId>false</externalId>
+    <label>Indemnización aprobada</label>
+    <summarizedField>ClaimPaymentSummary.PaymentAmount</summarizedField>
+    <summaryForeignKey>ClaimPaymentSummary.ClaimId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

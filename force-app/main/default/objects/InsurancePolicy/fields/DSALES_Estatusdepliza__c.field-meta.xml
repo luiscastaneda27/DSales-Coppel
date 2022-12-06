@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Estatusdepliza__c</fullName>
+    <description>Campo para revisar en que estatus se encuentra la póliza</description>
+    <externalId>false</externalId>
+    <label>Estatus de póliza</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>En solicitud</fullName>
+                <default>true</default>
+                <label>En solicitud</label>
+            </value>
+            <value>
+                <fullName>En trámite</fullName>
+                <default>false</default>
+                <label>En trámite</label>
+            </value>
+            <value>
+                <fullName>Vigente</fullName>
+                <default>false</default>
+                <label>Vigente</label>
+            </value>
+            <value>
+                <fullName>Vencida</fullName>
+                <default>false</default>
+                <label>Vencida</label>
+            </value>
+            <value>
+                <fullName>Cancelada</fullName>
+                <default>false</default>
+                <label>Cancelada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

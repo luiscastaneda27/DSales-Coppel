@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_TipoServ__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indica si es GEX o SM</description>
+    <externalId>false</externalId>
+    <label>Tipo de servicio</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,352 @@
+<b>
+        <table width="100%" style="color:rgb(0, 101, 173);">
+            <tr>
+                
+                <td ><img  width="185" height="65"  src="https://coppelmx--devpysis--c.visualforce.com/resource/1659047983000/gexV2?"/></td>
+                <td> <h2>
+                    Contrato de Servicio <br/> Garantía Extendida
+                    </h2> </td>
+                <td><img width="185" height="65"   src="https://coppelmx--devpysis--c.visualforce.com/resource/1658351938000/DSALES_CSimg"/></td>
+            </tr>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;font-family:'sans-serif';font-size:14px;">
+            
+            <tr> <td style='text-align:left;'>Datos de la sucursal</td>
+                <td></td>      
+                <td style="text-align:left; border-image: initial; border: .3px solid blue;"   > Folio:<span style='font-size:12px;'> Name</span></td>  
+                
+            </tr>  
+            <br/>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            
+            
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30.33%;"   > Tienda:<span style="font-size:12px;">DSALES_T_ienda__c</span>  </td>
+                <td style="width:3%"></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30.33%;"   > No. Caja: <span style="font-size:12px;"> DSALES_Caja_GEX__c</span></td>
+                <td style="width:3%"></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30.33%;"   > No. de Transacción: <span style="font-size:12px;">DSALES_Ticket__c</span></td>
+            </tr> 
+        </table>
+        <br/>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30%"   > No. de Vendedor: <span style="font-size:12px;">DSALES_Numero_de_Vendedor__c</span></td>
+                <td style=" width:2.5%"   > </td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:65%"   > Nombre del vendedor: <span style="font-size:12px;">DSALES_Nombre_Vendedor__c</span></td>
+                
+            </tr> 
+        </table>
+        <br/>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <th> Datos del Cliente <br/><br/></th>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue; width:90%;"   > Nombre del Cliente:<span style="font-size:12px;"> DSALES_NombreCliente__c</span></td>
+            </tr>
+            <tr> <td style="width:5%;" ></td></tr>
+            <tr> <td style="width:5%;" ></td></tr>
+            <tr> 
+                <td style=" border-image: initial; border: 0.3px solid blue; width:90%;"   >Domicilio del Cliente: <span style="font-size:12px;">DSALES_Domicilio_del_Client_e__c</span></td>
+            </tr>
+            <br/>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue; width:35.3%;"   > Email: <span style="font-size:12px;">DSALES_Email__c</span></td>
+                <td style="  width:1.5%;" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30%;"   > No. de Teléfono: <span style="font-size:12px;">DSALES_No_de_Telefono__c</span></td>
+                <td style="  width:1.5%;" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:30.3%;"   > No. de Celular:<span style="font-size:12px;"> DSALES_Numero_celular__c</span></td>
+            </tr>
+        </table>
+        <br/>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            
+            <th> Información del Artículo <br/> <br/></th>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue; width:49%;"   >SKU:<span style="font-size:12px;"> DSALES_S_KU__c</span></td>
+                <td style="width:1%" ></td>
+                
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   >Modelo: <span style="font-size:12px;">DSALES_M_odelo__c</span></td>
+            </tr>
+        </table>
+        
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Marca: <span style="font-size:12px;">DSALES_M_arca__c</span></td>
+                <td style="width:1%" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > No. de serie: <span style="font-size:12px;">DSALES_Numero_serie__c</span></td>
+            </tr>
+        </table>
+        
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:100%;"   > Descripción del artículo:<span style="font-size:12px;"> DSALES_Descripci_n_del_artculo__c</span></td>
+                
+            </tr>
+        </table>
+        
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Precio del artículo: $ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:12px;">DSALES_Precio_del_Articulo__c</span>&nbsp;&nbsp; MXN</td>
+                <td style="width:1%" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Fecha de venta del artículo: &nbsp; <span style="font-size:12px;">DSALES_Fecha_de_venta_del_articulo__c</span>  </td>
+            </tr>
+        </table>
+        <br/>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <th> Información Garantía Extendida</th>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+             <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                
+                <td style=" border-image: initial; border: 0.3px solid blue; width:100%;"   >Duración de Garantía Extendida adquirida en meses: <span style="font-size:12px;">DSALES_Duracion_de_GEX__c</span></td>
+            </tr>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr><td></td></tr>
+            <tr><td></td></tr><tr><td></td></tr>
+            
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Fecha de compra de Garantía Extendida: <span style="font-size:12px;">DSALES_Fecha_de_compra_GEX__c </span></td>
+                <td style="width:1%" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Fecha de inicio de vigencia <span style="font-size:12px;">DSALES_Fecha_Inicio_de_Vigencia__c </span></td>
+            </tr>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            
+            <tr><td></td></tr>  
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Costo de garantía extendida: $&nbsp;&nbsp;&nbsp; <span style="font-size:12px;">DSALES_Costo_de_Garantia_Extendida__c &nbsp;&nbsp;&nbsp; MXN</span></td>
+                <td style="width:1%" ></td>
+                <td style=" border-image: initial; border: 0.3px solid blue;width:49%;"   > Fecha fin de vigencia  <span style="font-size:12px;">DSALES_Fecha_Fin_Vigencia__c  </span> </td>
+            </tr>
+        </table>
+    </b>
+    <br/><br/><br/>
+    <p style="text-align:center; font-size:10px; color:rgb(0, 101, 173);">El Cliente manifiesta y acepta, que recibió el contrato de Servicio con los Términos y Condiciones de Garantía extendida</p>
+    <b>
+        <table width="100%" style="color:rgb(0, 101, 173); font-family:'sans-serif';font-size:14px;">
+            <tr > <td style="width:49%;">
+                &nbsp;&nbsp; _______________________________________
+                
+                </td>
+                <td style="width:1%;"></td>
+                <td style="width:49%;"> 
+                    &nbsp;&nbsp; _______________________________________
+                </td></tr>
+        </table>
+        <table width="100%" style="color:rgb(0, 101, 173);font-family:'sans-serif';font-size:14px;">        
+            <tr style="text-align:center ;">
+                <td style="width:49%;">Nombre del contratante</td>
+                <td style="width:1%;"></td>
+                <td style="width:49%;">Firma del contratante <br/>(Aceptación del Contrato de Servicio) </td>
+            </tr>
+            
+        </table>
+    </b>
+    <div style="page-break-after:always;" />
+    <table width="100%" style="color:rgb(0, 101, 173);">
+        <tr>
+            <td ><img width="185" height="65"  src="https://coppelmx--devpysis--c.visualforce.com/resource/1659047983000/gexV2?"/></td>
+            <td> <h2>
+                Contrato de Servicio <br/> Garantía Extendida
+                </h2> </td>
+            <td><img width="185" height="65"   src="https://coppelmx--devpysis--c.visualforce.com/resource/1658351938000/DSALES_CSimg?"/></td>
+        </tr>
+    </table>
+    <p style="color:rgb(0, 101, 173);"> Coberturas</p>
+    <table width="100%" style="font-size:8.7px ;">
+        <tr>
+            <th style="text-align: left; width:50%;">1. Extensión de la Garantía</th>
+            <th style="width:50%;color:rgb(0, 101, 173);">Obligaciones del Cliente para hacer efectiva la Garantía Extendida</th>
+        </tr>
+        <tr>
+            <td>El servicio Garantía Extendida prolonga el tiempo de la garantía otorgada por el<br/>
+                fabricante o la Garantía Coppel, la que concluya al último. Así, los artículos adquiridos en<br/>
+                Coppel quedan protegidos por uno o dos años más, de acuerdo con la cobertura<br/>
+                contratada estipulada en el certificado, frente a los desperfectos o fallas que el artículo<br/>
+                amparado llegase a presentar.
+            </td>
+            <td>1. Cuidar el producto y, después de presentar una falla, adoptar las medidas<br/>
+                necesarias para evitar el agravamiento del daño. <br/>
+                2. Entregar el productodañadoen caso de ser reemplazado.<br/>
+                3. Recoger el producto de reemplazo en su tienda Coppel, en un plazo de 30<br/>
+                días naturales contados desde la fecha de notificación. Transcurrido dicho<br/>
+                periodo Coppel se libera de responsabilidad del producto. Solo aplica en caso<br/>
+                de que el reemplazo se entregue en Tienda).<br/>
+                4. En caso de equipos computacionales, y/o cualquier dispositivo susceptible<br/>
+                de almacenar información, respaldar sus archivos antes que el producto<br/>
+                ingrese a servicio técnico.<br/>
+                5. Para poder hacer válido el servicio de Garantía Extendida, el Cliente deberá<br/>
+                de tener sus pagos al corriente o no presentar adeudos.</td>
+        </tr>
+        <tr>
+            <th style="text-align: left;">2. Reparación</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Cubre las reparaciones necesarias cuando el artículo presente fallas de funcionalidad o de<br/>
+                fábrica, durante el periodo contratado que se indica en este certificado de compra,<br/>
+                entregado como documento por la adquisición de este servicio. La reparación de un<br/>
+                artículo en el Taller de Servicios Coppel cuenta con al menos 90 días naturales de garantía<br/>
+                sobre la reparación a partir de la fecha de entrega.<br/>
+            </td>
+            <td>En caso de proceder con una Reparación, Coppel se compromete a:<br/>
+                1. En un plazo no mayor de 15 días naturales contados desde que el producto<br/>
+                ingresa a Taller de Servicios Coppel, reparar la falla del artículo.<br/>
+                2. Los respectivos diagnósticos y reparaciones del artículo se llevarán a cabo<br/>
+                exclusivamente por técnicos autorizados por Coppel.<br/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th style="text-align: left;">3. Reemplazo o Cambio Físico</th>
+            <th style="color:rgb(0, 101, 173);">Exclusiones </th>
+        </tr>
+        <tr>
+            <td>Si el artículo no puede ser reparado en el Taller de Servicios Coppel, se procederá al<br/>
+                reemplazo del artículo por uno nuevo de igual o de características similares. El valor del<br/>
+                nuevo artículo que se entregará en reemplazo nunca podrá superar el valor del producto<br/>
+                original, este valor se encuentra expresado en el ticket de compra, en este certificado o en<br/>
+                la factura del artículo.<br/><br/>
+                Una vez realizado dicho reemplazo, el presente certificado dejará de tener validez y se dará<br/>
+                por terminado automáticamente el servicio de Garantía Extendida.<br/><br/>
+                El artículo de reemplazo nuevo contará con 3 meses de Garantía Coppel, sin embargo para<br/>
+                que tenga el servicio de Garantía Extendida deberá ser contratado nuevamente por el<br/>
+                Cliente desde cero<br/>
+            </td>
+            
+            <td>La Garantía Extendida No aplica cuando:<br/><br/>
+                1. Cuando el producto se encuentra bajo la cobertura de la Garantía del<br/>
+                fabricante y este lo pueda atender.<br/>
+                2. Si la utilización del producto es de forma intensiva, con fines comerciales o<br/>
+                industriales, con cualquier fin de lucro o de alguna manera para la cual el<br/>
+                producto no fue diseñado.<br/>
+                3. Accesorios adicionales al producto que hayan sido incorporados al mismo por<br/>
+                el Cliente o reposición de productos o artículos reemplazables por el Cliente<br/>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left;">4. Descarga Eléctrica</th>
+            <th></th>
+            
+        </tr>
+        <tr><td>Protege al artículo de una variación de voltaje, es decir, cuando el artículo sufre una<br/>
+            sobrecarga o descarga de voltaje por el contacto del suministro de energía eléctrica,<br/>
+            por la conexión de antena, por cortocircuitos o por causas inherentes al funcionamiento<br/>
+            del artículo. Para la cobertura de Descarga Eléctrica, su vigencia inicia desde el día de la<br/>
+            compra de Garantía Extendida y mientras el certificado se encuentre vigente.<br/>
+            
+            </td>
+            
+            <td>La Garantía Extendida No cubre:<br/><br/>
+                1. Si el producto se hubiese utilizado en condiciones distintas a las normales o<br/>
+                de acuerdo a las indicaciones del instructivo de uso.<br/>
+                2. Mal funcionamiento derivado de accidentes de cualquier naturaleza, golpes o<br/>
+                caídas.<br/>
+                3. Daños o averías de componentes estéticos.<br/>
+                4. Daños o averías por extravío, robo total o parcial del producto.<br/>
+                5. Daños o averías causadas intencionalmente al producto por abuso o maltrato.<br/>
+                6. Daños o averías causadas por condiciones extrínsecas al producto (Ejemplo:<br/>
+                Corrosión u oxidación creadas por el desgaste por uso o por circunstancias<br/>
+                climáticas como arena, polvo, humedad, etc).
+                
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <th style="text-align: left; color:rgb(0, 101, 173);">Vigencia</th>
+            <th></th>
+            
+        </tr>
+        <tr>
+            <td>El servicio de Garantía Extendida comienza a regir al expirar la garantía original del<br/> 
+                fabricante o de la Garantía Coppel, lo que concluya al último. O bien, el inicio de la<br/>
+                vigencia expresada en este certificado, y no se extiende a desperfectos o fallas<br/>
+                excluidas por la garantía original del producto. Este servicio terminará automáticamente<br/>
+                en caso de fraude, intento de fraude, una vez efectuado un reemplazo del producto<br/>
+                cubierto por Garantía Extendida o en caso de que alguna de las partes involucradas<br/>
+                incumpla cualquiera de sus obligaciones expedidas en esta póliza. En este caso, se deja<br/>
+                expresa constancia de que el servicio de Garantía Extendida NO se extenderá al nuevo<br/>
+                producto reemplazado.<br/><br/>
+                El servicio de Garantía Extendida es intransferible a otro producto, sólo cubre el artículo<br/>
+                descrito en la presente póliza.<br/>
+                <br/>
+            </td>
+            
+            <td> 7. Daños o averías ocurridas al producto en el traslado al centro de servicios,<br/>
+                distinto al traslado que realice Coppel en términos de servicio.<br/>
+                8. Piezas fragmentadas, rotas o dañadas como resultado de la falta de<br/>
+                mantenimiento.<br/>
+                9. Reparación o piezas cubiertas por una garantía original del fabricante.<br/>
+                10. Programas de aplicaciones así como software de operación o cualquier otro<br/>
+                software.<br/>
+                11. Limpieza, ajustes o mantenimientos preventivos al producto.<br/>
+                12. El producto hubiera sido reparado, intervenido o alterado por terceros no<br/>
+                autorizados.<br/>
+                13. Daños accidentales o consecuentes ocasionados por el desperfecto o mal<br/>
+                funcionamiento del producto.<br/>
+                14. Daños provocados por el Cliente por accidentes o intencionalmente (abuso /<br/>
+                maltrato).<br/>
+                
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <th style="text-align: left;color:rgb(0, 101, 173);">Notificación</th>
+            <th></th>
+            
+        </tr>
+        <tr>
+            <td>Deberá acudir al módulo de Servicios y Garantías de tu tienda Coppel más cercana,<br/>
+                siempre y cuando su Garantía Extendida se encuentre vigente. <br/><br/>
+                Si el tamaño y peso del artículo lo permiten, podrá acudir a cualquier tienda Coppel <br/>
+                para entregar su artículo para ser reparado, por otra parte si el artículo es de difícil <br/>
+                manejo por su tamaño o peso, Coppel enviará un chofer para recoger dicho artículo en <br/>
+                el domicilio indicado en la presente póliza. Los servicios de desinstalación y/o<br/>
+                instalación del artículo deberán correr por cuenta del Cliente..<br/>
+            </td>
+            
+            <td> Coppel no será responsable por la restauración de programas, pérdida de datos o<br/>
+                información, ocasionados por la falla del producto o debidos al proceso de reparación del<br/>
+                mismo.<br/>
+                Coppel no se compromete a resarcir algún daño o pagar una prestación en dinero.<br/>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left;color:rgb(0, 101, 173);">Cancelación</th>
+            <th></th>
+            
+        </tr>
+        <tr>
+            <td>En caso de que el Cliente decida cancelar el servicio Garantía Extendida solo tiene<br/>
+                hasta 30 días naturales a partir de la fecha de compra, el servicio podrá ser cancelado<br/>
+                y el importe pagado será devuelto en su totalidad. Después de 30 días naturales a<br/>
+                partir de la fecha de compra, el servicio procederá a un convenio de devolución basado<br/>
+                en las políticas de Coppel aplicando el criterio de cobro por uso.<br/>
+            </td>
+            <td style="align:right;color:rgb(0, 101, 173);"> Consulta términos y condiciones en coppel.com/terminos-y-condiciones<br/>
+                Para más información consulta en coppel.com/servicios
+            </td>
+        </tr>
+        
+    </table>

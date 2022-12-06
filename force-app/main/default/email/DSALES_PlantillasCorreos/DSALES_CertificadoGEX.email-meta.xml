@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>correo para enviar el certificado al cliente</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>DSALES_Certificados</letterhead>
+    <name>CertificadoGEX</name>
+    <style>freeForm</style>
+    <subject>Tu certificado de Garantía Extendida Coppel / La compra de tu Garantía Extendida ha sido exitosa.</subject>
+    <textOnly>{!DSALES_Certificado__c.DSALES_Cliente__c}
+
+
+¡Felicidades!, acabas de extender la garantía de tu producto adquirido en coppel.
+Te invitamos a consultar el certificado de tu Garantía Extendida en donde te compartimos el
+detalle del servicio de protección que adquiriste y sus términos y condiciones para disfrutar de
+sus beneficios.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

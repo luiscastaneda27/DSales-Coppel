@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dsales_Divisin__c</fullName>
+    <externalId>false</externalId>
+    <label>División</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DIVISIÓN TIENDAS I</fullName>
+                <default>false</default>
+                <label>DIVISIÓN TIENDAS I</label>
+            </value>
+            <value>
+                <fullName>DIVISIÓN TIENDAS II</fullName>
+                <default>false</default>
+                <label>DIVISIÓN TIENDAS II</label>
+            </value>
+            <value>
+                <fullName>DIVISIÓN TIENDAS III</fullName>
+                <default>false</default>
+                <label>DIVISIÓN TIENDAS III</label>
+            </value>
+            <value>
+                <fullName>DIVISIÓN TIENDAS IV</fullName>
+                <default>false</default>
+                <label>DIVISIÓN TIENDAS IV</label>
+            </value>
+            <value>
+                <fullName>DIVISIÓN TIENDAS V</fullName>
+                <default>false</default>
+                <label>DIVISIÓN TIENDAS V</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

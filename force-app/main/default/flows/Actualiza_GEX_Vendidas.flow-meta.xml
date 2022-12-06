@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Validar</name>
+        <label>Validar</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Copia_1_de_Actualiza_check_vendido</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Resultado predeterminado</defaultConnectorLabel>
+        <rules>
+            <name>Valida_servicio</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.DSALES_TipoCompra__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Servicio</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Actualiza_check_servicio</targetReference>
+            </connector>
+            <label>Valida servicio</label>
+        </rules>
+    </decisions>
+    <description>Actualiza check de tipo servicio en OportunityLineItems</description>
+    <environments>Default</environments>
+    <interviewLabel>Actualiza GEX Vendidas {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Actualiza GEX Vendidas</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Actualiza_check_servicio</name>
+        <label>Actualiza check servicio</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>DSALES_TipoServ__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>DSALES_Vendido__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.DSALES_Oportunidad__r.OpportunityLineItems</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copia_1_de_Actualiza_check_vendido</name>
+        <label>Copia 1 de Actualiza check vendido</label>
+        <locationX>314</locationX>
+        <locationY>455</locationY>
+        <inputAssignments>
+            <field>DSALES_Vendido__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.DSALES_Oportunidad__r.OpportunityLineItems</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Validar</targetReference>
+        </connector>
+        <object>DSALES_InformacionDePago__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

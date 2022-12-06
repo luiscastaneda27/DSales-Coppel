@@ -1,0 +1,3 @@
+<apex:page renderAs="PDF" Controller="DSALES_ControladorCertificadoPDF" >
+    <apex:outputText value="{!html}" escape="false"  />
+</apex:page>

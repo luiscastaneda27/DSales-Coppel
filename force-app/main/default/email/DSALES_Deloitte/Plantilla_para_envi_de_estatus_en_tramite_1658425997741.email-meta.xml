@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informa al cliente que el endoso esta en tramite</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Plantilla para envió de estatus en tramite</name>
+    <pageDevName>Plantilla_para_envi_de_estatus_en_tramite1</pageDevName>
+    <relatedEntityType>DSALES_Endoso__c</relatedEntityType>
+    <style>none</style>
+    <subject>Endoso en tramite</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{DSALES_Endoso__c.DSALES_Cliente__c}}}
+
+De acuerdo a la documentación presentada en su trámite de Endoso de su póliza de Club de Protección Motos está completa, ha sido posible concluir el proceso de validación de manera satisfactoria.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Respetuosamente, 
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

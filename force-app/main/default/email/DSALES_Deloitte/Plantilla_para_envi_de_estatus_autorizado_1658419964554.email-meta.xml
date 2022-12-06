@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Informa al cliente que su endoso fue autorizado</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Plantilla para envió de estatus autorizado</name>
+    <pageDevName>Plantilla_para_envi_de_estatus_autorizado1</pageDevName>
+    <relatedEntityType>DSALES_Endoso__c</relatedEntityType>
+    <style>none</style>
+    <subject>Endoso Autorizado</subject>
+    <textOnly>Club de protección le informa
+
+Estimado (a) {{{DSALES_Endoso__c.DSALES_Cliente__c}}}
+
+Debido a que la documentación que presentó en su trámite de endoso a su póliza de Club de Protección Motos cumplió con los requisitos necesarios, le informamos que el proceso de validación concluyó de manera satisfactoria.
+
+Adjunto en el correo se encuentra su póliza con el endoso aplicado.
+
+Le reiteramos nuestro compromiso de seguir brindándole el servicio y la atención que usted se merece.
+
+Esperando que usted y su familia se encuentren bien, le enviamos un fuerte y cálido abrazo.
+
+Respetuosamente,
+
+El equipo de Club de Protección</textOnly>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_A_o_de_ltima_remodelaci_n__c</fullName>
+    <description>Indica el año de última remodelación</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indica el año de última remodelación</inlineHelpText>
+    <label>Año de última remodelación</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,320 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" >
+    <!-- MODAL HEADER -->
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading--medium" >Carga De Documentos </h4>
+    </div>
+    
+    
+    <!-- attributes -->
+    <aura:attribute name="claim" type="Claim" default="{'sobjectType':'Claim', 
+                                                       'ClaimType': 'Robo Total' }"/>
+    <aura:attribute name="recordId" type="String"  /> 
+<force:recordData layoutType="FULL"
+                  recordId="{!v.recordId}"
+                  targetFields="{!v.claim}"
+                  recordUpdated="{!c.recordUpdate}" />  
+     <aura:if isTrue="{!v.ClaimType == RoboTotal}">  
+           <div style="background-color:LightBlue">  
+   
+         <div class="slds"> 
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate">TIPO DE DOCUMENTO</span></th>
+                    <th scope="col"><span class="slds-truncate">QUALITAS</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Factura</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>ConstanciaBajaPlacas</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>Descripcion</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>Comprobante</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>IdComprobante</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>CarpetaMP</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>AcreditacionMP</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>OficioLiberacionRobo</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>IdentificacionFrontal</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>IdentificacionReverso
+                        
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>ComprobanteDomicilio</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>CURP
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>EncabezadoCuentaBancaria
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>PoderNotarial
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>EncabezadoCuentaBancaria
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>ConstanciaSituacionFiscal
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>CartaConsentimientoCFDI
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>FormatoCompraVenta
+                    </td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                
+                <tr>
+                    <td>FormatoFiniquito</td>
+                    <td> <!--Upload  the file-->
+                        <lightning:fileUpload label=" "
+                                              name="fileUploader"
+                                              multiple="true"
+                                              accept=".pdf, .png, .xlsx, .xls, .csv, .doc, .docx, .jpg"
+                                              recordId="{!v.recordId}"
+                                              onuploadfinished="{!c.handleUploadFinished}" />
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+         </div>
+         <aura:set attribute="else">
+        <div style="background-color:LightBlue">
+            There is no document to upload.
+        </div>
+    </aura:set>
+</aura:if>
+    
+    
+    <div class="slds-col modal-footer slds-modal__footer">    
+        <lightning:button label="Cancel" title="Cancel" onclick="{! c.handleClick }"/>
+        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleClick }" />
+    </div>
+    
+    
+</aura:component>

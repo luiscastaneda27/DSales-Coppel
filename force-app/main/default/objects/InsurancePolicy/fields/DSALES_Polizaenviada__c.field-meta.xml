@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Polizaenviada__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Nos indica si la póliza completa ya fue enviada a NPV</description>
+    <externalId>false</externalId>
+    <label>Póliza enviada</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

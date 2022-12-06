@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Actualizar Siniestro</label>
+    <protected>false</protected>
+    <values>
+        <field>DSALES_Endpoint__c</field>
+        <value xsi:type="xsd:string">https://1398fd0d-13e8-4a08-8b26-f4ea413b8093.mock.pstmn.io/siniestroput/1</value>
+    </values>
+</CustomMetadata>

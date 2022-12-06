@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>DSALES_Endoso__c</entityName>
+    <fieldName>DSALES_Estatus__c</fieldName>
+    <masterLabel>Ruta de estatus de Endosos</masterLabel>
+    <recordTypeName>Registro_de_endoso_completo</recordTypeName>
+</PathAssistant>
