@@ -913,6 +913,7 @@
 	<types>
 		<members>DSALES_PermisosAdminPisys</members>
 		<members>DSALES_Plantillas_de_construcci_n</members>
+		<members>DSales_AdministradorSistemaPisys</members>
 		<name>PermissionSet</name>
 	</types>
 	<types>
