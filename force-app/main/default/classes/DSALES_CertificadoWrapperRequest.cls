@@ -11,9 +11,20 @@ global with sharing class DSALES_CertificadoWrapperRequest {
                 try{
                     DSALES_CertificadoWrapper.CertificadoRequest certificado = (DSALES_CertificadoWrapper.CertificadoRequest)JSON.deserialize(body, DSALES_CertificadoWrapper.CertificadoRequest.class);
                     responsePayload = insertCertificado(certificado);
-                }catch(Exception e){
+                }
+                
+                catch(Exception.JSONException e)
+                {
                     responsePayload.success = false;
-                    responsePayload.error_message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
+                    responsePayload.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
+                    responsePayload.error_code=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    
+                }
+                 catch(Exception e){
+                    responsePayload.success = false;
+                    responsePayload.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    responsePayload.error_code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    
                     
                 }
             }
@@ -27,6 +38,7 @@ global with sharing class DSALES_CertificadoWrapperRequest {
         DSALES_Certificado__c certificadoRecord = new DSALES_Certificado__c();
         Boolean success = false;
         String message = '';
+        String code='';
         try{
             if(certificado.client_number!=null)
                {
@@ -66,19 +78,23 @@ global with sharing class DSALES_CertificadoWrapperRequest {
             insert certificadoRecord;
             
             success = true;
-            message = 'Certificado successfully saved';
+            message = '';
             system.debug('message' +message);
             
-        }catch(Exception e){
-            success = false;
-            message = 'Error: ' + e.getMessage() +' Line: '+e.getLineNumber();
-            
-        }
+        } catch(Exception e){
+                    success = false;
+                    message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    
+                    
+                }
         
         DSALES_CertificadoWrapper.CertificadoResponse responsePayload = new DSALES_CertificadoWrapper.CertificadoResponse();
         responsePayload.success = success;
         responsePayload.error_message = message;
+        responsePayload.error_code=code;
         responsePayload.certificado_id = certificadoRecord.id;
+        
         return responsePayload;
     }
     

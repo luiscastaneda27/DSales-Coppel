@@ -33,6 +33,7 @@ global class DSALES_CertificadoWrapper {
     
     global class CertificadoResponse{
         global Boolean success {get;set;}
+        global String error_code {get;set;}
         global String error_message {get;set;}
         global String certificado_id {get;set;}
     }
