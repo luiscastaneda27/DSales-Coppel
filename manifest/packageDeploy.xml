@@ -159,7 +159,6 @@
 	</types>
 	<types>
 		<members>Asset.DSALES_PysisCompactLayout</members>
-		<members>DSALES_Endoso__c-Formato Endoso</members>
 		<members>Claim.DSALES_Formato_compacto_siniestro</members>
 		<members>DSALES_Certificado__c.DSALES_Certificado</members>
 		<members>DSALES_Endoso__c.DSALES_Formato_compacto_endoso</members>
@@ -995,6 +994,7 @@
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_DivisionRegion_I6Q</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_Region_qfw</members>
 		<members>DSALES_ReportesdeVentasGEX/DSales_Resultado_GEX_Zonas_g9H</members>
+		<!--members>DSALES_ReportesdeVentasGEX/DSales_Resultados_GEX_por_Tiendas_Udp</members-->
 		<members>CoppelPISyS</members>
 		<members>CoppelPISyS/SegurosdeMotos/DSALES_Venta_Total_por_Mes_59p</members>
 		<members>CoppelPISyS/SegurosdeMotos</members>

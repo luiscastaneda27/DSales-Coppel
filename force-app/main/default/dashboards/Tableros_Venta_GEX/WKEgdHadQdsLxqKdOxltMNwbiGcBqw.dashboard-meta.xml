@@ -276,7 +276,7 @@
             <rowIndex>8</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
-        <dashboardGridComponents>
+        <!--dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>0</columnIndex>
             <dashboardComponent>
@@ -318,7 +318,7 @@
             </dashboardComponent>
             <rowIndex>16</rowIndex>
             <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
+        </dashboardGridComponents-->
         <dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>4</columnIndex>
@@ -370,7 +370,7 @@
             <rowIndex>16</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
-        <dashboardGridComponents>
+        <!--dashboardGridComponents>
             <colSpan>4</colSpan>
             <columnIndex>8</columnIndex>
             <dashboardComponent>
@@ -626,7 +626,7 @@
             </dashboardComponent>
             <rowIndex>32</rowIndex>
             <rowSpan>8</rowSpan>
-        </dashboardGridComponents>
+        </dashboardGridComponents-->
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
