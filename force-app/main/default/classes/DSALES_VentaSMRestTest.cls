@@ -126,6 +126,7 @@ public with sharing class DSALES_VentaSMRestTest {
         RestContext.response=response;
         DSALES_VentaSM.VentaSMRequest venta =(DSALES_VentaSM.VentaSMRequest)JSON.deserialize (body,DSALES_VentaSM.VentaSMRequest.class);
         Test.startTest();
+        Test.setMock(HttpCalloutMock.class, new DSALES_MockHttpResponsePolizaTest());
         DSALES_VentaSMRest.createVenta();
         Test.stopTest();
         RestContext.request = request;
