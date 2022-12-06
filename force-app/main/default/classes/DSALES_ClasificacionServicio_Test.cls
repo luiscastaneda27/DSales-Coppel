@@ -113,12 +113,16 @@ public class DSALES_ClasificacionServicio_Test {
         DSALES_ClasificacionServicio.getClases('Garantía extendida');
         DSALES_ClasificacionServicio.getFamilias('Garantía extendida');
         DSALES_ClasificacionServicio.getMatriz();
-        //DSALES_ClasificacionServicio.updateMatriz('[{"label": "test1"}]', DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
-         
+        DSALES_ClasificacionServicio.upsertRecord('[{"categoria":"LÍNEA BLANCA","clase":"COOLER","familia":"VENTANA","id":"01t75000000nGHOAA2","noAplica":true,"nombre":"Extractor de Aire 6p Volteck color Blanco","seguro":false,"servicio":false,"sku":"48671001","subCategoria":"COOLER","tipoServicio":"0"}]');
+        DSALES_ClasificacionServicio.RecordTypeId('Garantía Extendida');
+        DSALES_ClasificacionServicio.updateMatriz('["a3075000000D4YcAAK"]', DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
+        //DSALES_ClasificacionServicio.insertListaPrecios('01t75000000nGHOAA2','1','[]');
+        DSALES_ClasificacionServicio.insertPocentajeCobro(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'),'{"anio1":"6","anio2":"5","anio3":"9","anio4":0,"anio5":0,"anio6":0}');
         DSALES_ClasificacionServicio.getPickListValuesIntoList1();
         DSALES_ClasificacionServicio.getPickListValuesIntoList2();
         DSALES_ClasificacionServicio.getPickListValuesIntoList3();
         DSALES_ClasificacionServicio.getPickListValuesIntoList4();
+       // DSALES_ClasificacionServicio.createProductIntan('{valueSelectedtipoProducto: 'Servicio', DSales_Tipo_de_Producto__c: 'Servicio', tipoSeguroServicio: Array(1), ValueClasesSelected: 'a3275000000D7zAAAS', ValuefamiliasSelected: ''}', 'sku8080');
         System.assertEquals(controller.listServicios.size(), 1);
         
         //Modificacion OVG a partir de aqui
