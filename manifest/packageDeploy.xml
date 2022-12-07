@@ -1009,6 +1009,10 @@
 		<members>CoppelPISyS/SegurosdeMotos/Clientes_con_cotizaciones_jaC</members>
 		<members>CoppelPISyS/SegurosdeMotos/Tasa_de_conversin_de_cotizaciones_71B</members>
 		<members>unfiled$public/SampleReportClosedSales</members>
+		<members>DSALES_ReportesdeVentasGEX/DSALES_Ranking_por_unidades_GEX</members>
+		<members>DSALES_ReportesdeVentasGEX/DSALES_Resultado_Division</members>
+		<members>DSALES_ReportesdeVentasGEX/DSALES_Resultado_Tiendas</members>
+		<members>DSALES_ReportesdeVentasGEX/DSALES_Resultado_Zonas</members>
 		<name>Report</name>
 	</types>
 	<types>
