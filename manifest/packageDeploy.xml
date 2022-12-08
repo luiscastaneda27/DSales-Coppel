@@ -911,6 +911,7 @@
 		<name>PathAssistant</name>
 	</types>
 	<types>
+		<members>Administrador_de_sistema_Fun_SM</members>
 		<members>DSALES_PermisosAdminPisys</members>
 		<members>DSALES_Plantillas_de_construcci_n</members>
 		<members>DSales_AdministradorSistemaPisys</members>
