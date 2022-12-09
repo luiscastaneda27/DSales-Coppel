@@ -17779,11 +17779,15 @@
     </objectPermissions>
     <pageAccesses>
         <apexPage>DSALES_CertificadoPDF</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
         <apexPage>DSALES_NuevaPlantilla</apexPage>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
+    </pageAccesses>
+     <pageAccesses>
+        <apexPage>Cotizacion</apexPage>
+        <enabled>true</enabled>
     </pageAccesses>
     <recordTypeVisibilities>
         <default>true</default>
