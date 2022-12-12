@@ -18143,6 +18143,11 @@
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Product2.DSALES_ProdIntangible</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
         <default>true</default>
         <recordType>Product2.DSales_Seguro_de_Motos</recordType>
         <visible>true</visible>
@@ -18155,6 +18160,11 @@
     <recordTypeVisibilities>
         <default>true</default>
         <recordType>Quote.DSALES_VentaSM</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>DSALES_SubCategoria__c.DSALES_SM</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
