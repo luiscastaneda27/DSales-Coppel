@@ -823,6 +823,7 @@
 	</types>
 	<types>
 		<members>Asset-Pisys Asset Layout</members>
+		<members>DSALES_Categoria__c-DSALES_SM</members>
 		<members>DSALES_Categoria__c-Formato Categoría</members>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Clase__c-Formato Clase</members>
