@@ -837,6 +837,7 @@
 		<members>DSALES_Partidadepago__c-Partida de pago Layout</members>
 		<members>DASALES_Porcentajedecobro__c-Porcentage de cobro Layout</members>
 		<members>InsurancePolicy-Formato de póliza de seguro</members>
+		<members>InsurancePolicyAsset-Formato de Activo de póliza de seguro</members>
 		<members>Opportunity-DSALES_OpportunityPISYSGEX</members>
 		<members>Opportunity-DSALES_OpportunitySM</members>
 		<members>PersonAccount-DSALES_Clientes</members>
