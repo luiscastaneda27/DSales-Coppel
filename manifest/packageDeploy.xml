@@ -661,6 +661,7 @@
 		<members>DSALES_Partidadepago__c</members>
 		<members>Account</members>
 		<members>Account</members>
+		<members>InsurancePolicy</members>
 		<members>Opportunity</members>
 		<members>Quote</members>
 		<members>Claim</members>
