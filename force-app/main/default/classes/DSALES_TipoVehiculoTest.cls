@@ -6,7 +6,7 @@ private  class DSALES_TipoVehiculoTest {
         Id recordId = getTestTVId();
         RestRequest request = new RestRequest();
         request.requestUri =
-            'https://coppelmx--pisysdev2.sandbox.my.salesforce.com/services/apexrest/TiposVehiculo/'+ recordId;
+            'https://coppelmx--pisysdev2.sandbox.my.salesforce.com/services/apexrest/tiposVehiculo/'+ recordId;
         request.httpMethod = 'GET';
         RestContext.request = request;
         

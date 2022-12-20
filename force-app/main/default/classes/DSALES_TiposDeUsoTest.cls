@@ -6,7 +6,7 @@ private  class DSALES_TiposDeUsoTest {
         Id recordId = getTestTUId();
         RestRequest request = new RestRequest();
         request.requestUri =
-            'https://coppelmx--pisysdev2.sandbox.my.salesforce.com/services/apexrest/TiposUso/'+ recordId;
+            'https://coppelmx--pisysdev2.sandbox.my.salesforce.com/services/apexrest/tiposUso/'+ recordId;
         request.httpMethod = 'GET';
         RestContext.request = request;
         

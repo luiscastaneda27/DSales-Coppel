@@ -1,4 +1,4 @@
-@RestResource(urlMapping='/TiposUso/*')
+@RestResource(urlMapping='/tiposUso/*')
 global with sharing class DSALES_TiposDeUsoRequest {
     @HttpGet
     global static TipoUsoResponse  getTiposDeUso() {
