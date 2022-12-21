@@ -32,7 +32,7 @@
                                     <lightning:input type="checkbox" checked="{! v.dataShow.seleccionadoPag1 }" onchange="{! c.seleccionTodosPag1 }" disabled="{! NOT(v.data.esClone) }" />
                                 </th>
                                 <th class="" scope="col">
-                                    Folio
+                                    SKU
                                 </th>
                                 <th class="" scope="col">
                                     <div class="slds-truncate" title="Precio">Desde</div>
@@ -53,8 +53,7 @@
                                         <lightning:input type="checkbox" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag1 }" disabled="{! NOT(v.data.esClone) }" />
                                     </td>
                                     <td>
-                                        <br/>
-                                        {!item.codigo}
+                                        <lightning:input type="text" value="{!item.codigo}" readonly="{!  NOT(v.data.esClone) }" />
                                     </td>
                                     <td>
                                         <lightning:input type="number" value="{!item.rangoMenor}" readonly="{!  NOT(v.data.esClone) }" />
@@ -87,7 +86,7 @@
                                         <lightning:input type="checkbox" checked="{! v.dataShow.seleccionadoPag2 }" onchange="{! c.seleccionTodosPag2 }" disabled="{! NOT(v.data.esClone) }" />
                                     </th>
                                     <th class="" scope="col">
-                                         Folio
+                                         SKU
                                     </th>
                                     <th class="" scope="col">
                                         <div class="slds-truncate" title="Precio">Desde</div>
@@ -108,8 +107,7 @@
                                             <lightning:input type="checkbox" name="{! item.index }" checked="{! item.seleccionado }" onchange="{! c.seleccionPag2 }" disabled="{! NOT(v.data.esClone) }" />
                                         </td>
                                          <td>
-                                             <br/>
-                                             {!item.codigo}
+                                             <lightning:input type="text" value="{!item.codigo}" readonly="{! NOT(v.data.esClone) }" />
                                         </td>
                                         <td>
                                             <lightning:input type="number" value="{!item.rangoMenor}" readonly="{! NOT(v.data.esClone) }" />
