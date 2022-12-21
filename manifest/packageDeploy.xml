@@ -671,6 +671,8 @@
 		<members>Claim</members>
 		<members>QuoteLineItem</members>
 		<members>Tipo_de_endoso__mdt</members>
+		<members>DSALES_TipodeUso__c</members>
+		<members>DSALES_Tipodevehculo__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
