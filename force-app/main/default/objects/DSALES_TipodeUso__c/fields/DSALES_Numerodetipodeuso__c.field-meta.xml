@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Numerodetipodeuso__c</fullName>
+    <description>Campo para llevar el conteo de los tipos de uso.</description>
+    <displayFormat>{000000}</displayFormat>
+    <externalId>false</externalId>
+    <label>Número de tipo de uso</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>
