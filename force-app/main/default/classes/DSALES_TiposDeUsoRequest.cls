@@ -24,6 +24,7 @@ global with sharing class DSALES_TiposDeUsoRequest {
                 
                 tipoListObj.add(tu);
 
+
                 //responsePayload.data.add(tu);
                 
             }
