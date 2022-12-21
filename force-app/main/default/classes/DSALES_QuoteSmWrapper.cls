@@ -10,6 +10,12 @@ global class DSALES_QuoteSmWrapper {
         global List<Product> productList {get;set;}
         
         //pedido por inter
+        global String vehicle_use {get; set;}
+        global String vehicle_type {get; set;}
+        global String rfc {get; set;}
+        global String plazo {get; set;}
+        global String nombre_vendedor {get; set;}
+        
         global String contact_phone {get; set;}
         global String contact_email {get;set;}
         global String contact_gender {get; set;}
@@ -25,7 +31,7 @@ global class DSALES_QuoteSmWrapper {
  }
     global class QuotePostProvedor{
         //Inter Cotizacion
-        //global String tracking_id;
+        global String plazo {get; set;}
         global String business {get; set;} //sales-fijo
         global String insurance {get; set;} //sales-fijo
         global String contact_name {get; set;}//combinacion
@@ -49,6 +55,7 @@ global class DSALES_QuoteSmWrapper {
         global String associate_id {get; set;}//fijo
         global String quote_date {get; set;}//fecha creacion-sales
         global String start_at {get; set;}
+        
     }
 
 	global class Product {
@@ -58,11 +65,13 @@ global class DSALES_QuoteSmWrapper {
     global class respuestaDelProveedor{
 		global Integer code {get;set;}
         global Boolean success {get;set;}
+        global String tracking_id {get;set;}
         global Data data {get;set;}
 	}
 
     global class RespuestaParaNpv{
         global String quoteId {get;set;}
+        global String TrackingId {get;set;}
         global String Cliente {get;set;}
         global String oppor {get;set;}
         global String cotiza {get;set;}

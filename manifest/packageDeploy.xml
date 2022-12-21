@@ -576,6 +576,7 @@
 		<members>QuoteLineItem.DSales_Categoria__c</members>
 		<members>QuoteLineItem.DSales_Clase__c</members>
 		<members>QuoteLineItem.DSales_Familia__c</members>
+		<members>QuoteLineItem.DSALES_TrackingID__c</members>
 		<members>Tienda__c.DSALES_Cdigopostal__c</members>
 		<members>Quote.DSALES_Aseguradora__c</members>
 		<members>Quote.DSALES_Negocio__c</members>
