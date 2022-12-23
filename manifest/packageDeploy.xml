@@ -544,6 +544,9 @@
 		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
 		<members>Quote.DSales_Division__c</members>
 		<members>Quote.DSales_ID_Tienda__c</members>
+		<members>Quote.DSALES_RFC__c</members>
+		<members>Quote.DSALES_TipoUso__c</members>
+		<members>Quote.DSALES_Tipodeveihculo__c</members>
 		<members>Quote.DSales_Tienda__c</members>
 		<members>Quote.DSALES_Tipodeserviciodelvehculo__c</members>
 		<members>Quote.DSALES_Tipodevehculo__c</members>

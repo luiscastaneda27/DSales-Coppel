@@ -4,6 +4,10 @@ public class DSALES_QuoteSmWrapperTest {
     static void CreateQuoteCredito(){
         DSALES_QuoteSmWrapper.QuoteSmRequest requestnpv = new DSALES_QuoteSmWrapper.QuoteSmRequest();
         requestnpv.client_number = 'dato';
+        requestnpv.vehicle_use='Moto';
+        requestnpv.vehicle_type='Comercial';
+        requestnpv.rfc='wrr2r2r';
+        requestnpv.plazo='12';
         requestnpv.first_name = 'dato';
         requestnpv.middle_name = 'dato';
         requestnpv.last_name = 'dato';
