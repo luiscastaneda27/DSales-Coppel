@@ -66,6 +66,7 @@ public class DSALES_ControladorMatrizTiempo {
                 matriz.DSALES_Rango_Superior_GEX__c = mt.rangoMayor;
                 matriz.SALES_Precio_GEX__c = mt.precio;
                 matriz.DSALES_Tiempo_de_Garantia_Extendida_GEX__c = mt.anio;
+                matriz.Name = mt.codigo;
                 if(matriz.Id == null){
                     matriz.DSales_Matriz_GEX__c = recordId;
                 }
