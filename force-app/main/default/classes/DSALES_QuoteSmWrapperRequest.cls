@@ -61,7 +61,7 @@ global class DSALES_QuoteSmWrapperRequest {
                     datosEnviar.vehicle_service = Label.DSALES_vehicleService;//fijo-sales
                     datosEnviar.vehicle_use = data.vehicle_use; //Nuevo
                     datosEnviar.vehicle_type = data.vehicle_type; //Nuevo
-                    //HU 011 plazo  Nuevo
+                    datosEnviar.plazo = data.plazo; //Nuevo hU 001
                     //rfc Nuevo
                     datosEnviar.plazo = data.plazo; //Nuevo
                     //nombre en solo campo
@@ -133,6 +133,7 @@ global class DSALES_QuoteSmWrapperRequest {
                 }catch(Exception e){
                     //ver error en la linea message = e.getMessage()+'Linea: '+e.getLineNumber();
                     message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    message = e.getMessage()+'Linea: '+e.getLineNumber();
                     errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
                     succes = false;
                 }
@@ -234,6 +235,8 @@ global class DSALES_QuoteSmWrapperRequest {
         if(data.suffix != null ){
             cotiza.Name+=' ' +data.suffix;
         }
+        DSALES_TipodeUso__c tipoUso = [Select Id from DSALES_TipodeUso__c WHERE Name =: data.vehicle_use LIMIT 1];
+        DSALES_Tipodevehculo__c tipoVehiculo = [Select Id from DSALES_Tipodevehculo__c WHERE Name =: data.vehicle_type LIMIT 1];
         cotiza.OpportunityId = oportunidadId;
         //cotiza.DSALES_FormadePago__c = data.method_payment;
         cotiza.DSales_ID_Tienda__c = data.store_id;
@@ -257,6 +260,11 @@ global class DSALES_QuoteSmWrapperRequest {
         cotiza.DSALES_Gnero__c = data.contact_gender;
         cotiza.DSALES_Fechadecomienzodepliza__c = data.start_at;
         cotiza.Email = data.contact_email;
+        //cotiza.DSALES_Tipodevehculo__c = data.vehicle_type;
+        //cotiza.DSALES_Usodelvehculo__c = data.vehicle_use;
+        cotiza.DSALES_TipoUso__c = tipoUso.Id;
+        cotiza.DSALES_Tipodeveihculo__c = tipoVehiculo.Id;
+        cotiza.DSALES_RFC__c = data.rfc;
         insert cotiza;
 
         List<QuoteLineItem> listaItem= new List<QuoteLineItem>();

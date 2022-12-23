@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Tipodeveihculo__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo para relacionar el tipo del vehículo a la cotización</description>
+    <externalId>false</externalId>
+    <label>Tipo de vehículo</label>
+    <referenceTo>DSALES_Tipodevehculo__c</referenceTo>
+    <relationshipLabel>Cotizaciones</relationshipLabel>
+    <relationshipName>Cotizaciones</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

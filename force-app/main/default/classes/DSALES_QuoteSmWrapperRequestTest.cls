@@ -24,7 +24,7 @@ public class DSALES_QuoteSmWrapperRequestTest {
         Product2 prodAmp = new Product2(Name ='AMP Seguro de Moto', StockKeepingUnit='123444',DSALES_Familia__c=family.Id,DSALES_Categoria__c=category.Id,DSALES_Clase__c=classs.Id,DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
 		insert prodAmp;
         
-        Product2 prodM = new Product2(Name ='Moto', StockKeepingUnit='121212',DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
+        Product2 prodM = new Product2(Name ='Moto', StockKeepingUnit='1231212',DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
 		insert prodM;
         
         Id pricebookId = Test.getStandardPricebookId();
@@ -117,13 +117,18 @@ public class DSALES_QuoteSmWrapperRequestTest {
         presupuesto.UnitPrice = customPrice.UnitPrice;
         presupuesto.DSALES_ListaArticulo__c = 'Producto';
         insert presupuesto;
+        
+        DSALES_TipodeUso__c tipoUso = new DSALES_TipodeUso__c(Name='Comercial');
+        insert tipoUso;
+        DSALES_Tipodevehculo__c tipovehiculo = new DSALES_Tipodevehculo__c(Name='Moto');
+        insert tipovehiculo;
     }
     
     @isTest 
     static void CreateQuoteCredito(){
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
-        String body = '{"client_number":"43535","first_name":"hpero","middle_name":"gonzalez","last_name":"lopez","suffix":"sepa","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"121212121212"},{"sku":"632013-GEX"}]}';
+        String body = '{"vehicle_use":"Comercial","vehicle_type":"Moto","plazo":"12","rfc":"abcd","client_number":"43535","first_name":"hpero","middle_name":"gonzalez","last_name":"lopez","suffix":"sepa","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"1231212"},{"sku":"632013-GEX"}]}';
         req.requestURI = '/apexrest/insertQuoteSM';
         req.httpMethod = 'POST';
         RestContext.request = req;
@@ -141,7 +146,7 @@ public class DSALES_QuoteSmWrapperRequestTest {
     static void CreateQuoteCredito2(){
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
-        String body = '{"client_number":"45654","first_name":"hpero","middle_name":"gonzalez","last_name":"lopez","suffix":"sepa","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"121212"},{"sku":"632013-GEX"}]}';
+        String body = '{"vehicle_use":"Comercial","vehicle_type":"Moto","plazo":"12","rfc":"abcd","client_number":"45654","first_name":"hpero","middle_name":"gonzalez","last_name":"lopez","suffix":"sepa","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"121212"},{"sku":"632013-GEX"}]}';
         req.requestURI = '/apexrest/insertQuoteSM';
         req.httpMethod = 'POST';
         RestContext.request = req;
@@ -159,7 +164,7 @@ public class DSALES_QuoteSmWrapperRequestTest {
     static void CreateQuoteGenerico(){
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
-        String body = '{"client_number":"90001","first_name":"Daniela","middle_name":"Ho","last_name":"Gallegos","suffix":"","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"121212121212"},{"sku":"632013-GEX"}]}';
+        String body = '{"vehicle_use":"Comercial","vehicle_type":"Moto","plazo":"12","rfc":"abcd","client_number":"","first_name":"Daniela","middle_name":"Ho","last_name":"Gallegos","suffix":"","store_id":"CPPL-UGARTE","vendedor":"pedro","contact_phone":"4545454545","contact_email":"ssas@fgmaoc.com","contact_gender":"Masculino","contact_birth_date":"1990-10-02","contact_state_code":"12","contact_township_code":"212","contact_suburb_code":12,"contact_zip_code":"12","vehicle_id":"slknvsaeclskvlams","payment_option":"Mensual","packagge":"EC","start_at":"2020-10-10","productList":[{"sku":"121212121212"},{"sku":"632013-GEX"}]}';
         req.requestURI = '/apexrest/insertQuoteSM';
         req.httpMethod = 'POST';
         RestContext.request = req;
