@@ -8,7 +8,7 @@
 
 
         <div class="slds-grid slds-grid_align-end slds-box_x-small">
-            <lightning-button if:false={resultPerfil} variant="brand" label="Vincular Productos"
+            <lightning-button if:false={data.showAdmiSM} variant="brand" label="Vincular Productos"
                 onclick={openVincuProduct} title="Primary action" class="slds-m-right_large ">
             </lightning-button>
             <div>
@@ -36,13 +36,13 @@
                             <span class="slds-assistive-text">Close</span>
                         </button>
 
-                        <template if:false={resultPerfil}>
+                        <template if:true={data.showAdmiGex}>
                             <h1 id="modal-heading-03"
                                 class="slds-text-heading_medium slds-text-align_center slds-hyphenate">
                                 Crear Servicio
                             </h1>
                         </template>
-                        <template if:true={resultPerfil}>
+                        <template if:true={data.showAdmiSM}>
                             <h1 id="modal-heading-04"
                                 class="slds-text-heading_medium slds-text-align_center slds-hyphenate">
                                 Crear Seguro
@@ -60,19 +60,23 @@
                             <div class="slds-grid slds-gutters">
                                 <div class="slds-col">
                                     <div class="slds-col">
-                                        <template if:true={resultPerfil}>
+                                        <template if:true={data.showAdmiSM}>
                                             <lightning-combobox selected="Seguro" name="TipoProducto" required class="slds-m-bottom_x-small"
                                                 label="Tipo de Producto" value="Seguro" placeholder="Selecciona"
                                                 options={pickList.tipoProducto} onchange={SelectSeguroServicio}
                                                 disabled></lightning-combobox>
                                         </template>
-                                        <template if:false={resultPerfil}>
+                                        <template if:true={data.showAdmiGex}>
                                             <lightning-combobox selected="Servicio" name="TipoProducto" required class="slds-m-bottom_x-small"
                                                 label="Tipo de Producto" value="Servicio" placeholder="Selecciona"
                                                 options={pickList.tipoProducto} onchange={SelectSeguroServicio}
                                                 disabled></lightning-combobox>
                                         </template>
-
+                                        <template if:true={resultPerfil}>
+                                            <lightning-combobox selected="Servicio" name="TipoProducto" required class="slds-m-bottom_x-small"
+                                                label="Tipo de Producto" value="Servicio" placeholder="Selecciona"
+                                                options={pickList.tipoProducto} onchange={SelectSeguroServicioAdmi}></lightning-combobox>
+                                        </template>
                                         
                                             <lightning-combobox name="TipoServicio" label={label.labelTipoServicio}
                                                 value={pickList.valueSelectedtipoSeguroServicio} required class="slds-m-bottom_x-small"
@@ -96,7 +100,7 @@
                                                 placeholder="Escribe aquí">
                                             </lightning-input>
                                         
-                                            <template if:false={resultPerfil}>
+                                            <template if:true={data.showServicio}>
                                                 <lightning-input class="lgc-bg " type="checkbox" onchange={openPorcentajeCobro} value={pickList.aplicaCobro}
                                                     label="Aplica porcentaje de cobro" name="input3" checked={checkpc}>
                                                 </lightning-input>
@@ -180,7 +184,7 @@
 
 
 
-                                    <template if:false={resultPerfil}>
+                                    <template if:true={data.showServicio}>
                                             <lightning-dual-listbox 
                                                                     if:false={showPorcentajeCobro}
                                                                     name="Matrices"
@@ -887,6 +891,20 @@
                                         onchange={onchangeAllSeguro} label="Seguro"></lightning-input>
                                 </div>
                             </th>
+                            <th if:true ={resultPerfil} 
+                            class="" scope="col">
+                            <div class="slds-truncate" title="Servicio">
+                                <lightning-input type="checkbox" checked={data.registroServicio}
+                                    onchange={onchangeAllServicio} label="Servicio"></lightning-input>
+                            </div>
+                        </th>
+                        <th if:true ={resultPerfil}
+                             class="" scope="col">
+                            <div class="slds-truncate" title="Seguro">
+                                <lightning-input type="checkbox" checked={data.registroSeguro}
+                                    onchange={onchangeAllSeguro} label="Seguro"></lightning-input>
+                            </div>
+                        </th>
                             <th class="" scope="col">
                                 <div class="slds-truncate" title="Seguro">
                                     <lightning-input type="checkbox" checked={data.noAplica}
@@ -932,6 +950,21 @@
                                             onchange={onchangeSeguro}></lightning-input>
                                     </div>
                                 </td>
+                                <td if:true ={resultPerfil}
+                                data-label="Servicio" style="text-align: left;">
+                                   <div class="slds-truncate" title="Servicio">
+                                       <lightning-input type="checkbox" name={record.id} checked={record.servicio}
+                                           onchange={onchangeServicio}>
+                                       </lightning-input>
+                                   </div>
+                               </td>
+                               <td if:true ={resultPerfil}
+                                 data-label="Seguro" style="text-align: left;">
+                                   <div class="slds-truncate" title="Seguro">
+                                       <lightning-input type="checkbox" name={record.id} checked={record.seguro}
+                                           onchange={onchangeSeguro}></lightning-input>
+                                   </div>
+                               </td>
                                 <td data-label="No Aplica" style="text-align: left;">
                                     <div class="slds-truncate" title="No Aplica">
                                         <lightning-input type="checkbox" name={record.id} checked={record.noAplica}
