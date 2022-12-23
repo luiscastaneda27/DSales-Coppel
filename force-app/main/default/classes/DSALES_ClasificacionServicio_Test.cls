@@ -3,8 +3,10 @@ public class DSALES_ClasificacionServicio_Test {
     
     @testSetup
     static void testSetup(){
+        String recordTypeId = Schema.SObjectType.DSALES_Categoria__c.getRecordTypeInfosByName().get('Garantía Extendida').getRecordTypeId();
         DSALES_Categoria__c categoria = new DSALES_Categoria__c();
         categoria.Name = 'Test';
+        categoria.RecordTypeId=recordTypeId;
         insert categoria;
         
         DSALES_SubCategoria__c subC = new DSALES_SubCategoria__c ();
@@ -73,6 +75,7 @@ public class DSALES_ClasificacionServicio_Test {
         objetoserv.DSALES_Familia__c = familia.Id;
         objetoserv.StockKeepingUnit = 'SKU12346VG';
         objetoserv.DSales_Tipo_de_Producto__c= 'Servicio';
+        objetoserv.isActive=true;
         insert objetoserv;
         
         DSales_Asignacion_de_Productos__c asignacionprod = new DSales_Asignacion_de_Productos__c();
@@ -86,6 +89,11 @@ public class DSALES_ClasificacionServicio_Test {
     
     @isTest
     static void ClasificacionServicio(){
+        Product2 idprueba= [Select id from Product2 limit 1];
+        DSALES_Categoria__c idcat = [select id from DSALES_Categoria__c limit 1];
+        DSALES_SubCategoria__c idsubc= [select id from DSALES_SubCategoria__c limit 1];
+        DSALES_Clase__c idclass=  [select id from DSALES_Clase__c limit 1];
+        DSales_Matriz_GEX__c idmat= [select id from DSales_Matriz_GEX__c limit 1];
         DSALES_ClasificacionServicio.DSALES_ClasificacionServicioWrapper controller = DSALES_ClasificacionServicio.getPickListCategoria();
         controller.listCategorias[0].seleccionado = true;
         
@@ -104,19 +112,19 @@ public class DSALES_ClasificacionServicio_Test {
         controller.sku = 'SKU1234353464565654665';
         controller.listServicios = DSALES_ClasificacionServicio.getBuscarSKU(controller.sku);
         DSALES_ClasificacionServicio.getBuscarVinculacion(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
-        DSALES_ClasificacionServicio.getBuscarProducto(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
+        DSALES_ClasificacionServicio.getBuscarProducto(DSALES_ClasificacionServicio.getidservicio('SKU1234353464565654665'));
         DSALES_ClasificacionServicio.upsertVinculacion(JSON.serialize( DSALES_ClasificacionServicio.getBuscarVinculacion(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'))));
         DSALES_ClasificacionServicio.insertVinculacion(JSON.serialize( DSALES_ClasificacionServicio.getBuscarProducto(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'))), DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
         DSALES_ClasificacionServicio.checkProfileType('Administrador GEX');
-        DSALES_ClasificacionServicio.getcategories('Garantía extendida');
-        DSALES_ClasificacionServicio.getSubCategories('Garantía extendida');
-        DSALES_ClasificacionServicio.getClases('Garantía extendida');
-        DSALES_ClasificacionServicio.getFamilias('Garantía extendida');
+        DSALES_ClasificacionServicio.getcategories('Garantía Extendida');
+        DSALES_ClasificacionServicio.getSubCategories(idcat.id);
+        DSALES_ClasificacionServicio.getClases(idsubc.id);
+        DSALES_ClasificacionServicio.getFamilias(idclass.id);
         DSALES_ClasificacionServicio.getMatriz();
-        DSALES_ClasificacionServicio.upsertRecord('[{"categoria":"LÍNEA BLANCA","clase":"COOLER","familia":"VENTANA","id":"01t75000000nGHOAA2","noAplica":true,"nombre":"Extractor de Aire 6p Volteck color Blanco","seguro":false,"servicio":false,"sku":"48671001","subCategoria":"COOLER","tipoServicio":"0"}]');
+        DSALES_ClasificacionServicio.upsertRecord('[{"categoria":"LÍNEA BLANCA","clase":"COOLER","familia":"VENTANA","id":"'+idprueba.id+'","noAplica":true,"nombre":"Extractor de Aire 6p Volteck color Blanco","seguro":false,"servicio":false,"sku":"48671001","subCategoria":"COOLER","tipoServicio":"0"}]');
         DSALES_ClasificacionServicio.RecordTypeId('Garantía Extendida');
-        DSALES_ClasificacionServicio.updateMatriz('["a3075000000D4YcAAK"]', DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
-        //DSALES_ClasificacionServicio.insertListaPrecios('01t75000000nGHOAA2','1','[]');
+        DSALES_ClasificacionServicio.updateMatriz( '["'+idmat.id+'"]', DSALES_ClasificacionServicio.getidservicio('SKU12346VG'));
+        //DSALES_ClasificacionServicio.insertListaPrecios(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'),'1','[]');
         DSALES_ClasificacionServicio.insertPocentajeCobro(DSALES_ClasificacionServicio.getidservicio('SKU12346VG'),'{"anio1":"6","anio2":"5","anio3":"9","anio4":3,"anio5":2,"anio6":1}');
         DSALES_ClasificacionServicio.getPickListValuesIntoList1();
         DSALES_ClasificacionServicio.getPickListValuesIntoList2();
