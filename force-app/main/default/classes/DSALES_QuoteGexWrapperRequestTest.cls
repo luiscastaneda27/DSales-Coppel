@@ -97,18 +97,18 @@ public class DSALES_QuoteGexWrapperRequestTest{
         insert acc;
         
         Account accContado = new Account();
-        accContado.FirstName = 'Daniela';
-        accContado.LastName = 'Gallegos';
-        accContado.PersonEmail = 'danigallegos@deloittemx.com';
+        accContado.FirstName = 'Emmanuel';
+        accContado.LastName = 'Gonzalez';
+        accContado.PersonEmail = 'egl@deloittemx.com';
         accContado.PersonBirthdate = date.today();
-        accContado.Suffix = 'test';
+        accContado.Suffix = 'Lopez';
         insert accContado;
         
         Opportunity opp = new Opportunity(Name='TestOpportunity', AccountId=acc.Id, CloseDate=Date.Today(), StageName='Nuevo', Pricebook2Id=customPB.Id,RecordTypeId=recordTypeId);
         insert opp;
         
         Tienda__c t = new Tienda__c();
-        t.DSales_TiendaID__c =  'CPPL-UGARTE';
+        t.DSales_TiendaID__c =  '21';
         insert t;
         
         Quote cotizacion = new Quote(OpportunityId=opp.Id,Name='test',DSales_Tienda__c=t.Id);
@@ -143,7 +143,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest(){
         RestRequest req = new RestRequest();
         RestResponse res = new RestResponse();
-        String body = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "","Address_Store": "Paseo de los virreyes"}}';
+        String body = '{  "id_tienda": "21", "productos": [{"sku_de_tangible": "0000", "cantidad_productos_tangibles": 1.0, "articulo": "Estufa", "marca": "Whirlpool", "modelo": "WFR5000D", "precio_tangible": "4650" } ], "apellido_materno": "Lopez", "apellido_paterno": "Gonzalez", "nombre": "Emmanuel", "correo_electronico": "egl@deloittemx.com", "numero_de_cliente": "", "id_factura": null, "id_oportunidad": null }';
         req.requestURI = '/apexrest/insertQuoteGex';
         req.httpMethod = 'POST';
         RestContext.request = req;
@@ -161,7 +161,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest2(){
         RestRequest req2 = new RestRequest();
         RestResponse res2 = new RestResponse();
-        String body2 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "45654","Address_Store": "Paseo de los virreyes"}';
+        String body2 = '{ "id_tienda": "21", "productos": [ { "sku_de_tangible": "0000", "cantidad_productos_tangibles": 1.0, "articulo": "Estufa", "marca": "Whirlpool", "modelo": "WFR5000D", "precio_tangible": "4650" } ], "apellido_materno": "Test", "apellido_paterno": "Tes", "nombre": "Test", "correo_electronico": "danigallegos@deloittemx.com", "numero_de_cliente": "45654", "id_factura": null, "id_oportunidad": null }';
         req2.requestURI = '/apexrest/insertQuoteGex';
         req2.httpMethod = 'POST';
         RestContext.request = req2;
@@ -179,7 +179,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest3(){
         RestRequest req3 = new RestRequest();
         RestResponse res3 = new RestResponse();
-        String body3 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "90001","Address_Store": "Paseo de los virreyes"}';
+        String body3 = '{ "id_tienda": "21", "productos": [ { "sku_de_tangible": "0000", "cantidad_productos_tangibles": 1.0, "articulo": "Estufa", "marca": "Whirlpool", "modelo": "WFR5000D", "precio_tangible": "4650" } ], "apellido_materno": "Test", "apellido_paterno": "Tes", "nombre": "Test", "correo_electronico": "danigallegos@deloittemx.com", "numero_de_cliente": "90001", "id_factura": null, "id_oportunidad": null }';
         req3.requestURI = '/apexrest/insertQuoteGex';
         req3.httpMethod = 'POST';
         RestContext.request = req3;
@@ -197,7 +197,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest4(){
         RestRequest req4 = new RestRequest();
         RestResponse res4 = new RestResponse();
-        String body4 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "45555555555","Address_Store": "Paseo de los virreyes"}';
+        String body4 = '{ "id_tienda": "21", "productos": [ { "sku_de_tangible": "0000", "cantidad_productos_tangibles": 1.0, "articulo": "Estufa", "marca": "Whirlpool", "modelo": "WFR5000D", "precio_tangible": "4650" } ], "apellido_materno": "Test2", "apellido_paterno": "Test2", "nombre": "Test2", "correo_electronico": "test@deloittemx.com", "numero_de_cliente": "8765765875", "id_factura": null, "id_oportunidad": null }';
         req4.requestURI = '/apexrest/insertQuoteGex';
         req4.httpMethod = 'POST';
         RestContext.request = req4;
@@ -215,7 +215,7 @@ public class DSALES_QuoteGexWrapperRequestTest{
     static void CreateQuoteRecordTest5(){
         RestRequest req5 = new RestRequest();
         RestResponse res5 = new RestResponse();
-        String body5 = '{"vendor_id": "1234567","vendedor_name": "Pedro Juarez","type_service": "Servicio","store_id": "CPPL-UGARTE","Service_product_quantity": 2,"region": "Hermosillo","productList": [{"sku": "0000","Quantity_tangible_products": 1.0,"article": "Refrigerador Whirpool","brand": "Whirpool","model": "Refri","tangible_price": "7600"}],"method_payment": "Contado","suffix": "Rodriguez","last_name": "Gallegos","middle_name": "","first_name": "Daniela","Estimated_delivery_date": "2022-10-10","email": "danigallegos@deloittemx.com","division": "3","client_number": "45555555555","bill":"FAC001","Address_Store": "Paseo de los virreyes"}';
+        String body5 = '{ "id_tienda": "21", "productos": [ { "sku_de_tangible": "0000", "cantidad_productos_tangibles": 1.0, "articulo": "Estufa", "marca": "Whirlpool", "modelo": "WFR5000D", "precio_tangible": "4650" } ], "apellido_materno": "Test", "apellido_paterno": "Tes", "nombre": "Test", "correo_electronico": "danigallegos@deloittemx.com", "numero_de_cliente": "444444", "id_factura": "FAC001", "id_oportunidad": null }';
         req5.requestURI = '/apexrest/insertQuoteGex';
         req5.httpMethod = 'POST';
         RestContext.request = req5;

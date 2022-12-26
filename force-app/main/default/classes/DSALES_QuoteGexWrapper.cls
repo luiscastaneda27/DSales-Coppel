@@ -1,46 +1,39 @@
 global class DSALES_QuoteGexWrapper {
     global class QuoteGexRequest{
-        global String store_id {get; set;}
-        global String client_number {get;set;}
-        global String first_name {get; set;}
-        global String last_name {get;set;}
-        global Date birthdate {get;set;}
-        global String division {get;set;}
-        global String region {get;set;}
-        global String method_payment {get;set;}
-        global String email {get;set;}
-        global Date Estimated_delivery_date {get;set;}
-        global String Address_Store {get;set;}
-        global String store_name {get;set;}
-        global String bill {get;set;}
-        global List<Product> productList {get;set;}
+        global String id_tienda {get; set;}
+        global String numero_de_cliente {get;set;}
+        global String nombre {get; set;}
+        global String apellido_paterno {get;set;}
+        global String apellido_materno {get;set;}
+        global String correo_electronico {get;set;}
+        global String id_factura {get;set;}
+        global List<Product> productos {get;set;}
  }
 	global class Product {
-		global String sku {get;set;}
-		global Double Quantity_tangible_products {get;set;}
-        global String article {get; set;}
-        global String model {get; set;}
-        global String brand {get; set;}
-        global Double tangible_price {get; set;}
+		global String sku_de_tangible {get;set;}
+		global Double cantidad_productos_tangibles {get;set;}
+        global String articulo {get; set;}
+        global String modelo {get; set;}
+        global String marca {get; set;}
+        global Double precio_tangible {get; set;}
     }
     global class QuoteGexResponse{
-        global String	intangible_name	{get;set;}
-        global String	tangible_name	{get;set;}
-        global String	category	{get;set;}
-        global String	class1	{get;set;}
-        global String	family	{get;set;}
-        global double	price	{get;set;}
-        global double	total_cost	{get;set;}
-        global String	service_type	{get;set;}
-        global String 	validity_months {get;set;}
+        global String	sku_de_tangible	{get;set;}
+        global String	sku_de_precio	{get;set;}
+        global String	sku_de_servicio	{get;set;}
+        global String	nombre_intangible	{get;set;}
+        global double	precio	{get;set;}
+        global double	costo_total	{get;set;}
+        global String 	meses_cobertura {get;set;}
         
     }
     global class respuestaNPV{        
         global Boolean 	success {get;set;}
-        global String	quote_id	{get;set;}
-        global String 	error_code {get;set;}
-        global String 	error_message {get;set;}
-        global List<QuoteGexResponse> response {get;set;}
+        global String	id_cotizacion	{get;set;}
+        global String	id_oportunidad	{get;set;}
+        global String 	codigo_error {get;set;}
+        global String 	mensaje_error {get;set;}
+        global List<QuoteGexResponse> respuesta {get;set;}
     }
     
 }
