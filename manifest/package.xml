@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-	<types>
-		<members>DSALES_AssetWrapper</members>
-		<members>DSALES_AssetWrapperRequest</members>
-		<members>DSALES_AssetWrapperTest</members>
-		<members>DSALES_CertificadoWrapper</members>
-		<members>DSALES_CertificadoWrapperRequest</members>
-		<members>DSALES_CertificadoWrapperTest</members>
-		<members>DSALES_ControladorCertificadoPDF</members>
-		<members>DSALES_ControladorCertificadoPDFTest</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>DSALES_Certificado__c.DSALES_TiendaId__c</members>
-		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
-		<name>CustomField</name>
-	</types>
+	
 	<version>55.0</version>
 </Package>
