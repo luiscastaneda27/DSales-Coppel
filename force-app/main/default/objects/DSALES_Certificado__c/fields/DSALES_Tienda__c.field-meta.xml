@@ -3,7 +3,7 @@
     <fullName>DSALES_Tienda__c</fullName>
     <description>Clave de Tienda</description>
     <externalId>false</externalId>
-    <label>Tienda</label>
+    <label>Clave de Tienda</label>
     <length>7</length>
     <required>false</required>
     <trackHistory>false</trackHistory>

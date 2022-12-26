@@ -14,15 +14,15 @@ global with sharing class DSALES_AssetWrapperRequest {
                 }
                 catch(Exception.JSONException e)
                 {
-                    responsePayload.success = false;
-                    responsePayload.error_message = DSALES_Utility.BAD_REQUEST_MSJ;
-                    responsePayload.error_code=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
+                    responsePayload.exito = false;
+                    responsePayload.mensaje_error = DSALES_Utility.BAD_REQUEST_MSJ;
+                    responsePayload.codigo_error=String.valueOf(DSALES_Utility.BAD_REQUEST_CODE);
                     
                 }
                 catch(Exception e){
-                    responsePayload.success = false;
-                    responsePayload.error_message = DSALES_Utility.INTERNAL_ERROR_MSJ;
-                    responsePayload.error_code=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
+                    responsePayload.exito = false;
+                    responsePayload.mensaje_error = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    responsePayload.codigo_error=String.valueOf(DSALES_Utility.INTERNAL_ERROR_CODE);
                     
                     
                 }
@@ -44,17 +44,17 @@ global with sharing class DSALES_AssetWrapperRequest {
                 try{
                  system.debug('Product: '+product);   
                   
-                    if(product.category!=null)
+                    if(product.categoria!=null)
                     {
-                    	 categoria=[SELECT id FROM DSALES_categoria__c WHERE name=:product.category LIMIT 1];    
+                    	 categoria=[SELECT id FROM DSALES_categoria__c WHERE name=:product.categoria LIMIT 1];    
                     }
-                    else if (product.class_type!=null)
+                    else if (product.clase!=null)
                     {
-                    clase=[SELECT id FROM DSALES_clase__c WHERE name=:product.class_type];    
+                    clase=[SELECT id FROM DSALES_clase__c WHERE name=:product.clase];    
                     }
-                    else if (product.family!=null)
+                    else if (product.familia!=null)
                         {
-                             familia=[SELECT id FROM DSALES_familia__c WHERE name=:product.family];
+                             familia=[SELECT id FROM DSALES_familia__c WHERE name=:product.familia];
                         }
                     
                     
@@ -68,25 +68,25 @@ global with sharing class DSALES_AssetWrapperRequest {
                     
                     
                     
-                    assetRecord.AccountId=product.account_id;                    
-                    assetRecord.Name=product.name;                   
-                    assetRecord.ContactId=product.contact_id;
-                    assetRecord.DSALES_TipoProducto__c=product.product_type;
-                    assetRecord.DSALES_TipoSeguro__c=product.insurance_type;
-                    assetRecord.DSALES_TipoServicio__c=product.service_type;
+                    assetRecord.AccountId=product.id_cuenta;                    
+                    assetRecord.Name=product.nombre;                   
+                    assetRecord.ContactId=product.id_contacto;
+                    assetRecord.DSALES_TipoProducto__c=product.tipo_producto;
+                    assetRecord.DSALES_TipoSeguro__c=product.tipo_seguro;
+                    assetRecord.DSALES_TipoServicio__c=product.tipo_servicio;
                     assetRecord.DSALES_CategoriaBuscar__c=categoria.id;
                     assetRecord.DSALES_ClaseBuscar__c=clase.id;
                     assetRecord.DSALES_FamiliaBuscar__c=familia.id;
-                    assetRecord.Status=product.status;
-                    assetRecord.DSALES_VigenciaMeses__c=product.months;
+                    assetRecord.Status=product.estado;
+                    assetRecord.DSALES_VigenciaMeses__c=product.meses;
                     assetRecord.DSALES_SKU__c=product.sku;
                     //assetRecord.DSALES_DuracionGEX__c=product.warranty_duration;
-                    assetRecord.SerialNumber=product.serial_number;
-                    assetRecord.PurchaseDate=product.purchase_date;
-                    assetRecord.Quantity=product.quantity;
-                    assetRecord.DSales_Marca__c=product.brand;
-                    assetRecord.DSales_Modelo__c=product.model;
-                    assetRecord.Description=product.description; 
+                    assetRecord.SerialNumber=product.numero_serie;
+                    assetRecord.PurchaseDate=product.fecha_compra;
+                    assetRecord.Quantity=product.cantidad;
+                    assetRecord.DSales_Marca__c=product.marca;
+                    assetRecord.DSales_Modelo__c=product.modelo;
+                    assetRecord.Description=product.descripcion; 
                     system.debug('JSON: '+json.serialize(assetRecord));
                     insert assetRecord;
                     
@@ -111,10 +111,10 @@ global with sharing class DSALES_AssetWrapperRequest {
             
         
         DSALES_AssetWrapper.AssetResponse responsePayload = new DSALES_AssetWrapper.AssetResponse();
-        responsePayload.success = success;
-        responsePayload.error_message = message;
-        responsePayload.error_code=code;
-        responsePayload.Asset_id = AssetRecord.id;
+        responsePayload.exito = success;
+        responsePayload.mensaje_error = message;
+        responsePayload.codigo_error=code;
+        responsePayload.id_ASSET = AssetRecord.id;
         
         return responsePayload;
         
