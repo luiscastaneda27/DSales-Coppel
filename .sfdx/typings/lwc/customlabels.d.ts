@@ -22,3 +22,11 @@ declare module "@salesforce/label/c.DSALES_vehicleUse" {
     var DSALES_vehicleUse: string;
     export default DSALES_vehicleUse;
 }
+declare module "@salesforce/label/c.DSALES_coberturaAmp" {
+    var DSALES_coberturaAmp: string;
+    export default DSALES_coberturaAmp;
+}
+declare module "@salesforce/label/c.DSALES_coberturaRc" {
+    var DSALES_coberturaRc: string;
+    export default DSALES_coberturaRc;
+}
