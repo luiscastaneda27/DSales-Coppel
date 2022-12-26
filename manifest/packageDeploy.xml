@@ -108,6 +108,8 @@
 		<members>DSALES_QuoteSmWrapperRequestTest</members>
 		<members>DSALES_QuoteSmWrapperTest</members>
 		<members>DSALES_TipoVehiculoRequest</members>
+		<members>DSALES_TipoSeguroRequest</members>
+		<members>DSALES_TipoSeguroRequestTest</members>
 		<members>DSALES_TipoVehiculoTest</members>
 		<members>DSALES_TiposDeUsoRequest</members>
 		<members>DSALES_TiposDeUsoTest</members>
