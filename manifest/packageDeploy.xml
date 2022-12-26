@@ -107,6 +107,10 @@
 		<members>DSALES_QuoteSmWrapperRequest</members>
 		<members>DSALES_QuoteSmWrapperRequestTest</members>
 		<members>DSALES_QuoteSmWrapperTest</members>
+		<members>DSALES_TipoVehiculoRequest</members>
+		<members>DSALES_TipoVehiculoTest</members>
+		<members>DSALES_TiposDeUsoRequest</members>
+		<members>DSALES_TiposDeUsoTest</members>
 		<members>DSALES_VentaGEX</members>
 		<members>DSALES_VentaGEXRest</members>
 		<members>DSALES_VentaGEXRestTest</members>
@@ -268,6 +272,7 @@
 		<members>DSALES_Certificado__c.DSALES_ProductoAdquirido__c</members>
 		<members>DSALES_Certificado__c.DSALES_SKU__c</members>
 		<members>DSALES_Certificado__c.DSALES_Ticket__c</members>
+		<members>DSALES_Certificado__c.DSALES_TiendaId__c</members>
 		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
 		<members>DSALES_Certificado__c.DSALES_Vigenciacumplida__c</members>
 		<members>DSALES_Certificado__c.DSALES_enviado__c</members>
@@ -540,6 +545,9 @@
 		<members>Quote.DSales_Direccion_de_la_tienda__c</members>
 		<members>Quote.DSales_Division__c</members>
 		<members>Quote.DSales_ID_Tienda__c</members>
+		<members>Quote.DSALES_RFC__c</members>
+		<members>Quote.DSALES_TipoUso__c</members>
+		<members>Quote.DSALES_Tipodeveihculo__c</members>
 		<members>Quote.DSales_Tienda__c</members>
 		<members>Quote.DSALES_Tipodeserviciodelvehculo__c</members>
 		<members>Quote.DSALES_Tipodevehculo__c</members>
@@ -572,6 +580,7 @@
 		<members>QuoteLineItem.DSales_Categoria__c</members>
 		<members>QuoteLineItem.DSales_Clase__c</members>
 		<members>QuoteLineItem.DSales_Familia__c</members>
+		<members>QuoteLineItem.DSALES_TrackingID__c</members>
 		<members>Tienda__c.DSALES_Cdigopostal__c</members>
 		<members>Quote.DSALES_Aseguradora__c</members>
 		<members>Quote.DSALES_Negocio__c</members>
@@ -661,11 +670,14 @@
 		<members>DSALES_Partidadepago__c</members>
 		<members>Account</members>
 		<members>Account</members>
+		<members>InsurancePolicy</members>
 		<members>Opportunity</members>
 		<members>Quote</members>
 		<members>Claim</members>
 		<members>QuoteLineItem</members>
 		<members>Tipo_de_endoso__mdt</members>
+		<members>DSALES_TipodeUso__c</members>
+		<members>DSALES_Tipodevehculo__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -823,6 +835,7 @@
 	</types>
 	<types>
 		<members>Asset-Pisys Asset Layout</members>
+		<members>DSALES_Categoria__c-DSALES_SM</members>
 		<members>DSALES_Categoria__c-Formato Categoría</members>
 		<members>DSALES_Certificado__c-DSALES_Certificado_GEX</members>
 		<members>DSALES_Clase__c-Formato Clase</members>
@@ -836,6 +849,7 @@
 		<members>DSALES_Partidadepago__c-Partida de pago Layout</members>
 		<members>DASALES_Porcentajedecobro__c-Porcentage de cobro Layout</members>
 		<members>InsurancePolicy-Formato de póliza de seguro</members>
+		<members>InsurancePolicyAsset-Formato de Activo de póliza de seguro</members>
 		<members>Opportunity-DSALES_OpportunityPISYSGEX</members>
 		<members>Opportunity-DSALES_OpportunitySM</members>
 		<members>PersonAccount-DSALES_Clientes</members>
@@ -911,6 +925,7 @@
 		<name>PathAssistant</name>
 	</types>
 	<types>
+		<members>Administrador_de_sistema_Fun_SM</members>
 		<members>DSALES_PermisosAdminPisys</members>
 		<members>DSALES_Plantillas_de_construcci_n</members>
 		<members>DSales_AdministradorSistemaPisys</members>

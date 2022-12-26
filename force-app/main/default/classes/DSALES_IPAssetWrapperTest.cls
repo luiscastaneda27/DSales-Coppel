@@ -18,7 +18,7 @@ global with sharing class DSALES_IPAssetWrapperTest {
         RestRequest request=new RestRequest();
         RestResponse response = new RestResponse();
         DSALES_InformaciondePago__c pago = [SELECT id,DSALES_Poliza__c FROM  DSALES_InformaciondePago__c  LIMIT 1];
-        String body='{"payment_info":"'+pago.Id+'","store":"123","client_number":"90229562","partner":"Prueba","external_motorcycle":true, "invoice_value":"1234","status":"Activo","key_amis":"DannyTest","key_vehicle":"DannyTest","description":"DannyTest","model":"DannyTest","brand":"DannyTest","motor_number":"DannyTest","serial_number":"DannyTest","license_plate":"DannyTest","service":"DannyTest","use":"DannyTest","asset_name":"DannyTest"}';
+        String body='{"payment_info":"'+pago.Id+'","store":"123","client_id":"0017500000GcwfMAAR","partner":"Prueba","external_motorcycle":true, "invoice_value":"1234","status":"Activo","key_amis":"DannyTest","key_vehicle":"DannyTest","description":"DannyTest","model":"DannyTest","brand":"DannyTest","motor_number":"DannyTest","serial_number":"DannyTest","license_plate":"DannyTest","service":"DannyTest","use":"DannyTest","asset_name":"DannyTest"}';
         request.requestURI='/apexrest/insertIPAsset'; 
         request.httpMethod='POST';
         RestContext.request=request;

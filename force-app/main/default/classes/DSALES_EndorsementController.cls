@@ -61,6 +61,7 @@ public with sharing class DSALES_EndorsementController {
         HttpRequest request = new HttpRequest();
         String endpoint = DSALES_Utility.getEndpoint(NOMBRE_SERVICIO_GET);
         endpoint+= '/' + uid;
+        System.debug('Llamaa a::::: '+endpoint);
         request.setEndpoint(endpoint);
         request.setMethod('GET');
         HttpResponse response = http.send(request);

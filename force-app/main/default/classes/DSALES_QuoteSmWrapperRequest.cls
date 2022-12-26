@@ -7,6 +7,7 @@ global class DSALES_QuoteSmWrapperRequest {
     global static DSALES_QuoteSmWrapper.RespuestaParaNpv createQuoteSM(){
         String numeroCliente = DSALES_Utility.NUMERO_CLIENTE_GENERICO;
         String message = '';
+        String trackinId='';
         Account client = new Account();
         Opportunity oppor = new Opportunity();
         Quote cotiza = new Quote();
@@ -39,6 +40,8 @@ global class DSALES_QuoteSmWrapperRequest {
                         listaNegra = true;
                         message = 'Esta en la Lista negra';
                     }
+                    
+                    //trackinId = DSALES_TrackingIdCall.creaTracking();
 
                     DSALES_QuoteSmWrapper.QuotePostProvedor datosEnviar = new DSALES_QuoteSmWrapper.QuotePostProvedor();
                     datosEnviar.business = Label.DSALES_business;
@@ -56,8 +59,12 @@ global class DSALES_QuoteSmWrapperRequest {
                     datosEnviar.contact_now = true;//fijo-sales
                     datosEnviar.vehicle_id = data.vehicle_id;
                     datosEnviar.vehicle_service = Label.DSALES_vehicleService;//fijo-sales
-                    datosEnviar.vehicle_use = Label.DSALES_vehicleUse;//fijo-sales
-                    datosEnviar.vehicle_type=Label.DSALES_vehicleType;//fijo-sales
+                    datosEnviar.vehicle_use = data.vehicle_use; //Nuevo
+                    datosEnviar.vehicle_type = data.vehicle_type; //Nuevo
+                    datosEnviar.plazo = data.plazo; //Nuevo hU 001
+                    //rfc Nuevo
+                    datosEnviar.plazo = data.plazo; //Nuevo
+                    //nombre en solo campo
                     datosEnviar.payment_option = data.payment_option;
                     datosEnviar.packagge = coberturaRc;
                     datosEnviar.promotion_code='No definido';//fijo
@@ -65,14 +72,13 @@ global class DSALES_QuoteSmWrapperRequest {
                     date aux = date.today();
                     aux = date.newInstance(aux.year(), aux.month(), aux.day());
                     datosEnviar.quote_date = aux.format(); //cotiza.DSALES_Fechadecreacionpresupuesto__c.format();//fecha creacion-sales
-                    datosEnviar.start_at = data.start_at.format();
+                    datosEnviar.start_at = data.start_at.format(); //Nuevo revisar
                     if(!listaNegra){
                         respuestaDeProveedor = crearQuoteSm(datosEnviar);
                         datosEnviar.packagge = coberturaPlus;
                         respuestaDeProveedor2 = crearQuoteSm(datosEnviar);
                     }
   
-                    //data = (DSALES_QuoteSmWrapper.QuoteSmRequest)JSON.deserialize(body, DSALES_QuoteSmWrapper.QuoteSmRequest.class);
                     Account UniversalAccount = [Select Id from Account WHERE DSALES_ClienteCoppel__c = :numeroCliente LIMIT 1];
                     Tienda__c tienda = [Select Id from Tienda__c WHERE DSales_TiendaID__c =: data.store_id LIMIT 1];
                     Id ClienteId=null; 
@@ -120,13 +126,14 @@ global class DSALES_QuoteSmWrapperRequest {
                                 cotiza = crearCotizacion(data, oppor.Id, result[0].FirstName,  result[0].MiddleName, result[0].LastName, tienda,listaNegra, respuestaDeProveedor2, amp, coberturaPlus);
                             }       
                     }
-                    //llma a inter cotizar
                 }catch(Exception.JSONException jsonException){
                     message = DSALES_Utility.BAD_REQUEST_MSJ;
                     errorCode = DSALES_Utility.BAD_REQUEST_CODE;
                     succes = false;      
                 }catch(Exception e){
+                    //ver error en la linea message = e.getMessage()+'Linea: '+e.getLineNumber();
                     message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    message = e.getMessage()+'Linea: '+e.getLineNumber();
                     errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
                     succes = false;
                 }
@@ -140,9 +147,8 @@ global class DSALES_QuoteSmWrapperRequest {
         response.errorCode = errorCode;
         response.success = succes;
         response.quoteId = cotiza.Id;
-        //response.Cliente = 'Cliente: '+client.Id;
+        response.TrackingId = respuestaDeProveedor.tracking_id;
         //response.oppor = 'Oport: '+oppor.Id;
-        //response.cotiza = 'mensaje: '+ data.contact_email;
         response.listaNegra = listaNegra;
         response.rc = new DSALES_QuoteSmWrapper.Receipt();
         response.amp = new DSALES_QuoteSmWrapper.Receipt();
@@ -156,7 +162,6 @@ global class DSALES_QuoteSmWrapperRequest {
             message = DSALES_Utility.INTERNAL_ERROR_MSJ;
             errorCode = DSALES_Utility.INTERNAL_ERROR_CODE;
             succes = false;
-            
         }
         return response;
     }
@@ -230,6 +235,8 @@ global class DSALES_QuoteSmWrapperRequest {
         if(data.suffix != null ){
             cotiza.Name+=' ' +data.suffix;
         }
+        DSALES_TipodeUso__c tipoUso = [Select Id from DSALES_TipodeUso__c WHERE Name =: data.vehicle_use LIMIT 1];
+        DSALES_Tipodevehculo__c tipoVehiculo = [Select Id from DSALES_Tipodevehculo__c WHERE Name =: data.vehicle_type LIMIT 1];
         cotiza.OpportunityId = oportunidadId;
         //cotiza.DSALES_FormadePago__c = data.method_payment;
         cotiza.DSales_ID_Tienda__c = data.store_id;
@@ -253,6 +260,11 @@ global class DSALES_QuoteSmWrapperRequest {
         cotiza.DSALES_Gnero__c = data.contact_gender;
         cotiza.DSALES_Fechadecomienzodepliza__c = data.start_at;
         cotiza.Email = data.contact_email;
+        //cotiza.DSALES_Tipodevehculo__c = data.vehicle_type;
+        //cotiza.DSALES_Usodelvehculo__c = data.vehicle_use;
+        cotiza.DSALES_TipoUso__c = tipoUso.Id;
+        cotiza.DSALES_Tipodeveihculo__c = tipoVehiculo.Id;
+        cotiza.DSALES_RFC__c = data.rfc;
         insert cotiza;
 
         List<QuoteLineItem> listaItem= new List<QuoteLineItem>();
@@ -266,6 +278,7 @@ global class DSALES_QuoteSmWrapperRequest {
                 partidaM.Product2Id = precioM.Product2Id;
                 partidaM.Quantity = 1;
                 partidaM.UnitPrice = precioM.UnitPrice;
+                //partidaM.DSALES_TrackingID__c = res.tracking_id;
                 listaItem.add(partidaM);
             }
             Product2 producto = [SELECT Id, Name, StockKeepingUnit, DSALES_Seguro__c, DSales_Articulo__c FROM Product2 WHERE Name=:packagge LIMIT 1];
@@ -283,6 +296,7 @@ global class DSALES_QuoteSmWrapperRequest {
             partida.DSALES_Derechosdepliza__c = decimal.valueOf(res.data.receipts[0].right);
             partida.DSALES_Gastosdeoperacindelrecibo__c = decimal.valueOf(res.data.receipts[0].recharge);
             partida.DSALES_Impuestos__c = decimal.valueOf(res.data.receipts[0].tax);
+            partida.DSALES_TrackingID__c = res.tracking_id;
             
             listaItem.add(partida);
             insert listaItem;

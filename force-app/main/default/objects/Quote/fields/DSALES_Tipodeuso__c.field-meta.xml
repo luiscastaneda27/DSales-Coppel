@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Tipodeuso__c</fullName>
+    <description>Campo para identificar cual es el tipo de uso del vehículo para la cotización.</description>
+    <externalId>false</externalId>
+    <label>Tipo de uso</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Comercial</fullName>
+                <default>false</default>
+                <label>Comercial</label>
+            </value>
+            <value>
+                <fullName>Particular</fullName>
+                <default>false</default>
+                <label>Particular</label>
+            </value>
+            <value>
+                <fullName>Reparto de comida</fullName>
+                <default>false</default>
+                <label>Reparto de comida</label>
+            </value>
+            <value>
+                <fullName>Todo terreno</fullName>
+                <default>false</default>
+                <label>Todo terreno</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

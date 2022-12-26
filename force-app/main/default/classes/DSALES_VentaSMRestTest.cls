@@ -18,13 +18,13 @@ public with sharing class DSALES_VentaSMRestTest {
         classs.Name = 'test';
         insert classs;
         
-        Product2 prodRc = new Product2(Name ='RC Seguro de Moto', StockKeepingUnit='0000',DSALES_Familia__c=family.Id,DSALES_Categoria__c=category.Id,DSALES_Clase__c=classs.Id,DSales_Tipo_de_Producto__c='Producto');
+        Product2 prodRc = new Product2(Name ='RC Seguro de Moto',IsActive=true, StockKeepingUnit='0000',DSALES_Familia__c=family.Id,DSALES_Categoria__c=category.Id,DSALES_Clase__c=classs.Id,DSales_Tipo_de_Producto__c='Producto');
 		insert prodRc;
         
-        Product2 prodAmp = new Product2(Name ='AMP Seguro de Moto', StockKeepingUnit='123444',DSALES_Familia__c=family.Id,DSALES_Categoria__c=category.Id,DSALES_Clase__c=classs.Id,DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
+        Product2 prodAmp = new Product2(Name ='AMP Seguro de Moto',IsActive=true, StockKeepingUnit='123444',DSALES_Familia__c=family.Id,DSALES_Categoria__c=category.Id,DSALES_Clase__c=classs.Id,DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
 		insert prodAmp;
         
-        Product2 prodM = new Product2(Name ='Moto', StockKeepingUnit='121212',DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
+        Product2 prodM = new Product2(Name ='Moto',IsActive=true, StockKeepingUnit='121212',DSales_Tipo_de_Producto__c='Producto',DSales_Aplicaporcentajecobro__c=true, DSales_PorcentajeCobro__c=40);
 		insert prodM;
         
         Id pricebookId = Test.getStandardPricebookId();
@@ -126,6 +126,7 @@ public with sharing class DSALES_VentaSMRestTest {
         RestContext.response=response;
         DSALES_VentaSM.VentaSMRequest venta =(DSALES_VentaSM.VentaSMRequest)JSON.deserialize (body,DSALES_VentaSM.VentaSMRequest.class);
         Test.startTest();
+        Test.setMock(HttpCalloutMock.class, new DSALES_MockHttpResponsePolizaTest());
         DSALES_VentaSMRest.createVenta();
         Test.stopTest();
         RestContext.request = request;

@@ -58,6 +58,7 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
     
     public static DSALES_PaymentInfoWrapper.PaymentResponse insertPagos(DSALES_PaymentInfoWrapper.PaymentRequest pago){
         String consulta='no ha entrado en nada';
+        System.debug('pago:'+pago);
         List<Id> listaPagos = new List<Id>();
             Quote cotizacion = [Select id, Name,DSales_ID_Tienda__c, DSales_Tienda__c, ExpirationDate, RecordTypeId, DSALES_Fechadecreacionpresupuesto__c, Lista_negra__c, Motivo_de_lista_negra__c, Phone,
                                 DSALES_Fechadenacimiento__c, DSALES_Cdigodeestado__c, DSALES_Cdigodemunicipio__c, DSALES_Suburbcode__c, DSALES_Cdigopostal__c, DSALES_IDdelvehculo__c, DSALES_Opcindepago__c,
@@ -65,7 +66,7 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
             Opportunity EsGenerico = [Select Id, SyncedQuoteId, AccountId, Account.Name from Opportunity where Id =:cotizacion.OpportunityId];
             Opportunity nueva = new Opportunity();
             Id TomarIdOportunidad = EsGenerico.Id;
-            if(EsGenerico.Account.Name == '90001 -'){
+            if(EsGenerico.Account.Name == DSALES_Utility.NUMERO_CLIENTE_GENERICO){
                 EsGenerico.AccountId = pago.AccountId;
                 update EsGenerico;
             }
@@ -92,10 +93,11 @@ global with sharing class DSALES_PaymentInfoWrapperRequest {
                     Id aux = creaInfoPago(pago, cotizacion, objeto.DSALES_SKU__c, objeto.DSALES_NombreProducto__c); 
                     listaPagos.add(aux);
                 }
-                EsGenerico.StageName = 'Cerrada ganada';
-                EsGenerico.SyncedQuoteId = cotizacion.Id; 
-                update EsGenerico;
+                /*EsGenerico.StageName = 'Cerrada ganada';
+                EsGenerico.SyncedQuoteId = cotizacion.Id;
+                update EsGenerico;*/
             }
+        	
             else{
                 List<QuoteLineItem> eliminarItem = [Select DSALES_SKU__c,DSALES_NombreProducto__c,PricebookEntryId, Product2Id, Quantity, DSALES_Fechadeinicio__c, DSALES_Fechadetermino__c, DSALES_Primaneta__c, UnitPrice, DSALES_Derechosdepliza__c, DSALES_Gastosdeoperacindelrecibo__c, DSALES_Impuestos__c, TotalPrice from QuoteLineItem where QuoteId =:cotizacion.Id];
                 

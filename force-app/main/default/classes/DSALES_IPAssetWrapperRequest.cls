@@ -88,8 +88,8 @@ global with sharing class DSALES_IPAssetWrapperRequest {
             
         } catch (Exception e) {
             success = false;
-           message = DSALES_Utility.BAD_REQUEST_MSJ;
-                    code=DSALES_Utility.BAD_REQUEST_CODE;
+           message = DSALES_Utility.INTERNAL_ERROR_MSJ;
+                    code=DSALES_Utility.INTERNAL_ERROR_CODE;
         }
 
         DSALES_IPAssetWrapper.IPAssetResponse responsePayload = new DSALES_IPAssetWrapper.IPAssetResponse();
