@@ -12,6 +12,7 @@ public class DSALES_ControladorCertificadoPDF {
         String recordId = ApexPages.currentPage().getParameters().get('certificadoId');
         //Apexpages.currentPage().getHeaders().put('content-disposition', 'inline; filename='+myfilename);
         //html = [Select Id, HtmlValue, Subject from EmailTemplate Where DeveloperName = :NOMBRE_PLANTILLA].HtmlValue;
+      
         html = [select Id, DSALES_Plantilla__c  from DSALES_Generador__c Where Name = :NOMBRE_PLANTILLA].DSALES_Plantilla__c;
         html = html.replace('border-color: #ffffff;', 'border-image: initial; border: 1px solid blue;');
         html=html.replace('p style="text-align:center"', 'p style="text-align:center; font-size:10px; color:rgb(0, 101, 173);"');
@@ -25,6 +26,8 @@ public class DSALES_ControladorCertificadoPDF {
         query = query.substring(0, query.length() -1);
         query += ' From DSALES_Certificado__c Where Id = :recordId';
         DSALES_Certificado__c certificado = DataBase.query(query);
+        Tienda__c tienda=[SELECT name FROM Tienda__c WHERE DSales_TiendaID__c=:certificado.DSALES_Tienda__c LIMIT 1];
+        html=html.replace('DSALES_Tienda__c', tienda.Name);
         html = html.replace('certificado.', '');
         for(String item: mapCampos.keySet()){
             if(html.contains(item)){

@@ -272,6 +272,7 @@
 		<members>DSALES_Certificado__c.DSALES_ProductoAdquirido__c</members>
 		<members>DSALES_Certificado__c.DSALES_SKU__c</members>
 		<members>DSALES_Certificado__c.DSALES_Ticket__c</members>
+		<members>DSALES_Certificado__c.DSALES_TiendaId__c</members>
 		<members>DSALES_Certificado__c.DSALES_Tienda__c</members>
 		<members>DSALES_Certificado__c.DSALES_Vigenciacumplida__c</members>
 		<members>DSALES_Certificado__c.DSALES_enviado__c</members>

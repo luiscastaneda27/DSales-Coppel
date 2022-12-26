@@ -29,7 +29,7 @@ global with sharing class DSALES_AssetWrapperTest {
         request.requestBody=Blob.valueOf(body);
         RestContext.response=response;
         DSALES_AssetWrapper.AssetRequest assetRecord =  (DSALES_AssetWrapper.AssetRequest)JSON.deserialize (body,DSALES_AssetWrapper.AssetRequest.class);       
-        assetRecord.client_number=String.ValueOf(acc.CP_WalletCustomerNumber__c);
+        assetRecord.numero_cliente=String.ValueOf(acc.CP_WalletCustomerNumber__c);
         Test.startTest();
         DSALES_AssetWrapperRequest.createAsset();
         Test.stopTest();
@@ -45,14 +45,14 @@ global with sharing class DSALES_AssetWrapperTest {
         
         RestRequest request=new RestRequest();
         RestResponse response = new RestResponse();
-        String body = '{"name":"Prueba DannyTest","account_id":"'+acc.Id+'", "contact_id":"'+con.Id+'", "client_number":"1234567", "product_type":"Servicio","service_type ":"Garantía Extendida","category":"LÍNEA BLANCA","subcategory" :"ARTICULOS VIANA LINEA BLANCA","class_type" :"01 • AMPLIFICADORES CAR AUDIO","family" :"TEST FAMILIA","status" :"Adquirido","region" :"1 • HERMOSILLO","division" :"1","sku" :"658019","warranty_duration" :"12","serial_number" :"658019","purchase_date" :"2022-09-07","quantity":"1","price" :"12", "months": "12"}';
+        String body = '{"nombre":"Prueba DannyTest","id_cuenta":"'+acc.Id+'", "id_contacto":"'+con.Id+'", "numero_cliente":"1234567", "tipo_producto":"Servicio","tipo_servicio ":"Garantía Extendida","categoria":"LÍNEA BLANCA","subcategoria" :"ARTICULOS VIANA LINEA BLANCA","clase" :"01 • AMPLIFICADORES CAR AUDIO","familia" :"TEST FAMILIA","estado" :"Adquirido","sku" :"658019","duracion_garantia" :"12","numero_serie" :"658019","fecha_compra" :"2022-09-07","cantidad":"1","marca" :"Samsung", "modelo": "2010","descripcion":"Muy cómodo"}';
         request.requestURI='/apexrest/insertAsset'; 
         request.httpMethod='POST';
         RestContext.request=request;
         request.requestBody=Blob.valueOf(body);
         RestContext.response=response;
         DSALES_AssetWrapper.AssetRequest assetRecord =  (DSALES_AssetWrapper.AssetRequest)JSON.deserialize (body,DSALES_AssetWrapper.AssetRequest.class);
-        assetRecord.client_number=String.ValueOf(acc.CP_WalletCustomerNumber__c);
+        assetRecord.numero_cliente=String.ValueOf(acc.CP_WalletCustomerNumber__c);
         Test.startTest();
         DSALES_AssetWrapperRequest.createAsset();
         Test.stopTest();
