@@ -7,6 +7,7 @@ global class DSALES_QuoteSmWrapper {
         global String suffix {get;set;}
         global String store_id {get; set;}
         global String vendedor {get;set;}
+        global String sku {get;set;}
         global List<Product> productList {get;set;}
         
         //pedido por inter

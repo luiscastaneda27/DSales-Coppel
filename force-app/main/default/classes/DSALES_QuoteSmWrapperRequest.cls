@@ -44,6 +44,14 @@ global class DSALES_QuoteSmWrapperRequest {
                     //trackinId = DSALES_TrackingIdCall.creaTracking();
 
                     DSALES_QuoteSmWrapper.QuotePostProvedor datosEnviar = new DSALES_QuoteSmWrapper.QuotePostProvedor();
+                    if(data.sku!=''){
+                        Product2 temporal = [SELECT Id,DSALES_vehculo__c, Name, StockKeepingUnit, DSALES_Seguro__c, DSales_Articulo__c FROM Product2 WHERE StockKeepingUnit=:data.sku LIMIT 1];
+                        data.vehicle_id=temporal.DSALES_vehculo__c;
+                        data.productList[0].sku = data.sku;  
+                    }
+                    else{
+                        data.productList[0].sku = null;
+                    }
                     datosEnviar.business = Label.DSALES_business;
                     datosEnviar.insurance = Label.DSALES_NombreAseguradora; //sales-fijo
                     datosEnviar.contact_name = data.first_name + data.last_name;//combinacion

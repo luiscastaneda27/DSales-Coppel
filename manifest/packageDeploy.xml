@@ -517,6 +517,7 @@
 		<members>Product2.DSALES_SegEspecifico__c</members>
 		<members>Product2.DSALES_ServicioSeguro__c</members>
 		<members>Product2.DSALES_SubCategorias__c</members>
+		<members>Product2.DSALES_vehculo__c</members>
 		<members>Quote.DSALES_AdquiriopolizaSM__c</members>
 		<members>Quote.DSALES_Cdigodeestado__c</members>
 		<members>Quote.DSALES_Cdigodemunicipio__c</members>
