@@ -570,6 +570,7 @@
 		<members>QuoteLineItem.DSALES_Impuestos__c</members>
 		<members>QuoteLineItem.DSALES_ListaArticulo__c</members>
 		<members>QuoteLineItem.DSALES_NombreProducto__c</members>
+		<members>QuoteLineItem.DSALES_NombreProductoServicio__c</members>
 		<members>QuoteLineItem.DSALES_Primaneta__c</members>
 		<members>QuoteLineItem.DSALES_SKU__c</members>
 		<members>QuoteLineItem.DSales_SKU_Producto__c</members>
