@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSALES_Producto__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo para relacionar el producto</description>
+    <externalId>false</externalId>
+    <label>Producto</label>
+    <referenceTo>Product2</referenceTo>
+    <relationshipLabel>Asociación de campañas</relationshipLabel>
+    <relationshipName>Asociacindecampaas</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
