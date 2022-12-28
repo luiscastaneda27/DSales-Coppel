@@ -312,10 +312,22 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>DSALES_Tipodevehculo__c</picklist>
+        <picklist>DSALES_Tipodeuso__c</picklist>
         <values>
-            <fullName>Moto</fullName>
-            <default>true</default>
+            <fullName>Comercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Particular</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reparto de comida</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Todo terreno</fullName>
+            <default>false</default>
         </values>
     </picklistValues>
     <picklistValues>

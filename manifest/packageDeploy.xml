@@ -241,6 +241,9 @@
 		<members>DSales_Asignacion_de_Productos__c.DSales_NombreProducto__c</members>
 		<members>DSales_Asignacion_de_Productos__c.DSales_Producto__c</members>
 		<members>DSales_Asignacion_de_Productos__c.DSales_Servicio_Seguro__c</members>
+		<members>DSALES_AsociacionCampanias__c.DSALES_Campania__c</members>
+		<members>DSALES_AsociacionCampanias__c.DSALES_Producto__c</members>
+		<members>DSALES_AsociacionTiposUso__c.DSALES_Producto__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoProducto__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoSeguro__c</members>
 		<members>DSALES_Categoria__c.DSALES_TipoServicio__c</members>
@@ -657,6 +660,8 @@
     </types>
 	<types>
 		<members>DSales_Asignacion_de_Productos__c</members>
+		<members>DSALES_AsociacionCampanias__c</members>
+		<members>DSALES_AsociacionTiposUso__c</members>
 		<members>DSALES_Categoria__c</members>
 		<members>DSALES_Certificado__c</members>
 		<members>DSALES_Clase__c</members>
