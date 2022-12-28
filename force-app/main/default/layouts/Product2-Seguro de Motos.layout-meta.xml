@@ -117,11 +117,11 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>DSALES_Asociacindecampaas__c.DSALES_Producto__c</relatedList>
+        <relatedList>DSALES_AsociacionCampanias__c.DSALES_Producto__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>DSALES_Asociacindetiposdeuso__c.DSALES_Producto__c</relatedList>
+        <relatedList>DSALES_AsociacionTiposUso__c.DSALES_Producto__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
